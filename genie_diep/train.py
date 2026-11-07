@@ -135,7 +135,7 @@ def train(args):
         model.train(); optimizer.zero_grad(set_to_none=True)
         if args.stage=="tokenizer":
             rec,_,vq=model.tokenizer(x)
-            loss=10*image_loss(rec,x)+vq
+            loss=10*image_loss(rec,x,color_balance=args.color_balance)+vq
         else:
             prediction,actions,_,vq=model.lam(x)
             loss=10*image_loss(prediction,x[:,1:],x[:,:-1])+vq
@@ -146,7 +146,8 @@ def train(args):
             raise RuntimeError("Non-finite loss: aborting before wasting compute")
         loss.backward(); torch.nn.utils.clip_grad_norm_(parameters,1.0); optimizer.step()
         losses.append(float(loss.detach()))
-        if args.stage in ("world","actions") and args.revive_every and step%args.revive_every==0:
+        if (args.stage in ("world","actions") and args.revive_every and step%args.revive_every==0
+                and (not args.revive_until_step or step<=args.revive_until_step)):
             if args.synthetic:
                 features=model.lam.features(x).detach().flatten(0,1); pool_indices=[]
             else:
@@ -179,6 +180,8 @@ def main():
     p.add_argument("--downsample",type=int,choices=[4,8],default=4)
     p.add_argument("--init-actions",action="store_true")
     p.add_argument("--revive-every",type=int,default=0)
+    p.add_argument("--revive-until-step",type=int,default=0,help="Stop code resets after this step; 0 keeps prior unlimited behavior")
+    p.add_argument("--color-balance",action="store_true",help="Tokenizer-only equal-color-group reconstruction term")
     p.add_argument("--action-pool-clips",type=int,default=64)
     p.add_argument("--lr",type=float,default=3e-4); p.add_argument("--device",default="cpu")
     p.add_argument("--threads",type=int,default=4); p.add_argument("--seed",type=int,default=42)

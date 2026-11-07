@@ -240,7 +240,7 @@ class WorldModel(nn.Module):
         return asdict(self.config)
 
 
-def image_loss(pred,target,previous=None):
+def image_loss(pred,target,previous=None,color_balance=False):
     chroma=target.max(2,keepdim=True).values-target.min(2,keepdim=True).values
     weights=1+10*(chroma>.12).float().detach()
     if previous is not None:
@@ -248,7 +248,22 @@ def image_loss(pred,target,previous=None):
     weights=weights/weights.mean((-3,-2,-1),keepdim=True).clamp_min(.01)
     edges=(torch.diff(pred,dim=-1)-torch.diff(target,dim=-1)).abs().mean()
     edges=edges+(torch.diff(pred,dim=-2)-torch.diff(target,dim=-2)).abs().mean()
-    return ((pred-target).square()*weights).mean() + .1*(pred-target).abs().mean()+.2*edges
+    loss=((pred-target).square()*weights).mean() + .1*(pred-target).abs().mean()+.2*edges
+    if color_balance:
+        # Self-supervised color groups from target pixels; no external labels.
+        # Average within groups before across groups, so a large cyan tank cannot
+        # dominate the color error of a small blue/yellow object. Require 4 pixels
+        # to avoid making a single compression artifact a full color category.
+        r,g,b=target.unbind(2)
+        masks=torch.stack(((r-b>.12)&(g-b>.12),
+                           (r-g>.12)&(r-b>.08),
+                           (b-r>.12)&(g-r>.12)&(b-g<.12),
+                           (b-r>.12)&(b-g>=.12)),2).float().detach()
+        counts=masks.sum((-2,-1));valid=counts>=4
+        error=(pred-target).square().mean(2,keepdim=True)
+        per_group=(error*masks).sum((-2,-1))/counts.clamp_min(1)
+        loss=loss+(per_group*valid).sum()/valid.sum().clamp_min(1)
+    return loss
 
 
 def masked_dynamics_loss(dynamics,ids,actions):
