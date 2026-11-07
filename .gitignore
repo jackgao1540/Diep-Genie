@@ -3,6 +3,7 @@ __pycache__/
 .pytest_cache/
 data/
 runs/
+research/
 *.pt
 *.zip
 *.mp4
