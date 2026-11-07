@@ -160,6 +160,14 @@ class ClipDataset(Dataset):
     def __getitem__(self,index):
         return self.get_clip(index)
 
+    def source_balanced_weights(self):
+        """Equal total sampling mass per training source; never mix in validation."""
+        if any(row['split']!='train' for row in self.rows):
+            raise ValueError('Source-balanced sampling is training-only')
+        counts={}
+        for row in self.rows:counts[row['source_id']]=counts.get(row['source_id'],0)+1
+        return torch.tensor([1/counts[row['source_id']] for row in self.rows],dtype=torch.double)
+
     def representative_indices(self,limit=64):
         """Round-robin across sources, uniformly spaced within each source."""
         groups={}

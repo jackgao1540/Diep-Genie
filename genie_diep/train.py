@@ -8,7 +8,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader,WeightedRandomSampler
 
 from .model import Config, WorldModel, image_loss, masked_dynamics_loss
 from .data import ClipDataset
@@ -112,7 +112,8 @@ def train(args):
         length=min(args.length,c.context)
         data=ClipDataset(args.data,"train",length)
         validation=ClipDataset(args.data,"val",length)
-        loader=DataLoader(data,batch_size=args.batch,shuffle=True,num_workers=0,drop_last=False)
+        sampler=WeightedRandomSampler(data.source_balanced_weights(),len(data),replacement=True) if args.balance_sources else None
+        loader=DataLoader(data,batch_size=args.batch,shuffle=sampler is None,sampler=sampler,num_workers=0,drop_last=False)
         iterator=iter(loader); x=next(iterator).to(device)
         val=torch.stack([validation[i] for i in range(min(args.batch,len(validation)))]).to(device)
     if not (args.init or args.resume):
@@ -182,6 +183,7 @@ def main():
     p.add_argument("--revive-every",type=int,default=0)
     p.add_argument("--revive-until-step",type=int,default=0,help="Stop code resets after this step; 0 keeps prior unlimited behavior")
     p.add_argument("--color-balance",action="store_true",help="Tokenizer-only equal-color-group reconstruction term")
+    p.add_argument("--balance-sources",action="store_true",help="Equal total training sampling mass per source video")
     p.add_argument("--action-pool-clips",type=int,default=64)
     p.add_argument("--lr",type=float,default=3e-4); p.add_argument("--device",default="cpu")
     p.add_argument("--threads",type=int,default=4); p.add_argument("--seed",type=int,default=42)
