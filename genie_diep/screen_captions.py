@@ -20,12 +20,22 @@ def text_candidate(text,score,box):
                 and np.ptp(box[:,1])>=8 and score>=.5)
 
 
+def intersects_crop(box,width,height):
+    box=np.asarray(box)
+    return bool(box[:,0].max()>0 and box[:,0].min()<width and box[:,1].max()>0 and box[:,1].min()<height)
+
+
 def run(args):
     from rapidocr import RapidOCR
     engine=RapidOCR(params={'Global.log_level':'error','EngineConfig.onnxruntime.intra_op_num_threads':2,
         'EngineConfig.onnxruntime.inter_op_num_threads':1,'Det.limit_side_len':384})
     root=Path(args.data);raw=Path(args.raw);out=Path(args.out);out.mkdir(parents=True,exist_ok=True)
     rows=[json.loads(line) for p in sorted(root.glob('*.jsonl')) for line in p.read_text(encoding='utf-8').splitlines() if line]
+    if args.previous_screen:
+        previous=json.loads(Path(args.previous_screen).read_text(encoding='utf-8'))
+        prior={r['path']:r for r in previous['rows']}
+        if set(prior)!={r['path'] for r in rows}:raise ValueError('Previous screen must cover the entire candidate manifest')
+        rows=[r for r in rows if not prior[r['path']]['suspicious']]
     if args.limit:rows=rows[:args.limit]
     results=[];cap=None;source=None;samples=[];started=time.monotonic()
     for i,row in enumerate(rows):
@@ -39,10 +49,17 @@ def run(args):
         for index in indices:
             timestamp=row['start']+index/row['fps'];cap.set(cv2.CAP_PROP_POS_MSEC,timestamp*1000);ok,frame=cap.read()
             if not ok:raise RuntimeError(f'Cannot inspect {source} at {timestamp}')
-            if row.get('crop'):x,y,w,h=row['crop'];frame=frame[y:y+h,x:x+w]
-            sampled+=1;result=engine(frame)
+            origin=np.zeros(2)
+            if row.get('crop'):
+                x,y,w,h=row['crop'];left=max(0,x-args.padding);top=max(0,y-args.padding)
+                ocr_frame=frame[top:min(frame.shape[0],y+h+args.padding),left:min(frame.shape[1],x+w+args.padding)]
+                origin=np.array([x-left,y-top]);frame=frame[y:y+h,x:x+w]
+            else:ocr_frame=frame
+            sampled+=1;result=engine(ocr_frame)
             if result.boxes is None:continue
             for box,txt,score in zip(result.boxes,result.txts,result.scores):
+                box=box-origin
+                if not intersects_crop(box,frame.shape[1],frame.shape[0]):continue
                 suspicious=text_candidate(txt,score,box)
                 detections.append(dict(frame=index,time=timestamp,text=txt,score=float(score),box=box.tolist(),suspicious=bool(suspicious)))
                 if suspicious and not any(s[0]==row['path'] for s in samples):
@@ -69,4 +86,6 @@ def run(args):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('data');p.add_argument('out');p.add_argument('--raw',default='data/raw')
     p.add_argument('--every-frame',action='store_true');p.add_argument('--limit',type=int,default=0)
+    p.add_argument('--padding',type=int,default=24,help='Read outside crop to recognize partial captions; only intersecting text counts')
+    p.add_argument('--previous-screen',help='Rescreen only negatives from a complete earlier screening pass')
     run(p.parse_args())

@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-07",
+  "method": "Assistant visual review of six evenly spaced source-resolution/crop overview frames per video.",
+  "warning": "Recognizable diep.io gameplay in samples only. Not exhaustive identity, class, caption or duplicate review. No training approval.",
+  "clips": [
+    {
+      "source_id": "erfWgYS9WJ4",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay with cyan ordinary shooter; subtitles and intro/outro. Candidate intervals need full review.",
+      "overview": "runs/source-ambiguous/erfWgYS9WJ4.png"
+    },
+    {
+      "source_id": "740Dervtqh4",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "FFA/maze gameplay, ordinary shooter then drone class; captions. Exclude drone intervals.",
+      "overview": "runs/source-ambiguous/740Dervtqh4.png"
+    },
+    {
+      "source_id": "z4ceemED9Gk",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Retrospective moments compilation, mixed classes and possible reused footage; defer pending duplicate review.",
+      "overview": "runs/source-ambiguous/z4ceemED9Gk.png"
+    },
+    {
+      "source_id": "dN_UFytK7gw",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze then team gameplay, cyan then purple player; captions and mixed classes.",
+      "overview": "runs/source-ambiguous/dN_UFytK7gw.png"
+    },
+    {
+      "source_id": "XMYkDKQyyzw",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Compilation featuring other players, mixed classes and likely reused footage; defer.",
+      "overview": "runs/source-ambiguous/XMYkDKQyyzw.png"
+    },
+    {
+      "source_id": "E0b1NQHRcik",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay with ordinary shooter and drone classes; captions and outro.",
+      "overview": "runs/source-ambiguous/E0b1NQHRcik.png"
+    },
+    {
+      "source_id": "j22pphsxMpM",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay, player becomes invisible in sampled sections; letterboxing, captions and death screen.",
+      "overview": "runs/source-ambiguous/j22pphsxMpM.png"
+    },
+    {
+      "source_id": "ZqSU6aBo044",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Team gameplay, red rammer and mixed cyan shooter/drone tanks; captions. Player class uncertain in samples.",
+      "overview": "runs/source-ambiguous/ZqSU6aBo044.png"
+    },
+    {
+      "source_id": "p93x3LEAYoI",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay, shooter and drone classes; captions and outro.",
+      "overview": "runs/source-ambiguous/p93x3LEAYoI.png"
+    },
+    {
+      "source_id": "4qxKEoni9x4",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Diep-like gameplay in custom black/gray palette, externally credited JB footage; defer palette and duplicate handling.",
+      "overview": "runs/source-ambiguous/4qxKEoni9x4.png"
+    },
+    {
+      "source_id": "XsGFmDo11QU",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay; shooter/drone/invisible player intervals, captions.",
+      "overview": "runs/source-ambiguous/XsGFmDo11QU.png"
+    },
+    {
+      "source_id": "iO2JrL-EP3Y",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze gameplay, predominantly drone class and UI prompts; not current ordinary-tank training.",
+      "overview": "runs/source-ambiguous/iO2JrL-EP3Y.png"
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Maze/FFA ordinary shooter with Fallen Booster boss, captions.",
+      "overview": "runs/source-ambiguous/zA9B8C-l_HE.png"
+    },
+    {
+      "source_id": "MwOfFbwymWI",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Green team Annihilator shooter; caption overlays, cyan-only player heuristic incompatible.",
+      "overview": "runs/source-ambiguous/MwOfFbwymWI.png"
+    },
+    {
+      "source_id": "tNwgW4QBSZU",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Purple team Hybrid shooter with associated drones; captions, cyan-only heuristic incompatible.",
+      "overview": "runs/source-ambiguous/tNwgW4QBSZU.png"
+    },
+    {
+      "source_id": "_FNjCZyWgjw",
+      "observed_gameplay": "diep.io or visually matching gameplay",
+      "training_approved": false,
+      "note": "Red team player, drone class in sampled frames; zoomed opening and outro.",
+      "overview": "runs/source-ambiguous/_FNjCZyWgjw.png"
+    }
+  ]
+}

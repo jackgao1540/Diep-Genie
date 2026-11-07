@@ -23,6 +23,7 @@ class Config:
     context: int = 5
     lam_variant: str = "pair"
     downsample: int = 8
+    lam_dilations: tuple = (1,1,1)
 
 
 class VQ(nn.Module):
@@ -140,8 +141,12 @@ class LatentActionModel(nn.Module):
         elif c.lam_variant!="pair":
             raise ValueError("Unknown LAM encoder variant")
         self.books=nn.ModuleList([VQ(k,c.action_dim) for k in c.action_codes])
-        self.decoder=nn.Sequential(nn.Conv2d(3+d,c.width,3,1,1),nn.SiLU(),
-                                   nn.Conv2d(c.width,c.width,3,1,1),nn.SiLU(),nn.Conv2d(c.width,3,3,1,1))
+        if len(c.lam_dilations)!=3 or any(v<1 for v in c.lam_dilations):
+            raise ValueError('LAM decoder needs three positive dilation values')
+        d1,d2,d3=c.lam_dilations
+        self.decoder=nn.Sequential(nn.Conv2d(3+d,c.width,3,padding=d1,dilation=d1),nn.SiLU(),
+                                   nn.Conv2d(c.width,c.width,3,padding=d2,dilation=d2),nn.SiLU(),
+                                   nn.Conv2d(c.width,3,3,padding=d3,dilation=d3))
 
     def features(self,x):
         b,t,ch,h,w=x.shape

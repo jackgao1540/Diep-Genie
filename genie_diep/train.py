@@ -91,6 +91,14 @@ def train(args):
         model=WorldModel(Config(size=args.size,width=args.width,context=args.length,
                                 action_codes=tuple(args.action_codes),lam_variant=args.lam_variant,
                                 downsample=args.downsample)).to(device); state=None
+    if args.lam_dilations:
+        requested=tuple(args.lam_dilations)
+        if len(requested)!=3 or any(v<1 for v in requested):raise ValueError('Invalid decoder dilations')
+        if args.resume and requested!=tuple(model.config.lam_dilations):
+            raise ValueError('Resume cannot change architecture; use --init')
+        model.config.lam_dilations=requested
+        for layer,dilation in zip((model.lam.decoder[0],model.lam.decoder[2],model.lam.decoder[4]),requested):
+            layer.dilation=(dilation,dilation);layer.padding=(dilation,dilation)
     if args.stage in ("world","actions"):
         model.tokenizer.requires_grad_(False)
     if args.stage=="actions":
@@ -178,6 +186,7 @@ def main():
     p.add_argument("--width",type=int,default=32); p.add_argument("--length",type=int,default=5)
     p.add_argument("--action-codes",type=int,nargs="+",default=[16])
     p.add_argument("--lam-variant",choices=["pair","delta"],default="delta")
+    p.add_argument("--lam-dilations",type=int,nargs=3,help="Experimental decoder receptive field; 1 3 6 gives a 21-pixel span")
     p.add_argument("--downsample",type=int,choices=[4,8],default=4)
     p.add_argument("--init-actions",action="store_true")
     p.add_argument("--revive-every",type=int,default=0)
