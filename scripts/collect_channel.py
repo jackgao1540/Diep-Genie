@@ -19,7 +19,8 @@ def catalog(inventory):
     for entry in inventory.get('entries',[]):
         title=entry.get('title','');video_id=entry['id']
         if not re.fullmatch(r'[A-Za-z0-9_-]{11}',video_id):raise ValueError('Invalid public video identifier')
-        if re.search(r'obstar[.\s-]*io',title,re.I):status='excluded_other_game'
+        # A rival game's title can also contain "Diep.io"; exclusion comes first.
+        if re.search(r'(?:obstar|tanksmith)[.\s-]*io',title,re.I):status='excluded_other_game'
         elif re.search(r'diep[.\s-]*io|diepio',title,re.I):status='diep_title_candidate'
         else:status='ambiguous_review_required'
         rows.append(dict(id=video_id,title=title,duration=entry.get('duration'),

@@ -99,6 +99,9 @@ def train(args):
         model.config.lam_dilations=requested
         for layer,dilation in zip((model.lam.decoder[0],model.lam.decoder[2],model.lam.decoder[4]),requested):
             layer.dilation=(dilation,dilation);layer.padding=(dilation,dilation)
+    if args.motion_warp and not model.config.lam_motion_warp:
+        if args.resume:raise ValueError('Resume cannot enable a new architecture; use --init')
+        model.lam.enable_motion_warp()
     if args.stage in ("world","actions"):
         model.tokenizer.requires_grad_(False)
     if args.stage=="actions":
@@ -187,6 +190,7 @@ def main():
     p.add_argument("--action-codes",type=int,nargs="+",default=[16])
     p.add_argument("--lam-variant",choices=["pair","delta"],default="delta")
     p.add_argument("--lam-dilations",type=int,nargs=3,help="Experimental decoder receptive field; 1 3 6 gives a 21-pixel span")
+    p.add_argument("--motion-warp",action="store_true",help="Experimental action-conditioned scene translation before residual reconstruction")
     p.add_argument("--downsample",type=int,choices=[4,8],default=4)
     p.add_argument("--init-actions",action="store_true")
     p.add_argument("--revive-every",type=int,default=0)

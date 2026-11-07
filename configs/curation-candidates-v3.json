@@ -1,0 +1,44 @@
+{
+  "warning": "Source overviews reviewed; intervals are not approved training data until every-frame screening and visual review.",
+  "crop": [
+    220,
+    80,
+    200,
+    200
+  ],
+  "size": 64,
+  "intervals": [
+    {
+      "source_id": "2zc8I-mlZRM",
+      "start": 15,
+      "seconds": 70,
+      "note": "Cyan ordinary Destroyer before later team-color change; food and movement. Reject captions/cuts."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 180,
+      "seconds": 100,
+      "note": "Cyan shooter and food, before later mixed-class sections; inspect caption/cut contamination."
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "start": 390,
+      "seconds": 85,
+      "note": "Previously unused held-out basic-shooter source with nearby pentagons; every-frame review required."
+    }
+  ],
+  "source_exclusions_for_now": [
+    {
+      "source_id": "TK6P8CkUMeU",
+      "reason": "Visual review confirms Tanksmith.io despite Diep.io keyword."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "reason": "Red player and heavy crowds, cyan player heuristic incompatible."
+    },
+    {
+      "source_id": "OJsD4P2kHZw",
+      "reason": "Mostly drone class after early ordinary interval."
+    }
+  ]
+}

@@ -24,6 +24,8 @@ class Config:
     lam_variant: str = "pair"
     downsample: int = 8
     lam_dilations: tuple = (1,1,1)
+    lam_motion_warp: bool = False
+    lam_max_shift_fraction: float = .125
 
 
 class VQ(nn.Module):
@@ -124,6 +126,23 @@ class VideoTokenizer(nn.Module):
         return self.decode(q),ids,loss
 
 
+def translate_frames(current, shifts):
+    """Differentiable scene translation; positive (dx,dy) moves content right/down.
+
+    Shifts are in input pixels. Border replication avoids introducing black edges;
+    it cannot invent newly exposed content, which remains a decoder task.
+    """
+    b,t,ch,h,w=current.shape
+    if min(h,w)<2 or shifts.shape!=(b,t,2):raise ValueError('Invalid translation shape')
+    yy,xx=torch.meshgrid(torch.linspace(-1,1,h,device=current.device,dtype=current.dtype),
+                         torch.linspace(-1,1,w,device=current.device,dtype=current.dtype),indexing='ij')
+    base=torch.stack((xx,yy),-1)[None].expand(b*t,-1,-1,-1)
+    scale=current.new_tensor([2/(w-1),2/(h-1)])
+    grid=base-shifts.reshape(b*t,1,1,2)*scale
+    return F.grid_sample(current.reshape(b*t,ch,h,w),grid,mode='bilinear',
+                         padding_mode='border',align_corners=True).reshape_as(current)
+
+
 class LatentActionModel(nn.Module):
     def __init__(self,c):
         super().__init__()
@@ -147,6 +166,23 @@ class LatentActionModel(nn.Module):
         self.decoder=nn.Sequential(nn.Conv2d(3+d,c.width,3,padding=d1,dilation=d1),nn.SiLU(),
                                    nn.Conv2d(c.width,c.width,3,padding=d2,dilation=d2),nn.SiLU(),
                                    nn.Conv2d(c.width,3,3,padding=d3,dilation=d3))
+        self.motion_head=None
+        if c.lam_motion_warp:self.enable_motion_warp()
+
+    def enable_motion_warp(self):
+        if not 0<self.c.lam_max_shift_fraction<.5:raise ValueError('Invalid maximum scene shift')
+        if self.motion_head is None:
+            reference=next(self.parameters())
+            # All parameters start at zero; do not perturb matched data-order RNG.
+            with torch.random.fork_rng(devices=[]):
+                self.motion_head=nn.Linear(self.c.action_dim*len(self.books),2).to(reference)
+            nn.init.zeros_(self.motion_head.weight);nn.init.zeros_(self.motion_head.bias)
+        self.c.lam_motion_warp=True
+
+    def motion_shifts(self,actions,height,width):
+        if self.motion_head is None:raise ValueError('Scene-motion branch is disabled')
+        bound=actions.new_tensor([width,height])*self.c.lam_max_shift_fraction
+        return self.motion_head(actions).tanh()*bound
 
     def features(self,x):
         b,t,ch,h,w=x.shape
@@ -166,7 +202,10 @@ class LatentActionModel(nn.Module):
         b,t,ch,h,w=current.shape
         spatial=actions[:,:, :,None,None].expand(-1,-1,-1,h,w)
         residual=self.decoder(torch.cat([current,spatial],2).reshape(b*t,-1,h,w)).reshape_as(current)
-        return torch.sigmoid(torch.logit(current.clamp(.01,.99))+residual)
+        base=current
+        if self.motion_head is not None:
+            base=translate_frames(current,self.motion_shifts(actions,h,w))
+        return torch.sigmoid(torch.logit(base.clamp(.01,.99))+residual)
 
     def forward(self,x):
         actions,ids,loss=self.infer(x)
