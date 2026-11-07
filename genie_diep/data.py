@@ -138,6 +138,8 @@ class ClipDataset(Dataset):
                 if old!=row["split"]:
                     raise ValueError("Identical video content leakage across train/validation")
             if row["split"] == split and row["shape"][0] >= length:
+                if split=='train' and row.get('training_approved') is False:
+                    raise ValueError('Unapproved candidate clip: finish curation before training')
                 self.rows.append(row)
         if not self.rows:
             raise ValueError(f"No {split} clips in {root}; never fall back to the training set")

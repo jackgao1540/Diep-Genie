@@ -1,0 +1,16 @@
+{
+  "warning": "Source overviews reviewed only. These intervals require clip-level caption, cut and class screening; they are not approved training data.",
+  "crop": [220, 80, 200, 200],
+  "size": 64,
+  "intervals": [
+    {"source_id": "YtomeIYBAhE", "start": 5, "seconds": 395, "note": "Ordinary cyan shooter in sampled overview; captions and cuts must be rejected."},
+    {"source_id": "35gc8uMbkiQ", "start": 20, "seconds": 258, "note": "Ordinary cyan shooter; overlays and occasional edits. Includes reviewed food interval."},
+    {"source_id": "es0u30-F0NA", "start": 160, "seconds": 165, "note": "Sampled ordinary single/multiple-barrel shooting section; exclude later invisible/drone/rammer sections."},
+    {"source_id": "Hs8MezoSdgg", "start": 5, "seconds": 230, "note": "Basic tank in team mode; verify crop, player visibility and captions."},
+    {"source_id": "ycjXOBkPaXw", "start": 30, "seconds": 105, "note": "New source-held-out firing footage; fixed split is validation. Upper/lower overlays need review."}
+  ],
+  "source_exclusions_for_now": [
+    {"source_id": "vKDbVVYi6tk", "reason": "Retrospective compilation, mixed classes and possible reused footage from other videos; avoid leakage until duplicate screening."},
+    {"source_id": "egfJmYWJnCI", "reason": "Multiple simultaneously controlled tanks and mixed drone/rammer classes."}
+  ]
+}

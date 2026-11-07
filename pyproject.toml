@@ -11,6 +11,7 @@ dependencies = ["torch>=2.5", "numpy>=1.26", "Pillow>=10", "opencv-python-headle
 
 [project.optional-dependencies]
 data = ["yt-dlp[default]", "imageio-ffmpeg", "psutil"]
+curation = ["rapidocr==3.10.0", "onnxruntime>=1.31"]
 test = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
