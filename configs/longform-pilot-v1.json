@@ -1,0 +1,46 @@
+{
+  "purpose": "Local screening calibration; automatic candidates remain unapproved.",
+  "sources": [
+    {
+      "id": "RxUI8D6DzMw",
+      "video_sha256": "2f2b44317b2c7cda6654ee092c2327af268898072de6cac63945613878d19d45",
+      "overview_index": 109,
+      "duration": 727.6269,
+      "media_path": "data/raw/RxUI8D6DzMw.mp4",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          100,
+          160
+        ]
+      ]
+    },
+    {
+      "id": "Iw__m_tFTxE",
+      "video_sha256": "02d2cf1858f71e06fc3b5a49eb0c73a129a618fb23d002d56bde0443e47236e7",
+      "duration": 2027.9,
+      "width": 640,
+      "height": 360,
+      "media_path": "data/supplemental/raw/Iw__m_tFTxE.mp4",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          400,
+          460
+        ]
+      ]
+    }
+  ]
+}

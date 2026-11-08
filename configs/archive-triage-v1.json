@@ -1,0 +1,1900 @@
+{
+  "purpose": "Sparse source/class triage, not clean-hour approval. Intervals are provisional and require dense class/cut/caption checks.",
+  "overview": "runs/archive-overview-v2",
+  "sources": [
+    {
+      "id": "vKDbVVYi6tk",
+      "video_sha256": "f36f661bddbbadc49ae9dcabeea148f08dec4c7140a747669eaf7a1f4261b786",
+      "overview_index": 0,
+      "duration": 606.4333333333333,
+      "category": "compilation",
+      "note": "Retrospective mixed classes and reused footage; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "fEHSCu-wTec",
+      "video_sha256": "d64b344815bf021f4a4aa4598c6e059889305f7496828ba25ee363e19951a9ba",
+      "overview_index": 1,
+      "duration": 482.6822,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          135
+        ]
+      ],
+      "note": "Early ordinary shooters; later drones, class changes and edits.",
+      "training_approved": false
+    },
+    {
+      "id": "erfWgYS9WJ4",
+      "video_sha256": "5d76c7f9a9d1aac24ada2f9d42fb881446c38f000cb1deb0fbb0389470f3960b",
+      "overview_index": 2,
+      "duration": 487.2200666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          340
+        ],
+        [
+          400,
+          440
+        ]
+      ],
+      "note": "Mostly ordinary cyan shooters; later mixed colors/classes. Captions and cuts require screening.",
+      "training_approved": false
+    },
+    {
+      "id": "obJ-Q2ypzCA",
+      "video_sha256": "4419c711bd4e2f89277acab71ea16425ed52dd0b4386d43859de12e8d1834c91",
+      "overview_index": 3,
+      "duration": 502.6021,
+      "category": "special_class",
+      "note": "Predominantly drone-controlling player.",
+      "training_approved": false
+    },
+    {
+      "id": "JZ0R1JTdfMo",
+      "video_sha256": "34545baf36c379f9196e733490bcb92f7fa653ea913d7042fc19f4746575d4e2",
+      "overview_index": 4,
+      "duration": 493.9935,
+      "category": "mixed",
+      "intervals": [
+        [
+          10,
+          140
+        ],
+        [
+          420,
+          475
+        ]
+      ],
+      "note": "Early/late ordinary shooter; middle drone gameplay.",
+      "training_approved": false
+    },
+    {
+      "id": "LgdTICpqGoY",
+      "video_sha256": "a3987d76a23960cff47d3d262da1b0b877aa78e30b8f1c095e58e6d548fbca03",
+      "overview_index": 5,
+      "duration": 526.9264000000001,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          175
+        ]
+      ],
+      "note": "Early shooter, later factory square player.",
+      "training_approved": false
+    },
+    {
+      "id": "740Dervtqh4",
+      "video_sha256": "ec00b81dcd36fe587c48b2b58547b2fbcde8b56d05306723790528440ecc92ba",
+      "overview_index": 6,
+      "duration": 514.0802333333334,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          195
+        ],
+        [
+          370,
+          480
+        ]
+      ],
+      "note": "Shooting and drone intervals mixed; verify class boundaries.",
+      "training_approved": false
+    },
+    {
+      "id": "ETDiQYuEEEA",
+      "video_sha256": "585ee4e708244cdb692e7c1b066ca2e02feb69376de1edf2b8cce249e0ca6883",
+      "overview_index": 7,
+      "duration": 506.27243333333337,
+      "category": "special_class",
+      "note": "Sandbox/custom presentation, special class and large overlays.",
+      "training_approved": false
+    },
+    {
+      "id": "JD2i07vJPtI",
+      "video_sha256": "088534f8162d6feb65ab2b3b87f59036e374dda7af3c0917bde81b4558c7b44f",
+      "overview_index": 8,
+      "duration": 482.1149666666667,
+      "category": "special_class",
+      "note": "Predominantly drone-controlling player.",
+      "training_approved": false
+    },
+    {
+      "id": "DDWz_FIk6Rw",
+      "video_sha256": "1f01cf59c45df02d09441a5a69235f89e9865479fd0c69ef50d198f9e7693904",
+      "overview_index": 9,
+      "duration": 488.8884,
+      "category": "mixed",
+      "note": "Mixed drone/rammer/colored classes; defer to clearer sources.",
+      "training_approved": false
+    },
+    {
+      "id": "BmSJ-tAaiVo",
+      "video_sha256": "0d2220d99c1c40c5d6c9a5cb66e6b372c12cffba57b83ee983df5b16ce579057",
+      "overview_index": 10,
+      "duration": 485.55173333333335,
+      "category": "mixed",
+      "note": "Shooter/drone mixture in sandbox; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "OxBzFcdF0xY",
+      "video_sha256": "d541849abe25199c6820a4a278fe2d661a95f8125aa0032e5e7687228e9586fe",
+      "overview_index": 11,
+      "duration": 483.14933333333335,
+      "category": "special_class",
+      "note": "Factory player and edits.",
+      "training_approved": false
+    },
+    {
+      "id": "f6x0pEuhJ-Q",
+      "video_sha256": "2966845e281b6ecce4c5e8be58038aeb40ed7e647ed7e78ac40da78048adf6b4",
+      "overview_index": 12,
+      "duration": 578.2109666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          240
+        ]
+      ],
+      "note": "Ordinary Stalker with invisibility intervals; visibility filtering essential. Previously used validation source.",
+      "training_approved": false
+    },
+    {
+      "id": "Mr38B_C9oW4",
+      "video_sha256": "4053aa80c74dbf31d697526b6aac40b45088c60ac655da0a3869ff2135525e52",
+      "overview_index": 13,
+      "duration": 210.74386666666666,
+      "category": "special_class",
+      "note": "Predominantly factory/drone player despite food coverage.",
+      "training_approved": false
+    },
+    {
+      "id": "qDY6Y0Cw5_E",
+      "video_sha256": "d02b2310c8ed29aaec923c0b523a151da9503b16178c9a3c9f1e88d6c5df4157",
+      "overview_index": 14,
+      "duration": 545.0778666666666,
+      "category": "compilation",
+      "note": "Ranked montage, mixed classes and title cards.",
+      "training_approved": false
+    },
+    {
+      "id": "4OK8GzlnH9I",
+      "video_sha256": "c0a447b5faaf9093f8c7f771ba3311d68f7fbb858448ceaf5fe5f94a9ad79df7",
+      "overview_index": 15,
+      "duration": 482.34853333333336,
+      "category": "mixed",
+      "note": "Mixed team colors, shooter/drone classes and deaths; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "9QuChICgpg8",
+      "video_sha256": "33fb6688a600ecd3294664c1c78951f816d0f670825a6dc2d7e3da3b0ca46aa0",
+      "overview_index": 16,
+      "duration": 602.4351666666666,
+      "category": "mixed",
+      "note": "Multiboxers, crowds, montage and arena closer; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "egfJmYWJnCI",
+      "video_sha256": "3537a6d12c36cfd63a0dd8488d40a9d02981cafba12720163e595c609f0adfe5",
+      "overview_index": 17,
+      "duration": 621.9213,
+      "category": "special_class",
+      "note": "Multiple controlled players plus drone/rammer classes; exclude initial scope.",
+      "training_approved": false
+    },
+    {
+      "id": "es0u30-F0NA",
+      "video_sha256": "3c869cb1dfdb95ac01cb9640595107bf080a13b7a7f1f01cbf048b6177da928a",
+      "overview_index": 18,
+      "duration": 602.3350666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          160,
+          300
+        ]
+      ],
+      "note": "Known mixed classes; only earlier reviewed ordinary-shooter neighborhood is candidate.",
+      "training_approved": false
+    },
+    {
+      "id": "X7sphbSPXQg",
+      "video_sha256": "16793bf044ee2f8cc30b3fccc9d356b993795875638a0da01fbf5775b9fb75bd",
+      "overview_index": 19,
+      "duration": 605.9386666666667,
+      "category": "mixed",
+      "note": "Team shooter/drone mixture and overlays; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "z4ceemED9Gk",
+      "video_sha256": "77af38f6f4ce882406115ae6d10e12caf884da65bda071287bdca563faf17a29",
+      "overview_index": 20,
+      "duration": 676.6433099766433,
+      "category": "compilation",
+      "note": "Retrospective mixed classes; possible reused footage.",
+      "training_approved": false
+    },
+    {
+      "id": "YtomeIYBAhE",
+      "video_sha256": "47a8dd74cf9e766d99feccbdaec17e8c1c7165c16c46c581e73eb6f52da1b680",
+      "overview_index": 21,
+      "duration": 611.5109,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          135
+        ],
+        [
+          155,
+          395
+        ],
+        [
+          435,
+          590
+        ]
+      ],
+      "note": "Mostly ordinary shooters; exclude previously detected brief drone interval and transitions.",
+      "training_approved": false
+    },
+    {
+      "id": "35gc8uMbkiQ",
+      "video_sha256": "2b2c588dd2a5ad5f4e83800c5ac33c83013b2cd4cb3eb58e600bb6aa494e9f26",
+      "overview_index": 22,
+      "duration": 304.9046,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          20,
+          280
+        ]
+      ],
+      "note": "Ordinary cyan shooter; captions, blur/cuts and death ending need rejection.",
+      "training_approved": false
+    },
+    {
+      "id": "fqgBdsbhyxA",
+      "video_sha256": "a3400e2910757bcdd7d26d526b346cd6c646fde80add1afd159d9e4c0a0d30a4",
+      "overview_index": 23,
+      "duration": 671.2706000000001,
+      "category": "compilation",
+      "note": "Special levels/custom presentation and mixed classes; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "6nLJUYmFS9M",
+      "video_sha256": "280da55f25f731b5bed6b6298cb214f8063c3ee96b345b3d5c12c3c8efb8c33f",
+      "overview_index": 24,
+      "duration": 587.9874,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          240
+        ]
+      ],
+      "note": "Early colored ordinary shooters; later deaths and custom black palette.",
+      "training_approved": false
+    },
+    {
+      "id": "UzHLys2AR00",
+      "video_sha256": "6e0d3cceab78f771f4c150d988da7e690b35b6646c00710ecb95546b54f14113",
+      "overview_index": 25,
+      "duration": 294.9279666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          275
+        ]
+      ],
+      "note": "Colored shooters with crowds, captions and cuts; needs closer player-class review.",
+      "training_approved": false
+    },
+    {
+      "id": "59QN_OCbmJY",
+      "video_sha256": "53a59b88555b8bdbdb60395f3c933598c8d64cf10c11dd5a1c081bd32ce64891",
+      "overview_index": 26,
+      "duration": 602.5352666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          455,
+          575
+        ]
+      ],
+      "note": "Mostly drones; late visible ordinary tank is candidate.",
+      "training_approved": false
+    },
+    {
+      "id": "ycjXOBkPaXw",
+      "video_sha256": "601e43c99f082327800257b6fd749e551856ae3f08c71029ac7ce9b4ca4ebb2b",
+      "overview_index": 27,
+      "duration": 285.285,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          245
+        ]
+      ],
+      "note": "Ordinary shooters, changing team colors; late drone class excluded.",
+      "training_approved": false
+    },
+    {
+      "id": "j2rP04_wU3c",
+      "video_sha256": "21db42be00dcac0ca8d91c323647cc3e6464e13ea54df20d927b48b3caf74da5",
+      "overview_index": 28,
+      "duration": 270.57030000000003,
+      "category": "special_class",
+      "note": "Predominantly drone-controlling player.",
+      "training_approved": false
+    },
+    {
+      "id": "Xzj_eAzBuso",
+      "video_sha256": "ab3b28ccfdc8fa84ef0ef3b572d37a5483a19828ebf1a245711498ce3a64a66a",
+      "overview_index": 29,
+      "duration": 243.91033333333334,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          225
+        ]
+      ],
+      "note": "Cyan ordinary shooter; death/blur/captions present and must be removed.",
+      "training_approved": false
+    },
+    {
+      "id": "vSRAZ7Qpwjo",
+      "video_sha256": "94c65f803c0cb221257aa2ce34bd8045e304824cdf8d153bc51e820dc211ee2c",
+      "overview_index": 30,
+      "duration": 606.4725333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          110
+        ]
+      ],
+      "note": "Early shooter; later drone/factory.",
+      "training_approved": false
+    },
+    {
+      "id": "DJb10e4nkjg",
+      "video_sha256": "0c92dc28db4fa821d5b428d40f2bb1e6a401a46ca6b1f4b76ed7be889fbad02a",
+      "overview_index": 31,
+      "duration": 604.0367666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          80,
+          390
+        ],
+        [
+          510,
+          575
+        ]
+      ],
+      "note": "Mostly ordinary shooter intervals, mixed team colors and combat; confirm class boundaries.",
+      "training_approved": false
+    },
+    {
+      "id": "H7fxbdTENaQ",
+      "video_sha256": "235c878c3846d51ee5bc4a4e560eeaae23d60332b41db18127b86e6ba4cb344d",
+      "overview_index": 32,
+      "duration": 601.6343666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          170,
+          430
+        ],
+        [
+          505,
+          560
+        ]
+      ],
+      "note": "Ordinary shooter segments separated by mixed/drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "OYZXgeAdkK8",
+      "video_sha256": "baabf593890624efa3375ddd7eda45c3bb9b42ac6a24f5a41b3b41275d23e357",
+      "overview_index": 33,
+      "duration": 570.2697000000001,
+      "category": "compilation",
+      "note": "Ranked classes, deaths and other-player excerpts; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "dN_UFytK7gw",
+      "video_sha256": "7dee7f070068845f4529d0003510d3d23d7742d8fa9d404ad1f8d6c1901b6fee",
+      "overview_index": 34,
+      "duration": 584.7174666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          220
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone/team-class uncertainty.",
+      "training_approved": false
+    },
+    {
+      "id": "rhrJDjXpEVs",
+      "video_sha256": "1a40038dfcad27082b1f1dfd8aadc4b72a23469428203a94296437bab7b9d7c5",
+      "overview_index": 35,
+      "duration": 594.0601333333334,
+      "category": "mixed",
+      "intervals": [
+        [
+          300,
+          420
+        ],
+        [
+          490,
+          545
+        ]
+      ],
+      "note": "Opening drone crowds; later ordinary shooter candidates with intervening rammer.",
+      "training_approved": false
+    },
+    {
+      "id": "oINpEcYROc8",
+      "video_sha256": "dd92ef6c7888cd42867cc26158b3e960ad0e19235c3988750f9980a919e682a2",
+      "overview_index": 36,
+      "duration": 611.4441666666667,
+      "category": "special_class",
+      "note": "Predominantly drone player.",
+      "training_approved": false
+    },
+    {
+      "id": "u_1_o_wnAT8",
+      "video_sha256": "264514ab81d92b7ad07abe2c31c2cb925191e616359fb8c45bb1d6cf523262e6",
+      "overview_index": 37,
+      "duration": 648.3810666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          50,
+          315
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone classes and intro/outro.",
+      "training_approved": false
+    },
+    {
+      "id": "XMYkDKQyyzw",
+      "video_sha256": "540c81ccd5e59d0c2300df5389fcbe694da66488757535be19d2a9783a214e0b",
+      "overview_index": 38,
+      "duration": 616.5492666666667,
+      "category": "compilation",
+      "note": "Other-player compilation and mixed classes.",
+      "training_approved": false
+    },
+    {
+      "id": "bx5C2eALy20",
+      "video_sha256": "f0498f5a29f6c5f002f88bb7268a2b848e08b6b4247a1334501f3945d281ad31",
+      "overview_index": 39,
+      "duration": 590.256923590257,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          560
+        ]
+      ],
+      "note": "Mostly green ordinary shooter; deaths, crowds and name/caption overlays require screening.",
+      "training_approved": false
+    },
+    {
+      "id": "E0b1NQHRcik",
+      "video_sha256": "061ef9af37a8706047af1cf6b4b2839c8b0b77db85b1ba013e3cd0496c019a3a",
+      "overview_index": 40,
+      "duration": 588.7882,
+      "category": "mixed",
+      "intervals": [
+        [
+          110,
+          225
+        ]
+      ],
+      "note": "Short ordinary shooter section amid drone gameplay.",
+      "training_approved": false
+    },
+    {
+      "id": "_8xrCu0mQh8",
+      "video_sha256": "cfe35f40d149e796427e184ee0083ec03507237d4f3a37821f66816e7677d522",
+      "overview_index": 41,
+      "duration": 637.2699666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          610
+        ]
+      ],
+      "note": "Green sniper/Stalker gameplay; invisibility, crowding and overlays require rejection.",
+      "training_approved": false
+    },
+    {
+      "id": "j22pphsxMpM",
+      "video_sha256": "cbe56e16be30a77675d631757391b07f31041ca63f5f8a8a058c7855ee8193d0",
+      "overview_index": 42,
+      "duration": 580.0127666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          40,
+          160
+        ]
+      ],
+      "note": "Early ordinary cyan shooter; later red drone class.",
+      "training_approved": false
+    },
+    {
+      "id": "ZqSU6aBo044",
+      "video_sha256": "1a0a402e04492519b7b2efca4382846b879b8ff9eef6cb1491c9687d0fd67e00",
+      "overview_index": 43,
+      "duration": 612.0114,
+      "category": "special_class",
+      "note": "Predominantly rammer/landmine player.",
+      "training_approved": false
+    },
+    {
+      "id": "KzxyZEGoSWU",
+      "video_sha256": "0b26861f6e0e965772ce5de10c9d8ff98f0c70622dd640a8e1f108de86db02bf",
+      "overview_index": 44,
+      "duration": 630.296963630297,
+      "category": "mixed",
+      "note": "Crowded sandbox/minigame, uncertain controlled player and mixed classes; defer.",
+      "training_approved": false
+    },
+    {
+      "id": "p93x3LEAYoI",
+      "video_sha256": "933a20ef286ac0c97661afa04e3772340267cd40a682085cf1efe03a70c9cf65",
+      "overview_index": 45,
+      "duration": 591.624958291625,
+      "category": "special_class",
+      "note": "Predominantly drone player with short respawn.",
+      "training_approved": false
+    },
+    {
+      "id": "D6XeiF_Kfh0",
+      "video_sha256": "9c931e5f24cb6710e272925d0c9d7d52b0f47f3d5c50aa7f89c5e0a64e1811a6",
+      "overview_index": 46,
+      "duration": 616.9502836169503,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          175
+        ]
+      ],
+      "note": "Early ordinary shooter; later drones and combat edits.",
+      "training_approved": false
+    },
+    {
+      "id": "CiwIJD0ojic",
+      "video_sha256": "7a374e845f1b17cacd902d8a99c7b5d04324a855f172f852ae2f535182bcdcd6",
+      "overview_index": 47,
+      "duration": 580.6801,
+      "category": "special_class",
+      "note": "Predominantly drone player in sandbox.",
+      "training_approved": false
+    },
+    {
+      "id": "OcUlD5iTbpU",
+      "video_sha256": "da0cdb7b16def8ac333fd2f5e02a282f32510a9b044cd2c01df3e1b7a7a9c5f4",
+      "overview_index": 48,
+      "duration": 605.0711333333334,
+      "category": "special_class",
+      "note": "Predominantly factory/drone player.",
+      "training_approved": false
+    },
+    {
+      "id": "7wHqNBSiKho",
+      "video_sha256": "d0ca5d77d4d2afb506ec4a94952d036be2e054de8de3088ce4a237b070900975",
+      "overview_index": 49,
+      "duration": 616.0821333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          105
+        ],
+        [
+          245,
+          440
+        ]
+      ],
+      "note": "Ordinary-looking shooter intervals; verify hybrid/automatic-drone ambiguity before approval.",
+      "training_approved": false
+    },
+    {
+      "id": "CmfKpCFq4NM",
+      "video_sha256": "e6ee059508f208165eec418235cb4ace864f59edda0bde120f6bd878c34dd6d6",
+      "overview_index": 50,
+      "duration": 574.2403333333333,
+      "category": "special_class",
+      "note": "Factory takeover, square player and crowds.",
+      "training_approved": false
+    },
+    {
+      "id": "-ATyu8dOUg0",
+      "video_sha256": "0047d4403924ddb80109770abbc4b486ca530d23e925f4a82afc9a406f86daa4",
+      "overview_index": 51,
+      "duration": 602.6353666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          40,
+          170
+        ],
+        [
+          240,
+          300
+        ],
+        [
+          375,
+          420
+        ]
+      ],
+      "note": "Leveling shooter sections between repeated drone intervals.",
+      "training_approved": false
+    },
+    {
+      "id": "Hp0rUjKEu2g",
+      "video_sha256": "933cf4b3f70af40e61208f6b0f21e5024e6a866c42193db14f51f1f8dbfaf5fc",
+      "overview_index": 52,
+      "duration": 625.9253,
+      "category": "special_class",
+      "note": "Predominantly drones; short respawn not prioritized.",
+      "training_approved": false
+    },
+    {
+      "id": "1v_EioaHzuI",
+      "video_sha256": "ee46feb12e8dffe5fd4ba1343647970bd293f8c26a38e87134422111a3d69274",
+      "overview_index": 53,
+      "duration": 576.9764,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          560
+        ]
+      ],
+      "note": "Ordinary shooters/Rocketeer; record special projectile appearance and reject edits.",
+      "training_approved": false
+    },
+    {
+      "id": "MTMD1c-qY-s",
+      "video_sha256": "98a7d91e11c9a67935c1da3e216eefa53df7ce1e06347d2bf2a13f341a31e402",
+      "overview_index": 54,
+      "duration": 602.4351666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          110,
+          325
+        ]
+      ],
+      "note": "Shooter middle section; spike/drone elsewhere, captions and transitions.",
+      "training_approved": false
+    },
+    {
+      "id": "mdKD7LhDaNY",
+      "video_sha256": "f297d431cca26405b8368f5f2a774577327fab921d004900d6b9451616555c8e",
+      "overview_index": 55,
+      "duration": 615.7818333333333,
+      "category": "special_class",
+      "note": "Factory/rammer gameplay, crowds and edits.",
+      "training_approved": false
+    },
+    {
+      "id": "1fDZzRp5V7w",
+      "video_sha256": "721921536e46492d0e107f2ebd139ee0a02f0835359d32c21a7827c7d2958927",
+      "overview_index": 56,
+      "duration": 607.4068,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          380
+        ]
+      ],
+      "note": "Sniper/Destroyer despite RAM title; later drone class and deaths. Verify actual body/barrel.",
+      "training_approved": false
+    },
+    {
+      "id": "4qxKEoni9x4",
+      "video_sha256": "cf0758f83530504d0310603f2e1056063b0c926ff8a08f329ccf155b26686202",
+      "overview_index": 57,
+      "duration": 616.7828333333333,
+      "category": "compilation",
+      "note": "Other-player credited footage and custom black/gray palette; defer reuse/palette handling.",
+      "training_approved": false
+    },
+    {
+      "id": "fgFwy03Qxn0",
+      "video_sha256": "407856e995932430759fdde916d858718c05e1836373f7c6455fa34448d345d9",
+      "overview_index": 58,
+      "duration": 1054.9205333333334,
+      "category": "special_class",
+      "note": "Predominantly drone classes, edits.",
+      "training_approved": false
+    },
+    {
+      "id": "rmIfTalT3kM",
+      "video_sha256": "618239503632a5c40f3abbb9dde1af8afe1edfdbc81f2a18ff00a1179b13c858",
+      "overview_index": 59,
+      "duration": 605.2379666666667,
+      "category": "special_class",
+      "note": "Predominantly drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "QE5X7eqyA50",
+      "video_sha256": "61422085f6da0dd21a3261b1419037a94b0dcce5371e6aa4885fa7f102ce5dcf",
+      "overview_index": 60,
+      "duration": 631.9646666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          105
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone player and overlays.",
+      "training_approved": false
+    },
+    {
+      "id": "VV-QcAfx9hI",
+      "video_sha256": "fe412d45afe665f6b7354e2f9fb7ef66e3b8dcf86e717b565a43f25b64e4db73",
+      "overview_index": 61,
+      "duration": 601.8345666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          590
+        ]
+      ],
+      "note": "Ordinary cyan Destroyer throughout sampled gameplay; strong first-pass candidate.",
+      "training_approved": false
+    },
+    {
+      "id": "YZfzsdxDb84",
+      "video_sha256": "622ef9ada37730df14cce3c192226984518007dd256c9c466fd2acf69cfcb3fc",
+      "overview_index": 62,
+      "duration": 678.678,
+      "category": "special_class",
+      "note": "Predominantly drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "-U5UIZ8MBXo",
+      "video_sha256": "025a38e0acb7ebf5bc385837a580d1408ceabb050a9480bd7e43237ab1232191",
+      "overview_index": 63,
+      "duration": 581.0471333333334,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          570
+        ]
+      ],
+      "note": "Ordinary cyan Annihilator/Destroyer; death transition near middle must be rejected.",
+      "training_approved": false
+    },
+    {
+      "id": "Zpy_9XXJtKw",
+      "video_sha256": "84aa1dc37eccc15ada16b1c2e9728b011c7858d429515759b68e7344ac751b71",
+      "overview_index": 64,
+      "duration": 601.0004,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          105
+        ],
+        [
+          505,
+          555
+        ]
+      ],
+      "note": "Short shooter sections; predominantly drone gameplay and deaths.",
+      "training_approved": false
+    },
+    {
+      "id": "s_NMXnRBq7w",
+      "video_sha256": "f21ac980712ee46ea9204e4c380b79fd29c3662e75fbff01949053c680d32452",
+      "overview_index": 65,
+      "duration": 588.588,
+      "category": "mixed",
+      "intervals": [
+        [
+          105,
+          295
+        ],
+        [
+          550,
+          580
+        ]
+      ],
+      "note": "Ordinary shooter middle section; drones elsewhere.",
+      "training_approved": false
+    },
+    {
+      "id": "UjF_w3Jjq3E",
+      "video_sha256": "25849e0d516f1228c0ef1f98684a7273db69d816a5515a5ddb526e5dec40ea5f",
+      "overview_index": 66,
+      "duration": 601.601,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          170
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "OJsD4P2kHZw",
+      "video_sha256": "42f024ce215465696459f0b286a7721a8cab8805f070348ebace1e6187ff01d1",
+      "overview_index": 67,
+      "duration": 604.1035,
+      "category": "mixed",
+      "intervals": [
+        [
+          20,
+          105
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "XsGFmDo11QU",
+      "video_sha256": "aa58a3ff5656905782147534711289007296f305ef3e8ed18c055d90384cdd59",
+      "overview_index": 68,
+      "duration": 683.9833,
+      "category": "mixed",
+      "intervals": [
+        [
+          115,
+          340
+        ],
+        [
+          420,
+          485
+        ]
+      ],
+      "note": "Ordinary shooter sections; invisible/drone periods and edits elsewhere.",
+      "training_approved": false
+    },
+    {
+      "id": "SuhvU0ReMX4",
+      "video_sha256": "f590761c20ea17ddf6c19afda29f832925db1bc63ebc4b262355790f16b5f8aa",
+      "overview_index": 69,
+      "duration": 603.2693333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          230
+        ],
+        [
+          380,
+          590
+        ]
+      ],
+      "note": "Mostly ordinary shooter sections separated by drone classes; multiple team colors.",
+      "training_approved": false
+    },
+    {
+      "id": "haMF0UV2bYs",
+      "video_sha256": "53b6894efef96c21eb6097af716b25b54f668422a357db0df28691519fd938d1",
+      "overview_index": 70,
+      "duration": 603.0024,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          585
+        ]
+      ],
+      "note": "Ordinary cyan shooter/Destroyer; promising unused held-out candidate, captions/cuts still require screening.",
+      "training_approved": false
+    },
+    {
+      "id": "u__MkCJWBZE",
+      "video_sha256": "b01b7db5288146da469d6ed1e067fca11f1e0812dca54eb0af0026b35afc2585",
+      "overview_index": 71,
+      "duration": 567.9006666666667,
+      "category": "special_class",
+      "note": "Auto-trapper, not initial ordinary shooter scope; externally credited footage.",
+      "training_approved": false
+    },
+    {
+      "id": "dgKCNs5Cn24",
+      "video_sha256": "5abc0209ca770923406ad9d0b3d6450142e9fe38e5ca44e2e9247153d54349c4",
+      "overview_index": 72,
+      "duration": 638.8715666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          630
+        ]
+      ],
+      "note": "Ordinary cyan shooter with food and scrolling; already a validation source, captions/deaths need rejection.",
+      "training_approved": false
+    },
+    {
+      "id": "9rvvmxML1FY",
+      "video_sha256": "c6ec06470cdbc49e2991a43df26bedb58cbef597c6621e73a0296899071c1691",
+      "overview_index": 73,
+      "duration": 604.0034,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          35,
+          570
+        ]
+      ],
+      "note": "Ordinary shooters including multibarrel class; intro/outro and transitions excluded.",
+      "training_approved": false
+    },
+    {
+      "id": "0tEeQGSiyH0",
+      "video_sha256": "dec5005eb0458193f9723d58f0454f823d593bd7b63e58e9c3faf6fb73211ee3",
+      "overview_index": 74,
+      "duration": 601.9013,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          580
+        ]
+      ],
+      "note": "Colored Stalker; substantial invisible intervals, must gate visibility and edits.",
+      "training_approved": false
+    },
+    {
+      "id": "fx46FnbYP9Y",
+      "video_sha256": "93f738c42abe34fac6f870dd7e121f580c09bb48d49061c880b6760c58260461",
+      "overview_index": 75,
+      "duration": 611.2439666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          590
+        ]
+      ],
+      "note": "Cyan/green ordinary Destroyer; transitions/captions require screening.",
+      "training_approved": false
+    },
+    {
+      "id": "36X_HOyNETg",
+      "video_sha256": "4cc486ae52e85119307b03e483bec685ffa399e7a76fbd95ea87bc2ed835b097",
+      "overview_index": 76,
+      "duration": 612.5452666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          305
+        ]
+      ],
+      "note": "Early ordinary shooter/hybrid ambiguity; later drones. Verify class before approval.",
+      "training_approved": false
+    },
+    {
+      "id": "o1swktx96bU",
+      "video_sha256": "a4d95005811032ea0ae44b663f1a9edc94db51b4162437fd32d166bf64b0be60",
+      "overview_index": 77,
+      "duration": 611.0437666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          585
+        ]
+      ],
+      "note": "Ordinary shooter/multibarrel progression; food, boss and combat; verify boundaries and cut filtering.",
+      "training_approved": false
+    },
+    {
+      "id": "Mzy_1LcAP7o",
+      "video_sha256": "a46b3b2fdb7a86928f47fb43bb4f9a05d6b1ab7a9955063ecc7efb778f3b2549",
+      "overview_index": 78,
+      "duration": 636.3357,
+      "category": "special_class",
+      "note": "Factory player, square body and drones.",
+      "training_approved": false
+    },
+    {
+      "id": "1tkHsixTALw",
+      "video_sha256": "c4359d86c095adc7c75a54b19f9526ecd44e262e7b9f993f7dccb1d34bd2655e",
+      "overview_index": 79,
+      "duration": 604.2369666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          15,
+          420
+        ]
+      ],
+      "note": "Early ordinary shooters; later drone class.",
+      "training_approved": false
+    },
+    {
+      "id": "IsdEQpGO1Mk",
+      "video_sha256": "3c18c258decfb78f41b1548f623477df50b83ef3d3b22039c416f68b57953aa3",
+      "overview_index": 80,
+      "duration": 642.2082333333334,
+      "category": "compilation",
+      "note": "Takeover highlights compilation with mixed players/classes; defer reuse review.",
+      "training_approved": false
+    },
+    {
+      "id": "ITEHkeX7Myk",
+      "video_sha256": "a4eeddc7e3cb65ae7d00a3a753a2be60573ba99821cd9e32fde71bd359a3a01c",
+      "overview_index": 81,
+      "duration": 605.1712333333334,
+      "category": "special_class",
+      "note": "Predominantly drone player.",
+      "training_approved": false
+    },
+    {
+      "id": "CLSiOG-g_t4",
+      "video_sha256": "62dddd53cb7cecf4835f0246b858e49f1fa542a4c46304d128ff40bfbe029b20",
+      "overview_index": 82,
+      "duration": 571.7378333333334,
+      "category": "mixed",
+      "intervals": [
+        [
+          20,
+          410
+        ]
+      ],
+      "note": "Ordinary multibarrel shooter first portion; deaths and invisible/spike ending.",
+      "training_approved": false
+    },
+    {
+      "id": "Q4u0FpQfT0s",
+      "video_sha256": "42d4586f59a52114083b0bf057b7c9a95c976896c71fa9061f9b2b0446dde95e",
+      "overview_index": 83,
+      "duration": 601.8679333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          50
+        ],
+        [
+          100,
+          240
+        ],
+        [
+          300,
+          580
+        ]
+      ],
+      "note": "Ordinary shooter intervals separated by rammer/drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "soatudugBjY",
+      "video_sha256": "45f38494bb0a8fb05b758c67b3d13f485063c37dac8606965fea33a7e55f346b",
+      "overview_index": 84,
+      "duration": 606.2723333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          100,
+          165
+        ],
+        [
+          370,
+          490
+        ]
+      ],
+      "note": "Ordinary shooter intervals between factory/drone footage.",
+      "training_approved": false
+    },
+    {
+      "id": "VQ1keUxn1Bw",
+      "video_sha256": "f78584666e9841694f94524c5bd4425109627861489e734be3e9c6250155a579",
+      "overview_index": 85,
+      "duration": 605.605,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          575
+        ]
+      ],
+      "note": "Ordinary multibarrel shooters and team-color change; crowds and edits need rejection.",
+      "training_approved": false
+    },
+    {
+      "id": "BqezRLcwq2s",
+      "video_sha256": "153c9cb07c580f83434d7d3531435d700a0e8e886871c68b4701bbfe1e53e3d3",
+      "overview_index": 86,
+      "duration": 608.7414666666667,
+      "category": "special_class",
+      "note": "Mixed drones/trapper; not initial scope.",
+      "training_approved": false
+    },
+    {
+      "id": "SdgNGyCHxrs",
+      "video_sha256": "94c3a683e934b5ff3c1940fc0a655a6419426b144ea45e781f2b136a0b448e71",
+      "overview_index": 87,
+      "duration": 726.8594666666667,
+      "category": "special_class",
+      "note": "Predominantly drone player.",
+      "training_approved": false
+    },
+    {
+      "id": "EHAN8Yw3EuA",
+      "video_sha256": "2c60ec00f52b67f2f87f0ac2e083ee6a3dd0a7e5ee578485f215cec79318e558",
+      "overview_index": 88,
+      "duration": 653.7864666666667,
+      "category": "special_class",
+      "note": "Predominantly drone player and overlays.",
+      "training_approved": false
+    },
+    {
+      "id": "bU9qp8h2dNc",
+      "video_sha256": "4b8f3751b978a3249e042ae4e0c325ee3fd01497a80f90c4b1c1bb4d4e6f253d",
+      "overview_index": 89,
+      "duration": 629.7291,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          600
+        ]
+      ],
+      "note": "Green Ranger/shooter, crowds and overlays; visibility gate required.",
+      "training_approved": false
+    },
+    {
+      "id": "2zc8I-mlZRM",
+      "video_sha256": "8f893dab387ab14a0b9bc7c17b5acf1341d7c72963cda18326ceea41540cff51",
+      "overview_index": 90,
+      "duration": 609.5756333333334,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          590
+        ]
+      ],
+      "note": "Ordinary Destroyer/Hybrid-looking shooter across team colors; verify rear-drone ambiguity and remove cuts.",
+      "training_approved": false
+    },
+    {
+      "id": "2Ty7pbltJvM",
+      "video_sha256": "f4eba2d056c14751740c2421820ceeb045680bbc995fb516d8d6774e086ef42d",
+      "overview_index": 91,
+      "duration": 633.5662666666667,
+      "category": "mixed",
+      "intervals": [
+        [
+          180,
+          590
+        ]
+      ],
+      "note": "Middle ordinary Destroyer section; drones at beginning/end.",
+      "training_approved": false
+    },
+    {
+      "id": "4sMBtZA_kZE",
+      "video_sha256": "04f451f3e57aade8079e5ff25b70bd19a9a518ee34872594ac6f51b103c3f448",
+      "overview_index": 92,
+      "duration": 602.4351666666666,
+      "category": "special_class",
+      "note": "Rammer/spike player.",
+      "training_approved": false
+    },
+    {
+      "id": "2BhF41Xn42U",
+      "video_sha256": "9fb5b50b00ecef2055bbf4499dda687ba89bf2986f71d3106784de2c77d986ed",
+      "overview_index": 93,
+      "duration": 728.1274,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          710
+        ]
+      ],
+      "note": "Ordinary Booster/Fighter shooter; useful movement and firing, crowded sections require checks.",
+      "training_approved": false
+    },
+    {
+      "id": "sDFoV1lTIQ8",
+      "video_sha256": "b4d66ac94b4e86b64a8222f6faf071416835d4e2d1650b79ee9a5da1ae55941b",
+      "overview_index": 94,
+      "duration": 585.2179666666667,
+      "category": "special_class",
+      "note": "Battleship drones, outside initial scope.",
+      "training_approved": false
+    },
+    {
+      "id": "iD4cnIhY-To",
+      "video_sha256": "c41e36c4e975aa2801bdc8d3fecfae21b6fc2b0a1d5e85e794cfa61017915799",
+      "overview_index": 95,
+      "duration": 610.3430666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          580
+        ]
+      ],
+      "note": "Green/red Stalker; filter invisibility, deaths and captions.",
+      "training_approved": false
+    },
+    {
+      "id": "nUm8hjfQ9pc",
+      "video_sha256": "8ee423c87c2a553a9d0b2b63c651bcb1cf1e9a1e24026d5da037a6f88df9ae60",
+      "overview_index": 96,
+      "duration": 623.4228,
+      "category": "mixed",
+      "intervals": [
+        [
+          50,
+          570
+        ]
+      ],
+      "note": "Mostly ordinary multibarrel shooters between drone intervals; verify class boundaries.",
+      "training_approved": false
+    },
+    {
+      "id": "pEJPDYfFQeM",
+      "video_sha256": "9b75be61e9f15e75d7a40691d76505a46826dc56ff0951889b6d96b6b4c9c0b6",
+      "overview_index": 97,
+      "duration": 606.4391666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          580
+        ]
+      ],
+      "note": "Ordinary shooter progression; later hybrid ambiguity needs verification; captions/cuts.",
+      "training_approved": false
+    },
+    {
+      "id": "-WR-7h-leGs",
+      "video_sha256": "da7f541aaffa12c03983ebba60297c9b93304a5bb22af623536e3477b4198918",
+      "overview_index": 98,
+      "duration": 590.3564333333334,
+      "category": "special_class",
+      "note": "Necromancer square player.",
+      "training_approved": false
+    },
+    {
+      "id": "CjnGE_9RJbI",
+      "video_sha256": "30698228354b51c1b99f96d9fa46c1812a18e098104139483347b04229d95668",
+      "overview_index": 99,
+      "duration": 601.1672333333333,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          35,
+          565
+        ]
+      ],
+      "note": "Red Octo shooter, very crowded; reject player occlusion/name overlays.",
+      "training_approved": false
+    },
+    {
+      "id": "umarkPB_gqU",
+      "video_sha256": "31d012233ba2cb2a29fc5dbd56da0f1ec774a4230443e1455ca7073fc5119eb0",
+      "overview_index": 100,
+      "duration": 603.3360666666666,
+      "category": "special_class",
+      "note": "Factory/drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "B7Mieh4P1rk",
+      "video_sha256": "22877cb58c7a05223d44d62aa0e982c48d81db2c4d455ebe980439c5176996a5",
+      "overview_index": 101,
+      "duration": 358.8251333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          100
+        ]
+      ],
+      "note": "Early red ordinary shooter, later drones.",
+      "training_approved": false
+    },
+    {
+      "id": "00vB_YL9k8o",
+      "video_sha256": "8f0210069331c42225add95bbe28dce083f234825ed5fa609a9bf14ee0d7c161",
+      "overview_index": 102,
+      "duration": 604.604,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          35,
+          575
+        ]
+      ],
+      "note": "Green/red Sprayer ordinary shooter; intro/outro, crowded names and cuts require filtering.",
+      "training_approved": false
+    },
+    {
+      "id": "e4Mo0JLJmS4",
+      "video_sha256": "ba56f7baff6049b0e2e76ca5de0c3b22edd1d307e44e693216edf25e4ce6dbad",
+      "overview_index": 103,
+      "duration": 606.8062,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          170
+        ]
+      ],
+      "note": "Early ordinary shooter; later drone classes.",
+      "training_approved": false
+    },
+    {
+      "id": "UWVsBKVm2To",
+      "video_sha256": "5e72640adab362b52eb1bbee035423c011a43d3585cf264334e885024b165c45",
+      "overview_index": 104,
+      "duration": 564.4305333333333,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          550
+        ]
+      ],
+      "note": "Red Triplet shooter; crowded teammate names and captions need screening.",
+      "training_approved": false
+    },
+    {
+      "id": "fJSP0cL-n98",
+      "video_sha256": "144026371ed92df0c773bb05beefa1545e76957bf90ce90d7c8f604ce736ae05",
+      "overview_index": 105,
+      "duration": 579.2666666666667,
+      "category": "special_class",
+      "note": "Predominantly drone player.",
+      "training_approved": false
+    },
+    {
+      "id": "5epLyYmUmD8",
+      "video_sha256": "53cd6b96b0e6c3e8e0c445ff78d9f6a40886462ebb663b3ffe2c80af788de028",
+      "overview_index": 106,
+      "duration": 594.7274666666667,
+      "category": "special_class",
+      "note": "Factory player; food-rich appearance does not change class exclusion.",
+      "training_approved": false
+    },
+    {
+      "id": "iO2JrL-EP3Y",
+      "video_sha256": "229fb1b663013e4a12fa1be60bcd8d6a39917f2174da54808351152caf4ff04f",
+      "overview_index": 107,
+      "duration": 778.0439333333334,
+      "category": "special_class",
+      "note": "Drone player throughout sampled footage.",
+      "training_approved": false
+    },
+    {
+      "id": "YgaN1N7AOZQ",
+      "video_sha256": "6ed41854f652f097df2cf1d300c2852fead541d927588fe0c2d90282166095cf",
+      "overview_index": 108,
+      "duration": 602.602,
+      "category": "mixed",
+      "intervals": [
+        [
+          440,
+          570
+        ]
+      ],
+      "note": "Multiple classes including drones/trapper; late ordinary shooter candidate only.",
+      "training_approved": false
+    },
+    {
+      "id": "RxUI8D6DzMw",
+      "video_sha256": "2f2b44317b2c7cda6654ee092c2327af268898072de6cac63945613878d19d45",
+      "overview_index": 109,
+      "duration": 727.6269,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          710
+        ]
+      ],
+      "note": "Mostly ordinary cyan Destroyer; source includes blurred transitions and captions. Already training source.",
+      "training_approved": false
+    },
+    {
+      "id": "ZdKAlWLVMtE",
+      "video_sha256": "20cd680d48cb97bd896c377f59ebdf721fc1913664effc79f1f35c0f42570626",
+      "overview_index": 110,
+      "duration": 601.3007,
+      "category": "special_class",
+      "note": "Predominantly drones.",
+      "training_approved": false
+    },
+    {
+      "id": "zA9B8C-l_HE",
+      "video_sha256": "92d879b05f19df007c5edef00b910766d4233aa063546fc54125ef134ab9df37",
+      "overview_index": 111,
+      "duration": 656.3890666666666,
+      "category": "mixed",
+      "intervals": [
+        [
+          120,
+          640
+        ]
+      ],
+      "note": "Mostly ordinary multibarrel shooter with boss; verify ambiguous early class and collisions.",
+      "training_approved": false
+    },
+    {
+      "id": "Eg7jb3rl9BA",
+      "video_sha256": "98e3d8b99d5fb832f837d297b1b92173b5bac24c60f40e89e64bf0e9137c145e",
+      "overview_index": 112,
+      "duration": 589.7558333333334,
+      "category": "special_class",
+      "note": "Overlord throughout sampled frames.",
+      "training_approved": false
+    },
+    {
+      "id": "WXmKRyJ137M",
+      "video_sha256": "bfa037231964e2206c731d0ecca6aa3c1cd5d5ce4cab649b8beefd49dbe8a73e",
+      "overview_index": 113,
+      "duration": 665.5649,
+      "category": "special_class",
+      "note": "Overlord and end death.",
+      "training_approved": false
+    },
+    {
+      "id": "lOJM-9UhpuQ",
+      "video_sha256": "13e801fa090e5c2edfaddeb426b1c6711baeb4d3aae6abccb2fdd31a77f6883d",
+      "overview_index": 114,
+      "duration": 179.34583333333333,
+      "category": "mixed",
+      "note": "Team shooter zoom camera often leaves player off center; dense names.",
+      "training_approved": false
+    },
+    {
+      "id": "qgHWurhjiu0",
+      "video_sha256": "8dd69b807b05070f27a350695dd9f4bc2b904e11ec742dbe4b3eaf248326369c",
+      "overview_index": 115,
+      "duration": 614.7141,
+      "category": "special_class",
+      "note": "Overlord.",
+      "training_approved": false
+    },
+    {
+      "id": "QiejzcW2J9s",
+      "video_sha256": "be420d02d8319c9715a9f11c1732ea2aa41bf1b12af6fe3e06a08d329e3a749d",
+      "overview_index": 116,
+      "duration": 663.663,
+      "category": "special_class",
+      "note": "Factory.",
+      "training_approved": false
+    },
+    {
+      "id": "nXmacTJdWMc",
+      "video_sha256": "23a1fd47a21882153b6318243f00c8ab9ad91a5c4e6d0e0e9cd49d1cc68d7622",
+      "overview_index": 117,
+      "duration": 627.3934333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          120,
+          300
+        ],
+        [
+          450,
+          490
+        ],
+        [
+          580,
+          615
+        ]
+      ],
+      "note": "Shooter stretches between drone gameplay; dense review needed.",
+      "training_approved": false
+    },
+    {
+      "id": "yNjdEhCFVdw",
+      "video_sha256": "d5a5114e6971cc40ceaf73f49627733eaaed94d746cc59f72dd0b0e0ce867137",
+      "overview_index": 118,
+      "duration": 585.1846,
+      "category": "special_class",
+      "note": "Overlord.",
+      "training_approved": false
+    },
+    {
+      "id": "5UGw6jEMcYQ",
+      "video_sha256": "26eab687d8d7951ad28518cfc55d5559ab190a2f00b5f31239c5ebc43d1ea08d",
+      "overview_index": 119,
+      "duration": 275.5085666666667,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          260
+        ]
+      ],
+      "note": "Green Destroyer/Hybrid; verify autonomous drones and class scope.",
+      "training_approved": false
+    },
+    {
+      "id": "FiTFmcihB6I",
+      "video_sha256": "4bec18b2ee09858ebf9c2e0a8443fd49e334a95b727a20af695f71570b768388",
+      "overview_index": 120,
+      "duration": 951.4505,
+      "category": "special_class",
+      "note": "Necromancer.",
+      "training_approved": false
+    },
+    {
+      "id": "qW4nBIYZUxM",
+      "video_sha256": "e7a3627c2bad774adf368b313ea442862a057006f1a99b478de4d1b5ef135b9c",
+      "overview_index": 121,
+      "duration": 630.3630666666667,
+      "category": "special_class",
+      "note": "Drone/factory progression.",
+      "training_approved": false
+    },
+    {
+      "id": "9OD4rSA1EHs",
+      "video_sha256": "627d5dad7df55d1391230ec16b5b84c9125ab61df04bb783aa494ae67b45f204",
+      "overview_index": 122,
+      "duration": 421.7213,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          35,
+          410
+        ]
+      ],
+      "note": "Red Hybrid/Destroyer; drone ambiguity requires class verification.",
+      "training_approved": false
+    },
+    {
+      "id": "H2yYgGv-xCI",
+      "video_sha256": "35033b5a4e761203d0ba33abcdb06d11ec926a45fb3120ee53f1a2fd0838773a",
+      "overview_index": 123,
+      "duration": 646.8795666666667,
+      "category": "special_class",
+      "note": "Overlord/rammer with short ordinary start/end.",
+      "training_approved": false
+    },
+    {
+      "id": "NDL5hAQjpIU",
+      "video_sha256": "f7bdce7f4b16cb5daefd3f8bda1587d595f3c4c9d79fdb486624ec4d4f5186f2",
+      "overview_index": 124,
+      "duration": 435.0679666666667,
+      "category": "special_class",
+      "note": "Spike team.",
+      "training_approved": false
+    },
+    {
+      "id": "UsUb8DUvYss",
+      "video_sha256": "638950109f58253c9390c5abfd25886ec8d4864e469946f9e8aa462c61041be0",
+      "overview_index": 125,
+      "duration": 349.3156333333333,
+      "category": "mixed",
+      "note": "Stalker frequently invisible; captions.",
+      "training_approved": false
+    },
+    {
+      "id": "0H52HQHM2dM",
+      "video_sha256": "75de4e0c1f9f2a95e26e6b1a8dc0853c75eefb05f82f1689fb457c5bcc8906c1",
+      "overview_index": 126,
+      "duration": 601.7678333333333,
+      "category": "mixed",
+      "intervals": [
+        [
+          5,
+          170
+        ],
+        [
+          240,
+          390
+        ],
+        [
+          450,
+          560
+        ]
+      ],
+      "note": "Mostly Destroyer, drone intervals and outro.",
+      "training_approved": false
+    },
+    {
+      "id": "j9NZN5e38sw",
+      "video_sha256": "9458c8a71736e650133c79922303ef710e4667532d26515627823d239805972a",
+      "overview_index": 127,
+      "duration": 582.0147666666667,
+      "category": "special_class",
+      "note": "Spike after short shooter start.",
+      "training_approved": false
+    },
+    {
+      "id": "hG216-zybrI",
+      "video_sha256": "e21356a74d39e8a7c59b00c6d9932d81e05300a075c6a28413eb63d9b618b28b",
+      "overview_index": 128,
+      "duration": 584.0835,
+      "category": "special_class",
+      "note": "Overlord.",
+      "training_approved": false
+    },
+    {
+      "id": "a3WnHYFnccg",
+      "video_sha256": "3cd966515dae8d48e9ae5aa04436c3b8a61c9030251d8e9020245f277fdbc4c2",
+      "overview_index": 129,
+      "duration": 354.0203333333333,
+      "category": "special_class",
+      "note": "Overlord with captions.",
+      "training_approved": false
+    },
+    {
+      "id": "vks-GsapOXM",
+      "video_sha256": "680e0687dc46e90ef96f261ff446d1721862ef392cbf1c5e19be40b844205b51",
+      "overview_index": 130,
+      "duration": 325.99233333333336,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          290
+        ]
+      ],
+      "note": "Red Fighter team crowd names, identify player/crop.",
+      "training_approved": false
+    },
+    {
+      "id": "7zAusKTvuiw",
+      "video_sha256": "81f8f33f4f9583edcfff613b0ba6badae598d445ccd8d22cca329f2090ab0637",
+      "overview_index": 131,
+      "duration": 288.0210666666667,
+      "category": "mixed",
+      "note": "Stalker repeated invisibility.",
+      "training_approved": false
+    },
+    {
+      "id": "MwOfFbwymWI",
+      "video_sha256": "678a32d13c0fd9173a31fe4e905af2d267f0100113e2180f845b550c4b1c5001",
+      "overview_index": 132,
+      "duration": 220.8206,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          205
+        ]
+      ],
+      "note": "Green Annihilator, bright hit/death frames.",
+      "training_approved": false
+    },
+    {
+      "id": "PSNubmrTEts",
+      "video_sha256": "a749d3636d6ce3cfb1d8672183edfdb11eb98a4efe0924911ebf164c8c6eb192",
+      "overview_index": 133,
+      "duration": 279.1789,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          250
+        ]
+      ],
+      "note": "Streamliner team crowd names.",
+      "training_approved": false
+    },
+    {
+      "id": "opdjdDeRs60",
+      "video_sha256": "79c66985afcce916edb694a03e69fec95c744b54702a23be8bec4a5be9c5c90a",
+      "overview_index": 134,
+      "duration": 219.51930000000002,
+      "category": "mixed",
+      "note": "Drone with brief shooter ending.",
+      "training_approved": false
+    },
+    {
+      "id": "tNwgW4QBSZU",
+      "video_sha256": "20c4b9d83152f49c7b312008c6b6274b6b0fe9bd115d972a05bc8fd827922439",
+      "overview_index": 135,
+      "duration": 185.9858,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          5,
+          175
+        ]
+      ],
+      "note": "Purple Destroyer, verify drone association.",
+      "training_approved": false
+    },
+    {
+      "id": "JPee4p-t2EY",
+      "video_sha256": "a8879a74a4cee58311ab7a146b417402fa916bddbe45ad77c0e57a9a10cef1bf",
+      "overview_index": 136,
+      "duration": 231.56466666666668,
+      "category": "ordinary_candidate",
+      "intervals": [
+        [
+          30,
+          205
+        ]
+      ],
+      "note": "Purple Ranger team, text/name crowding.",
+      "training_approved": false
+    },
+    {
+      "id": "tucxkLssgRw",
+      "video_sha256": "499d601f02de3370bad0a07393ebc0522168f0a1f80c89abe60b66aebe3d5b67",
+      "overview_index": 137,
+      "duration": 237.40383333333332,
+      "category": "mixed",
+      "intervals": [
+        [
+          125,
+          220
+        ]
+      ],
+      "note": "Overlord first half then ordinary cannon.",
+      "training_approved": false
+    },
+    {
+      "id": "3YbGCwSuTmQ",
+      "video_sha256": "bd80dc31f8cfc83a0c4ae4bb3db75e2c837cd51b700ac632f98b538911caefd9",
+      "overview_index": 138,
+      "duration": 222.58903333333333,
+      "category": "special_class",
+      "note": "Auto/Overlord classes.",
+      "training_approved": false
+    },
+    {
+      "id": "rwMdLWjN2fA",
+      "video_sha256": "3a6b7f841460296db5f46a25e5b44c8eb39c733bd824caeb91415821ec0a89c8",
+      "overview_index": 139,
+      "duration": 294.42746666666665,
+      "category": "special_class",
+      "note": "Overlord.",
+      "training_approved": false
+    },
+    {
+      "id": "zrrqWmtW8-M",
+      "video_sha256": "bd7a4cdbdc087aebcb232efb35b64f77b1b76ce79af968098ac4a34fe3211f19",
+      "overview_index": 140,
+      "duration": 220.75386666666668,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "U_-xLTj9cDM",
+      "video_sha256": "da08be672d56d8ed92942457f11b1c4d653bcc699a71ec2be369e403633e1e56",
+      "overview_index": 141,
+      "duration": 371.00396666666666,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "OvQS3MWUUw4",
+      "video_sha256": "728e92421c488dc65ec9d72332cdfaf4ad1ffa6c10f9aa9cb14996713dd6694c",
+      "overview_index": 142,
+      "duration": 254.68776666666668,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "sPutE2--4PA",
+      "video_sha256": "0e3317ccea8d3cab3b749fc1be404dec63a2dfcd867474789e08d2f3dd7b3d85",
+      "overview_index": 143,
+      "duration": 308.2746333333333,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "OjrdgJ2PRIM",
+      "video_sha256": "5ac1b4e15fcfd70ce747e4e218a48c57d6fa05907bf71d381a15648f9ed24ee3",
+      "overview_index": 144,
+      "duration": 279.14553333333333,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "NL_EAn-Ba4o",
+      "video_sha256": "30f8da9b6d8e25a5aa8f939a12cc9a38daa7405075100f628f44ef0a75e9e321",
+      "overview_index": 145,
+      "duration": 302.76913333333334,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "RRrqWbXbH1A",
+      "video_sha256": "687251ff6972157796990d29f3cc067df509af277140c344706aaf59870a3804",
+      "overview_index": 146,
+      "duration": 452.0849666666667,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "7ZAyubrGouw",
+      "video_sha256": "7e6aed0a75fff1e61f64abe01355ff66281afed7e5b855b5e377aa808e2714ab",
+      "overview_index": 147,
+      "duration": 245.8456,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "O3A3U6fKonM",
+      "video_sha256": "c89290013112cb9f541382300f5b47b5e47d7989ae141af03d1f393e2dd74ce9",
+      "overview_index": 148,
+      "duration": 242.242,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    },
+    {
+      "id": "_FNjCZyWgjw",
+      "video_sha256": "48b1b3888df95b1f72522699c417699ac3bbf72e1f1c77dbf551ac06fa7064b0",
+      "overview_index": 149,
+      "duration": 251.38446666666667,
+      "category": "special_class",
+      "note": "Drone, factory, rammer or auto-turret player in sampled footage; exclude from initial ordinary-shooter pass.",
+      "training_approved": false
+    }
+  ]
+}

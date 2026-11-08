@@ -24,7 +24,7 @@ def catalog(inventory):
         elif re.search(r'diep[.\s-]*io|diepio',title,re.I):status='diep_title_candidate'
         else:status='ambiguous_review_required'
         rows.append(dict(id=video_id,title=title,duration=entry.get('duration'),
-                         channel=inventory.get('channel'),url=f'https://www.youtube.com/watch?v={video_id}',
+                         channel=entry.get('channel') or inventory.get('channel'),url=f'https://www.youtube.com/watch?v={video_id}',
                          split=source_split(video_id),selection=status,training_approved=False))
     return rows
 
