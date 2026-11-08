@@ -1,0 +1,8 @@
+{
+  "review": "runs/longform-expanded-audit-v1",
+  "index_sha256": "ae8eff5ec3032c095ce683e4ddc07092db4141abf4dd8f2bf5631605d8a1fb02",
+  "reviewed_ranges": [[0, 299]],
+  "rejected_indices": {},
+  "method": "All38 pages/300 sampled blocks/12000 displayed frames reviewed. Reproducible source-round-robin random sample of the2475 class-filtered candidate blocks. No visible edited overlay, unsupported player class or internal cut found. Ambiguous127 resolved against original frames in runs/expanded-audit-127-detail.png: ordinary machine-gun firing/movement. Native labels, damage flashes and opponent drones retained. Targeted pre-audits already excluded known bad blocks; this sample measures the resulting pool, not raw screening accuracy. Sampling and reduced image size can miss subtle defects. Duplicate and boundary review still required.",
+  "training_approved": false
+}

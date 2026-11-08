@@ -1,0 +1,12 @@
+{
+  "candidate_index": "runs/longform-expanded-duplicates-v1/index.json",
+  "candidate_index_sha256": "1baa3bc4f486ceab3513729a764c0b9b8c53a9010d229c37538871f160bc0b0d",
+  "class_reviews": ["configs/longform-class-ordinary-long-v1.json", "configs/longform-class-musa-v1.json", "configs/longform-class-masterov-long-v1.json", "configs/longform-class-quarantined-original-v1.json", "configs/longform-class-diverse-v1.json"],
+  "visual_audit": "configs/longform-expanded-audit-v1.json",
+  "duplicate_review": "configs/longform-expanded-duplicate-review-v1.json",
+  "boundary_review": "configs/longform-expanded-boundary-review-v1.json",
+  "source_recipes": ["configs/longform-sources-v1.json", "configs/longform-supplemental2-v1.json"],
+  "exclude_intervals": [{"source_id": "AnMhPHvSLUA", "start": 922, "end": 930, "reason": "Preserve first-cohort unresolved-label exclusion and the resulting sequence gap."}],
+  "scope": "Cumulative replacement for curated-longform-v1, not an addition to its hours. Fifteen-source curation checkpoint; ten-hour corpus incomplete. Known numeric-caption, emoticon, transition and ambiguous-player blocks excluded by hash-bound class decisions before random audit. User requests notification for review when10 clean unique hours are ready. No training before that review.",
+  "training_approved": false
+}

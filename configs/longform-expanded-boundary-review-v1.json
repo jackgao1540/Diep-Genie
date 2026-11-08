@@ -1,0 +1,8 @@
+{
+  "index": "runs/longform-expanded-boundaries-v1/index.json",
+  "index_sha256": "3d828f1375ef26a4fc5eed04a31727e720ea61c7e3d21675220a2fef9250a3c9",
+  "reviewed_ranges": [[0, 1851]],
+  "rejected_indices": [],
+  "method": "All1852 proposed joins inspected across20 sheets as last/first retained frame pairs. No visible discontinuity observed. Joins additionally require original source, interval, crop, FPS and time adjacency; excluded blocks remain gaps. Boundary review plus the300-clip sample does not prove absence of every subtle internal edit.",
+  "training_approved": false
+}

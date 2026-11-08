@@ -1,4 +1,23 @@
-from genie_diep.screen_captions import text_candidate,intersects_crop
+from genie_diep.screen_captions import text_candidate,intersects_crop,score_caption_candidate
+
+
+def test_numeric_caption_misses_without_reintroducing_known_food_misreads():
+    box=[[73,133],[145,134],[144,167],[73,165]]
+    for text,score in [('980k',.99989),('994k°',.92814),('1000',.95)]:
+        assert not text_candidate(text,score,box)
+        assert score_caption_candidate(text,score,box)
+    for text in ('44','70'):
+        assert not score_caption_candidate(text,.99,box)
+    assert not score_caption_candidate('980k',.6,box)
+
+
+def test_stronger_caption_policy_cannot_reuse_legacy_negatives(tmp_path):
+    from types import SimpleNamespace
+    import pytest
+    from scripts.screen_longform import screen_source
+    args=SimpleNamespace(caption_policy='score-captions',previous_screen=['old'])
+    with pytest.raises(ValueError,match='cannot reuse'):
+        screen_source({},args,None,'recipe')
 import json
 import pytest
 from genie_diep.data import ClipDataset

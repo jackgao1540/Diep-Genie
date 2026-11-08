@@ -15,7 +15,7 @@ import cv2
 import numpy as np
 
 from genie_diep.data import file_hash
-from genie_diep.screen_captions import intersects_crop, text_candidate
+from genie_diep.screen_captions import intersects_crop, text_candidate, score_caption_candidate
 from genie_diep.native_text import native_name
 
 
@@ -62,6 +62,11 @@ def crop_frame(frame,crop,padding):
 
 
 def screen_source(source,args,engine,recipe_sha):
+    caption_policy=getattr(args,'caption_policy','legacy')
+    if caption_policy not in ('legacy','score-captions'):raise ValueError('Unknown caption policy')
+    if caption_policy!='legacy' and getattr(args,'previous_screen',[]):
+        raise ValueError('Stronger caption policy cannot reuse earlier negative screens')
+    candidate_fn=score_caption_candidate if caption_policy=='score-captions' else text_candidate
     out=Path(args.out)/source['id'];out.mkdir(parents=True,exist_ok=True)
     media=Path(source['media_path'])
     source_sha=file_hash(media)
@@ -71,6 +76,7 @@ def screen_source(source,args,engine,recipe_sha):
                        fps=args.fps,block_seconds=args.block_seconds,padding=args.padding,
                        proxy_size=args.proxy_size,screen_version=1)
     if policy!='strict':configuration.update(screen_version=2,text_policy=policy)
+    if caption_policy!='legacy':configuration.update(screen_version=3,caption_policy=caption_policy,text_policy=policy)
     config=out/'configuration.json'
     if config.exists() and json.loads(config.read_text())!=configuration:
         raise ValueError('Screen configuration changed: choose a new output directory')
@@ -142,7 +148,7 @@ def screen_source(source,args,engine,recipe_sha):
                     if result.boxes is None:continue
                     for box,txt,score in zip(result.boxes,result.txts,result.scores):
                         box=box-origin
-                        if intersects_crop(box,crop[2],crop[3]) and text_candidate(txt,score,box):
+                        if intersects_crop(box,crop[2],crop[3]) and candidate_fn(txt,score,box):
                             allowed=policy=='native-names' and native_name(full_frames[i],box+np.array(crop[:2]))
                             detections.append(dict(frame=i,text=txt,score=float(score),box=box.tolist(),native_name_allowed=bool(allowed)))
                     if any(not d['native_name_allowed'] for d in detections):
@@ -190,5 +196,6 @@ if __name__=='__main__':
     p.add_argument('--padding',type=int,default=24);p.add_argument('--proxy-size',type=int,default=128)
     p.add_argument('--threads',type=int,default=2);p.add_argument('--shards',type=int,default=1);p.add_argument('--shard',type=int,default=0)
     p.add_argument('--text-policy',choices=['strict','native-names'],default='strict')
+    p.add_argument('--caption-policy',choices=['legacy','score-captions'],default='legacy')
     p.add_argument('--previous-screen',nargs='*',default=[])
     run(p.parse_args())

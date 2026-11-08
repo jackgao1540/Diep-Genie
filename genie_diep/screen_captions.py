@@ -20,6 +20,18 @@ def text_candidate(text,score,box):
                 and np.ptp(box[:,1])>=8 and score>=.5)
 
 
+def score_caption_candidate(text,score,box):
+    """Supplement legacy OCR with large confident score-like text, not symbols.
+
+    Actual missed overlays read '980k' and '994k°'. Keep two-digit food
+    misreads excluded. OCR can still miss emoticons and clipped/short text.
+    """
+    box=np.asarray(box)
+    return text_candidate(text,score,box) or bool(
+        sum(c.isdigit() for c in text)>=3 and score>=.8
+        and np.ptp(box[:,0])>=24 and np.ptp(box[:,1])>=8)
+
+
 def intersects_crop(box,width,height):
     box=np.asarray(box)
     return bool(box[:,0].max()>0 and box[:,0].min()<width and box[:,1].max()>0 and box[:,1].min()<height)

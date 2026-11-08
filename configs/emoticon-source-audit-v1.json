@@ -1,0 +1,17 @@
+{
+  "review": "runs/emoticon-source-audit-v1",
+  "index_sha256": "d26f8c0174963ce2b341acd4800ed5bee43604723a4afc40565b3aaca24fe6d2",
+  "reviewed_ranges": [
+    [
+      0,
+      72
+    ]
+  ],
+  "rejected_indices": {
+    "56": "Visible dissolve/blur in final frames",
+    "65": "Added blue emoticon above player",
+    "66": "Added blue emoticon and dissolve/blur"
+  },
+  "method": "Every displayed frame of every candidate inspected (40 frames per block). Targeted audit after discovery of an OCR miss; not a random cohort quality estimate. Rejections propagated to longform-class-diverse-v1.json. Reduced-resolution visual inspection can still miss subtle artifacts.",
+  "training_approved": false
+}

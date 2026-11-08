@@ -1,0 +1,10 @@
+{
+  "report": "runs/longform-expanded-duplicates-v1/report.json",
+  "report_sha256": "8e0e1c5207abf743a78fe9cf9dfd69073a8b142106b3d05d8af0bad698934764",
+  "index": "runs/longform-expanded-duplicates-v1/index.json",
+  "index_sha256": "1baa3bc4f486ceab3513729a764c0b9b8c53a9010d229c37538871f160bc0b0d",
+  "reviewed_near_run_ranges": [[0, 27]],
+  "confirmed_duplicate_indices": [],
+  "method": "All28 flags reviewed in runs/longform-expanded-duplicate-review-v1, original start/middle/end crops. Three new MasterOv quiet-scene flags differ in grid position and barrel motion; remaining25 Musa flags differ in player class, projectiles or surrounding triangle arrangements. No reused footage confirmed. Cumulative2475-block scan includes the first cohort,19800 sampled informative frames at2FPS; zero exact pairs and zero saturated buckets. Transformed or unsampled reuse remains possible.",
+  "training_approved": false
+}

@@ -1,0 +1,56 @@
+{
+  "review": "runs/class-original-diverse-v1",
+  "index_sha256": "390072fff2f2135ce883898b65e24bf78e98d78cda3d2677ad68de22d3d3b86c",
+  "accepted_ranges": [
+    [
+      0,
+      42
+    ],
+    [
+      44,
+      147
+    ],
+    [
+      149,
+      156
+    ],
+    [
+      159,
+      694
+    ],
+    [
+      696,
+      709
+    ],
+    [
+      712,
+      715
+    ],
+    [
+      717,
+      719
+    ],
+    [
+      721,
+      732
+    ],
+    [
+      734,
+      905
+    ]
+  ],
+  "rejected_indices": {
+    "43": "Full-frame check: player becomes obscured/disappears during damage/death-like event; conservatively excluded",
+    "148": "Visible dissolve/blur found in full-frame targeted audit",
+    "157": "Added blue emoticon above player",
+    "158": "Added blue emoticon above player",
+    "695": "Visible rectangular scene transition in final frames",
+    "710": "Rectangular scene transition and edited score caption",
+    "711": "Edited red numeric score caption (980k)",
+    "716": "Edited numeric score captions (993k/994k)",
+    "720": "Horizontal scene transition",
+    "733": "Clipped edited caption visible at top edge in initial frames"
+  },
+  "method": "All57 original-resolution class pages reviewed, four player samples plus context per block. Targeted full40-frame review covered all73 o1swktx96bU and63 j5LISxLbKNk candidates, exposing additional edited numeric captions, emoticons and scene transitions. Block43 received an enlarged full-frame check. Ordinary fixed-barrel player classes in remaining displayed samples; opponent drones allowed. Full cohort random sample, duplicate and continuity audits remain required.",
+  "training_approved": false
+}

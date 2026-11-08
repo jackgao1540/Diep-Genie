@@ -1,0 +1,20 @@
+{
+  "review": "runs/numeric-source-audit-v1",
+  "index_sha256": "c34ae33d25ebfa8d627b75d2de30fa14dc7fed8d165d6180e93d7fa79c3bb0ed",
+  "reviewed_ranges": [
+    [
+      0,
+      62
+    ]
+  ],
+  "rejected_indices": {
+    "24": "Visible rectangular scene transition in final frames",
+    "39": "Rectangular scene transition and edited score caption",
+    "40": "Edited red numeric score caption (980k)",
+    "45": "Edited numeric score captions (993k/994k)",
+    "49": "Horizontal scene transition",
+    "62": "Clipped edited caption visible at top edge in initial frames"
+  },
+  "method": "Every displayed frame of every candidate inspected (40 frames per block). Targeted audit after discovery of an OCR miss; not a random cohort quality estimate. Rejections propagated to longform-class-diverse-v1.json. Reduced-resolution visual inspection can still miss subtle artifacts.",
+  "training_approved": false
+}
