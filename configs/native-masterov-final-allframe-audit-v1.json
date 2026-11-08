@@ -1,0 +1,13 @@
+{
+  "review": "runs/native-masterov-final-allframe-v1",
+  "index_sha256": "6b46fa23a55d979cff686e260a0010034a81cd31e975505a6667e19c5e6c7476",
+  "reviewed_ranges": [
+    [
+      0,
+      108
+    ]
+  ],
+  "rejected_indices": {},
+  "method": "All 14 sheets inspected, showing all 40 retained proxy frames for every one of 109 class-positive blocks from tRySe3Tx-n0. No additional visible added captions, edited transitions or crop failures found. Native player names, game terrain/base tint and normal damage flashes retained. Reduced-size proxy inspection is not full-resolution perfection; cumulative duplicate, boundary and stratified audits remain required.",
+  "training_approved": false
+}

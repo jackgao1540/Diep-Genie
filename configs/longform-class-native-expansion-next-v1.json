@@ -1,0 +1,115 @@
+{
+  "review": "runs/class-original-native-expansion-next-v1",
+  "index_sha256": "3f658382259cea290c894558d341f246a202fc9c6e2eff2d86c58e8ff2f666b0",
+  "accepted_ranges": [
+    [
+      0,
+      535
+    ],
+    [
+      550,
+      598
+    ],
+    [
+      616,
+      864
+    ],
+    [
+      873,
+      1038
+    ],
+    [
+      1040,
+      1054
+    ],
+    [
+      1056,
+      1245
+    ],
+    [
+      1277,
+      1310
+    ],
+    [
+      1312,
+      1371
+    ]
+  ],
+  "rejected_indices": {
+    "536": "Drone-controlling Overseer class",
+    "537": "Drone-controlling Overseer class",
+    "538": "Drone-controlling Overseer class",
+    "539": "Drone-controlling Overseer class",
+    "540": "Drone-controlling Overseer class",
+    "541": "Drone-controlling Overseer class",
+    "542": "Drone-controlling Overseer class",
+    "543": "Drone-controlling Overseer class",
+    "544": "Drone-controlling Overseer class",
+    "545": "Drone-controlling Overseer class",
+    "546": "Drone-controlling Overseer class",
+    "547": "Drone-controlling Overseer class",
+    "548": "Drone-controlling Overseer class",
+    "549": "Drone-controlling Overseer class",
+    "599": "Drone-controlling Overseer class",
+    "600": "Drone-controlling Overseer class",
+    "601": "Drone-controlling Overseer class",
+    "602": "Drone-controlling Overseer class",
+    "603": "Drone-controlling Overseer class",
+    "604": "Drone-controlling Overseer class",
+    "605": "Drone-controlling Overseer class",
+    "606": "Drone-controlling Overseer class",
+    "607": "Drone-controlling Overseer class",
+    "608": "Drone-controlling Overseer class",
+    "609": "Drone-controlling Overseer class",
+    "610": "Drone-controlling Overseer class",
+    "611": "Drone-controlling Overseer class",
+    "612": "Drone-controlling Overseer class",
+    "613": "Drone-controlling Overseer class",
+    "614": "Drone-controlling Overseer class",
+    "615": "Drone-controlling Overseer class",
+    "865": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "866": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "867": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "868": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "869": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "870": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "871": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "872": "Large forward gun plus rear auxiliary spawner; Hybrid class withheld",
+    "1039": "Hard scene cut changes player/team within block",
+    "1055": "Circular menu overlays player",
+    "1246": "Drone-controlling Overseer class, including transition",
+    "1247": "Drone-controlling Overseer class, including transition",
+    "1248": "Drone-controlling Overseer class, including transition",
+    "1249": "Drone-controlling Overseer class, including transition",
+    "1250": "Drone-controlling Overseer class, including transition",
+    "1251": "Drone-controlling Overseer class, including transition",
+    "1252": "Drone-controlling Overseer class, including transition",
+    "1253": "Drone-controlling Overseer class, including transition",
+    "1254": "Drone-controlling Overseer class, including transition",
+    "1255": "Drone-controlling Overseer class, including transition",
+    "1256": "Drone-controlling Overseer class, including transition",
+    "1257": "Drone-controlling Overseer class, including transition",
+    "1258": "Drone-controlling Overseer class, including transition",
+    "1259": "Drone-controlling Overseer class, including transition",
+    "1260": "Drone-controlling Overseer class, including transition",
+    "1261": "Drone-controlling Overseer class, including transition",
+    "1262": "Drone-controlling Overseer class, including transition",
+    "1263": "Drone-controlling Overseer class, including transition",
+    "1264": "Drone-controlling Overseer class, including transition",
+    "1265": "Drone-controlling Overseer class, including transition",
+    "1266": "Drone-controlling Overseer class, including transition",
+    "1267": "Drone-controlling Overseer class, including transition",
+    "1268": "Drone-controlling Overseer class, including transition",
+    "1269": "Drone-controlling Overseer class, including transition",
+    "1270": "Drone-controlling Overseer class, including transition",
+    "1271": "Drone-controlling Overseer class, including transition",
+    "1272": "Drone-controlling Overseer class, including transition",
+    "1273": "Drone-controlling Overseer class, including transition",
+    "1274": "Drone-controlling Overseer class, including transition",
+    "1275": "Drone-controlling Overseer class, including transition",
+    "1276": "Drone-controlling Overseer class, including transition",
+    "1311": "Abrupt scene/player reset from twin to basic within block"
+  },
+  "method": "All 1372 blocks across 86 original-frame sheets visually reviewed. Exclude Overseer, Hybrid auxiliary spawners, circular menu and abrupt resets. Sparse class decisions only. Targeted full-frame audit required for edited e-8RxOtYZoU; cumulative duplicate and continuity checks outstanding.",
+  "training_approved": false
+}

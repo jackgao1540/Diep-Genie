@@ -1,0 +1,13 @@
+{
+  "review": "runs/native-expansion-next-allframe-v1",
+  "index_sha256": "98f1d7011ade566998fb7053179ddf7d1e78854a21acc21805598ab4c06442c8",
+  "reviewed_ranges": [
+    [
+      0,
+      418
+    ]
+  ],
+  "rejected_indices": {},
+  "method": "All 53 sheets inspected, showing all 40 retained proxy frames for every one of 419 class-positive blocks from e-8RxOtYZoU. No additional visible added captions, edited transitions or crop failures found. Native player names, game terrain/base tint and normal damage flashes retained. Reduced-size proxy inspection is not full-resolution perfection; cumulative duplicate, boundary and stratified audits remain required.",
+  "training_approved": false
+}
