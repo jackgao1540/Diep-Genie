@@ -1,0 +1,1492 @@
+{
+  "manifest_sha256": "67d8c6fdb151c09401703cfe84e0fef1474d3b3172bdc3e743f218edcc842456",
+  "sequences_sha256": "9d11f740e87da3d3d625b1d11f6536d8c618eb9791545966d425b83408378eee",
+  "review_sha256": "a2abf29f1db20a25d763ba8f24ce3911c006bf07a8e62cc912189e5bbfd12e91",
+  "index_sha256": "cafff70b9df7801c937622a0485ad7891a5fb88d26c8fe4e15d2f40fda8c9f03",
+  "metadata": {
+    "all": {
+      "seconds": 42172.0,
+      "blocks": 10543,
+      "videos": 109,
+      "seconds_by_channel": {
+        "Sinbadx": 6616.0,
+        "AlphaSkillz00": 964.0,
+        "MasterOv": 11116.0,
+        "AtmosOps": 1676.0,
+        "PTC pattycakes": 1208.0,
+        "ZackScottGames": 1056.0,
+        "MasterOv & Family!": 1000.0,
+        "Pashalik Games": 4900.0,
+        "Fancy 88": 264.0,
+        "Squeak Legends": 984.0,
+        "Matteo_XZ": 2872.0,
+        "MoltenEarth360\u00b0": 724.0,
+        "69 boys": 580.0,
+        "\u30de\u30b9\u30bf\u30fc /master": 228.0,
+        "skip designer": 768.0,
+        "Nates games1111": 2216.0,
+        "Bababooey": 96.0,
+        "kyloda": 1676.0,
+        "ThoriumHD": 988.0,
+        "phonecatss": 2240.0
+      },
+      "seconds_by_pool": {
+        "raw": 6616.0,
+        "supplemental": 9124.0,
+        "supplemental2": 9916.0,
+        "masterov": 9300.0,
+        "supplemental3": 7216.0
+      },
+      "sources": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "seconds": 2872.0,
+          "channel": "Matteo_XZ"
+        },
+        {
+          "source_id": "n4Sb-H9pM-Q",
+          "seconds": 2240.0,
+          "channel": "phonecatss"
+        },
+        {
+          "source_id": "bSkKxo820is",
+          "seconds": 2216.0,
+          "channel": "Nates games1111"
+        },
+        {
+          "source_id": "CJWlY5GDndo",
+          "seconds": 1816.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "D1Y2kpow5YM",
+          "seconds": 1676.0,
+          "channel": "AtmosOps"
+        },
+        {
+          "source_id": "e-8RxOtYZoU",
+          "seconds": 1676.0,
+          "channel": "kyloda"
+        },
+        {
+          "source_id": "iS_jnBTqi0c",
+          "seconds": 1360.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "Zl-_A3zUn6w",
+          "seconds": 1240.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "Uq_byDCKc9U",
+          "seconds": 1224.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "Iw__m_tFTxE",
+          "seconds": 1208.0,
+          "channel": "PTC pattycakes"
+        },
+        {
+          "source_id": "tWQAx7eWb1A",
+          "seconds": 1140.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "JSyZI-2KEMg",
+          "seconds": 1128.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "JHC8BOtWrKA",
+          "seconds": 1056.0,
+          "channel": "ZackScottGames"
+        },
+        {
+          "source_id": "QDhz5R9gxR8",
+          "seconds": 1000.0,
+          "channel": "MasterOv & Family!"
+        },
+        {
+          "source_id": "iX4CtB3NXtQ",
+          "seconds": 988.0,
+          "channel": "ThoriumHD"
+        },
+        {
+          "source_id": "3K9aU1BNwko",
+          "seconds": 984.0,
+          "channel": "Squeak Legends"
+        },
+        {
+          "source_id": "AnMhPHvSLUA",
+          "seconds": 964.0,
+          "channel": "AlphaSkillz00"
+        },
+        {
+          "source_id": "nqBcHxUQrrg",
+          "seconds": 768.0,
+          "channel": "skip designer"
+        },
+        {
+          "source_id": "fE8mBs7v-8k",
+          "seconds": 724.0,
+          "channel": "MoltenEarth360\u00b0"
+        },
+        {
+          "source_id": "FlzyVTjZRxc",
+          "seconds": 688.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "wp54XkQUhz0",
+          "seconds": 688.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "eGJEVXrV8rs",
+          "seconds": 640.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "fVKMTdpbbFw",
+          "seconds": 632.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "jxk_SQf-aLI",
+          "seconds": 624.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "qz3LCxUIe7c",
+          "seconds": 592.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "IDEuIUEZCoY",
+          "seconds": 580.0,
+          "channel": "69 boys"
+        },
+        {
+          "source_id": "pst7M2Un5Aw",
+          "seconds": 572.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "GOSmSMrDbk4",
+          "seconds": 568.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "zjzq4XfA8DU",
+          "seconds": 484.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "tRySe3Tx-n0",
+          "seconds": 436.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "jrQ8N8LsysA",
+          "seconds": 432.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "y6-L9w3fKLs",
+          "seconds": 416.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "bbyWrwSCq5I",
+          "seconds": 312.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "2zc8I-mlZRM",
+          "seconds": 308.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "St5gqfAbHEo",
+          "seconds": 300.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "ifbuKVQIDC8",
+          "seconds": 292.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "o1swktx96bU",
+          "seconds": 288.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "bU9qp8h2dNc",
+          "seconds": 276.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "RxUI8D6DzMw",
+          "seconds": 272.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "haMF0UV2bYs",
+          "seconds": 264.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "uobBFtK1goY",
+          "seconds": 264.0,
+          "channel": "Fancy 88"
+        },
+        {
+          "source_id": "nUm8hjfQ9pc",
+          "seconds": 260.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "2BhF41Xn42U",
+          "seconds": 256.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "CjnGE_9RJbI",
+          "seconds": 252.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "2Ty7pbltJvM",
+          "seconds": 248.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "9rvvmxML1FY",
+          "seconds": 232.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "1v_EioaHzuI",
+          "seconds": 228.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "j5LISxLbKNk",
+          "seconds": 228.0,
+          "channel": "\u30de\u30b9\u30bf\u30fc /master"
+        },
+        {
+          "source_id": "d5G0470YeuE",
+          "seconds": 224.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "fx46FnbYP9Y",
+          "seconds": 212.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "e6LxjKUgZtI",
+          "seconds": 208.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "-U5UIZ8MBXo",
+          "seconds": 204.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "dgKCNs5Cn24",
+          "seconds": 200.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "VV-QcAfx9hI",
+          "seconds": 164.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "pEJPDYfFQeM",
+          "seconds": 160.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "0tEeQGSiyH0",
+          "seconds": 148.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "1tkHsixTALw",
+          "seconds": 136.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "0H52HQHM2dM",
+          "seconds": 132.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "iD4cnIhY-To",
+          "seconds": 132.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "ycjXOBkPaXw",
+          "seconds": 120.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Q4u0FpQfT0s",
+          "seconds": 116.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "zA9B8C-l_HE",
+          "seconds": 112.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "35gc8uMbkiQ",
+          "seconds": 108.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "CLSiOG-g_t4",
+          "seconds": 108.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "YtomeIYBAhE",
+          "seconds": 104.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "e4Mo0JLJmS4",
+          "seconds": 100.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "H7fxbdTENaQ",
+          "seconds": 100.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "00vB_YL9k8o",
+          "seconds": 96.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "cNy25QYc8GY",
+          "seconds": 96.0,
+          "channel": "Bababooey"
+        },
+        {
+          "source_id": "36X_HOyNETg",
+          "seconds": 88.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "f6x0pEuhJ-Q",
+          "seconds": 72.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "VQ1keUxn1Bw",
+          "seconds": 68.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "_8xrCu0mQh8",
+          "seconds": 56.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "-ATyu8dOUg0",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "1fDZzRp5V7w",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "u_1_o_wnAT8",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Xzj_eAzBuso",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "6nLJUYmFS9M",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "UWVsBKVm2To",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "YgaN1N7AOZQ",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "59QN_OCbmJY",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "dN_UFytK7gw",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "JZ0R1JTdfMo",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "MwOfFbwymWI",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "j22pphsxMpM",
+          "seconds": 36.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "740Dervtqh4",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "erfWgYS9WJ4",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "s_NMXnRBq7w",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "tucxkLssgRw",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "vSRAZ7Qpwjo",
+          "seconds": 28.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "E0b1NQHRcik",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "PSNubmrTEts",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "rhrJDjXpEVs",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "soatudugBjY",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Zpy_9XXJtKw",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "B7Mieh4P1rk",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "D6XeiF_Kfh0",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "LgdTICpqGoY",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "UjF_w3Jjq3E",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "vks-GsapOXM",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "bx5C2eALy20",
+          "seconds": 16.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "QE5X7eqyA50",
+          "seconds": 16.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "DJb10e4nkjg",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "es0u30-F0NA",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "fEHSCu-wTec",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "7wHqNBSiKho",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "9OD4rSA1EHs",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "JPee4p-t2EY",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "OJsD4P2kHZw",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        }
+      ],
+      "top1_share": 0.06810205823769326,
+      "top5_share": 0.2565683391823959,
+      "effective_source_count": 37.01407172657867,
+      "runs": 2662,
+      "longest_seconds": 276.0,
+      "seconds_in_runs_at_least": {
+        "10": 34108.0,
+        "20": 27376.0,
+        "30": 19500.0,
+        "60": 10932.0
+      },
+      "channel_count": 20,
+      "seconds_by_channel_id": {
+        "UCHUQW6_dDHOTV8TtM_OfZsQ": 6616.0,
+        "UCrrs5pSjtFxlfnvOXGTf-Tg": 964.0,
+        "UCYfybUu1hUKRZl3r7FYAgHg": 11116.0,
+        "UCwY06RBMEw5lXq7EIhK7ZXQ": 1676.0,
+        "UCOqDqKocn_XjsvqHUvMrprg": 1208.0,
+        "UCzNhowpzT4AwyIW7Unk_B5Q": 1056.0,
+        "UCUtTt06-cuZoprkR0GPQutg": 1000.0,
+        "UCRHqmzrW7KJYVjdduz1l8mw": 4900.0,
+        "UCVCcoWr_1EWRsqBCX4S2GKw": 264.0,
+        "UCGIKZCMD8z9hJTNlymE-Xbw": 984.0,
+        "UC68grO5whCzwXqgbP3f1Mcw": 2872.0,
+        "UCNqIBNjyS_6BF80jtLT57YQ": 724.0,
+        "UCrH36LwkL9ceej2Ga5MPYyg": 580.0,
+        "UCjUqPsuWt3rBnhG_qTjx4LQ": 228.0,
+        "UCVJtd_7QANl4DGDnR5dRphA": 768.0,
+        "UCVZTuC2ExH82PvU1nc4Sr9g": 2216.0,
+        "UCxHEF8XXdvGgz0nVNjcZJTA": 96.0,
+        "UCGmdFkw90oOP5vIzsHQdt5w": 1676.0,
+        "UCO7rnIYnt3hIZTGFGsszYQA": 988.0,
+        "UCahcB0CpQjzUl2Voxd9hH0Q": 2240.0
+      }
+    },
+    "train": {
+      "seconds": 32028.0,
+      "blocks": 8007,
+      "videos": 85,
+      "seconds_by_channel": {
+        "Sinbadx": 5180.0,
+        "AlphaSkillz00": 964.0,
+        "MasterOv": 7668.0,
+        "PTC pattycakes": 1208.0,
+        "ZackScottGames": 1056.0,
+        "MasterOv & Family!": 1000.0,
+        "Fancy 88": 264.0,
+        "Squeak Legends": 984.0,
+        "Matteo_XZ": 2872.0,
+        "Pashalik Games": 3760.0,
+        "MoltenEarth360\u00b0": 724.0,
+        "69 boys": 580.0,
+        "skip designer": 768.0,
+        "Bababooey": 96.0,
+        "kyloda": 1676.0,
+        "ThoriumHD": 988.0,
+        "phonecatss": 2240.0
+      },
+      "seconds_by_pool": {
+        "raw": 5180.0,
+        "supplemental": 6308.0,
+        "supplemental2": 9688.0,
+        "masterov": 5852.0,
+        "supplemental3": 5000.0
+      },
+      "sources": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "seconds": 2872.0,
+          "channel": "Matteo_XZ"
+        },
+        {
+          "source_id": "n4Sb-H9pM-Q",
+          "seconds": 2240.0,
+          "channel": "phonecatss"
+        },
+        {
+          "source_id": "CJWlY5GDndo",
+          "seconds": 1816.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "e-8RxOtYZoU",
+          "seconds": 1676.0,
+          "channel": "kyloda"
+        },
+        {
+          "source_id": "iS_jnBTqi0c",
+          "seconds": 1360.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "Zl-_A3zUn6w",
+          "seconds": 1240.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "Iw__m_tFTxE",
+          "seconds": 1208.0,
+          "channel": "PTC pattycakes"
+        },
+        {
+          "source_id": "JSyZI-2KEMg",
+          "seconds": 1128.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "JHC8BOtWrKA",
+          "seconds": 1056.0,
+          "channel": "ZackScottGames"
+        },
+        {
+          "source_id": "QDhz5R9gxR8",
+          "seconds": 1000.0,
+          "channel": "MasterOv & Family!"
+        },
+        {
+          "source_id": "iX4CtB3NXtQ",
+          "seconds": 988.0,
+          "channel": "ThoriumHD"
+        },
+        {
+          "source_id": "3K9aU1BNwko",
+          "seconds": 984.0,
+          "channel": "Squeak Legends"
+        },
+        {
+          "source_id": "AnMhPHvSLUA",
+          "seconds": 964.0,
+          "channel": "AlphaSkillz00"
+        },
+        {
+          "source_id": "nqBcHxUQrrg",
+          "seconds": 768.0,
+          "channel": "skip designer"
+        },
+        {
+          "source_id": "fE8mBs7v-8k",
+          "seconds": 724.0,
+          "channel": "MoltenEarth360\u00b0"
+        },
+        {
+          "source_id": "FlzyVTjZRxc",
+          "seconds": 688.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "wp54XkQUhz0",
+          "seconds": 688.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "eGJEVXrV8rs",
+          "seconds": 640.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "fVKMTdpbbFw",
+          "seconds": 632.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "jxk_SQf-aLI",
+          "seconds": 624.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "IDEuIUEZCoY",
+          "seconds": 580.0,
+          "channel": "69 boys"
+        },
+        {
+          "source_id": "GOSmSMrDbk4",
+          "seconds": 568.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "zjzq4XfA8DU",
+          "seconds": 484.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "jrQ8N8LsysA",
+          "seconds": 432.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "bbyWrwSCq5I",
+          "seconds": 312.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "2zc8I-mlZRM",
+          "seconds": 308.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "St5gqfAbHEo",
+          "seconds": 300.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "ifbuKVQIDC8",
+          "seconds": 292.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "bU9qp8h2dNc",
+          "seconds": 276.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "RxUI8D6DzMw",
+          "seconds": 272.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "uobBFtK1goY",
+          "seconds": 264.0,
+          "channel": "Fancy 88"
+        },
+        {
+          "source_id": "nUm8hjfQ9pc",
+          "seconds": 260.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "2BhF41Xn42U",
+          "seconds": 256.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "2Ty7pbltJvM",
+          "seconds": 248.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "9rvvmxML1FY",
+          "seconds": 232.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "1v_EioaHzuI",
+          "seconds": 228.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "d5G0470YeuE",
+          "seconds": 224.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "fx46FnbYP9Y",
+          "seconds": 212.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "-U5UIZ8MBXo",
+          "seconds": 204.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "VV-QcAfx9hI",
+          "seconds": 164.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "pEJPDYfFQeM",
+          "seconds": 160.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "0tEeQGSiyH0",
+          "seconds": 148.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "1tkHsixTALw",
+          "seconds": 136.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "0H52HQHM2dM",
+          "seconds": 132.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "iD4cnIhY-To",
+          "seconds": 132.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Q4u0FpQfT0s",
+          "seconds": 116.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "zA9B8C-l_HE",
+          "seconds": 112.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "35gc8uMbkiQ",
+          "seconds": 108.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "CLSiOG-g_t4",
+          "seconds": 108.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "YtomeIYBAhE",
+          "seconds": 104.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "e4Mo0JLJmS4",
+          "seconds": 100.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "H7fxbdTENaQ",
+          "seconds": 100.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "00vB_YL9k8o",
+          "seconds": 96.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "cNy25QYc8GY",
+          "seconds": 96.0,
+          "channel": "Bababooey"
+        },
+        {
+          "source_id": "36X_HOyNETg",
+          "seconds": 88.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "VQ1keUxn1Bw",
+          "seconds": 68.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "_8xrCu0mQh8",
+          "seconds": 56.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "-ATyu8dOUg0",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "u_1_o_wnAT8",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Xzj_eAzBuso",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "6nLJUYmFS9M",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "UWVsBKVm2To",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "59QN_OCbmJY",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "JZ0R1JTdfMo",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "MwOfFbwymWI",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "740Dervtqh4",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "erfWgYS9WJ4",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "s_NMXnRBq7w",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "tucxkLssgRw",
+          "seconds": 32.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "vSRAZ7Qpwjo",
+          "seconds": 28.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "E0b1NQHRcik",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "PSNubmrTEts",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "rhrJDjXpEVs",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "soatudugBjY",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "B7Mieh4P1rk",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "D6XeiF_Kfh0",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "UjF_w3Jjq3E",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "vks-GsapOXM",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "QE5X7eqyA50",
+          "seconds": 16.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "es0u30-F0NA",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "fEHSCu-wTec",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "7wHqNBSiKho",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "9OD4rSA1EHs",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "JPee4p-t2EY",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "OJsD4P2kHZw",
+          "seconds": 8.0,
+          "channel": "Sinbadx"
+        }
+      ],
+      "top1_share": 0.08967153740477082,
+      "top5_share": 0.3111027850630698,
+      "effective_source_count": 28.4066631013626,
+      "runs": 2018,
+      "longest_seconds": 276.0,
+      "seconds_in_runs_at_least": {
+        "10": 25984.0,
+        "20": 20876.0,
+        "30": 14708.0,
+        "60": 8008.0
+      },
+      "channel_count": 17,
+      "seconds_by_channel_id": {
+        "UCHUQW6_dDHOTV8TtM_OfZsQ": 5180.0,
+        "UCrrs5pSjtFxlfnvOXGTf-Tg": 964.0,
+        "UCYfybUu1hUKRZl3r7FYAgHg": 7668.0,
+        "UCOqDqKocn_XjsvqHUvMrprg": 1208.0,
+        "UCzNhowpzT4AwyIW7Unk_B5Q": 1056.0,
+        "UCUtTt06-cuZoprkR0GPQutg": 1000.0,
+        "UCVCcoWr_1EWRsqBCX4S2GKw": 264.0,
+        "UCGIKZCMD8z9hJTNlymE-Xbw": 984.0,
+        "UC68grO5whCzwXqgbP3f1Mcw": 2872.0,
+        "UCRHqmzrW7KJYVjdduz1l8mw": 3760.0,
+        "UCNqIBNjyS_6BF80jtLT57YQ": 724.0,
+        "UCrH36LwkL9ceej2Ga5MPYyg": 580.0,
+        "UCVJtd_7QANl4DGDnR5dRphA": 768.0,
+        "UCxHEF8XXdvGgz0nVNjcZJTA": 96.0,
+        "UCGmdFkw90oOP5vIzsHQdt5w": 1676.0,
+        "UCO7rnIYnt3hIZTGFGsszYQA": 988.0,
+        "UCahcB0CpQjzUl2Voxd9hH0Q": 2240.0
+      }
+    },
+    "val": {
+      "seconds": 3768.0,
+      "blocks": 942,
+      "videos": 16,
+      "seconds_by_channel": {
+        "Sinbadx": 1316.0,
+        "\u30de\u30b9\u30bf\u30fc /master": 228.0,
+        "MasterOv": 2224.0
+      },
+      "seconds_by_pool": {
+        "raw": 1316.0,
+        "supplemental2": 228.0,
+        "masterov": 2224.0
+      },
+      "sources": [
+        {
+          "source_id": "qz3LCxUIe7c",
+          "seconds": 592.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "pst7M2Un5Aw",
+          "seconds": 572.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "tRySe3Tx-n0",
+          "seconds": 436.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "y6-L9w3fKLs",
+          "seconds": 416.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "o1swktx96bU",
+          "seconds": 288.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "haMF0UV2bYs",
+          "seconds": 264.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "CjnGE_9RJbI",
+          "seconds": 252.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "j5LISxLbKNk",
+          "seconds": 228.0,
+          "channel": "\u30de\u30b9\u30bf\u30fc /master"
+        },
+        {
+          "source_id": "e6LxjKUgZtI",
+          "seconds": 208.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "dgKCNs5Cn24",
+          "seconds": 200.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "ycjXOBkPaXw",
+          "seconds": 120.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "f6x0pEuhJ-Q",
+          "seconds": 72.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "dN_UFytK7gw",
+          "seconds": 40.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "j22pphsxMpM",
+          "seconds": 36.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "Zpy_9XXJtKw",
+          "seconds": 24.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "LgdTICpqGoY",
+          "seconds": 20.0,
+          "channel": "Sinbadx"
+        }
+      ],
+      "top1_share": 0.15711252653927812,
+      "top5_share": 0.6114649681528662,
+      "effective_source_count": 10.029205000113022,
+      "runs": 316,
+      "longest_seconds": 120.0,
+      "seconds_in_runs_at_least": {
+        "10": 2652.0,
+        "20": 1892.0,
+        "30": 1072.0,
+        "60": 488.0
+      },
+      "channel_count": 3,
+      "seconds_by_channel_id": {
+        "UCHUQW6_dDHOTV8TtM_OfZsQ": 1316.0,
+        "UCjUqPsuWt3rBnhG_qTjx4LQ": 228.0,
+        "UCYfybUu1hUKRZl3r7FYAgHg": 2224.0
+      }
+    },
+    "test": {
+      "seconds": 6376.0,
+      "blocks": 1594,
+      "videos": 8,
+      "seconds_by_channel": {
+        "Sinbadx": 120.0,
+        "AtmosOps": 1676.0,
+        "Pashalik Games": 1140.0,
+        "MasterOv": 1224.0,
+        "Nates games1111": 2216.0
+      },
+      "seconds_by_pool": {
+        "raw": 120.0,
+        "supplemental": 2816.0,
+        "masterov": 1224.0,
+        "supplemental3": 2216.0
+      },
+      "sources": [
+        {
+          "source_id": "bSkKxo820is",
+          "seconds": 2216.0,
+          "channel": "Nates games1111"
+        },
+        {
+          "source_id": "D1Y2kpow5YM",
+          "seconds": 1676.0,
+          "channel": "AtmosOps"
+        },
+        {
+          "source_id": "Uq_byDCKc9U",
+          "seconds": 1224.0,
+          "channel": "MasterOv"
+        },
+        {
+          "source_id": "tWQAx7eWb1A",
+          "seconds": 1140.0,
+          "channel": "Pashalik Games"
+        },
+        {
+          "source_id": "1fDZzRp5V7w",
+          "seconds": 48.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "YgaN1N7AOZQ",
+          "seconds": 44.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "bx5C2eALy20",
+          "seconds": 16.0,
+          "channel": "Sinbadx"
+        },
+        {
+          "source_id": "DJb10e4nkjg",
+          "seconds": 12.0,
+          "channel": "Sinbadx"
+        }
+      ],
+      "top1_share": 0.3475533249686324,
+      "top5_share": 0.9887076537013801,
+      "effective_source_count": 3.8636371930635556,
+      "runs": 328,
+      "longest_seconds": 208.0,
+      "seconds_in_runs_at_least": {
+        "10": 5472.0,
+        "20": 4608.0,
+        "30": 3720.0,
+        "60": 2436.0
+      },
+      "channel_count": 5,
+      "seconds_by_channel_id": {
+        "UCHUQW6_dDHOTV8TtM_OfZsQ": 120.0,
+        "UCwY06RBMEw5lXq7EIhK7ZXQ": 1676.0,
+        "UCRHqmzrW7KJYVjdduz1l8mw": 1140.0,
+        "UCYfybUu1hUKRZl3r7FYAgHg": 1224.0,
+        "UCVZTuC2ExH82PvU1nc4Sr9g": 2216.0
+      }
+    }
+  },
+  "semantic_sample": {
+    "train": {
+      "blocks": 64,
+      "seconds": 256.0,
+      "videos": 30,
+      "sampled_blocks_by_source": {
+        "AnMhPHvSLUA": 4,
+        "CJWlY5GDndo": 5,
+        "8f7hehx5w5g": 5,
+        "soatudugBjY": 1,
+        "GOSmSMrDbk4": 1,
+        "n4Sb-H9pM-Q": 3,
+        "fVKMTdpbbFw": 2,
+        "iS_jnBTqi0c": 2,
+        "JHC8BOtWrKA": 4,
+        "00vB_YL9k8o": 1,
+        "jxk_SQf-aLI": 1,
+        "IDEuIUEZCoY": 3,
+        "Zl-_A3zUn6w": 2,
+        "Iw__m_tFTxE": 3,
+        "3K9aU1BNwko": 4,
+        "VQ1keUxn1Bw": 2,
+        "FlzyVTjZRxc": 1,
+        "JSyZI-2KEMg": 2,
+        "iD4cnIhY-To": 1,
+        "cNy25QYc8GY": 1,
+        "e-8RxOtYZoU": 5,
+        "u_1_o_wnAT8": 1,
+        "iX4CtB3NXtQ": 1,
+        "Q4u0FpQfT0s": 1,
+        "nqBcHxUQrrg": 2,
+        "fE8mBs7v-8k": 1,
+        "fx46FnbYP9Y": 1,
+        "0H52HQHM2dM": 1,
+        "wp54XkQUhz0": 1,
+        "QDhz5R9gxR8": 2
+      },
+      "counts": {
+        "player_palette": {
+          "cyan": 35,
+          "red": 23,
+          "green": 3,
+          "purple": 3
+        },
+        "barrel_layout": {
+          "multi": 37,
+          "single": 26,
+          "uncertain": 1
+        },
+        "maze_wall": {
+          "not_seen": 61,
+          "seen": 3
+        },
+        "yellow_square": {
+          "seen": 48,
+          "not_seen": 16
+        },
+        "red_triangle": {
+          "not_seen": 34,
+          "seen": 30
+        },
+        "blue_pentagon": {
+          "not_seen": 50,
+          "seen": 14
+        },
+        "large_blue_pentagon": {
+          "not_seen": 63,
+          "seen": 1
+        },
+        "aim_change": {
+          "seen": 50,
+          "not_seen": 12,
+          "uncertain": 2
+        },
+        "player_firing_evidence": {
+          "seen": 56,
+          "not_seen": 7,
+          "uncertain": 1
+        },
+        "scene_translation": {
+          "seen": 51,
+          "uncertain": 12,
+          "not_seen": 1
+        },
+        "ten_plus_projectiles": {
+          "seen": 20,
+          "not_seen": 44
+        }
+      },
+      "sources_with_observation": {
+        "maze_wall": 3,
+        "yellow_square": 22,
+        "red_triangle": 15,
+        "blue_pentagon": 9,
+        "large_blue_pentagon": 1,
+        "aim_change": 24,
+        "player_firing_evidence": 26,
+        "scene_translation": 25,
+        "ten_plus_projectiles": 13
+      }
+    },
+    "val": {
+      "blocks": 32,
+      "seconds": 128.0,
+      "videos": 10,
+      "sampled_blocks_by_source": {
+        "f6x0pEuhJ-Q": 1,
+        "qz3LCxUIe7c": 5,
+        "o1swktx96bU": 3,
+        "Zpy_9XXJtKw": 2,
+        "pst7M2Un5Aw": 8,
+        "tRySe3Tx-n0": 5,
+        "y6-L9w3fKLs": 3,
+        "haMF0UV2bYs": 2,
+        "e6LxjKUgZtI": 2,
+        "dgKCNs5Cn24": 1
+      },
+      "counts": {
+        "player_palette": {
+          "cyan": 24,
+          "red": 8
+        },
+        "barrel_layout": {
+          "single": 18,
+          "multi": 14
+        },
+        "maze_wall": {
+          "seen": 9,
+          "not_seen": 23
+        },
+        "yellow_square": {
+          "seen": 19,
+          "not_seen": 13
+        },
+        "red_triangle": {
+          "seen": 11,
+          "not_seen": 21
+        },
+        "blue_pentagon": {
+          "not_seen": 30,
+          "seen": 2
+        },
+        "large_blue_pentagon": {
+          "not_seen": 32
+        },
+        "aim_change": {
+          "seen": 28,
+          "not_seen": 4
+        },
+        "player_firing_evidence": {
+          "seen": 27,
+          "not_seen": 3,
+          "uncertain": 2
+        },
+        "scene_translation": {
+          "seen": 26,
+          "uncertain": 5,
+          "not_seen": 1
+        },
+        "ten_plus_projectiles": {
+          "not_seen": 20,
+          "seen": 12
+        }
+      },
+      "sources_with_observation": {
+        "maze_wall": 5,
+        "yellow_square": 9,
+        "red_triangle": 9,
+        "blue_pentagon": 2,
+        "large_blue_pentagon": 0,
+        "aim_change": 10,
+        "player_firing_evidence": 8,
+        "scene_translation": 10,
+        "ten_plus_projectiles": 6
+      }
+    }
+  },
+  "limitations": [
+    "Describe a frozen cohort and prepare a content-bound semantic review sample.\n\nTest metadata is summarized, but test pixels are never selected for this review.\nEight original-crop frames establish observable coverage, not action ground truth\nor a new all-frame quality audit. Sampling is uniform within train/val separately.\n",
+    "Inspected all 24 original-crop storyboards: 96 blocks, eight sampled frames per block (768 images). These are exploratory semantic observations, not exhaustive four-second action labels, a new all-frame quality audit, or renewed class approval.",
+    "For observation fields: seen, not_seen, uncertain. not_seen refers only to displayed frames. Multiple tags can overlap; sample counts cannot be summed as unique duration.",
+    "Source/channel counts describe uploads, not independent creators or gameplay sessions; transformed reuse may remain.",
+    "Sample is uniform over equal-duration blocks within each split. Split sample sizes need not be corpus proportional; do not pool percentages.",
+    "A single reviewer supplied exploratory observations. No inter-rater validation, calibrated action labels, or exhaustive class taxonomy."
+  ],
+  "corpus_complete": false,
+  "training_approved": false
+}
