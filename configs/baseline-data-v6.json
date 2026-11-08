@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "data_binding_only_not_executable_training_config",
+  "architecture_spec": "configs/baseline-v1.json",
+  "architecture_spec_sha256": "7969bbfd5c3cf7dd534bd15598a748abcd097f1533351ee0e1086fb5c857d395",
+  "cohort": "data/curated-longform-v6",
+  "hashes": {
+    "summary.json": "dbf7d8a4469ba77236368b4e372fca073ebdebf35e300873b007ae8177187859",
+    "manifest.jsonl": "b5f4e4bb530d1a2d4851c254305473c9535650e7401df1509dd529764f354a83",
+    "sequences.json": "a62b91f331ce8d962d68a3b1e7bdab731fa4c669e33383c2156071a13558ac9a"
+  },
+  "excluded_source_holds": [
+    "eGJEVXrV8rs"
+  ],
+  "coverage_evidence": "configs/longform-focused-review-v1.json",
+  "cohort_verification": "configs/longform-sixth-checkpoint-v1.json",
+  "note": "Use v6 instead of the historical v5 identity in baseline-v1. Model, optimization, gates and budget remain as designed. Held-source recovery is optional while excluded; implementation and readiness checks are still required.",
+  "training_approved": false,
+  "execution_ready": false
+}

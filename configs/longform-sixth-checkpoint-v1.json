@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "cohort": "data/curated-longform-v6",
+  "hashes": {
+    "summary.json": "dbf7d8a4469ba77236368b4e372fca073ebdebf35e300873b007ae8177187859",
+    "manifest.jsonl": "b5f4e4bb530d1a2d4851c254305473c9535650e7401df1509dd529764f354a83",
+    "sequences.json": "a62b91f331ce8d962d68a3b1e7bdab731fa4c669e33383c2156071a13558ac9a"
+  },
+  "accepted_blocks": 10383,
+  "accepted_hours": 11.536666666666667,
+  "source_count": 108,
+  "seconds_by_split": {
+    "train": 31388.0,
+    "test": 6376.0,
+    "val": 3768.0
+  },
+  "removed_source": "eGJEVXrV8rs",
+  "removed_blocks": 160,
+  "removed_seconds": 640,
+  "retained_rows_identical_to_v5": true,
+  "sequences_are_exact_v5_subset": true,
+  "review_website": {
+    "accepted_train_val_clips": 8789,
+    "held_clips": 160,
+    "rejected_examples": 4,
+    "reserved_test_available": false,
+    "feedback_restart_verified": true
+  },
+  "native_freeze_evidence": {
+    "source_id": "eGJEVXrV8rs",
+    "video_sha256": "2af74598bba52c883c8687238c47ac50e913d6c037cefab32b344d74461df385",
+    "start": 64,
+    "end": 88,
+    "native_frames_analyzed": 720,
+    "fps": 30,
+    "exact_repeated_transitions": 131,
+    "sheet": "runs/footage-review-v1/freeze-detail/native-64-88.png",
+    "sheet_sha256": "2de05321907a9dc91e422fa2bb4dc5e8b3c3f573e703b1df3184927021521c4a",
+    "metrics": "runs/footage-review-v1/freeze-detail/native-deltas.json",
+    "metrics_sha256": "e399841c135292e3fea51db77efb52c78d6a6ce1cf91a9154ec9c54ba9eaf754",
+    "visual_review": "24 original-crop frames at one-second intervals; player/other player/projectile stall around 71-76 seconds confirms quality concern. Native-rate difference analysis is not full visual review. Exact recovery bounds and whole-source clearance remain unresolved."
+  },
+  "corpus_complete": false,
+  "training_approved": false
+}
