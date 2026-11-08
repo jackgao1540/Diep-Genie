@@ -6,20 +6,40 @@ import random
 import numpy as np
 from PIL import Image,ImageDraw
 from genie_diep.data import file_hash
+from genie_diep.curation_reviews import load_class_review
+
+
+def candidates(screens,class_reviews=(),new_only=False):
+    decisions={}
+    for path in class_reviews:
+        for r in load_class_review(path):
+            key=(r['source_id'],r['block_id'])
+            if key in decisions:raise ValueError('Repeated class decision')
+            decisions[key]=r
+    rows=[];seen=set()
+    for root in screens:
+        for path in sorted(Path(root).glob('*/blocks.jsonl')):
+            for line in path.read_text(encoding='utf-8').splitlines():
+                r=json.loads(line)
+                if r['reasons']:continue
+                if new_only and r.get('reused_strict_screen'):continue
+                key=(r['source_id'],r['block_id'])
+                if key in seen:raise ValueError('Repeated source block')
+                seen.add(key)
+                if class_reviews:
+                    decision=decisions.get(key)
+                    if not decision or not decision['class_candidate']:continue
+                    if decision['proxy_sha256']!=r['proxy_sha256']:raise ValueError('Class review hash mismatch')
+                r['proxy_path']=(path.parent/r['proxy']).as_posix()
+                if file_hash(r['proxy_path'])!=r['proxy_sha256']:raise ValueError('Changed candidate')
+                rows.append(r)
+    return rows
 
 
 def run(args):
-    root=Path(args.screen);out=Path(args.out)
+    out=Path(args.out)
     if out.exists():raise FileExistsError('Choose a new immutable review directory')
-    rows=[]
-    for path in sorted(root.glob('*/blocks.jsonl')):
-        for line in path.read_text(encoding='utf-8').splitlines():
-            r=json.loads(line)
-            if r['reasons']:continue
-            if args.new_only and r.get('reused_strict_screen'):continue
-            r['proxy_path']=(path.parent/r['proxy']).as_posix()
-            if file_hash(r['proxy_path'])!=r['proxy_sha256']:raise ValueError('Changed candidate')
-            rows.append(r)
+    rows=candidates([args.screen]+args.extra_screens,args.class_reviews,args.new_only)
     if args.source:rows=[r for r in rows if r['source_id'] in args.source]
     if args.limit and len(rows)>args.limit:
         # Source-stratified round robin random sample, reproducible and disclosed.
@@ -63,4 +83,6 @@ if __name__=='__main__':
     p.add_argument('--mode',choices=['class','audit'],default='audit');p.add_argument('--limit',type=int,default=0)
     p.add_argument('--source',nargs='+');p.add_argument('--seed',type=int,default=20261107)
     p.add_argument('--new-only',action='store_true',help='Review recovered candidates, excluding unchanged strict negatives')
+    p.add_argument('--extra-screens',nargs='*',default=[])
+    p.add_argument('--class-reviews',nargs='*',default=[],help='Only include hash-matched class candidates')
     run(p.parse_args())

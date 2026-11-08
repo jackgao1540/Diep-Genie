@@ -1,0 +1,12 @@
+{
+  "candidate_index": "runs/longform-hour-duplicates-v1/index.json",
+  "candidate_index_sha256": "0dd53bbf18048895566804d90ed6527df604bd8ba60ed3c3de15b0e74ddfab85",
+  "class_reviews": ["configs/longform-class-ordinary-long-v1.json", "configs/longform-class-musa-v1.json"],
+  "visual_audit": "configs/longform-hour-audit-v2.json",
+  "duplicate_review": "configs/longform-hour-duplicate-review-v1.json",
+  "boundary_review": "configs/longform-hour-boundary-review-v1.json",
+  "source_recipes": ["configs/longform-sources-v1.json", "configs/longform-supplemental2-v1.json"],
+  "exclude_intervals": [{"source_id": "AnMhPHvSLUA", "start": 922, "end": 930, "reason": "Unresolved rectangular opponent label. Original-frame neighborhood checked916..935 seconds; preserve a gap, never stitch it out."}],
+  "scope": "First curation cohort only: three sources (two training, one reserved test). Retain artifacts and continue to10 unique clean hours with source diversity and held-out splits. Not authorized for paid training until the full data checkpoint.",
+  "training_approved": false
+}

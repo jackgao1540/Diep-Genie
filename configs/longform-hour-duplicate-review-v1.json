@@ -1,0 +1,10 @@
+{
+  "report": "runs/longform-hour-duplicates-v1/report.json",
+  "report_sha256": "7a2a2f874ed0f0577625df012df73c0ed091640771e86c8e867302d9e0c768cf",
+  "index": "runs/longform-hour-duplicates-v1/index.json",
+  "index_sha256": "0dd53bbf18048895566804d90ed6527df604bd8ba60ed3c3de15b0e74ddfab85",
+  "reviewed_near_run_ranges": [[0, 24]],
+  "confirmed_duplicate_indices": [],
+  "method": "All25 flagged pairs inspected in three sheets using original-resolution crops at start, midpoint and end of both runs. Similar quiet scenes or circling allied drones, with differing projectile/triangle arrangements, barrel orientation or player class; no repeated footage confirmed. Zero exact whole-clip pairs. Screened9072 informative frames at2FPS, zero saturated lookup buckets. This limited check does not rule out heavily transformed or unsampled reuse.",
+  "training_approved": false
+}

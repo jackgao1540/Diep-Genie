@@ -6,6 +6,7 @@ from genie_diep.data import file_hash
 
 def load_class_review(path):
     review=json.loads(Path(path).read_text(encoding='utf-8'))
+    if review.get('invalidated_reason'):raise ValueError('Invalidated class review: '+review['invalidated_reason'])
     if 'rows' in review:return review['rows']
     index_path=Path(review['review'])/'index.json'
     if file_hash(index_path)!=review['index_sha256']:raise ValueError('Changed class review index')

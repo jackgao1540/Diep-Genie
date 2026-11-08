@@ -1,0 +1,11 @@
+{
+  "review": "runs/longform-hour-audit-v2",
+  "index_sha256": "69e59d09751d29cda1588abc2f76c64f4d2812a6d80c48b47deba74775f575df",
+  "reviewed_ranges": [[0, 299]],
+  "rejected_indices": {"147": "Unresolved white rectangular name-like label above opponent; source check runs/hour-audit-v2-detail.png. Conservatively exclude this block and inspect neighboring blocks before acceptance."},
+  "method": "All38 sheets, all40 retained frames per clip at reduced size, source-stratified100 clips each from three class-reviewed long recordings, seed20261107. Original-resolution follow-up confirms ordinary fixed multi-barrel tanks, and resolves one ambiguous label conservatively. No other added overlay, menu, cut or unsupported player class observed. Neighboring clips are correlated and tiny overlays may be missed.",
+  "sample_visibly_clean": 299,
+  "sample_clips": 300,
+  "status": "visual_sample_complete_pending_duplicate_continuity_and_neighbor_checks",
+  "training_approved": false
+}

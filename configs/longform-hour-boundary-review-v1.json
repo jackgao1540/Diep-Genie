@@ -1,0 +1,8 @@
+{
+  "index": "runs/longform-hour-boundaries-v1/index.json",
+  "index_sha256": "9c1211c203408a1411495a689d0c654eaa45aafe35df5c6cbc8bc4cc1f8b4af2",
+  "reviewed_ranges": [[0, 890]],
+  "rejected_indices": [],
+  "method": "All891 proposed joins inspected as last/first retained frame pairs across ten sheets. No visible discontinuity observed. Joins also require original source, interval, crop, FPS and time adjacency. This boundary check and the300-clip full-frame sample are not exhaustive proof against subtle edits.",
+  "training_approved": false
+}

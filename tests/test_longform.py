@@ -22,6 +22,8 @@ def test_compact_review_is_bound_to_index_and_rejects_overlap(tmp_path):
     with pytest.raises(ValueError,match='Overlapping'):load_class_review(review)
     review.write_text(json.dumps(config));index.write_text('{}')
     with pytest.raises(ValueError,match='Changed'):load_class_review(review)
+    review.write_text(json.dumps({'rows':[],'invalidated_reason':'failed full-frame audit'}))
+    with pytest.raises(ValueError,match='Invalidated'):load_class_review(review)
 
 
 def test_native_name_requires_small_outlined_font_and_body():

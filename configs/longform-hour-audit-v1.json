@@ -1,0 +1,14 @@
+{
+  "review": "runs/longform-hour-audit-v1",
+  "index_sha256": "4a175d6cebfd4684e5c58da955418c35bcbaf639be4683a752d5f97f82adfa80",
+  "reviewed_ranges": [[0, 39]],
+  "rejected_indices": {
+    "1": "Global darkening near end; possible death/edit transition, conservatively rejected",
+    "3": "Original frame confirms Auto 5 automatic turrets",
+    "23": "Original frame confirms Hybrid rear drone spawner",
+    "29": "Original frame confirms Hybrid rear drone spawner"
+  },
+  "status": "failed_systematic_class_error",
+  "consequence": "Stopped after five pages/40 clips. Quarantined all144 earlier class candidates in batch1/2. No new training data approved. Original evidence: runs/hour-audit-class-detail.png. Remaining260 sampled clips were not inspected in this aborted audit.",
+  "training_approved": false
+}

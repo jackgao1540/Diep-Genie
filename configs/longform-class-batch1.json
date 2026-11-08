@@ -1,4 +1,5 @@
 {
+  "invalidated_reason": "Full-frame audit runs/longform-hour-audit-v1 found automatic turrets and Hybrid drone spawners missed by small class sheets. All decisions in this early batch are quarantined pending original-resolution re-review.",
   "review": "runs/longform-class-batch1",
   "method": "Four player closeups at one-second spacing per4s block plus context. Sparse class triage only; random full-frame audit still required.",
   "rows": [
