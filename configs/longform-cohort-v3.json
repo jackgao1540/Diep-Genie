@@ -1,0 +1,12 @@
+{
+  "candidate_index": "runs/longform-third-duplicates-v1/index.json",
+  "candidate_index_sha256": "68d13590e617d4ec7e29e115524b4c4e99926ec9b3722141dbc1a35bef835015",
+  "class_reviews": ["configs/longform-class-ordinary-long-v1.json", "configs/longform-class-musa-v1.json", "configs/longform-class-masterov-long-v1.json", "configs/longform-class-quarantined-original-v1.json", "configs/longform-class-diverse-v1.json", "configs/longform-class-long-next-v1.json"],
+  "visual_audit": "configs/longform-third-audit-v1.json",
+  "duplicate_review": "configs/longform-third-duplicate-review-v1.json",
+  "boundary_review": "configs/longform-third-boundary-review-v1.json",
+  "source_recipes": ["configs/longform-sources-v1.json", "configs/longform-supplemental2-v1.json"],
+  "exclude_intervals": [{"source_id": "AnMhPHvSLUA", "start": 922, "end": 930, "reason": "Preserve prior unresolved-label exclusion and sequence gap."}],
+  "scope": "Cumulative replacement for curated-longform-v2, never add their durations. Nineteen-source intermediate curation checkpoint; ten-hour corpus incomplete. No training before the full corpus report and user review.",
+  "training_approved": false
+}

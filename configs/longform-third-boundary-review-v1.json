@@ -1,0 +1,10 @@
+{
+  "index": "runs/longform-third-boundaries-v1/index.json",
+  "index_sha256": "551d6f4dd72850d7e8b9627ee1c5ab974d1caed2b0a9804c592cd811129f9e59",
+  "reviewed_ranges": [[0, 2600]],
+  "rejected_indices": [],
+  "newly_inspected_ranges": [[1470, 2097], [2480, 2600]],
+  "prior_review": "configs/longform-expanded-boundary-review-v1.json",
+  "method": "All749 new joins visually inspected on sheets16..22 and26..28, no visible discontinuity. Remaining1852 joins match previously inspected evidence by source, before/after block IDs and both content hashes. Carry unchanged decisions forward only after exact evidence matching. Original source/time/interval/crop/FPS adjacency remains required. Exclusions remain gaps. Neither boundary review nor sampled full-frame audit proves absence of all subtle internal edits.",
+  "training_approved": false
+}

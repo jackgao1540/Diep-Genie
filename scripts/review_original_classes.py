@@ -6,7 +6,24 @@ import cv2
 from PIL import Image,ImageDraw
 from genie_diep.data import file_hash
 from genie_diep.class_hud import class_bar_crop
+from genie_diep.curation_reviews import load_class_review
 from scripts.review_longform import candidates
+
+
+def unreviewed_rows(rows, reviews):
+    decisions={}
+    for path in reviews:
+        for r in load_class_review(path):
+            key=(r['source_id'],r['block_id'])
+            if key in decisions:raise ValueError('Repeated prior class decision')
+            decisions[key]=r
+    remaining=[]
+    for r in rows:
+        previous=decisions.get((r['source_id'],r['block_id']))
+        if previous:
+            if previous['proxy_sha256']!=r['proxy_sha256']:raise ValueError('Prior class evidence changed')
+        else:remaining.append(r)
+    return remaining
 
 
 def run(args):
@@ -16,6 +33,7 @@ def run(args):
     sources={s['id']:s for p in args.recipes for s in json.loads(Path(p).read_text(encoding='utf-8'))['sources']}
     rows=candidates(args.screens,new_only=args.new_only)
     if args.source:rows=[r for r in rows if r['source_id'] in args.source]
+    rows=unreviewed_rows(rows,args.exclude_reviews)
     if args.limit:rows=rows[:args.limit]
     caps={}
     for sid in {r['source_id'] for r in rows}:
@@ -53,4 +71,6 @@ def run(args):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('screens',nargs='+');p.add_argument('--out',required=True)
     p.add_argument('--recipes',nargs='+',required=True);p.add_argument('--source',nargs='+');p.add_argument('--limit',type=int)
-    p.add_argument('--new-only',action='store_true');run(p.parse_args())
+    p.add_argument('--new-only',action='store_true')
+    p.add_argument('--exclude-reviews',nargs='*',default=[],help='Skip unchanged blocks with accepted or rejected class decisions')
+    run(p.parse_args())

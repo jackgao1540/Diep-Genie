@@ -1,0 +1,11 @@
+{
+  "report": "runs/longform-third-duplicates-v1/report.json",
+  "report_sha256": "f944dc38f257a82dbb28f857a6c364c3440f792f2907807fe18af25d978988e5",
+  "index": "runs/longform-third-duplicates-v1/index.json",
+  "index_sha256": "68d13590e617d4ec7e29e115524b4c4e99926ec9b3722141dbc1a35bef835015",
+  "reviewed_near_run_ranges": [[0, 27]],
+  "confirmed_duplicate_indices": [],
+  "prior_review": "configs/longform-expanded-duplicate-review-v1.json",
+  "method": "Cumulative3440-block scan,27520 informative frames at2FPS, zero exact pairs and zero saturated buckets. All28 near-run records are exactly equal to the prior report whose original start/middle/end crops were reviewed. Prior source/proxy evidence is unchanged; carry those28 false-positive decisions forward. No new near-run flags. This includes comparisons between the965 added candidates and the previous pool. Sampling can miss transformed or unsampled reuse.",
+  "training_approved": false
+}

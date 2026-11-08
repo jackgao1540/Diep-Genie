@@ -1,0 +1,8 @@
+{
+  "review": "runs/longform-third-audit-v1",
+  "index_sha256": "079ce65f52f43b3b45f3682e7204f29939f87ec486aa043f900c5ccaf4d297f3",
+  "reviewed_ranges": [[0, 299]],
+  "rejected_indices": {},
+  "method": "All38 pages,300 sampled blocks and12000 displayed frames inspected from the3440-block cumulative pool. Reproducible source-round-robin random sample. No visible edited caption, internal transition or excluded player class found. Index171 resolved with original-frame detail in runs/third-audit-171-detail.png: outlined triangular game entities approach an ordinary fixed-gun player, not edited text. Native names, opponents and damage flashes retained. Sample-based acceptance can miss subtle defects; it is not exhaustive perfection.",
+  "training_approved": false
+}
