@@ -5,6 +5,20 @@ import numpy as np
 import pytest
 from genie_diep.data import file_hash
 from scripts.screen_longform import crop_frame, player_present, screen_source
+from scripts.report_sequence_lengths import sequence_runs
+
+
+def test_contiguous_runs_do_not_bridge_missing_rejected_or_new_intervals():
+    rows=[dict(source_id='a',split='train',block_id=f'000_{i:06}',start=i*4,end=(i+1)*4,
+               frames=40,fps=10,source_fps=30,crop=[0,0,128,128],video_sha256='sha',reasons=[])
+          for i in range(7)]
+    rows[2]['reasons']=['text']
+    rows[6]['block_id']='001_000000'
+    runs=sequence_runs(rows)
+    assert [r['seconds'] for r in runs]==[8,12,4]
+    assert all(not r['training_approved'] for r in runs)
+    runs=sequence_runs(rows,lambda a,b:b['start']!=16)
+    assert [r['seconds'] for r in runs]==[8,4,8,4]
 
 
 def test_player_palette_and_crop_padding():

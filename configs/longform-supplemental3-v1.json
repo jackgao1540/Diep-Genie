@@ -1,0 +1,107 @@
+{
+  "purpose": "Sparse visual source triage; all intervals provisional, need every-frame screen plus dense class/sample audit. Facecam of n4Sb-H9pM-Q is outside proposed crop.",
+  "sources": [
+    {
+      "id": "n4Sb-H9pM-Q",
+      "media_path": "data/supplemental3/raw/n4Sb-H9pM-Q.mp4",
+      "video_sha256": "5929d6287c2823cb95fb2b2ba0f922effae25f15098e03c6b824f8d2162c2efc",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          3330
+        ]
+      ]
+    },
+    {
+      "id": "iX4CtB3NXtQ",
+      "media_path": "data/supplemental3/raw/iX4CtB3NXtQ.mp4",
+      "video_sha256": "c15ee2a241b60ee0825e700d027c49816bf0cdef08cca5306f52f5c19bb2c0f2",
+      "split": "train",
+      "crop": [
+        144,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          3994
+        ]
+      ]
+    },
+    {
+      "id": "cNy25QYc8GY",
+      "media_path": "data/supplemental3/raw/cNy25QYc8GY.mp4",
+      "video_sha256": "0658205df80e041f25b41bd03ef2c33be5f83f90548251ad1f4189296b244f0c",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          1000
+        ],
+        [
+          2300,
+          4000
+        ]
+      ]
+    },
+    {
+      "id": "bSkKxo820is",
+      "media_path": "data/supplemental3/raw/bSkKxo820is.mp4",
+      "video_sha256": "cd3d123eb329e3405795b46a2dd38800dcd200d3437cd338676cfebdb3ba454c",
+      "split": "test",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          250,
+          3350
+        ]
+      ]
+    },
+    {
+      "id": "e-8RxOtYZoU",
+      "media_path": "data/supplemental3/raw/e-8RxOtYZoU.mp4",
+      "video_sha256": "3614ac95053a7f503e847fe1d55e542ac5eeb31f4351a16825f68dbb1c7cb452",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          1200
+        ],
+        [
+          1400,
+          2200
+        ],
+        [
+          2550,
+          2970
+        ]
+      ]
+    }
+  ]
+}

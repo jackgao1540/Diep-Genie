@@ -1,0 +1,107 @@
+[
+  {
+    "id": "IB8vxQgvgoc",
+    "video_sha256": "0e43afa614278aba54e03141b0bf16eb23fd338d47163d71f1734b9cb32c595b",
+    "decision": "defer",
+    "note": "Deferred: player often off-center; crop needs investigation",
+    "training_approved": false
+  },
+  {
+    "id": "eGJEVXrV8rs",
+    "video_sha256": "2af74598bba52c883c8687238c47ac50e913d6c037cefab32b344d74461df385",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "fE8mBs7v-8k",
+    "video_sha256": "ff7815380527f24cac5e907cd85ecd159f575e0239e338e017e02fc7938396e1",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "dIxCw_YVNsU",
+    "video_sha256": "804d21a7967f40233d36d5f71467509915aabe635acd3f40187c67e6c7ca1a0f",
+    "decision": "defer",
+    "note": "Excluded initial corpus: mobile portrait recording",
+    "training_approved": false
+  },
+  {
+    "id": "8f7hehx5w5g",
+    "video_sha256": "77b4ded7a8a39d3dbe6a8d10b699ffb2fbab067d372a795ae1833d2703b68286",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "j5LISxLbKNk",
+    "video_sha256": "7d30206c4a85ecbb0771f6720dd8efa2525d32cd27f3cb18f9e6d14608758351",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "HrtSO2tLRlo",
+    "video_sha256": "82d6182aa476950570027f4ed42a0ed12eea8f33a1ca25038309a987ae0f5889",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "yD2gYv4wXAY",
+    "video_sha256": "b744e5c3ada855160d8ecbcafe1caef6e5dc750d05903782e0b3f2f1a6c517c8",
+    "decision": "defer",
+    "note": "Excluded initial corpus: mobile controls and camera recording interruption",
+    "training_approved": false
+  },
+  {
+    "id": "IDEuIUEZCoY",
+    "video_sha256": "aaf36ac53332807583ab7ba01b95f82ec44eeb78aa560b10cd21bef65763b2b6",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "nqBcHxUQrrg",
+    "video_sha256": "d2c03fb23f960e04e3e060cba36937c0a58bfa41c14d2aa1e6d624e2d5f1f633",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "3K9aU1BNwko",
+    "video_sha256": "c6187b69d1e8971a4c71a1b0ef0a169126bb51c9dbcaf11d15168c49f69206c0",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "BJA-wXfSy4k",
+    "video_sha256": "9ad7e123c1a9e5a17df83014b740cda18d9b1fd09dd7dc932ac37b9beae526d1",
+    "decision": "defer",
+    "note": "Deferred: custom blue palette",
+    "training_approved": false
+  },
+  {
+    "id": "JSyZI-2KEMg",
+    "video_sha256": "c7fa9a4178d8316479690cb0f1ef6b08a361bb0438fb57d90e860e7e9f35bcac",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "fVKMTdpbbFw",
+    "video_sha256": "717b96ff8aabd4fff830148bc0d82709c2ceac93132cd0440ff15aab2195d60b",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  },
+  {
+    "id": "iS_jnBTqi0c",
+    "video_sha256": "703aa29cf115f1bb422594ec052c93e59ff7fe30d5a736b8d447938b9ad2d81a",
+    "decision": "screen_candidate",
+    "note": "Genuine diep.io ordinary shooter in sparse samples; dense checks still required",
+    "training_approved": false
+  }
+]

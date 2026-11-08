@@ -1,0 +1,915 @@
+{
+  "review": "runs/longform-class-batch2",
+  "method": "Four player closeups at one-second spacing per4s block plus context. Sparse class triage only; random full-frame audit still required.",
+  "rows": [
+    {
+      "review_index": 0,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000002",
+      "proxy_sha256": "92a4a7171d483b9fb07a246efeeaa06f7373ef79d2c9b481e44f06fcef794be7",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 1,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000020",
+      "proxy_sha256": "562789cafa020129ba2eca9412c054b1beef991582302a6402d568af9683219a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 2,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000023",
+      "proxy_sha256": "01569de1c36038325556bf186e85404d5397ad13632c2f1963a1c0a3e351586a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 3,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000027",
+      "proxy_sha256": "3d5226f25e4deb5dc2fc24c294b4075c8046e9194e1a3b072b8c178f4e1ed8a3",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 4,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000028",
+      "proxy_sha256": "baa7cb401683eea6a01b2cfd57188af9f8889748591f25652105c4c7ee910d01",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 5,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000029",
+      "proxy_sha256": "481a546ca2428cb1285a29036b0987581d99c5a5d6689a76cf737bc8672ca689",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 6,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000030",
+      "proxy_sha256": "3350048fde12258b9ac38e89165b6906dbdcc9643b07951899a41afdfa41fbef",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 7,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000031",
+      "proxy_sha256": "c34a5fffd6368bb88dbe06b4d8cec1796bb99a0a045f164b16fc10e6ca85ce37",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 8,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000032",
+      "proxy_sha256": "f12f15aefa475b7571b477631bd26117767f1e119e69313eabe28ea94dae3074",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 9,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000033",
+      "proxy_sha256": "20fbb944fe26221d4834a16adbc2679c0809cb905dcc38eda1f9311bf09cb0b5",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 10,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000034",
+      "proxy_sha256": "fbfec4a834f0f331c51b69962fe4479d75ceb1689e0ae15e6f1f275fd3e975c5",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 11,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000035",
+      "proxy_sha256": "6067e4ffef0ef9eb56a36920120e4b243d1050e24d231f4652c601537521331c",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 12,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000036",
+      "proxy_sha256": "0efb273b57a0a2b74e11a33da9d8b343f55a1622de6e74c3332310d0e496ab51",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 13,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000037",
+      "proxy_sha256": "00429b3377ee6e2292f9dfa4432b6b13f081b55b95c8bd950be7aaf3a75571f2",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 14,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000038",
+      "proxy_sha256": "599d0e007c7855f558c496fdb530717e291cf711050f5c06112bee0af6443b5b",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 15,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000055",
+      "proxy_sha256": "1057d7ef6099e6514c30301c606e310632139abf213b4f9a14e3abb4ea6b71bd",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 16,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000062",
+      "proxy_sha256": "61483c500813c6b11c51129c37e8619cfd68a87ad793b3c256c10a64bffb91f0",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 17,
+      "source_id": "35gc8uMbkiQ",
+      "block_id": "000_000063",
+      "proxy_sha256": "eb106891df1a67683002282938cd7a33d561b761ad9705e838e68fc7bec3eba9",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 18,
+      "source_id": "59QN_OCbmJY",
+      "block_id": "000_000008",
+      "proxy_sha256": "182733b4cd36301c6d3f000023cfdbf7688a235d1521bfad0ba0c6b0e6c658cf",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 19,
+      "source_id": "59QN_OCbmJY",
+      "block_id": "000_000011",
+      "proxy_sha256": "d7c1fcaa2bc99e13d569bec5e920af306ea72961f0fa1a1945eed1274a6534a6",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 20,
+      "source_id": "59QN_OCbmJY",
+      "block_id": "000_000018",
+      "proxy_sha256": "4e3026d28d77a7299d899e6e3b65f2895b27ca495b5b51ec32b8b5f06daac18b",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 21,
+      "source_id": "59QN_OCbmJY",
+      "block_id": "000_000021",
+      "proxy_sha256": "743b22126ca18adc821bdab7ff7943e6c3d1cefbd93456ad7f0442df75248d2c",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 22,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000003",
+      "proxy_sha256": "2623a583ac32b6d1c8ada44a3eb05e564aff89f81fa40d2d6aaa3a1b3d8546da",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 23,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000004",
+      "proxy_sha256": "0f13070d2f8122fd79cfb5569e5c4a13a6d31d7a12d9888d61433ebaf869b370",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 24,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000005",
+      "proxy_sha256": "6672bd07fb1b0d72fd819f2e7db45dffc1746fdeff443375abef562ffbcb6837",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 25,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000006",
+      "proxy_sha256": "93e24b1ed3d941b6cc63e2794c791dd012926c16429eea8ac2bee4d865868ff0",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 26,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000011",
+      "proxy_sha256": "6609c2928838d02e81b427902990770ab358e56fb1bbeae840517ac44ae8cbc0",
+      "class_candidate": false,
+      "reason": "Drone player",
+      "training_approved": false
+    },
+    {
+      "review_index": 27,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000012",
+      "proxy_sha256": "760a3ba2ce7ec5ae4b5a3262886eb4c36ce2d7aa41bcc2e9c6db4d7d1ca7074c",
+      "class_candidate": false,
+      "reason": "Drone player",
+      "training_approved": false
+    },
+    {
+      "review_index": 28,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000056",
+      "proxy_sha256": "593f7a3c8ad52a7d052b07711ff645640f877fde892140ec2dd9816cd6034407",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 29,
+      "source_id": "6nLJUYmFS9M",
+      "block_id": "000_000057",
+      "proxy_sha256": "6142e75ae0e895c9713a55d57582a0418605bb334b46bb4b470c24316757b1e2",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 30,
+      "source_id": "es0u30-F0NA",
+      "block_id": "000_000000",
+      "proxy_sha256": "5dfc9de11fd9a64d85ccf49c90d61d9c81d715394d22a25603500c45fca20e96",
+      "class_candidate": false,
+      "reason": "Factory player",
+      "training_approved": false
+    },
+    {
+      "review_index": 31,
+      "source_id": "UzHLys2AR00",
+      "block_id": "000_000065",
+      "proxy_sha256": "07ecc278c87f4c26b92b93d120a4768bb018c3e6a1d9fefa141e254fbd96b4c7",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 32,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000006",
+      "proxy_sha256": "903eb74ab602382176c3f08a21df2a255a7bce9b0c79e29830596880a2f2f5ea",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 33,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000007",
+      "proxy_sha256": "f5ff2fd5e61d8326236805ae0a72e32180ed7ccb73afaca99aaebb5c1d99f46b",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 34,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000013",
+      "proxy_sha256": "03611856b76a48682eb28a8992b2d12f8e3a557103f6b5e0ea43ba33bc0a532e",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 35,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000022",
+      "proxy_sha256": "5b05739293bb60d2403bb942d572716a51d47896880fa526094ee2aac1986476",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 36,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000023",
+      "proxy_sha256": "39fc26b21341932fc26ff16ead02fb5fea96eb7b8355cbfe1c0b1cb0820d6c1a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 37,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000024",
+      "proxy_sha256": "5f0b1e81d7278f81d6cdad4c5e01d6f2ebe5874fe176ba3078e847294bbdb76f",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 38,
+      "source_id": "vSRAZ7Qpwjo",
+      "block_id": "000_000025",
+      "proxy_sha256": "3944eeef918567789823e7abbd0b6c4d087ecbd156a7b4b785daf2833681f576",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 39,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000005",
+      "proxy_sha256": "29f9d30d8da95de3eff695402e47e36518bce2135f505b4b2a9831640c6e3593",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 40,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000007",
+      "proxy_sha256": "1b5620c8172b0449315b8740695be1f3270e66943ec4d5f55eea180508d3c831",
+      "class_candidate": false,
+      "reason": "Blurred transition",
+      "training_approved": false
+    },
+    {
+      "review_index": 41,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000009",
+      "proxy_sha256": "df8c3e417590ad03cb4afde33294ed00347975b5e1dd20596a61054dcffaa5d2",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 42,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000015",
+      "proxy_sha256": "a082b8cc2b66661638ce8c014ba2b0353237ee68ee9604c92dc5c61538128e30",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 43,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000019",
+      "proxy_sha256": "4370cf09610a1b08105fae4361e1e6fdc076f045e884dbfd56e6cf6f73093871",
+      "class_candidate": false,
+      "reason": "Player obscured/death flash",
+      "training_approved": false
+    },
+    {
+      "review_index": 44,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000020",
+      "proxy_sha256": "9896856a698ed23f8329ea9d7eaaaed38e6cca02fc7b0c0bb16397c7703475b7",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 45,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000021",
+      "proxy_sha256": "2d70939c58fe32370e8d0d3ef5a4a4882e2a173f050ec85fd9979c3307f01b38",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 46,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000022",
+      "proxy_sha256": "139de359ce57cd1b48a9b9e1e387f4f0afd0b47e00a80fb2d12a605679f36180",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 47,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000024",
+      "proxy_sha256": "fd964eb84e01b3ad307a8d9881852bf9fb4257ce0e149859bda6ac72a26aa144",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 48,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000025",
+      "proxy_sha256": "32087267c1a63dd04fff7f52bdd69d78441d9fb2c910b6d7b5db612685992ad6",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 49,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000027",
+      "proxy_sha256": "45019124f239073a6f202b320443d9d21af6ccf4a818bd77855256d80fd4f77b",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 50,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000028",
+      "proxy_sha256": "2e09a514e4cbdf66f2fb441cd80a5751f14e0a3b732c8944f6ad4fb4a4cebc9a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 51,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000029",
+      "proxy_sha256": "34bf6c461253a0a6eef6c3c892d3e3761418f50a9f5cf46a9178b11b0d9917e4",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 52,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000033",
+      "proxy_sha256": "0b34a48fa1163816977a6fd493cd9c010da2786a5bf0b95e8f552a4a0c03498e",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 53,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000039",
+      "proxy_sha256": "73120c464c3f5c2f6ab34fa83ac35f445ead94975ccb855777fec12b7e19c3a4",
+      "class_candidate": false,
+      "reason": "Uncertain drone-assisted class",
+      "training_approved": false
+    },
+    {
+      "review_index": 54,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000040",
+      "proxy_sha256": "91de13002981d56bd23b1fb33aad3e57b91181485bf69984786b64c8c59ccfee",
+      "class_candidate": false,
+      "reason": "Uncertain drone-assisted class",
+      "training_approved": false
+    },
+    {
+      "review_index": 55,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000044",
+      "proxy_sha256": "06c8ccd46cdc98b5a69ba1b5d7ffc8d91bcabcf4ce8d0d5abf3d6ccf037d65e0",
+      "class_candidate": false,
+      "reason": "Drone-associated player",
+      "training_approved": false
+    },
+    {
+      "review_index": 56,
+      "source_id": "Xzj_eAzBuso",
+      "block_id": "000_000045",
+      "proxy_sha256": "e40eef6e7e09575aaa9b91bb76c25ba7ed94532b7dc32a4a584bea5b5fb343d5",
+      "class_candidate": false,
+      "reason": "Drone-associated player",
+      "training_approved": false
+    },
+    {
+      "review_index": 57,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000007",
+      "proxy_sha256": "fa170095dd66c39c2a4c98b0ec12896cf5aac0f9aa5fb0f5f46b922aaf0b80d7",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 58,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000008",
+      "proxy_sha256": "d0ccf153690046c8354008d0b6e65d000325cd09532adc2dec43663383bf7a0c",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 59,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000009",
+      "proxy_sha256": "19c522338f97ab87383e837ff805b8e8e91b25837025fc5ddd1a8200ea9df6e3",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 60,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000010",
+      "proxy_sha256": "8ad9fc368c4178bf1f90398d0524ea72be5a51e9a55262b61ddfa0ed2155e143",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 61,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000011",
+      "proxy_sha256": "4b924382b43add3916fa71a1444f7fdd17956274632820978b5760c1fb2b28dc",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 62,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000012",
+      "proxy_sha256": "c5461ee9095dfcbeaea6f0a2454e9ad1a7ba4e3d480e7962bd346fa067304123",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 63,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000014",
+      "proxy_sha256": "ae5ed051ee2fd4101340e78924e83b9a6e368e46bf8de6b98499a837dc1cb292",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 64,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000015",
+      "proxy_sha256": "644557178803059f7736e53f0460b6dd4850358b1e825f3b6c5fd9bc847db516",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 65,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000016",
+      "proxy_sha256": "73665ae3b0e654cb1756598fd92e089883c0a1e07cabbce749ec6b8918bb5ff7",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 66,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000018",
+      "proxy_sha256": "8078f5c821fcb6512ebe87792b19dbea6383211d7abbf842afe2f8e78845b18d",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 67,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000019",
+      "proxy_sha256": "6c2eded69506f1971f5bfdc8fc1cddd23638a59514d4a4ad32555952436f4cd2",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 68,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000020",
+      "proxy_sha256": "7de4005985af861a76fbb07ff15cb88e311c70987a61ba745646f046a4cec838",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 69,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000021",
+      "proxy_sha256": "e85b3c017b8bbe12df2bda55fca848fa43145b3c6af16032771119d905c4477c",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 70,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000026",
+      "proxy_sha256": "7ffe2c7d681903bb7bd5577ab02a3c0c500a52978ba843ef30378e47b46ede36",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 71,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000031",
+      "proxy_sha256": "05033abd4928552aeb77e21de5fbbf25697be5dc6bd3882ba7c7a31528d98111",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 72,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000035",
+      "proxy_sha256": "5f21a28cbbed3be045e97342ccff452fb481541b9a2d5647f1479b42bee0165f",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 73,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000038",
+      "proxy_sha256": "bb10b467037b654b11e6422fe19c33106dc397de96bd2179b0b4f7fc600ed0b6",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 74,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000039",
+      "proxy_sha256": "530e92ab9e56e2070dc6f521bfb5d3379c4d175d934c551ffa1daf34fa9bc340",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 75,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000042",
+      "proxy_sha256": "a432bcbe80f11b0cc4bacc94237a1a8d05c02af5ef1488eb565ab67e50ca2e27",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 76,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000043",
+      "proxy_sha256": "05550766b8eb807bcf55c859220c9221477017cc23f5790775c3d227d87505ad",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 77,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000048",
+      "proxy_sha256": "9d0c2ee59cf9b43cb6169c7fee1f4ddb2f4d02873d305b3bd2314a28119cf198",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 78,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000049",
+      "proxy_sha256": "b8ea0c5ff41955cc8463a4fec78e488c12dfc3a753c1c97105ee96f264705c86",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 79,
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000050",
+      "proxy_sha256": "29cf6b0ca00af3a60be4937d0aa85ff81cc3e1031f5b816e2d305665b8ff65f6",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 80,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000000",
+      "proxy_sha256": "2ab79cca94a277f6d4eb5c5d31a65237023718f518cbf9b0a43d503567a643d5",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 81,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000011",
+      "proxy_sha256": "fadf30db47c6bf3752335eacf7f51e1ce14351c43250d52dc2bc0d100c9652e3",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 82,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000015",
+      "proxy_sha256": "6c37b73efb3d22f65dfabfb0b39fa027b152dc9f4cad3d40be6c306b46ab0e83",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 83,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000021",
+      "proxy_sha256": "ec9ca9d43c8e1db225630fe89907a39490ea38e51b0dd17f6c07760a3351969a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 84,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000022",
+      "proxy_sha256": "9bfcf747e9e1db305aeffa225e471c8e1262c6174a3f28173524e5b02935fd2f",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 85,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000028",
+      "proxy_sha256": "9debab92b82c07efcde25aaaa52a41d5a874f222723e26be089979b6a71a5c74",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 86,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000029",
+      "proxy_sha256": "9d7a2cff4e46a990141f1d00afaba2f62b136b5662fb67d21b8c385fafbd391a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 87,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "000_000031",
+      "proxy_sha256": "c27261da803b5e31c5ddb84c47d459576c3290c4f9a22c166000486c29828216",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 88,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "001_000001",
+      "proxy_sha256": "c6505ca2345a53ac5c16619b1e82b32a486d49f340bb5ace0cfaf62f2cc3d06f",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 89,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "001_000015",
+      "proxy_sha256": "8570d6ea90d684ff391497f5a4e6d1c84314e7615befe00a05e1828f6d49cb22",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 90,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "001_000018",
+      "proxy_sha256": "07ad1201033c9d7c17810e103938fd368f36608697287b1c8ec2ec1ba89ff6b5",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 91,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "001_000025",
+      "proxy_sha256": "c9c9b9a4abbaa4cf9868722d0cd751121c19c1b6eee2d8eb2087142d3e8231da",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 92,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000002",
+      "proxy_sha256": "ea4d0ac938e63e35480c4a2903b765404e4cb6b890cecdcda4cd92861f0270c1",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 93,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000003",
+      "proxy_sha256": "4baf957370d4536970bb7c432052ba1a508d40151536cd4f5007e01b3f831533",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 94,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000004",
+      "proxy_sha256": "e7ef6395a8443aebaa7cbff83782e929d1c0eb27fd610d9b528bee4f27a5f223",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 95,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000006",
+      "proxy_sha256": "05ae916eafa73e5a77597ef9997626a1907a476d17f67c1edc9b9b20ba7f00d1",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 96,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000018",
+      "proxy_sha256": "ad54b0a1d34af6dab266883dd2d420b47572732f70c7dbb877eda54c56543d6a",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 97,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000019",
+      "proxy_sha256": "0d117f10f8dcbe6ca81fc8acc55503317d778f5dee63a4657aa65a00c292588b",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 98,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000032",
+      "proxy_sha256": "4f1eb39b32db65d4e6708e09ad5d163d9079bfb697cb76a3a6b79605395d54c9",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 99,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000033",
+      "proxy_sha256": "622818845f45c01457fa78ffc6edeec063ca7f9335de8be32e459e65319a5c54",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    },
+    {
+      "review_index": 100,
+      "source_id": "YtomeIYBAhE",
+      "block_id": "002_000037",
+      "proxy_sha256": "d24004678f1870c2fbb681909501e251bd158563ff0d99b7bacf88eeabbebab5",
+      "class_candidate": true,
+      "reason": "Ordinary shooter in displayed frames",
+      "training_approved": false
+    }
+  ]
+}
