@@ -1,0 +1,51 @@
+{
+  "review": "runs/class-original-quarantined-v1",
+  "index_sha256": "9967bfde188662f96d6b32845dd11f3e1d0bc03a5029a5a4efa00003ff8bab05",
+  "accepted_ranges": [
+    [
+      3,
+      3
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      16,
+      22
+    ],
+    [
+      26,
+      26
+    ],
+    [
+      28,
+      38
+    ]
+  ],
+  "rejected_indices": {
+    "0": "Drone or uncertain attachment",
+    "1": "Drone or uncertain attachment",
+    "2": "Drone or uncertain attachment",
+    "4": "Independent automatic turrets",
+    "5": "Independent automatic turrets",
+    "6": "Independent automatic turrets",
+    "7": "Independent automatic turrets",
+    "8": "Independent automatic turrets",
+    "12": "Drone or uncertain attachment",
+    "13": "Drone or uncertain attachment",
+    "14": "Drone or uncertain attachment",
+    "15": "Drone or uncertain attachment",
+    "23": "Player rear drone spawner / Hybrid",
+    "24": "Player rear drone spawner / Hybrid",
+    "25": "Player rear drone spawner / Hybrid",
+    "27": "Visible dissolve/blur in displayed original sample",
+    "39": "Player rear drone spawner / Hybrid",
+    "40": "Player rear drone spawner / Hybrid",
+    "41": "Player rear drone spawner / Hybrid",
+    "42": "Player rear drone spawner / Hybrid",
+    "43": "Player rear drone spawner / Hybrid"
+  },
+  "method": "All 44 blocks across three original-frame sheets reviewed. Larger views expose Auto5 turrets and Hybrid rear drone spawners missed by earlier tiny proxy sheets. Only displayed ordinary-shooter samples retained provisionally. Old batch review files remain invalidated; these new content-bound decisions do not approve full clips.",
+  "training_approved": false
+}

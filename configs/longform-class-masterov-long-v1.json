@@ -1,0 +1,8 @@
+{
+  "review": "runs/class-original-masterov-long-v1",
+  "index_sha256": "eb0306693ba4de3652284287f61b877fe204dfddbda7bdb5d16589cc2e913a7b",
+  "accepted_ranges": [[0, 421]],
+  "rejected_indices": {},
+  "method": "All 27 pages inspected, four original-resolution player samples plus context per block. Ordinary fixed-barrel shooters throughout the displayed samples, including basic, machine-gun, twin, quad, octagonal and rear-thrust gun configurations. No independent automatic turret or player-controlled drone attachment observed. Other players may use those classes. Native damage flashes retained. Class-bar crops are unverified visual assistance, not OCR evidence. Full-frame sample, duplicate and continuity audits remain required.",
+  "training_approved": false
+}
