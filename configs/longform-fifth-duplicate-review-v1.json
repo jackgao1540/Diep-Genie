@@ -1,0 +1,25 @@
+{
+  "report": "runs/longform-fifth-duplicates-v1/report.json",
+  "report_sha256": "3a35ab57620ea3ef6b8c21afd77652ca6de6e4cf0ef74fc6248e6fb7a229eb66",
+  "index": "runs/longform-fifth-duplicates-v1/index.json",
+  "index_sha256": "7e741b7ac47cfd19d74961aa15fa6fd98e69a340f2836e1163f7fff1d692fe94",
+  "reviewed_near_run_ranges": [
+    [
+      0,
+      253
+    ]
+  ],
+  "confirmed_duplicate_indices": [
+    18,
+    19,
+    20,
+    21,
+    85,
+    86,
+    87
+  ],
+  "original_review": "runs/longform-fifth-duplicate-original-v1",
+  "original_review_index_sha256": "58b75e11777d90079bab80fcdbe669cf902a5b22443b2e7ac123fb84e91e7881",
+  "method": "All 254 flags inspected on 32 original-frame start/middle/end comparison sheets. Seven confirmed flags repeat prior cross-video reuse (MTMD1c-qY-s/RxUI8D6DzMw, fx46FnbYP9Y/SuhvU0ReMX4) and frozen/repeated eGJEVXrV8rs footage. Preserve whole-source quarantines and eGJ430..470. Other 247 flags differ in objects, class, aim, projectiles or terrain. 10745 clips,85944 informative sampled frames,16 low-information frames,zero exact pairs,zero saturated buckets. Sampling can miss transformed or unsampled reuse.",
+  "training_approved": false
+}
