@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "training_approved": false,
+  "test_pixels_reviewed": false,
+  "method": "Purposive follow-up, all 40 retained 10-FPS frames per block rendered from original crops at 200px. Not full native-frame-rate review, prevalence estimates or input labels.",
+  "definitions": {
+    "none_visible": "No new player-attributable muzzle emission visible in retained frames; not proof that firing input was off.",
+    "visually_stable": "Scenery appears stable in both axes, with continuing gameplay activity; not verified zero movement input.",
+    "quality_hold": "Do not train on held source until neighboring interval audit and a new versioned eligibility manifest resolve it.",
+    "omitted_category": "Not annotated, not an absence claim."
+  },
+  "batches": [
+    {
+      "name": "initial",
+      "request": "configs/longform-focused-request-v1.json",
+      "index": "runs/longform-focused-coverage-v1/dense-initial/index.json",
+      "annotations": [
+        {
+          "review_index": 0,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Maze wall remains visible; wall translation and intermittent player bullet emission."
+        },
+        {
+          "review_index": 1,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Sparse eight-frame review missed muzzle emission between sampled offsets. Dense review finds firing; do not count as a non-firing block."
+        },
+        {
+          "review_index": 2,
+          "firing": "none_visible",
+          "scene_motion": "slow_drift",
+          "aim_change": "not_seen",
+          "notes": "No player emission in 40 retained frames; food and arena edge drift slightly. This is low motion, not a confirmed stationary action."
+        },
+        {
+          "review_index": 3,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Green player does not visibly emit bullets; slight late aim turn while food translates. Red opponent bullets remain distinct."
+        },
+        {
+          "review_index": 4,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Maze traversal with visible player emission and barrel turn; enemy drones do not disqualify player."
+        },
+        {
+          "review_index": 5,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "not_seen",
+          "notes": "No cyan player emission in 40 frames. Red opponent fires. Maze walls and ordinary pentagon are visible."
+        },
+        {
+          "review_index": 6,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "No new player muzzle emission over 40 frames; a pre-existing projectile exits at the beginning. Food scrolls while multi-barrel orientation changes."
+        },
+        {
+          "review_index": 7,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "A green projectile emerges from the barrel early in the block between sparse offsets. Second missed firing example from the sparse sample."
+        },
+        {
+          "review_index": 8,
+          "firing": "none_visible",
+          "scene_motion": "unknown",
+          "aim_change": "not_seen",
+          "notes": "No emission; almost empty crop gives no reliable scenery anchor. Small late barrel turn does not establish independent aiming while stationary."
+        },
+        {
+          "review_index": 9,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Confirms ordinary and large pentagons in accepted training footage; multi-barrel player fires while turning."
+        },
+        {
+          "review_index": 10,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Confirms ordinary blue pentagon in validation; player firing and food translation."
+        },
+        {
+          "review_index": 11,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "not_seen",
+          "notes": "No player emission in 40 frames while maze walls translate; opponent red bullets remain visible."
+        },
+        {
+          "review_index": 12,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "not_seen",
+          "notes": "Ordinary pentagon enters upper crop; dense muzzle frames resolve previously uncertain firing attribution as seen."
+        },
+        {
+          "review_index": 13,
+          "firing": "seen",
+          "scene_motion": "one_axis_stable",
+          "aim_change": "not_seen",
+          "notes": "Player shoots along a long horizontal maze edge. Vertical relative position is stable; edge supplies no reliable horizontal-motion anchor. Not a verified fully stationary interval."
+        },
+        {
+          "review_index": 14,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Large cyan bullet emerges in frames 1-2, between sparse offsets. Third missed firing example among ten prior not-seen blocks."
+        },
+        {
+          "review_index": 15,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "No player emission in all 40 frames while scrolling through maze and changing barrel orientation."
+        }
+      ],
+      "index_sha256": "04f9c7b20977e26dbd00fc7eda1ba26b68a8505e7fd73b32f5f077dc068744e9"
+    },
+    {
+      "name": "targeted",
+      "request": "configs/longform-focused-request-v2.json",
+      "index": "runs/longform-focused-coverage-v1/dense-targeted/index.json",
+      "annotations": [
+        {
+          "review_index": 0,
+          "firing": "seen",
+          "scene_motion": "grid_stable",
+          "aim_change": "not_seen",
+          "notes": "Red player emits bullets. Repeating grid appears stable but no unique two-dimensional scenery anchor; not a verified zero-input action."
+        },
+        {
+          "review_index": 1,
+          "firing": "none_visible",
+          "scene_motion": "visually_stable",
+          "aim_change": "seen",
+          "notes": "Player rotates barrel through large angles while arena boundary, grid and another tank remain stable. Positive visual independent-aim example; keyboard/mouse inputs unknown. Damage flashing is visible."
+        },
+        {
+          "review_index": 2,
+          "firing": "none_visible",
+          "scene_motion": "one_axis_stable",
+          "aim_change": "not_seen",
+          "notes": "Large red player emits no new projectile; other red player fires. Arena boundary stable horizontally, no strong vertical scenery anchor."
+        },
+        {
+          "review_index": 3,
+          "firing": "none_visible",
+          "scene_motion": "unknown",
+          "aim_change": "seen",
+          "notes": "Full original context identifies level-37 Triple Shot ordinary shooter. Nearby triangular projectiles belong to other players. No new player muzzle emission visible; barrel rotates slightly but no fixed scenery anchor. Context image 003 inspected."
+        },
+        {
+          "review_index": 4,
+          "firing": "none_visible",
+          "scene_motion": "visually_stable",
+          "aim_change": "not_seen",
+          "notes": "Two perpendicular arena boundaries and grid stay fixed. Small other-player projectiles cross later; no new large player muzzle emission visible. Stationary visual reference, controls unknown."
+        },
+        {
+          "review_index": 5,
+          "firing": "uncertain",
+          "scene_motion": "freeze_suspected",
+          "aim_change": "seen",
+          "quality_hold": true,
+          "notes": "Initial motion then player, second player and in-flight projectile become static for most of block. Suspected source freeze, not stationary gameplay evidence. Hold this block and audit neighboring interval before any training."
+        },
+        {
+          "review_index": 6,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "notes": "Red player fires and turns, but team boundary translates clearly; automated low-flow candidate is a false stationary hit."
+        },
+        {
+          "review_index": 7,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "maze_walls": "seen",
+          "notes": "Accepted training source contains narrow maze corridors; player emits large cyan rounds and turns."
+        },
+        {
+          "review_index": 8,
+          "firing": "none_visible",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "maze_walls": "seen",
+          "notes": "Accepted training source contains parallel maze walls, food and barrel turning without visible player emission."
+        },
+        {
+          "review_index": 9,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "maze_walls": "seen",
+          "notes": "Training maze walls with multi-barrel firing, turning and other players."
+        },
+        {
+          "review_index": 10,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "pentagons": "seen",
+          "large_pentagons": "seen",
+          "notes": "Validation contains ordinary and clearly large pentagons; red player emits and rotates."
+        },
+        {
+          "review_index": 11,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "pentagons": "seen",
+          "large_pentagons": "seen",
+          "notes": "Validation ordinary and large pentagons, continuous multi-barrel emission and turning."
+        },
+        {
+          "review_index": 12,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "large_pentagons": "seen",
+          "notes": "Validation large pentagon visibly takes hits; multi-barrel firing and turning with food scrolling."
+        },
+        {
+          "review_index": 13,
+          "firing": "seen",
+          "scene_motion": "scroll",
+          "aim_change": "seen",
+          "maze_walls": "seen",
+          "pentagons": "seen",
+          "large_pentagons": "seen",
+          "notes": "Validation maze with ordinary and large pentagons; player emits large round late in block."
+        },
+        {
+          "review_index": 14,
+          "firing": "none_visible",
+          "scene_motion": "visually_stable",
+          "aim_change": "seen",
+          "freeze_rejection_assessment": "active_gameplay",
+          "notes": "Freeze-only rejection is not a truly frozen image: opponent enters/moves and player turns slightly while maze wall stays fixed. Candidate for full re-review, not automatic reinstatement."
+        },
+        {
+          "review_index": 15,
+          "firing": "none_visible",
+          "scene_motion": "visually_stable",
+          "aim_change": "not_seen",
+          "freeze_rejection_assessment": "active_gameplay_but_text_overlay",
+          "notes": "Opponent projectile moves near end despite stationary player. Added Zzz text makes this unsuitable for automatic reinstatement; preserve rejection."
+        },
+        {
+          "review_index": 16,
+          "firing": "none_visible",
+          "scene_motion": "slow_drift",
+          "aim_change": "not_seen",
+          "freeze_rejection_assessment": "active_gameplay",
+          "notes": "Maze walls translate gradually while no player emission is visible. Low mean-delta freeze criterion rejects low-motion footage; requires full re-review before reinstatement."
+        },
+        {
+          "review_index": 17,
+          "firing": "none_visible",
+          "scene_motion": "visually_stable",
+          "aim_change": "seen",
+          "freeze_rejection_assessment": "active_gameplay",
+          "notes": "Red player rotates barrel while two perpendicular team-area boundaries remain fixed; no player emission. Freeze-only screening rejected visible aiming activity. Re-review full quality/class checks before reinstatement."
+        }
+      ],
+      "index_sha256": "df90db09ad06d9d059759a10c02e93ca91ecb9e8ee476ac195344f4166b516e5"
+    }
+  ],
+  "training_holds": [
+    {
+      "source_id": "eGJEVXrV8rs",
+      "scope": "entire source until bounded interval audit resolves new suspected freeze at 70-74 seconds",
+      "reason": "Player, other player and in-flight projectile remain static after initial motion; previously quarantined 430-470 seconds does not cover this.",
+      "resolution": "Review original native-frame-rate footage around 70-74 seconds, extend bounds as needed, preserve existing exclusions, rebuild a versioned cohort and revalidate boundaries/hashes; do not mutate v5."
+    }
+  ],
+  "scan_sha256": "738799463d23a7625339d7c1d607bce5ad204d9fc663e37e38770f440dc9d6ae"
+}

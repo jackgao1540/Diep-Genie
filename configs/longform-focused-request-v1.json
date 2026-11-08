@@ -1,0 +1,120 @@
+{
+  "manifest_sha256": "67d8c6fdb151c09401703cfe84e0fef1474d3b3172bdc3e743f218edcc842456",
+  "method": "Dense follow-up of explicit gaps in the previous semantic sample. Targeted, not a prevalence estimate.",
+  "rows": [
+    {
+      "source_id": "soatudugBjY",
+      "block_id": "000_000010",
+      "targets": [
+        "training_maze"
+      ]
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000102",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000816",
+      "targets": [
+        "verify_non_firing",
+        "verify_low_scene_motion"
+      ]
+    },
+    {
+      "source_id": "iD4cnIhY-To",
+      "block_id": "000_000057",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "block_id": "000_000059",
+      "targets": [
+        "training_maze"
+      ]
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "block_id": "001_000010",
+      "targets": [
+        "verify_non_firing",
+        "training_maze"
+      ]
+    },
+    {
+      "source_id": "Iw__m_tFTxE",
+      "block_id": "000_000086",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "block_id": "000_000144",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "0H52HQHM2dM",
+      "block_id": "002_000022",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "wp54XkQUhz0",
+      "block_id": "000_000117",
+      "targets": [
+        "large_pentagon"
+      ]
+    },
+    {
+      "source_id": "tRySe3Tx-n0",
+      "block_id": "001_000058",
+      "targets": [
+        "validation_pentagon"
+      ]
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "block_id": "000_000021",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "block_id": "000_000194",
+      "targets": [
+        "validation_pentagon"
+      ]
+    },
+    {
+      "source_id": "qz3LCxUIe7c",
+      "block_id": "000_000158",
+      "targets": [
+        "verify_low_scene_motion"
+      ]
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "block_id": "000_000152",
+      "targets": [
+        "verify_non_firing"
+      ]
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "block_id": "000_000081",
+      "targets": [
+        "verify_non_firing"
+      ]
+    }
+  ]
+}

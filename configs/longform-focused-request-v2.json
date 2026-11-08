@@ -1,0 +1,137 @@
+{
+  "manifest_sha256": "67d8c6fdb151c09401703cfe84e0fef1474d3b3172bdc3e743f218edcc842456",
+  "scan_sha256": "738799463d23a7625339d7c1d607bce5ad204d9fc663e37e38770f440dc9d6ae",
+  "method": "Targeted follow-up selected from scores, prioritizing source variety. Wall score is restricted below 8000 pixels because whole-background false positives saturated at 16129. Seven stable-flow candidates, three wall candidates, four validation large-pentagon candidates and four freeze-only rejections. Not random or a prevalence estimate.",
+  "rows": [
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000022",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000427",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000159",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000370",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000976",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "block_id": "000_000010",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "e-8RxOtYZoU",
+      "block_id": "001_000172",
+      "targets": [
+        "stationary_or_independent_aim_candidate"
+      ]
+    },
+    {
+      "source_id": "2Ty7pbltJvM",
+      "block_id": "000_000056",
+      "targets": [
+        "additional_training_maze_candidate"
+      ]
+    },
+    {
+      "source_id": "9rvvmxML1FY",
+      "block_id": "000_000039",
+      "targets": [
+        "additional_training_maze_candidate"
+      ]
+    },
+    {
+      "source_id": "2BhF41Xn42U",
+      "block_id": "000_000005",
+      "targets": [
+        "additional_training_maze_candidate"
+      ]
+    },
+    {
+      "source_id": "y6-L9w3fKLs",
+      "block_id": "000_000053",
+      "targets": [
+        "validation_large_pentagon_candidate"
+      ]
+    },
+    {
+      "source_id": "ycjXOBkPaXw",
+      "block_id": "000_000011",
+      "targets": [
+        "validation_large_pentagon_candidate"
+      ]
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "block_id": "000_000100",
+      "targets": [
+        "validation_large_pentagon_candidate"
+      ]
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "block_id": "000_000154",
+      "targets": [
+        "validation_large_pentagon_candidate"
+      ]
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "block_id": "000_000038",
+      "targets": [
+        "freeze_rejection_bias_check"
+      ],
+      "screen": "runs\\longform-native-v1\\u_1_o_wnAT8"
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "block_id": "000_000028",
+      "targets": [
+        "freeze_rejection_bias_check"
+      ],
+      "screen": "runs\\longform-native-v1\\haMF0UV2bYs"
+    },
+    {
+      "source_id": "rhrJDjXpEVs",
+      "block_id": "001_000004",
+      "targets": [
+        "freeze_rejection_bias_check"
+      ],
+      "screen": "runs\\longform-native-v1\\rhrJDjXpEVs"
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000867",
+      "targets": [
+        "freeze_rejection_bias_check"
+      ],
+      "screen": "runs\\longform-native-v1\\CJWlY5GDndo"
+    }
+  ]
+}
