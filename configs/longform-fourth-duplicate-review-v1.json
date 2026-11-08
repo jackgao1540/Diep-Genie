@@ -1,0 +1,23 @@
+{
+  "report": "runs/longform-fourth-duplicates-v1/report.json",
+  "report_sha256": "5b5d4a5fd612bc092baded0714c6f4eb04883b9e1f2860ec7022a9e423879db1",
+  "index": "runs/longform-fourth-duplicates-v1/index.json",
+  "index_sha256": "34395f9b3d019bdc5a6a512e70fc4d7a874d5a7c3207789b1727ed912b8a58c9",
+  "reviewed_near_run_ranges": [
+    [
+      0,
+      45
+    ]
+  ],
+  "confirmed_duplicate_indices": [
+    14,
+    15,
+    16,
+    17,
+    43,
+    44,
+    45
+  ],
+  "method": "All46 flags inspected on six original start/middle/end comparison sheets. Full-frame HUD check runs/fourth-duplicates-detail.png confirms MTMD1c-qY-s/RxUI8D6DzMw reused gameplay (two offsets), fx46FnbYP9Y/SuhvU0ReMX4 reused gameplay, and eGJEVXrV8rs frozen/repeated scene. Quarantine entire MTMD1c-qY-s and SuhvU0ReMX4 sources pending broader reuse mapping; withhold eGJ430..470seconds. Other39 flags show differing objects, classes, aim or projectile arrangements.43060 informative sampled frames,4 low-information, zero exact pairs/saturation. Sampling can miss transformed or unsampled reuse.",
+  "training_approved": false
+}

@@ -1,0 +1,15 @@
+{
+  "review": "runs/remaining-strict-allframe-v2",
+  "index_sha256": "789bdce4440b1aa374689c7634679fb0232bc360a895b35dd627cfc3add9865c",
+  "reviewed_ranges": [
+    [
+      0,
+      625
+    ]
+  ],
+  "rejected_indices": {
+    "548": "Visible dark overlay/darkening in later frames; conservatively exclude unresolved edit."
+  },
+  "method": "All79 sheets inspected: all40 displayed proxy frames of626 class candidates. One unresolved dark overlay excluded and propagated into the class review. Reduced proxy resolution cannot establish full-resolution perfection; duplicate and continuity approval remain separate.",
+  "training_approved": false
+}

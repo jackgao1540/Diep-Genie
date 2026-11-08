@@ -1,0 +1,428 @@
+{
+  "review": "runs/class-original-remaining-strict-v1",
+  "index_sha256": "174fe8eb5c44fe505fe2768999538fc5c37c2c098d2d925306af2bfadba7dbd8",
+  "accepted_ranges": [
+    [
+      0,
+      2
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      16,
+      77
+    ],
+    [
+      81,
+      82
+    ],
+    [
+      86,
+      128
+    ],
+    [
+      130,
+      131
+    ],
+    [
+      135,
+      150
+    ],
+    [
+      153,
+      174
+    ],
+    [
+      176,
+      196
+    ],
+    [
+      199,
+      208
+    ],
+    [
+      210,
+      224
+    ],
+    [
+      226,
+      283
+    ],
+    [
+      285,
+      356
+    ],
+    [
+      367,
+      371
+    ],
+    [
+      373,
+      379
+    ],
+    [
+      381,
+      381
+    ],
+    [
+      383,
+      384
+    ],
+    [
+      410,
+      413
+    ],
+    [
+      416,
+      417
+    ],
+    [
+      438,
+      439
+    ],
+    [
+      478,
+      507
+    ],
+    [
+      509,
+      528
+    ],
+    [
+      530,
+      575
+    ],
+    [
+      577,
+      585
+    ],
+    [
+      587,
+      615
+    ],
+    [
+      618,
+      658
+    ],
+    [
+      673,
+      674
+    ],
+    [
+      678,
+      678
+    ],
+    [
+      683,
+      691
+    ],
+    [
+      697,
+      726
+    ],
+    [
+      728,
+      745
+    ],
+    [
+      747,
+      785
+    ],
+    [
+      787,
+      787
+    ],
+    [
+      789,
+      789
+    ],
+    [
+      791,
+      794
+    ],
+    [
+      796,
+      798
+    ],
+    [
+      800,
+      810
+    ],
+    [
+      812,
+      812
+    ],
+    [
+      814,
+      827
+    ],
+    [
+      829,
+      839
+    ],
+    [
+      841,
+      842
+    ],
+    [
+      846,
+      851
+    ],
+    [
+      853,
+      861
+    ],
+    [
+      863,
+      870
+    ],
+    [
+      872,
+      911
+    ],
+    [
+      926,
+      926
+    ],
+    [
+      928,
+      943
+    ],
+    [
+      945,
+      946
+    ],
+    [
+      948,
+      967
+    ],
+    [
+      994,
+      997
+    ],
+    [
+      999,
+      999
+    ]
+  ],
+  "rejected_indices": {
+    "3": "Opposed drone spawners and controlled drones",
+    "4": "Opposed drone spawners",
+    "13": "Drone-control tank",
+    "14": "Drone-control tank",
+    "15": "Drone-control tank",
+    "78": "Drone-control tank",
+    "79": "Drone-control tank",
+    "80": "Drone-to-basic edited transition",
+    "83": "Drone-control tank",
+    "84": "Drone-control tank",
+    "85": "Drone-control tank",
+    "132": "Independent automatic turrets",
+    "133": "Independent automatic turrets",
+    "134": "Independent automatic turrets",
+    "151": "Drone-control tank",
+    "152": "Drone-control tank",
+    "175": "Edited fast-forward chevrons visible; possible speed change",
+    "197": "Edited blue emoticon",
+    "198": "Edited blue emoticon",
+    "209": "Edited blur/dissolve visible",
+    "225": "Edited blur/dissolve visible",
+    "357": "Hybrid rear drone spawner",
+    "358": "Hybrid rear drone spawner",
+    "359": "Hybrid rear drone spawner",
+    "360": "Hybrid rear drone spawner",
+    "361": "Hybrid rear drone spawner",
+    "362": "Hybrid rear drone spawner",
+    "363": "Hybrid rear drone spawner",
+    "364": "Hybrid rear drone spawner",
+    "365": "Hybrid rear drone spawner",
+    "366": "Hybrid rear drone spawner",
+    "372": "Blurred transition",
+    "380": "Hybrid rear drone spawner",
+    "385": "Hybrid rear drone spawner",
+    "386": "Hybrid rear drone spawner",
+    "387": "Hybrid rear drone spawner",
+    "388": "Hybrid rear drone spawner",
+    "389": "Hybrid rear drone spawner",
+    "390": "Hybrid rear drone spawner",
+    "391": "Hybrid rear drone spawner",
+    "392": "Hybrid rear drone spawner",
+    "393": "Hybrid rear drone spawner",
+    "394": "Hybrid rear drone spawner",
+    "395": "Hybrid rear drone spawner",
+    "396": "Hybrid rear drone spawner",
+    "397": "Hybrid rear drone spawner",
+    "398": "Hybrid rear drone spawner",
+    "399": "Hybrid rear drone spawner",
+    "400": "Hybrid rear drone spawner",
+    "401": "Hybrid rear drone spawner",
+    "402": "Hybrid rear drone spawner",
+    "403": "Hybrid rear drone spawner",
+    "404": "Hybrid rear drone spawner",
+    "405": "Hybrid rear drone spawner",
+    "406": "Hybrid rear drone spawner",
+    "407": "Hybrid rear drone spawner",
+    "408": "Hybrid rear drone spawner",
+    "409": "Hybrid rear drone spawner",
+    "414": "Drone-control tank",
+    "415": "Drone-control tank",
+    "418": "Hybrid or unresolved rear attachment in mixed-class source",
+    "419": "Hybrid or unresolved rear attachment in mixed-class source",
+    "420": "Hybrid or unresolved rear attachment in mixed-class source",
+    "421": "Hybrid or unresolved rear attachment in mixed-class source",
+    "422": "Hybrid or unresolved rear attachment in mixed-class source",
+    "423": "Hybrid or unresolved rear attachment in mixed-class source",
+    "424": "Hybrid or unresolved rear attachment in mixed-class source",
+    "425": "Hybrid or unresolved rear attachment in mixed-class source",
+    "426": "Hybrid or unresolved rear attachment in mixed-class source",
+    "427": "Hybrid or unresolved rear attachment in mixed-class source",
+    "428": "Hybrid or unresolved rear attachment in mixed-class source",
+    "429": "Hybrid or unresolved rear attachment in mixed-class source",
+    "430": "Hybrid or unresolved rear attachment in mixed-class source",
+    "431": "Hybrid or unresolved rear attachment in mixed-class source",
+    "432": "Hybrid rear drone spawner",
+    "433": "Hybrid rear drone spawner",
+    "434": "Hybrid rear drone spawner",
+    "435": "Hybrid rear drone spawner",
+    "436": "Hybrid rear drone spawner",
+    "437": "Hybrid rear drone spawner",
+    "440": "Hybrid rear drone spawner",
+    "441": "Hybrid rear drone spawner",
+    "442": "Hybrid rear drone spawner",
+    "443": "Hybrid rear drone spawner",
+    "444": "Hybrid rear drone spawner",
+    "445": "Hybrid rear drone spawner",
+    "446": "Hybrid rear drone spawner",
+    "447": "Hybrid rear drone spawner",
+    "448": "Hybrid rear drone spawner",
+    "449": "Hybrid rear drone spawner",
+    "450": "Hybrid rear drone spawner",
+    "451": "Hybrid rear drone spawner",
+    "452": "Hybrid rear drone spawner",
+    "453": "Hybrid rear drone spawner",
+    "454": "Hybrid rear drone spawner",
+    "455": "Hybrid rear drone spawner",
+    "456": "Hybrid rear drone spawner",
+    "457": "Hybrid rear drone spawner",
+    "458": "Hybrid rear drone spawner",
+    "459": "Hybrid rear drone spawner",
+    "460": "Hybrid rear drone spawner",
+    "461": "Hybrid rear drone spawner",
+    "462": "Hybrid rear drone spawner",
+    "463": "Hybrid rear drone spawner",
+    "464": "Hybrid rear drone spawner",
+    "465": "Hybrid rear drone spawner",
+    "466": "Hybrid rear drone spawner",
+    "467": "Hybrid rear drone spawner",
+    "468": "Hybrid rear drone spawner",
+    "469": "Hybrid rear drone spawner",
+    "470": "Hybrid rear drone spawner",
+    "471": "Hybrid rear drone spawner",
+    "472": "Hybrid rear drone spawner",
+    "473": "Hybrid rear drone spawner",
+    "474": "Hybrid rear drone spawner",
+    "475": "Hybrid rear drone spawner",
+    "476": "Hybrid rear drone spawner",
+    "477": "Hybrid rear drone spawner",
+    "529": "Spike rammer",
+    "576": "Smasher rammer",
+    "586": "Apparent edited zoom; unresolved scale change",
+    "616": "Drone-control tank",
+    "617": "Drone-control tank",
+    "659": "Drone-control tank",
+    "660": "Drone-control tank",
+    "661": "Drone-control tank",
+    "662": "Drone-control tank",
+    "663": "Drone-control tank",
+    "664": "Drone-control tank",
+    "665": "Drone-control tank",
+    "666": "Trapper",
+    "667": "Trapper",
+    "668": "Trapper",
+    "669": "Hybrid rear drone spawner",
+    "670": "Hybrid rear drone spawner",
+    "671": "Hybrid rear drone spawner",
+    "672": "Hybrid rear drone spawner",
+    "675": "Drone-control tank",
+    "676": "Drone-control tank",
+    "677": "Drone-control tank",
+    "680": "Edited numeric countdown",
+    "681": "Edited numeric countdown",
+    "682": "Edited numeric countdown",
+    "692": "Drone-control tank",
+    "693": "Drone-control tank",
+    "694": "Drone-control tank",
+    "695": "Drone-control tank",
+    "696": "Drone-control tank",
+    "727": "Necromancer drone-control tank",
+    "746": "Unresolved apparent edited zoom",
+    "786": "Edited blur/dissolve",
+    "788": "Edited blur/dissolve",
+    "795": "Edited class switch includes drone tank",
+    "799": "Edited class switch includes drone tank",
+    "811": "Edited zoom/scale transition",
+    "813": "Player death/respawn transition",
+    "840": "Player attachments obscured by overlapping tanks",
+    "843": "Drone-control tank",
+    "844": "Drone-control tank",
+    "845": "Drone-control tank",
+    "852": "Drone-control tank",
+    "862": "Unresolved apparent edited zoom",
+    "871": "Drone-control tank",
+    "912": "Drone-control tank",
+    "913": "Drone-control tank",
+    "914": "Drone-control tank",
+    "915": "Drone-control tank",
+    "916": "Drone-control tank",
+    "917": "Drone-control tank",
+    "918": "Drone-control tank",
+    "919": "Drone-control tank",
+    "920": "Drone-control tank",
+    "921": "Drone-control tank",
+    "922": "Drone-control tank",
+    "923": "Drone-control tank",
+    "924": "Drone-control tank",
+    "925": "Hybrid/drone edited switch",
+    "927": "Drone-control tank",
+    "968": "Hybrid rear drone spawner or drone-control class",
+    "969": "Hybrid rear drone spawner or drone-control class",
+    "970": "Hybrid rear drone spawner or drone-control class",
+    "971": "Hybrid rear drone spawner or drone-control class",
+    "972": "Hybrid rear drone spawner or drone-control class",
+    "973": "Hybrid rear drone spawner or drone-control class",
+    "974": "Hybrid rear drone spawner or drone-control class",
+    "975": "Hybrid rear drone spawner or drone-control class",
+    "976": "Hybrid rear drone spawner or drone-control class",
+    "977": "Hybrid rear drone spawner or drone-control class",
+    "978": "Hybrid rear drone spawner or drone-control class",
+    "979": "Hybrid rear drone spawner or drone-control class",
+    "980": "Hybrid rear drone spawner or drone-control class",
+    "981": "Hybrid rear drone spawner or drone-control class",
+    "982": "Hybrid rear drone spawner or drone-control class",
+    "983": "Hybrid rear drone spawner or drone-control class",
+    "984": "Hybrid rear drone spawner or drone-control class",
+    "985": "Hybrid rear drone spawner or drone-control class",
+    "986": "Hybrid rear drone spawner or drone-control class",
+    "987": "Hybrid rear drone spawner or drone-control class",
+    "988": "Hybrid rear drone spawner or drone-control class",
+    "989": "Hybrid rear drone spawner or drone-control class",
+    "990": "Hybrid rear drone spawner or drone-control class",
+    "991": "Hybrid rear drone spawner or drone-control class",
+    "992": "Hybrid rear drone spawner or drone-control class",
+    "993": "Hybrid rear drone spawner or drone-control class",
+    "998": "Edited blur transition",
+    "129": "Brief blur/dissolve between sparse class samples",
+    "284": "Brief blurred transition visible between sampled class frames",
+    "382": "Dark fade at end of block",
+    "508": "Mid-block blur/dissolve",
+    "679": "Edited numeric countdown appears near end of block",
+    "790": "Brief blurred transition in first row",
+    "828": "Brief edited player zoom in middle of block",
+    "944": "Mid-block blur/dissolve",
+    "947": "Mid-block blur/dissolve"
+  },
+  "method": "All63 original-frame class sheets inspected:1000 new blocks,205 initially excluded. All40 proxy frames of795 remaining blocks reviewed on100 sheets; nine more edited clips rejected.786 provisional ordinary-shooter candidates,214 rejected total. Native labels and opponent drones allowed. Full-frame evidence: configs/remaining-strict-allframe-audit-v1.json. Duplicate and sequence-boundary approval still required; reduced-resolution review may miss subtle artifacts.",
+  "training_approved": false
+}

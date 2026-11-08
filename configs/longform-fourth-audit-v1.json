@@ -1,0 +1,13 @@
+{
+  "review": "runs/longform-fourth-audit-v1",
+  "index_sha256": "2f58d54c464c3e113ba04852da9624c015b1500e35dcd60997f7d1df5c456144",
+  "reviewed_ranges": [
+    [
+      0,
+      299
+    ]
+  ],
+  "rejected_indices": {},
+  "method": "All38 sheets/300 stratified sampled clips/12000 displayed proxy frames inspected. No additional visible edited caption, unsupported player class or internal transition found. Separate full-frame targeted reviews rejected10 more clips before this sample. Duplicate/freeze exclusions are separately enforced. Sample-backed acceptance is not exhaustive perfection.",
+  "training_approved": false
+}

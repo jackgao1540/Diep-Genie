@@ -1,0 +1,72 @@
+{
+  "index": "runs/longform-fourth-boundaries-v1/index.json",
+  "index_sha256": "f258f3d39cdd1fbae2e39bbea204dd2257ef0df945b9021e1f423d29eccd701f",
+  "reviewed_ranges": [
+    [
+      0,
+      3762
+    ]
+  ],
+  "rejected_indices": [],
+  "newly_inspected_ranges": [
+    [
+      0,
+      157
+    ],
+    [
+      345,
+      348
+    ],
+    [
+      704,
+      732
+    ],
+    [
+      930,
+      930
+    ],
+    [
+      1221,
+      1228
+    ],
+    [
+      1586,
+      1608
+    ],
+    [
+      2321,
+      2595
+    ],
+    [
+      2602,
+      2752
+    ],
+    [
+      2754,
+      2762
+    ],
+    [
+      2910,
+      3053
+    ],
+    [
+      3074,
+      3253
+    ],
+    [
+      3274,
+      3290
+    ],
+    [
+      3479,
+      3508
+    ],
+    [
+      3630,
+      3762
+    ]
+  ],
+  "prior_review": "configs/longform-third-boundary-review-v1.json",
+  "method": "All1162 new joins visually inspected on21 sheets; no visible discontinuity.2601 prior joins match source, endpoint IDs and both content hashes exactly. Excluded intervals remain gaps. Boundary sampling does not prove absence of subtle internal edits.",
+  "training_approved": false
+}

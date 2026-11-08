@@ -1,0 +1,49 @@
+{
+  "candidate_index": "runs/longform-fourth-duplicates-v1/index.json",
+  "candidate_index_sha256": "34395f9b3d019bdc5a6a512e70fc4d7a874d5a7c3207789b1727ed912b8a58c9",
+  "class_reviews": [
+    "configs/longform-class-ordinary-long-v1.json",
+    "configs/longform-class-musa-v1.json",
+    "configs/longform-class-masterov-long-v1.json",
+    "configs/longform-class-quarantined-original-v1.json",
+    "configs/longform-class-diverse-v1.json",
+    "configs/longform-class-long-next-v1.json",
+    "configs/longform-class-remaining-strict-v1.json",
+    "configs/longform-class-remaining-strict-v2.json"
+  ],
+  "visual_audit": "configs/longform-fourth-audit-v1.json",
+  "duplicate_review": "configs/longform-fourth-duplicate-review-v1.json",
+  "boundary_review": "configs/longform-fourth-boundary-review-v1.json",
+  "source_recipes": [
+    "configs/longform-sources-v1.json",
+    "configs/longform-supplemental2-v1.json"
+  ],
+  "exclude_intervals": [
+    {
+      "source_id": "AnMhPHvSLUA",
+      "start": 922,
+      "end": 930,
+      "reason": "Preserve prior unresolved-label exclusion and sequence gap."
+    },
+    {
+      "source_id": "MTMD1c-qY-s",
+      "start": 0,
+      "end": 1000000,
+      "reason": "Whole-source quarantine after confirmed cross-video gameplay reuse; retain counterpart pending broader mapping."
+    },
+    {
+      "source_id": "SuhvU0ReMX4",
+      "start": 0,
+      "end": 1000000,
+      "reason": "Whole-source quarantine after confirmed cross-video gameplay reuse; retain counterpart pending broader mapping."
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "start": 430,
+      "end": 470,
+      "reason": "Frozen/repeated scene confirmed in original frames; conservative padded exclusion."
+    }
+  ],
+  "scope": "Cumulative replacement for curated-longform-v3; never add their durations. Intermediate ten-hour curation checkpoint. No training before full corpus report and user review.",
+  "training_approved": false
+}

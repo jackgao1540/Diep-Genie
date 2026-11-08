@@ -29,6 +29,21 @@ def indices(ranges,total):
 def key(row):return row['source_id'],row['block_id']
 
 
+def validate_duplicate_exclusions(rows,report,confirmed,excluded):
+    """A confirmed near-run is resolved only when one whole candidate side is withheld."""
+    if report['exact_pairs']:raise ValueError('Exact duplicate resolution required')
+    flags=report['near_runs']
+    if len(confirmed)!=len(set(confirmed)):raise ValueError('Repeated confirmed duplicate')
+    for index in confirmed:
+        if not isinstance(index,int) or not 0<=index<len(flags):raise ValueError('Invalid confirmed duplicate index')
+        flag=flags[index];resolved=False
+        for side in ('a','b'):
+            overlapping={key(r) for r in rows if r['source_id']==flag['source_'+side]
+                and r['start']<=flag['end_'+side] and r['end']>flag['start_'+side]}
+            if overlapping and overlapping<=excluded:resolved=True
+        if not resolved:raise ValueError('Confirmed duplicate still present on both sides')
+
+
 def validate(recipe):
     rows=read(recipe['candidate_index'],recipe['candidate_index_sha256'])['rows']
     by_key={key(r):r for r in rows}
@@ -71,7 +86,7 @@ def validate(recipe):
             if r['source_id']==e['source_id'] and r['start']<e['end']-1e-6 and r['end']>e['start']+1e-6:excluded.add(key(r))
     dup=read(recipe['duplicate_review']);report=read(dup['report'],dup['report_sha256'])
     if dup['index_sha256']!=recipe['candidate_index_sha256']:raise ValueError('Duplicate audit cohort mismatch')
-    if report['exact_pairs'] or dup['confirmed_duplicate_indices']:raise ValueError('Duplicate resolution required')
+    validate_duplicate_exclusions(rows,report,dup['confirmed_duplicate_indices'],excluded)
     if indices(dup['reviewed_near_run_ranges'],len(report['near_runs']))!=set(range(len(report['near_runs']))):raise ValueError('Unreviewed duplicate flags')
     if report['saturated_hash_buckets']:raise ValueError('Duplicate lookup saturated')
     bound=read(recipe['boundary_review']);bi=read(bound['index'],bound['index_sha256'])
@@ -109,7 +124,7 @@ def run(args):
             coverage[r['source_id']]['frames']+=len(frames)
         with (out/'manifest.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(r)+'\n')
     durations=[r['seconds'] for r in runs]
-    summary=dict(curation_accepted_hours=sum(counts.values())/3600,clips=len(rows),source_count=len(evidence['sources']),
+    summary=dict(curation_accepted_hours=sum(counts.values())/3600,clips=len(rows),source_count=len({r['source_id'] for r in rows}),
         seconds_by_split=counts,longest_sequence_seconds=max(durations,default=0),
         seconds_in_runs_at_least={str(n):sum(d for d in durations if d>=n) for n in (10,20,30,60)},
         coverage_color_proxies=coverage,evidence=evidence,recipe=args.recipe,recipe_sha256=file_hash(args.recipe),

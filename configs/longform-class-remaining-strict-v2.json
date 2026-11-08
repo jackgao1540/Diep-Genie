@@ -1,0 +1,165 @@
+{
+  "review": "runs/class-original-remaining-strict-v2",
+  "index_sha256": "05071559605eaa82e1f6f4507d0e9ff590a65d99912f1f7dd93442098328ded4",
+  "accepted_ranges": [
+    [
+      0,
+      19
+    ],
+    [
+      21,
+      274
+    ],
+    [
+      280,
+      317
+    ],
+    [
+      319,
+      327
+    ],
+    [
+      329,
+      334
+    ],
+    [
+      339,
+      341
+    ],
+    [
+      347,
+      349
+    ],
+    [
+      353,
+      356
+    ],
+    [
+      367,
+      369
+    ],
+    [
+      375,
+      470
+    ],
+    [
+      477,
+      477
+    ],
+    [
+      480,
+      547
+    ],
+    [
+      549,
+      553
+    ],
+    [
+      557,
+      564
+    ],
+    [
+      566,
+      584
+    ],
+    [
+      586,
+      596
+    ],
+    [
+      598,
+      602
+    ],
+    [
+      622,
+      647
+    ],
+    [
+      653,
+      697
+    ],
+    [
+      699,
+      1231
+    ]
+  ],
+  "rejected_indices": {
+    "20": "Visible edited dissolve across class/scene change",
+    "275": "Drone-control class",
+    "276": "Drone-control class",
+    "277": "Drone-control class",
+    "278": "Hybrid rear drone spawner",
+    "279": "Hybrid rear drone spawner",
+    "318": "Visible blurred transition",
+    "328": "Drone-control or Necromancer class",
+    "335": "Drone-control or Necromancer class",
+    "336": "Drone-control or Necromancer class",
+    "337": "Drone-control or Necromancer class",
+    "338": "Drone-control or Necromancer class",
+    "342": "Drone-control or Necromancer class",
+    "343": "Drone-control or Necromancer class",
+    "344": "Drone-control or Necromancer class",
+    "345": "Drone-control or Necromancer class",
+    "346": "Drone-control or Necromancer class",
+    "350": "Drone-control or Necromancer class",
+    "351": "Drone-control or Necromancer class",
+    "352": "Drone-control or Necromancer class",
+    "357": "Hybrid rear drone spawner / excluded class transition",
+    "358": "Hybrid rear drone spawner / excluded class transition",
+    "359": "Hybrid rear drone spawner / excluded class transition",
+    "360": "Hybrid rear drone spawner / excluded class transition",
+    "361": "Hybrid rear drone spawner / excluded class transition",
+    "362": "Hybrid rear drone spawner / excluded class transition",
+    "363": "Hybrid rear drone spawner / excluded class transition",
+    "364": "Hybrid rear drone spawner / excluded class transition",
+    "365": "Hybrid rear drone spawner / excluded class transition",
+    "366": "Edited blue question-mark overlay",
+    "370": "Hybrid rear drone spawner",
+    "371": "Hybrid rear drone spawner",
+    "372": "Hybrid rear drone spawner",
+    "373": "Hybrid rear drone spawner",
+    "374": "Hybrid rear drone spawner",
+    "471": "Drone-control class or switch into it",
+    "472": "Drone-control class or switch into it",
+    "473": "Drone-control class or switch into it",
+    "474": "Drone-control class or switch into it",
+    "475": "Drone-control class or switch into it",
+    "476": "Drone-control class or switch into it",
+    "478": "Drone-control class or switch into it",
+    "479": "Drone-control class or switch into it",
+    "548": "Hybrid/drone-control barrel geometry",
+    "554": "Unsupported trapper class",
+    "555": "Unsupported trapper class",
+    "556": "Unsupported trapper class",
+    "565": "Blurred transition",
+    "585": "Visible edited dissolve",
+    "603": "Drone-controlling Overseer class",
+    "604": "Drone-controlling Overseer class",
+    "605": "Drone-controlling Overseer class",
+    "606": "Drone-controlling Overseer class",
+    "607": "Drone-controlling Overseer class",
+    "608": "Drone-controlling Overseer class",
+    "609": "Drone-controlling Overseer class",
+    "610": "Drone-controlling Overseer class",
+    "611": "Drone-controlling Overseer class",
+    "612": "Drone-controlling Overseer class",
+    "613": "Drone-controlling Overseer class",
+    "614": "Drone-controlling Overseer class",
+    "615": "Drone-controlling Overseer class",
+    "616": "Drone-controlling Overseer class",
+    "617": "Drone-controlling Overseer class",
+    "618": "Drone-controlling Overseer class",
+    "619": "Drone-controlling Overseer class",
+    "620": "Drone-controlling Overseer class",
+    "621": "Drone-controlling Overseer class",
+    "648": "Switch to drone-control class",
+    "649": "Switch to drone-control class",
+    "650": "Switch to drone-control class",
+    "651": "Switch to drone-control class",
+    "652": "Switch to drone-control class",
+    "698": "Switch to unsupported rammer class",
+    "597": "Visible dark overlay/darkening in later frames; conservatively exclude unresolved edit."
+  },
+  "method": "All77 original-frame class sheets /1232 blocks visually inspected. Four player crops plus context per block. Reject drone, Hybrid, trapper, rammer classes and displayed edited transitions or overlays. Native flashes and opponent drones retained. Sparse class evidence only; full-frame audit, duplicates and boundary checks still required before clean-hour accounting. Full-frame follow-up configs/remaining-strict-allframe-audit-v2.json excludes one additional block. Final1157 class candidates/75 exclusions.",
+  "training_approved": false
+}

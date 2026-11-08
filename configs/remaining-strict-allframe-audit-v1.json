@@ -1,0 +1,23 @@
+{
+  "review": "runs/remaining-strict-allframe-v1",
+  "index_sha256": "a7cb9bc9d26bb252fb60ba78500cc98c0a9f310a17b4d889bf35267e2a2a505d",
+  "reviewed_ranges": [
+    [
+      0,
+      794
+    ]
+  ],
+  "rejected_indices": {
+    "118": "Brief blur/dissolve between sparse class samples",
+    "263": "Brief blurred transition visible between sampled class frames",
+    "349": "Dark fade at end of block",
+    "390": "Mid-block blur/dissolve",
+    "539": "Edited numeric countdown appears near end of block",
+    "638": "Brief blurred transition in first row",
+    "672": "Brief edited player zoom in middle of block",
+    "766": "Mid-block blur/dissolve",
+    "769": "Mid-block blur/dissolve"
+  },
+  "method": "All100 sheets inspected: every displayed retained frame of795 provisional blocks,40 frames each. Nine additional clips rejected for blur, fade, edited zoom or numeric countdown; propagated into the class review. This is targeted exhaustive proxy-frame inspection, not full-resolution perfection or duplicate/continuity approval.",
+  "training_approved": false
+}
