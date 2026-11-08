@@ -1,0 +1,879 @@
+{
+  "candidate_index": "runs/longform-fifth-duplicates-v1/index.json",
+  "candidate_index_sha256": "7e741b7ac47cfd19d74961aa15fa6fd98e69a340f2836e1163f7fff1d692fe94",
+  "class_reviews": [
+    "configs/longform-class-ordinary-long-v1.json",
+    "configs/longform-class-musa-v1.json",
+    "configs/longform-class-masterov-long-v1.json",
+    "configs/longform-class-quarantined-original-v1.json",
+    "configs/longform-class-diverse-v1.json",
+    "configs/longform-class-long-next-v1.json",
+    "configs/longform-class-remaining-strict-v1.json",
+    "configs/longform-class-remaining-strict-v2.json",
+    "configs/longform-class-native-expansion-next-v1.json",
+    "configs/longform-class-native-masterov-final-v1.json",
+    "configs/longform-class-native-masterov-v1.json",
+    "configs/longform-class-native-recovery-v1.json",
+    "configs/longform-class-native-supplemental3-v1.json"
+  ],
+  "visual_audit": "configs/longform-fifth-audit-v1.json",
+  "duplicate_review": "configs/longform-fifth-duplicate-review-v1.json",
+  "boundary_review": "configs/longform-fifth-boundary-review-v1.json",
+  "source_recipes": [
+    "configs/longform-sources-v1.json",
+    "configs/longform-supplemental2-v1.json",
+    "configs/longform-masterov-v1.json",
+    "configs/longform-supplemental3-v1.json"
+  ],
+  "exclude_intervals": [
+    {
+      "source_id": "AnMhPHvSLUA",
+      "start": 922,
+      "end": 930,
+      "reason": "Preserve prior unresolved-label exclusion and sequence gap."
+    },
+    {
+      "source_id": "MTMD1c-qY-s",
+      "start": 0,
+      "end": 1000000,
+      "reason": "Whole-source quarantine after confirmed cross-video gameplay reuse; retain counterpart pending broader mapping."
+    },
+    {
+      "source_id": "SuhvU0ReMX4",
+      "start": 0,
+      "end": 1000000,
+      "reason": "Whole-source quarantine after confirmed cross-video gameplay reuse; retain counterpart pending broader mapping."
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "start": 430,
+      "end": 470,
+      "reason": "Frozen/repeated scene confirmed in original frames; conservative padded exclusion."
+    },
+    {
+      "source_id": "sH605WtRnks",
+      "start": 0,
+      "end": 1000000,
+      "reason": "Preserve strong-color-effects quarantine."
+    },
+    {
+      "source_id": "2Ty7pbltJvM",
+      "start": 240.00643333333335,
+      "end": 244,
+      "reason": "Hard scene cut between retained frames 32 and 33."
+    },
+    {
+      "source_id": "D6XeiF_Kfh0",
+      "start": 88.988988988989,
+      "end": 93,
+      "reason": "Abrupt change in scene layout in adjacent-frame detail."
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "start": 128.99553333333333,
+      "end": 133,
+      "reason": "Abrupt change in scene layout in adjacent-frame detail."
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "start": 152.98616666666666,
+      "end": 157,
+      "reason": "Abrupt change in scene layout in adjacent-frame detail."
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "start": 445.01123333333334,
+      "end": 449,
+      "reason": "Abrupt change in scene layout in adjacent-frame detail."
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "start": 501.0005,
+      "end": 505,
+      "reason": "Hard scene cut between retained frames 13 and 14."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 393.9936,
+      "end": 398,
+      "reason": "Player death and scene fade at end of block."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 159.99316666666667,
+      "end": 164,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 168.00116666666668,
+      "end": 172,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 180.01316666666668,
+      "end": 184,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 408.0076,
+      "end": 412,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 16.983633333333334,
+      "end": 21,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 305.0047,
+      "end": 309,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 696.9963,
+      "end": 701,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 701.0003,
+      "end": 705,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 164.99816666666666,
+      "end": 169,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 337.00333333333333,
+      "end": 341,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 218.98543333333333,
+      "end": 223,
+      "reason": "Hard scene cut between retained frames 16 and 17."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 343.00933333333336,
+      "end": 347,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 358.99196666666666,
+      "end": 363,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 366.9999666666667,
+      "end": 371,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 371.00396666666666,
+      "end": 375,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 383.01596666666666,
+      "end": 387,
+      "reason": "Abrupt scene/layout change in adjacent-frame detail."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 236.00243333333333,
+      "end": 240,
+      "reason": "Strong blur/transition obscures gameplay inside block."
+    },
+    {
+      "source_id": "36X_HOyNETg",
+      "start": 56.99026666666667,
+      "end": 61,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "9rvvmxML1FY",
+      "start": 535.0011333333333,
+      "end": 539,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 124.99153333333334,
+      "end": 129,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 128.99553333333333,
+      "end": 133,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 364.9979666666667,
+      "end": 369,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 496.9965,
+      "end": 501,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 549.0151333333333,
+      "end": 553,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "start": 569.0017666666666,
+      "end": 573,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "CjnGE_9RJbI",
+      "start": 215.0148,
+      "end": 219,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "CLSiOG-g_t4",
+      "start": 99.9999,
+      "end": 104,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "D1Y2kpow5YM",
+      "start": 114.0,
+      "end": 118,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "D1Y2kpow5YM",
+      "start": 530.0,
+      "end": 534,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "D1Y2kpow5YM",
+      "start": 654.0,
+      "end": 658,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "D1Y2kpow5YM",
+      "start": 1486.0,
+      "end": 1490,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "D6XeiF_Kfh0",
+      "start": 124.99165832499166,
+      "end": 129,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "start": 569.0017666666666,
+      "end": 573,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "e4Mo0JLJmS4",
+      "start": 124.99153333333334,
+      "end": 129,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "es0u30-F0NA",
+      "start": 191.9918,
+      "end": 196,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "f6x0pEuhJ-Q",
+      "start": 77.01026666666667,
+      "end": 81,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "start": 337.00333333333333,
+      "end": 341,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "start": 452.98586666666665,
+      "end": 457,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "H7fxbdTENaQ",
+      "start": 206.0058,
+      "end": 210,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "H7fxbdTENaQ",
+      "start": 317.9843333333333,
+      "end": 322,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "H7fxbdTENaQ",
+      "start": 406.0056,
+      "end": 410,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "iD4cnIhY-To",
+      "start": 149.01553333333334,
+      "end": 153,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "iD4cnIhY-To",
+      "start": 349.01533333333333,
+      "end": 353,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "iD4cnIhY-To",
+      "start": 569.0017666666666,
+      "end": 573,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "MTMD1c-qY-s",
+      "start": 142.00853333333333,
+      "end": 146,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "MwOfFbwymWI",
+      "start": 96.9969,
+      "end": 101,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "MwOfFbwymWI",
+      "start": 101.0009,
+      "end": 105,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 89.9899,
+      "end": 94,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 221.98843333333335,
+      "end": 226,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 242.00843333333333,
+      "end": 246,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 457.99086666666665,
+      "end": 462,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "start": 550.0161333333333,
+      "end": 554,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "start": 137.00353333333334,
+      "end": 141,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "start": 164.99816666666666,
+      "end": 169,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "start": 328.99533333333335,
+      "end": 333,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "start": 517.0165000000001,
+      "end": 521,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 69.00226666666667,
+      "end": 73,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 101.0009,
+      "end": 105,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 137.00353333333334,
+      "end": 141,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 169.00216666666668,
+      "end": 173,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 192.99280000000002,
+      "end": 197,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "start": 232.99943333333334,
+      "end": 237,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "PSNubmrTEts",
+      "start": 201.0008,
+      "end": 205,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 127.99453333333334,
+      "end": 132,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 183.9838,
+      "end": 188,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "start": 416.0156,
+      "end": 420,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "QDhz5R9gxR8",
+      "start": 126.0,
+      "end": 130,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "QDhz5R9gxR8",
+      "start": 930.0,
+      "end": 934,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "QDhz5R9gxR8",
+      "start": 1050.0,
+      "end": 1054,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 537.0031333333334,
+      "end": 541,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "start": 577.0097666666667,
+      "end": 581,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "s_NMXnRBq7w",
+      "start": 201.0008,
+      "end": 205,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "tWQAx7eWb1A",
+      "start": 34.0,
+      "end": 38,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "tWQAx7eWb1A",
+      "start": 38.0,
+      "end": 42,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "start": 121.98853333333334,
+      "end": 126,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "start": 125.99253333333334,
+      "end": 130,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "start": 138.00453333333334,
+      "end": 142,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "start": 206.0058,
+      "end": 210,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UjF_w3Jjq3E",
+      "start": 77.01026666666667,
+      "end": 81,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "uobBFtK1goY",
+      "start": 78.0,
+      "end": 82,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "uobBFtK1goY",
+      "start": 194.0,
+      "end": 198,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 56.99026666666667,
+      "end": 61,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 84.9849,
+      "end": 89,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 269.0020666666667,
+      "end": 273,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 281.0140666666667,
+      "end": 285,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "start": 492.9925,
+      "end": 497,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "vks-GsapOXM",
+      "start": 128.99553333333333,
+      "end": 133,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 73.00626666666666,
+      "end": 77,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 92.9929,
+      "end": 97,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 132.99953333333335,
+      "end": 137,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 184.9848,
+      "end": 189,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 292.9927,
+      "end": 297,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "start": 356.98996666666665,
+      "end": 361,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 173.00616666666667,
+      "end": 177,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 201.0008,
+      "end": 205,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 205.00480000000002,
+      "end": 209,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 232.99943333333334,
+      "end": 237,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 273.0060666666667,
+      "end": 277,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "start": 556.9897666666667,
+      "end": 561,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "Xzj_eAzBuso",
+      "start": 13.013,
+      "end": 17,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 32.999633333333335,
+      "end": 37,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 37.00363333333333,
+      "end": 41,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 52.986266666666666,
+      "end": 57,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 258.9920666666667,
+      "end": 263,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 322.9893333333333,
+      "end": 327,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 335.0013333333333,
+      "end": 339,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 339.00533333333334,
+      "end": 343,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 522.9891333333334,
+      "end": 527,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 526.9931333333334,
+      "end": 531,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 550.9837666666667,
+      "end": 555,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 554.9877666666666,
+      "end": 559,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "start": 579.0117666666666,
+      "end": 583,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 127.99453333333334,
+      "end": 132,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 155.98916666666668,
+      "end": 160,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 168.00116666666668,
+      "end": 172,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 195.9958,
+      "end": 200,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 199.9998,
+      "end": 204,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 227.99443333333335,
+      "end": 232,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 240.00643333333335,
+      "end": 244,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 251.98506666666668,
+      "end": 256,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 259.99306666666666,
+      "end": 264,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 272.00506666666666,
+      "end": 276,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "start": 308.0077,
+      "end": 312,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "3K9aU1BNwko",
+      "start": 85.9975181807688,
+      "end": 90,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "3K9aU1BNwko",
+      "start": 105.99694101350572,
+      "end": 110,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "start": 110.0,
+      "end": 114,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "start": 230.0,
+      "end": 234,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    },
+    {
+      "source_id": "eGJEVXrV8rs",
+      "start": 270.0,
+      "end": 274,
+      "reason": "Unresolved possible discontinuity after overview and adjacent-pair detail; retain original and proxy for later review, withhold from current corpus."
+    }
+  ],
+  "targeted_audits": [
+    "configs/native-masterov-allframe-audit-v1.json",
+    "configs/native-supplemental3-offset-allframe-audit-v1.json",
+    "configs/native-expansion-next-allframe-audit-v1.json",
+    "configs/native-masterov-final-allframe-audit-v1.json",
+    "configs/native-recovery-allframe-audit-v1.json"
+  ],
+  "scope": "Cumulative replacement for curated-longform-v4; never add their durations. Preserve all clean surplus beyond ten hours. Dataset freeze pending coverage report and user review; no training authorization.",
+  "training_approved": false
+}

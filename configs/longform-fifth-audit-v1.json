@@ -1,0 +1,13 @@
+{
+  "review": "runs/longform-fifth-audit-v1",
+  "index_sha256": "70d08ad5e4a42c4bfcbd2e70ea31d7111436d8278d3f3f5bb7e183bfabb1ef91",
+  "reviewed_ranges": [
+    [
+      0,
+      299
+    ]
+  ],
+  "rejected_indices": {},
+  "method": "All 38 sheets, 300 source-stratified sampled clips and all 12000 displayed proxy frames inspected. No additional visible contamination or internal edited transition found. Sampling follows preserved quarantines and targeted exclusions; source-round-robin sampling is not a duration-uniform error estimate. Original-frame class reviews and targeted all-frame audits are separate prerequisites. Sample-backed acceptance is not exhaustive assurance.",
+  "training_approved": false
+}
