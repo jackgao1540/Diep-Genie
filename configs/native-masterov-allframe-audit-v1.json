@@ -1,0 +1,8 @@
+{
+  "review": "runs/native-masterov-allframe-v1",
+  "index_sha256": "5b8bbcdc7cde5f202cbf42fb7111c02941f155ea93cad304097094047cbb72d4",
+  "reviewed_ranges": [[0, 523]],
+  "rejected_indices": {},
+  "method": "All 66 sheets inspected: all 40 displayed proxy frames of 524 class-positive candidates from e6LxjKUgZtI, St5gqfAbHEo, wp54XkQUhz0, y6-L9w3fKLs and zjzq4XfA8DU. These sources received targeted scrutiny for edits, menus, corner overlays and class resets observed during original-frame review. No additional visible overlays or transitions found after class exclusions. Native player names and damage flashes retained. Reduced proxy resolution cannot establish full-resolution perfection; cumulative duplicate, stratified audit and continuity approval remain separate.",
+  "training_approved": false
+}

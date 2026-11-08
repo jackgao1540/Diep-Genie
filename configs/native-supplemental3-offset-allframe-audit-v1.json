@@ -1,0 +1,8 @@
+{
+  "review": "runs/native-supplemental3-offset-allframe-v1",
+  "index_sha256": "0c93c603175a4a86a6479cef46208b193579c19c73917a6bcbf3e13809cafac8",
+  "reviewed_ranges": [[0, 246]],
+  "rejected_indices": {},
+  "method": "All 31 sheets inspected, showing all 40 retained frames per block. Player stays inside full fixed crop despite displacement within smaller class closeups. No additional visible overlay or crop failures. This targeted review does not replace cumulative duplicate, continuity and stratified audit checks.",
+  "training_approved": false
+}
