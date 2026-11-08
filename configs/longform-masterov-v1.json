@@ -1,0 +1,340 @@
+{
+  "purpose": "Sparse source triage only; genuine desktop diep.io candidates. Fixed central crops exclude visible corner facecams/HUD. Every-frame native-name-aware OCR, dense class review and audits remain required.",
+  "sources": [
+    {
+      "id": "St5gqfAbHEo",
+      "media_path": "data/masterov/raw/St5gqfAbHEo.mp4",
+      "video_sha256": "a6dd98ce59eb4f616f6bc3a6eb16e9f636b61b2639f064065b45d17633928fcb",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          440
+        ]
+      ]
+    },
+    {
+      "id": "wp54XkQUhz0",
+      "media_path": "data/masterov/raw/wp54XkQUhz0.mp4",
+      "video_sha256": "2af47758c5d889f158165f426fcc10336d65885659cb6a94ddb62cca6dd348c3",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          832
+        ]
+      ]
+    },
+    {
+      "id": "sH605WtRnks",
+      "media_path": "data/masterov/raw/sH605WtRnks.mp4",
+      "video_sha256": "26da5aaf333255a3a4a0220ec22d9e9956a7ce2bc521fe8838ec9ef29d611a2e",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          35,
+          580
+        ]
+      ]
+    },
+    {
+      "id": "d5G0470YeuE",
+      "media_path": "data/masterov/raw/d5G0470YeuE.mp4",
+      "video_sha256": "cf3bf906edeba5bff74a65b252d1a1961781fa5e6cdd7962e84f10de7a4d746f",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          40,
+          580
+        ]
+      ]
+    },
+    {
+      "id": "y6-L9w3fKLs",
+      "media_path": "data/masterov/raw/y6-L9w3fKLs.mp4",
+      "video_sha256": "a98125431ac2cbcbbf34e71c671cef428d3203c8485d60ada36c62d4dc68db2f",
+      "split": "val",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          716
+        ]
+      ]
+    },
+    {
+      "id": "qz3LCxUIe7c",
+      "media_path": "data/masterov/raw/qz3LCxUIe7c.mp4",
+      "video_sha256": "a244178dec55819050052cd86a5d89a2b4258f8c3b55ff4e559fc4dd1db02f5f",
+      "split": "val",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          45,
+          750
+        ]
+      ]
+    },
+    {
+      "id": "FlzyVTjZRxc",
+      "media_path": "data/masterov/raw/FlzyVTjZRxc.mp4",
+      "video_sha256": "eadef19dd8153e3f1f849bc57994414b17e1dcae71153320a5091140b280a91a",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          45,
+          980
+        ]
+      ]
+    },
+    {
+      "id": "GOSmSMrDbk4",
+      "media_path": "data/masterov/raw/GOSmSMrDbk4.mp4",
+      "video_sha256": "82b0f1ca0e8fd774450649aa2fc459c08dc4b83f2942d02b135d9f14a46d5a36",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          820
+        ]
+      ]
+    },
+    {
+      "id": "bbyWrwSCq5I",
+      "media_path": "data/masterov/raw/bbyWrwSCq5I.mp4",
+      "video_sha256": "9165a07fcff9723e982e2ef17e070d7fef1dbbabf732de88c41ec4cac70856d3",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          20,
+          380
+        ]
+      ]
+    },
+    {
+      "id": "e6LxjKUgZtI",
+      "media_path": "data/masterov/raw/e6LxjKUgZtI.mp4",
+      "video_sha256": "422a34e75faf667356b77d296b01bf221cc61edc52b0b38a2e40c74a2a129387",
+      "split": "val",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          345
+        ]
+      ]
+    },
+    {
+      "id": "zjzq4XfA8DU",
+      "media_path": "data/masterov/raw/zjzq4XfA8DU.mp4",
+      "video_sha256": "27d00eea9c2c8bb7de3d3fae832cab541ff91fd1a4b59b67365e11518e330122",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          230
+        ],
+        [
+          320,
+          790
+        ]
+      ]
+    },
+    {
+      "id": "jxk_SQf-aLI",
+      "media_path": "data/masterov/raw/jxk_SQf-aLI.mp4",
+      "video_sha256": "6056073eee80c3ad1d041181153e0f86f4f82d9bf9f0947c3f623c902842da35",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          778
+        ]
+      ]
+    },
+    {
+      "id": "jrQ8N8LsysA",
+      "media_path": "data/masterov/raw/jrQ8N8LsysA.mp4",
+      "video_sha256": "b4f1af21993b7d0c8e6c615a21553302ee8bc239f58d3e5b29984c59dcaa8e27",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          25,
+          580
+        ]
+      ]
+    },
+    {
+      "id": "Uq_byDCKc9U",
+      "media_path": "data/masterov/raw/Uq_byDCKc9U.mp4",
+      "video_sha256": "c2f01d7a53c0449919d86ecadcb716fa385b9bfe4bb0e84bb5fe75b376a870db",
+      "split": "test",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          4050
+        ]
+      ]
+    },
+    {
+      "id": "Zl-_A3zUn6w",
+      "media_path": "data/masterov/raw/Zl-_A3zUn6w.mp4",
+      "video_sha256": "ea8059a8158a82f882fd3047e7aeaccc9004ed5f70cf6824258b3fc6c6ef7b40",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          250,
+          4020
+        ]
+      ]
+    },
+    {
+      "id": "ifbuKVQIDC8",
+      "media_path": "data/masterov/raw/ifbuKVQIDC8.mp4",
+      "video_sha256": "d35126c8f992e52374969f9aeff938d1b1866eaf2adfd722eeb4b638f5d5a96e",
+      "split": "train",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          30,
+          470
+        ]
+      ]
+    },
+    {
+      "id": "pst7M2Un5Aw",
+      "media_path": "data/masterov/raw/pst7M2Un5Aw.mp4",
+      "video_sha256": "a0fe92464073e5ba6f93327398e1ebbacec3bd1a5d93280cd38e5a9a7d0911a8",
+      "split": "val",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          60,
+          960
+        ]
+      ]
+    },
+    {
+      "id": "tRySe3Tx-n0",
+      "media_path": "data/masterov/raw/tRySe3Tx-n0.mp4",
+      "video_sha256": "d8109a0b29fb27d1a15c6f0c36577fd6fddd81dcbc0e53f5953bba021ca1468c",
+      "split": "val",
+      "crop": [
+        220,
+        80,
+        200,
+        200
+      ],
+      "intervals": [
+        [
+          20,
+          270
+        ],
+        [
+          350,
+          800
+        ]
+      ]
+    }
+  ],
+  "excluded": {
+    "LGJwlOqZJzA": "Hybrid with auxiliary drones; defer for initial ordinary-shooter scope"
+  }
+}

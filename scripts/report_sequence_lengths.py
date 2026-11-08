@@ -8,6 +8,7 @@ from collections import defaultdict
 import json
 from pathlib import Path
 import numpy as np
+from genie_diep.curation_reviews import load_class_review
 
 
 def sequence_runs(rows,boundary_check=None):
@@ -41,7 +42,7 @@ def make_run(source,rows):
 def run(args):
     rows=[];seen=set();class_decisions={}
     for p in args.class_reviews:
-        for r in json.loads(Path(p).read_text(encoding='utf-8'))['rows']:
+        for r in load_class_review(p):
             key=(r['source_id'],r['block_id']);old=class_decisions.get(key)
             if old and old!=r:raise ValueError('Conflicting class decisions')
             class_decisions[key]=r

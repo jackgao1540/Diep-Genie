@@ -1,0 +1,8 @@
+{
+  "review": "runs/longform-class-musa-v1",
+  "index_sha256": "61ceb8aaffc3a8d5ecbd7f621b6e03b5f9bdc31093348afefc5f7a3115d67c8b",
+  "accepted_ranges": [[0, 517]],
+  "rejected_indices": {},
+  "method": "All nine class sheets inspected: four player samples per four-second block plus context. Ordinary basic, Triple Shot and Destroyer progression; native damage flashes retained. Original-resolution checks in runs/musa-class-detail.png and runs/musa-late-class-detail.png resolved ambiguous barrel shapes. Sparse class review only; full-frame sample, duplicate and continuity audits still required.",
+  "training_approved": false
+}

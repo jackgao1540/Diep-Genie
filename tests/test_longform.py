@@ -6,6 +6,37 @@ import pytest
 from genie_diep.data import file_hash
 from scripts.screen_longform import crop_frame, player_present, screen_source
 from scripts.report_sequence_lengths import sequence_runs
+from genie_diep.native_text import native_name
+from genie_diep.curation_reviews import load_class_review
+
+
+def test_compact_review_is_bound_to_index_and_rejects_overlap(tmp_path):
+    index=tmp_path/'index.json'
+    index.write_text(json.dumps({'rows':[dict(source_id='a',block_id='000_000000',proxy_sha256='pixels')]}))
+    review=tmp_path/'review.json'
+    config=dict(review=str(tmp_path),index_sha256=file_hash(index),accepted_ranges=[[0,0]],rejected_indices={})
+    review.write_text(json.dumps(config))
+    rows=load_class_review(review)
+    assert len(rows)==1 and rows[0]['proxy_sha256']=='pixels' and not rows[0]['training_approved']
+    review.write_text(json.dumps({**config,'accepted_ranges':[[0,0],[0,0]]}))
+    with pytest.raises(ValueError,match='Overlapping'):load_class_review(review)
+    review.write_text(json.dumps(config));index.write_text('{}')
+    with pytest.raises(ValueError,match='Changed'):load_class_review(review)
+
+
+def test_native_name_requires_small_outlined_font_and_body():
+    frame=np.full((360,640,3),185,np.uint8)
+    cv2.circle(frame,(320,190),12,(220,170,20),-1)
+    for color,thickness in (((30,30,30),3),((255,255,255),1)):
+        cv2.putText(frame,'Player',(303,171),cv2.FONT_HERSHEY_SIMPLEX,.3,color,thickness,cv2.LINE_AA)
+    box=np.array([[300,158],[337,158],[337,176],[300,176]])
+    assert native_name(frame,box)
+    without_body=frame.copy();without_body[178:210,300:340]=185
+    assert not native_name(without_body,box)
+    caption=frame.copy();caption[155:178,298:340]=185
+    cv2.putText(caption,'Player',(303,171),cv2.FONT_HERSHEY_SIMPLEX,.3,(220,50,50),1,cv2.LINE_AA)
+    assert not native_name(caption,box)
+    assert not native_name(frame,np.array([[200,120],[440,120],[440,160],[200,160]]))
 
 
 def test_contiguous_runs_do_not_bridge_missing_rejected_or_new_intervals():
@@ -34,7 +65,7 @@ def test_player_palette_and_crop_padding():
     with pytest.raises(ValueError,match='outside'):crop_frame(frame,[60,60,100,100],24)
 
 
-def test_every_frame_ocr_rejection_and_resume_integrity(tmp_path):
+def test_every_frame_ocr_rejection_and_resume_integrity(tmp_path,monkeypatch):
     video=tmp_path/'source.avi'
     writer=cv2.VideoWriter(str(video),cv2.VideoWriter_fourcc(*'MJPG'),10,(160,160))
     assert writer.isOpened()
@@ -61,6 +92,28 @@ def test_every_frame_ocr_rejection_and_resume_integrity(tmp_path):
     assert not any(r['training_approved'] for r in rows)
     screen_source(source,args,engine,'recipe-sha')
     assert engine.calls==79  # no duplicate work or duplicate accepted seconds
+    recovered=SimpleNamespace(**vars(args));recovered.out=str(tmp_path/'recovered')
+    recovered.text_policy='native-names';recovered.previous_screen=[args.out]
+    second_engine=Engine();screen_source(source,recovered,second_engine,'recipe-sha')
+    recovered_rows=[json.loads(s) for s in (tmp_path/'recovered/source/blocks.jsonl').read_text().splitlines()]
+    assert second_engine.calls==40  # strict negative reused, text-positive block rescreened in FULL
+    assert recovered_rows[0]['proxy_sha256']==rows[0]['proxy_sha256']
+    assert recovered_rows[0]['reused_strict_screen']
+    class LateCaption:
+        calls=0
+        def __call__(self,frame):
+            self.calls+=1
+            if self.calls in (1,39):
+                x=20 if self.calls==1 else 80
+                return SimpleNamespace(boxes=np.array([[[x,30],[x+35,30],[x+35,45],[x,45]]]),txts=['label'],scores=[.99])
+            return SimpleNamespace(boxes=None)
+    late_args=SimpleNamespace(**vars(args));late_args.out=str(tmp_path/'late-caption');late_args.text_policy='native-names'
+    monkeypatch.setattr('scripts.screen_longform.native_name',lambda frame,box:box[0,0]<60)
+    late_engine=LateCaption();screen_source({**source,'intervals':[[0,4]]},late_args,late_engine,'late-recipe')
+    late_row=json.loads((tmp_path/'late-caption/source/blocks.jsonl').read_text())
+    assert late_row['reasons']==['text'] and late_row['ocr_frames']==39
+    assert late_row['detections'][0]['native_name_allowed']
+    assert not late_row['detections'][1]['native_name_allowed']
     with pytest.raises(ValueError,match='configuration changed'):screen_source(source,args,engine,'different-recipe')
     (tmp_path/'screen/source'/rows[0]['proxy']).write_bytes(b'corrupted')
     with pytest.raises(ValueError,match='missing or changed'):screen_source(source,args,engine,'recipe-sha')

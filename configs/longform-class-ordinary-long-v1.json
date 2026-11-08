@@ -1,0 +1,13 @@
+{
+  "review": "runs/longform-class-ordinary-long-v1",
+  "index_sha256": "a12e6f604f5e8b06d673c36381ad990f3553f9af38413cc6e03672522b1fa81f",
+  "accepted_ranges": [
+    [
+      0,
+      615
+    ]
+  ],
+  "rejected_indices": {},
+  "method": "All10class sheets reviewed, four one-second-spaced player closeups and context per4-second block. Both sources show ordinary shooter progression. Native damage flashes are game events; they are not by themselves editing contamination. This is sparse class triage, not all-frame approval; duplicates, continuity and full-frame sample audits remain.",
+  "training_approved": false
+}

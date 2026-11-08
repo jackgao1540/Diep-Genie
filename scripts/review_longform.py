@@ -16,6 +16,7 @@ def run(args):
         for line in path.read_text(encoding='utf-8').splitlines():
             r=json.loads(line)
             if r['reasons']:continue
+            if args.new_only and r.get('reused_strict_screen'):continue
             r['proxy_path']=(path.parent/r['proxy']).as_posix()
             if file_hash(r['proxy_path'])!=r['proxy_sha256']:raise ValueError('Changed candidate')
             rows.append(r)
@@ -61,4 +62,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('screen');p.add_argument('out')
     p.add_argument('--mode',choices=['class','audit'],default='audit');p.add_argument('--limit',type=int,default=0)
     p.add_argument('--source',nargs='+');p.add_argument('--seed',type=int,default=20261107)
+    p.add_argument('--new-only',action='store_true',help='Review recovered candidates, excluding unchanged strict negatives')
     run(p.parse_args())
