@@ -1,0 +1,292 @@
+{
+  "review": "runs/class-original-native-recovery-v1",
+  "index_sha256": "fc72adaada650a2a926681602083bd0d3595ca09b73c54d3eb03874c0ad07230",
+  "scope": "Ordinary shooting player tank eligibility; preserve all excluded footage for future review.",
+  "method": "Visually inspected all 85 original-frame class sheets: four enlarged player views, full crop context and available class HUD per block. Sparse class review is not full-frame quality approval. Native names and opponent drones allowed; uncertain player geometry withheld.",
+  "accepted_ranges": [
+    [
+      1,
+      11
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      15,
+      17
+    ],
+    [
+      19,
+      33
+    ],
+    [
+      35,
+      35
+    ],
+    [
+      37,
+      51
+    ],
+    [
+      53,
+      167
+    ],
+    [
+      169,
+      183
+    ],
+    [
+      187,
+      189
+    ],
+    [
+      194,
+      196
+    ],
+    [
+      199,
+      199
+    ],
+    [
+      201,
+      202
+    ],
+    [
+      212,
+      286
+    ],
+    [
+      289,
+      289
+    ],
+    [
+      292,
+      296
+    ],
+    [
+      303,
+      312
+    ],
+    [
+      314,
+      362
+    ],
+    [
+      364,
+      381
+    ],
+    [
+      383,
+      396
+    ],
+    [
+      400,
+      404
+    ],
+    [
+      411,
+      412
+    ],
+    [
+      416,
+      421
+    ],
+    [
+      423,
+      425
+    ],
+    [
+      427,
+      442
+    ],
+    [
+      448,
+      468
+    ],
+    [
+      470,
+      500
+    ],
+    [
+      502,
+      521
+    ],
+    [
+      524,
+      524
+    ],
+    [
+      527,
+      528
+    ],
+    [
+      530,
+      559
+    ],
+    [
+      561,
+      566
+    ],
+    [
+      568,
+      573
+    ],
+    [
+      577,
+      595
+    ],
+    [
+      599,
+      602
+    ],
+    [
+      606,
+      636
+    ],
+    [
+      638,
+      662
+    ],
+    [
+      668,
+      668
+    ],
+    [
+      672,
+      752
+    ],
+    [
+      757,
+      758
+    ],
+    [
+      760,
+      782
+    ],
+    [
+      798,
+      799
+    ],
+    [
+      801,
+      811
+    ],
+    [
+      814,
+      1349
+    ]
+  ],
+  "rejected_indices": {
+    "0": "Drone-controlling multi-spawner player; future-class candidate, quality not yet approved.",
+    "12": "Crowded overlapping players obscure central tank class; retain as uncertain candidate.",
+    "14": "Crowded overlapping players obscure central tank class; retain as uncertain candidate.",
+    "18": "Overlapping players obscure central tank geometry; retain as uncertain candidate.",
+    "34": "Drone-controlling multi-spawner player; future-class candidate, quality not yet approved.",
+    "36": "Drone-controlling side-spawner player; future-class candidate, quality not yet approved.",
+    "52": "Spike/rammer player without a shooting barrel; future-class candidate, quality not yet approved.",
+    "168": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "184": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "185": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "186": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "190": "Strong edited color shift; excluded from clean gameplay.",
+    "191": "Strong edited color shift; excluded from clean gameplay.",
+    "192": "Strong edited color shift; excluded from clean gameplay.",
+    "193": "Strong edited color shift; excluded from clean gameplay.",
+    "197": "Automatic trapper player; future-class candidate, quality not yet approved.",
+    "198": "Automatic trapper player; future-class candidate, quality not yet approved.",
+    "200": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "203": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "204": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "205": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "206": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "207": "Hybrid shooting/drone player or unresolved rear-spawner geometry; retain for future-class review.",
+    "208": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "209": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "210": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "211": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "287": "Spike/rammer player; future-class candidate, quality not yet approved.",
+    "288": "Spike/rammer player; future-class candidate, quality not yet approved.",
+    "290": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "291": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "297": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "298": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "299": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "300": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "301": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "302": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "313": "Player persistently obscured by overlapping tanks and names; retain as uncertain candidate.",
+    "363": "Apparent edited player/projectile color shift; withhold pending quality review.",
+    "382": "Square player body and projectiles indicate visual modification; not standard gameplay.",
+    "397": "Possible rear drone spawner; retain as uncertain future-class candidate.",
+    "398": "Possible rear drone spawner; retain as uncertain future-class candidate.",
+    "399": "Possible rear drone spawner; retain as uncertain future-class candidate.",
+    "405": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "406": "Trapper player; future-class candidate, quality not yet approved.",
+    "407": "Trapper player; future-class candidate, quality not yet approved.",
+    "408": "Trapper player; future-class candidate, quality not yet approved.",
+    "409": "Trapper player; future-class candidate, quality not yet approved.",
+    "410": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "413": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "414": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "415": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "422": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "426": "Player class transition or drone mechanics unresolved; retain as uncertain candidate.",
+    "443": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "444": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "445": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "446": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "447": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "469": "Drone-controlling player; future-class candidate, quality not yet approved.",
+    "501": "Scene/player-color change inside sampled block; edited transition.",
+    "522": "Crowded overlapping players obscure central player; retain as uncertain candidate.",
+    "523": "Crowded overlapping players obscure central player; retain as uncertain candidate.",
+    "525": "Drone/factory player; future-class candidate, quality not yet approved.",
+    "526": "Drone/factory player; future-class candidate, quality not yet approved.",
+    "529": "Drone/factory player; future-class candidate, quality not yet approved.",
+    "560": "Death/respawn or edited player-class discontinuity inside block.",
+    "567": "Death/respawn or edited player-class discontinuity inside block.",
+    "574": "Drone-controlling player; future-class candidate, quality not yet approved.",
+    "575": "Drone-controlling player; future-class candidate, quality not yet approved.",
+    "576": "Drone-controlling player; future-class candidate, quality not yet approved.",
+    "596": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "597": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "598": "Hybrid shooting/drone player; future-class candidate, quality not yet approved.",
+    "603": "Smasher/rammer player; future-class candidate, quality not yet approved.",
+    "604": "Smasher/rammer player; future-class candidate, quality not yet approved.",
+    "605": "Smasher/rammer player; future-class candidate, quality not yet approved.",
+    "637": "Scene/player discontinuity inside block.",
+    "663": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "664": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "665": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "666": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "667": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "669": "Added question-mark overlay.",
+    "670": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "671": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "753": "Automatic-turret player; future-class candidate, quality not yet approved.",
+    "754": "Automatic-turret player; future-class candidate, quality not yet approved.",
+    "755": "Automatic-turret player; future-class candidate, quality not yet approved.",
+    "756": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "759": "Player obscured by overlapping players and labels; retain as uncertain candidate.",
+    "783": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "784": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "785": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "786": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "787": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "788": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "789": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "790": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "791": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "792": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "793": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "794": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "795": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "796": "Gunner-trapper player; future-class candidate, quality not yet approved.",
+    "797": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "800": "Added smiley overlay inside block.",
+    "812": "Drone/hybrid player; future-class candidate, quality not yet approved.",
+    "813": "Drone/hybrid player; future-class candidate, quality not yet approved."
+  },
+  "training_approved": false
+}
