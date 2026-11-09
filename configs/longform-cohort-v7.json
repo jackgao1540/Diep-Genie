@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "parent_cohort": "data/curated-longform-v6",
+  "parent_checkpoint": "configs/longform-sixth-checkpoint-v1.json",
+  "native_index": "runs/stationary-recovery-v1/native-index.json",
+  "native_index_sha256": "7820975bc5e9e3ca2327a0fce6dec24f2b3061d05cafea65f0e5a84263a83a35",
+  "duplicate_report": "runs/stationary-recovery-v1/duplicates.json",
+  "duplicate_report_sha256": "1aa763058ad8ae5b828a4b3d8060e5a278d757feb89b2c39c9c9b9c4ea7ef545",
+  "accepted": [
+    {
+      "source_id": "u_1_o_wnAT8",
+      "block_id": "000_000038",
+      "rescreen_sha256": "3212970bb6aaee093f328ea208f23e3831bb9444c07a42e154de6c190d5be6cc",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "All 120 native crop frames and start/middle/end original context reviewed; live activity, no added overlay or cut. Stationarity is not frozen recording.",
+      "approved_boundaries": []
+    },
+    {
+      "source_id": "rhrJDjXpEVs",
+      "block_id": "001_000004",
+      "rescreen_sha256": "4aac301ad11f6ee2b8e8f27296b8029e3e38be7064740a1d5602f80d1e6d052f",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "All 120 native crop frames and start/middle/end original context reviewed; live activity, no added overlay or cut. Stationarity is not frozen recording.",
+      "approved_boundaries": []
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000867",
+      "rescreen_sha256": "6567e8fc96a358b31382ccc09380625f4c3083da82461a19f40acf74d77167b1",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "All 120 native crop frames and start/middle/end original context reviewed; live activity, no added overlay or cut. Stationarity is not frozen recording.",
+      "approved_boundaries": [
+        {
+          "source_id": "CJWlY5GDndo",
+          "before": "000_000866",
+          "after": "000_000867"
+        },
+        {
+          "source_id": "CJWlY5GDndo",
+          "before": "000_000867",
+          "after": "000_000868"
+        }
+      ]
+    }
+  ],
+  "duplicate_decisions": [
+    {
+      "index": 0,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 1,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 2,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 3,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 4,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 5,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 6,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    },
+    {
+      "index": 7,
+      "decision": "distinct_gameplay",
+      "reason": "Same tank remains in place at a later time. Barrel angles/damage phases differ; full context shows different food positions/rotations and leaderboard state. Not a reused video segment."
+    }
+  ],
+  "duplicate_review_evidence": [
+    {
+      "path": "runs/stationary-recovery-v1/duplicate-review/duplicates-001.png",
+      "sha256": "4679cd29f75f8311283c63bc1237ddb6e277f58bdcf03a33a0d79d451334c20e"
+    },
+    {
+      "path": "runs/stationary-recovery-v1/duplicate-review/full-context.png",
+      "sha256": "5e298f71d5424a31f96623cef6e8deff2ab2b57dd33071b717831ef7a9b73901"
+    }
+  ],
+  "training_approved": false
+}

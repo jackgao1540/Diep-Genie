@@ -5,3 +5,6 @@ docs/style.css text eol=lf
 docs/app.js text eol=lf
 docs/showcase.json text eol=lf
 docs/assets/*.webp binary
+configs/longform-cohort-v7.json text eol=lf
+configs/longform-seventh-checkpoint-v1.json text eol=lf
+configs/baseline-data-v7.json text eol=lf

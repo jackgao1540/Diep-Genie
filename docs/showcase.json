@@ -2,14 +2,15 @@
   "schema_version": 1,
   "updated": "2026-11-08",
   "project": "Diep-Genie",
-  "dataset_version": "v6",
-  "retained_hours": 11.536666666666667,
+  "dataset_version": "v7",
+  "retained_seconds": 41544.0,
+  "retained_hours": 11.54,
   "retained_sources": 108,
-  "retained_blocks": 10383,
+  "retained_blocks": 10386,
   "training_approved": false,
   "model_status": "Research prototype; no playable trained world model.",
-  "cohort_manifest_sha256": "b5f4e4bb530d1a2d4851c254305473c9535650e7401df1509dd529764f354a83",
-  "selection_sha256": "416ae212ed35b23b5a5e85242f84a9b5649df919d2d6e16a7e4f89383d0e8ffa",
+  "cohort_manifest_sha256": "8e728a7b689ecb5fdec3e4dea9a492b79c6fa224d2d1437d654ee69fc763d053",
+  "selection_sha256": "cf7340fa09392651a50149b1f14c316ef0d9b437fdcfeebd6a46870cbb615eb5",
   "sample_count": 13,
   "sample_seconds": 52,
   "media_bytes": 3520218,
@@ -900,8 +901,8 @@
     {
       "id": "sample-10",
       "title": "Low motion is not always a freeze",
-      "description": "An opponent moves and the barrel turns slightly. The freeze screen rejected it; it has not been reinstated.",
-      "status": "rejected",
+      "description": "An opponent moves and the barrel turns slightly. Recovered into v7 after native-frame, text, class and duplicate review.",
+      "status": "accepted",
       "split": "train",
       "source_id": "u_1_o_wnAT8",
       "source_title": "BYE DIEPIO",
@@ -919,7 +920,7 @@
         128,
         128
       ],
-      "processed_kind": "illustrative_resize_not_training_data",
+      "processed_kind": "retained_proxy",
       "tags": [
         "Aim changes",
         "No emission seen",
@@ -944,7 +945,7 @@
       },
       "provenance": {
         "video_sha256": "264514ab81d92b7ad07abe2c31c2cb925191e616359fb8c45bb1d6cf523262e6",
-        "proxy_sha256": null,
+        "proxy_sha256": "8bf16a2ee609ea2e0199a94cf49d7fa8dfeb52725db4e951506fa5d902b8c900",
         "crop": [
           220,
           80,
@@ -1095,8 +1096,8 @@
     {
       "id": "sample-12",
       "title": "Slow movement missed by screening",
-      "description": "Maze walls drift gradually. A low mean-change threshold rejected the clip; recovery needs a full review.",
-      "status": "rejected",
+      "description": "Maze walls drift gradually. Recovered into v7 after review confirmed live gameplay; low image change was a screening false positive.",
+      "status": "accepted",
       "split": "train",
       "source_id": "rhrJDjXpEVs",
       "source_title": "WE FINALLY KILLED THE BASE DRONES!  + Maze funny moments - Diep.io",
@@ -1114,7 +1115,7 @@
         128,
         128
       ],
-      "processed_kind": "illustrative_resize_not_training_data",
+      "processed_kind": "retained_proxy",
       "tags": [
         "No emission seen"
       ],
@@ -1137,7 +1138,7 @@
       },
       "provenance": {
         "video_sha256": "1a40038dfcad27082b1f1dfd8aadc4b72a23469428203a94296437bab7b9d7c5",
-        "proxy_sha256": null,
+        "proxy_sha256": "1a7208b5fc8980086185f47770a7d5dfecf93fc5043c4f7cf34ab56b449b3c19",
         "crop": [
           220,
           80,
@@ -1190,9 +1191,9 @@
     },
     {
       "id": "sample-13",
-      "title": "Aiming inside a rejected clip",
-      "description": "The player turns while the team-area boundaries remain stable. A screening rejection is not proof of a frozen image.",
-      "status": "rejected",
+      "title": "Recovered aiming footage",
+      "description": "The player turns while team-area boundaries stay fixed. Recovered into v7, with both neighboring joins checked for continuity.",
+      "status": "accepted",
       "split": "train",
       "source_id": "CJWlY5GDndo",
       "source_title": "WOLRDS STRONGEST TANK MAXED! DIEP.IO HUGE UPDATE! - New DIEP.IO TEAMS Gamemode & NEW TANK GAMEPLAY!",
@@ -1210,7 +1211,7 @@
         128,
         128
       ],
-      "processed_kind": "illustrative_resize_not_training_data",
+      "processed_kind": "retained_proxy",
       "tags": [
         "Aim changes",
         "No emission seen",
@@ -1235,7 +1236,7 @@
       },
       "provenance": {
         "video_sha256": "94cd44d160589c22358e2bfde76535feb33ea267ef74bbbd790fd11fd32d088a",
-        "proxy_sha256": null,
+        "proxy_sha256": "1d5c7c59f07933384e7f2bea53476964592074cfccc92b98a2f96ccd1e117037",
         "crop": [
           220,
           80,

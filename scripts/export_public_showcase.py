@@ -58,11 +58,12 @@ def run(root, destination):
             source_url=f"https://www.youtube.com/watch?v={p['source_id']}&t={int(p['start'])}s",
             start=p['start'],duration=4,fps=10,frames=40,source_crop_size=p['crop'][2:],processed_size=[128,128],
             processed_kind=processed_kind,tags=p['tags'],media=media,
-            provenance=dict(video_sha256=r['video_sha256'],proxy_sha256=r.get('proxy_sha256'),crop=r['crop'],source_frame_indices=r['source_frame_indices'])))
+            provenance=dict(video_sha256=r['video_sha256'],proxy_sha256=library.records[cid].get('proxy_sha256'),crop=r['crop'],source_frame_indices=r['source_frame_indices'])))
     media_bytes=sum(m['bytes'] for c in clips for m in c['media'].values())
     if media_bytes>recipe['max_media_bytes']:raise ValueError('Public sample size cap exceeded')
     # Deliberate field whitelist: no local paths, user feedback, credentials or test samples.
-    data=dict(schema_version=1,updated='2026-11-08',project='Diep-Genie',dataset_version='v6',
+    data=dict(schema_version=1,updated='2026-11-08',project='Diep-Genie',dataset_version='v7',
+        retained_seconds=sum(library.summary['seconds_by_split'].values()),
         retained_hours=library.summary['curation_accepted_hours'],retained_sources=library.summary['source_count'],
         retained_blocks=library.summary['clips'],training_approved=False,model_status='Research prototype; no playable trained world model.',
         cohort_manifest_sha256=library.manifest_hash,selection_sha256=digest(root/'configs/public-showcase-v1.json'),

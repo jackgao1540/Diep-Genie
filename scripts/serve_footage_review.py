@@ -36,11 +36,14 @@ def clip_id(row):
 
 
 class Library:
-    def __init__(self, root, cohort='data/curated-longform-v6', feedback='runs/footage-review-v1/feedback.jsonl'):
+    def __init__(self, root, cohort='data/curated-longform-v7', feedback='runs/footage-review-v1/feedback.jsonl'):
         self.root = Path(root).resolve()
         self.cohort = self.root / cohort
         self.manifest_hash = file_hash(self.cohort/'manifest.jsonl')
-        checkpoint = read(self.root/'configs/longform-sixth-checkpoint-v1.json')
+        checkpoints={'data/curated-longform-v6':'configs/longform-sixth-checkpoint-v1.json',
+                     'data/curated-longform-v7':'configs/longform-seventh-checkpoint-v1.json'}
+        if cohort not in checkpoints:raise ValueError('Unsupported review cohort')
+        checkpoint = read(self.root/checkpoints[cohort])
         if self.cohort != self.root/checkpoint['cohort']:
             raise ValueError('Unsupported review cohort')
         for name, expected in checkpoint['hashes'].items():
@@ -65,14 +68,13 @@ class Library:
         active = {identity(r): r for r in rows(self.cohort/'manifest.jsonl')}
         self.records = {}
         self.public = {}
+        for r in active.values():
+            if r['split']!='test':self.add(r,'accepted',self.cohort/r['proxy_path'])
         previous = self.root/'data/curated-longform-v5'
         for r in rows(previous/'manifest.jsonl'):
             if r['split'] == 'test':
                 continue
-            accepted = identity(r) in active
-            current = active.get(identity(r), r)
-            self.add(current, 'accepted' if accepted else 'held',
-                     (self.cohort if accepted else previous)/current['proxy_path'])
+            if identity(r) not in active:self.add(r,'held',previous/r['proxy_path'])
         focused = read(self.root/'configs/longform-focused-review-v1.json')
         for batch in focused['batches']:
             index_path = self.root/batch['index']
@@ -87,7 +89,7 @@ class Library:
             for row, requested in zip(index['rows'], request['rows']):
                 if identity(row) != identity(requested):
                     raise ValueError('Review request mismatch')
-                if not row['accepted']:
+                if not row['accepted'] and identity(row) not in active:
                     candidates = [r for r in rows(self.root/requested['screen']/'blocks.jsonl') if identity(r) == identity(row)]
                     if len(candidates) != 1:
                         raise ValueError('Ambiguous rejected clip')
@@ -136,7 +138,7 @@ class Library:
         if self.feedback_path.exists():
             for entry in rows(self.feedback_path):
                 record = self.records.get(entry.get('id'))
-                if record and entry.get('content_sha256') == self.content_hash(record):
+                if record and self.feedback_matches(record, entry.get('content_sha256')):
                     self.feedback[entry['id']] = entry
         self.summary = read(self.cohort/'summary.json')
 
@@ -151,8 +153,10 @@ class Library:
             raise ValueError('Duplicate review clip')
         self.records[cid] = dict(row, _proxy=proxy)
         reason = ('Retained after existing screening and class/quality review. Sample-backed; not a guarantee for every frame.' if status == 'accepted' else
-                  'Entire source withheld from v6 after suspected frozen gameplay at 70–74 seconds. No training use pending source audit.' if status == 'held' else
+                  'Entire source withheld from the current cohort after frozen gameplay at 70–74 seconds. No training use pending source audit.' if status == 'held' else
                   'Screen rejected this clip: '+', '.join(row['reasons'])+'. Retained for comparison; not reinstated.')
+        if row.get('recovery_recipe'):
+            reason='Recovered into v7 after native-frame, class, text, duplicate and continuity review. Low motion is valid gameplay; original screening decision is preserved.'
         self.public[cid] = dict(id=cid, source_id=row['source_id'], block_id=row['block_id'], title=source['title'], channel=source['channel'],
             split=row['split'], start=row['start'], seconds=row['frames']/row['fps'], fps=row['fps'], frames=row['frames'],
             crop=row['crop'], has_proxy=proxy is not None, status=status, reason=reason, tags=[], evidence=[], reviewed=False,
@@ -161,6 +165,15 @@ class Library:
     @staticmethod
     def content_hash(record):
         return hashlib.sha256(json.dumps({k:record.get(k) for k in ('video_sha256','proxy_sha256','source_frame_indices','crop')},sort_keys=True).encode()).hexdigest()
+
+    @classmethod
+    def feedback_matches(cls, record, digest):
+        if digest == cls.content_hash(record):
+            return True
+        # Earlier rejected previews were bound to the same original frames/crop,
+        # before a reviewed proxy existed. Keep those notes without rewriting them.
+        return bool(record.get('recovery_recipe') and
+                    digest == cls.content_hash(dict(record, proxy_sha256=None)))
 
     def catalog(self):
         with self.lock:

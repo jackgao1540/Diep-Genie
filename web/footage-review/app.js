@@ -5,7 +5,7 @@ const descriptions = {
   featured:['Reviewed examples','Start with clips examined for scene and behavior coverage. This is a targeted selection, not a random sample.'],
   accepted:['Retained footage','Browse the current retained training and validation footage. Quality remains sample-backed.'],
   held:['Source hold','160 clips from one source are withheld from the current dataset. Inspect them here without reinstating them.'],
-  rejected:['Screening rejects','Four low-motion screening rejects, kept for comparison. Some show active gameplay; one contains added text.'],
+  rejected:['Screening rejects','The added-text example remains excluded. Three former low-motion rejects are now included in the retained v7 footage.'],
   flagged:['Your flags','Clips you flagged for a closer look. Feedback does not change the frozen dataset.'],
   reviewed:['Your reviews','Your saved quality decisions and notes, stored on this computer.']
 };

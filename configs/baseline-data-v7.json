@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "data_binding_only_not_executable_training_config",
+  "architecture_spec": "configs/baseline-v1.json",
+  "architecture_spec_sha256": "7969bbfd5c3cf7dd534bd15598a748abcd097f1533351ee0e1086fb5c857d395",
+  "cohort": "data/curated-longform-v7",
+  "hashes": {
+    "summary.json": "bf6a6ec3896a8d6b5e786eaab294e36f0b08a54cf17c10b99f0e73fe0af9743f",
+    "manifest.jsonl": "8e728a7b689ecb5fdec3e4dea9a492b79c6fa224d2d1437d654ee69fc763d053",
+    "sequences.json": "71f059d5ecb62f2bf8ddd8673e13e6985c620b2069004f4bd63e2e55ce187e30"
+  },
+  "excluded_source_holds": [
+    "eGJEVXrV8rs"
+  ],
+  "coverage_evidence": "configs/longform-focused-review-v1.json",
+  "cohort_verification": "configs/longform-seventh-checkpoint-v1.json",
+  "note": "Use v7: v6 plus three fully reviewed low-motion clips (12 seconds), preserving every parent row and split. Model, gates and budget remain as designed; implementation and readiness checks are still required.",
+  "training_approved": false,
+  "execution_ready": false
+}

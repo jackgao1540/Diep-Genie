@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "purpose": "User-authorized public GitHub Pages sample export, not full dataset publication.",
-  "cohort": "data/curated-longform-v6",
+  "cohort": "data/curated-longform-v7",
   "max_media_bytes": 15000000,
   "selection": [
     {
@@ -72,7 +72,7 @@
       "batch": "targeted",
       "review_index": 14,
       "title": "Low motion is not always a freeze",
-      "description": "An opponent moves and the barrel turns slightly. The freeze screen rejected it; it has not been reinstated."
+      "description": "An opponent moves and the barrel turns slightly. Recovered into v7 after native-frame, text, class and duplicate review."
     },
     {
       "id": "sample-11",
@@ -86,14 +86,14 @@
       "batch": "targeted",
       "review_index": 16,
       "title": "Slow movement missed by screening",
-      "description": "Maze walls drift gradually. A low mean-change threshold rejected the clip; recovery needs a full review."
+      "description": "Maze walls drift gradually. Recovered into v7 after review confirmed live gameplay; low image change was a screening false positive."
     },
     {
       "id": "sample-13",
       "batch": "targeted",
       "review_index": 17,
-      "title": "Aiming inside a rejected clip",
-      "description": "The player turns while the team-area boundaries remain stable. A screening rejection is not proof of a frozen image."
+      "title": "Recovered aiming footage",
+      "description": "The player turns while team-area boundaries stay fixed. Recovered into v7, with both neighboring joins checked for continuity."
     }
   ]
 }
