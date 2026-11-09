@@ -27,7 +27,8 @@ def launcher_environment(monkeypatch, tmp_path):
     monkeypatch.setattr(threading, 'Thread', Mock())
     run = Mock(side_effect=AssertionError('Setup must not execute after validation failure'))
     monkeypatch.setattr(subprocess, 'run', run)
-    scope = dict(AUTHORIZED_TO_RUN=True, LIVE_BALANCE=199.71, DISPLAYED_UNITS_PER_HOUR=2.0,
+    scope = dict(AUTHORIZED_TO_RUN=True, LIVE_BALANCE=100.0, DISPLAYED_UNITS_PER_HOUR=2.0,
+                 PRIOR_ALLOCATED_SECONDS=0.0, PRIOR_COMPUTE_UNITS=0.0,
                  ALLOCATION_START_UTC=datetime.now(timezone.utc).isoformat())
     code = ''.join(notebook()['cells'][2]['source'])
     return colab, run, scope, code
@@ -60,9 +61,24 @@ def test_expired_budget_releases_runtime_without_mount(monkeypatch, tmp_path):
 def test_default_launcher_disabled_and_export_cannot_overwrite(tmp_path):
     output = tmp_path/'launch-v1'
     build(output)
-    exported = json.loads((output/'first-gpu-trial-drive-v1.ipynb').read_text())
+    exported = json.loads((output/'first-gpu-trial-drive-v2.ipynb').read_text())
     scope = {}
     exec(''.join(exported['cells'][1]['source']), scope)
     assert scope['AUTHORIZED_TO_RUN'] is False
     with pytest.raises(FileExistsError):
         build(output)
+
+
+@pytest.mark.parametrize('seconds,units,rate', [(3400, 0, 1), (0, 1.99, 1), (300, 0.1, 100)])
+def test_prior_debits_or_live_rate_prevent_overbudget_setup(monkeypatch, tmp_path, seconds, units, rate):
+    colab, run, scope, code = launcher_environment(monkeypatch, tmp_path)
+    scope.update(PRIOR_ALLOCATED_SECONDS=seconds, PRIOR_COMPUTE_UNITS=units,
+                 DISPLAYED_UNITS_PER_HOUR=rate)
+    with pytest.raises(AssertionError, match='Insufficient budget'):
+        exec(compile(code, 'launcher', 'exec'), scope)
+    colab.drive.mount.assert_not_called()
+    run.assert_not_called()
+    colab.runtime.unassign.assert_called_once()
+    remaining = scope['deadline'] - scope['allocation_start']
+    assert remaining <= 3600 - seconds + 1e-6
+    assert remaining * rate / 3600 <= 2 - units + 1e-6

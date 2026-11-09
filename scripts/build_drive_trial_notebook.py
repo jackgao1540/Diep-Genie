@@ -28,6 +28,8 @@ it does not establish model quality or authorize further training.
 After authorization, enter the live balance, displayed hourly usage rate and
 actual allocation start timestamp below. All allocated setup and idle time counts.
 Stop at 2 compute units or one allocated hour; preserve 50 units. No purchases.
+Enter conservative prior allocation debits from the private setup report. The
+watchdog and pilot both deduct these before allowing the resumed measurement.
 The watchdog begins before Drive authentication and setup. Results go to Drive,
 and the runtime is unassigned on success or failure. Do not run the historical pilot.
 ''')
@@ -35,6 +37,8 @@ and the runtime is unassigned on success or failure. Do not run the historical p
 LIVE_BALANCE = 0.0
 DISPLAYED_UNITS_PER_HOUR = 0.0
 ALLOCATION_START_UTC = ""  # Actual allocation start, ISO 8601 with UTC offset
+PRIOR_ALLOCATED_SECONDS = 0.0
+PRIOR_COMPUTE_UNITS = 0.0
 ''')
     cell('code', '''import hashlib, json, math, pathlib, shutil, subprocess, sys, threading, time, zipfile
 from datetime import datetime
@@ -43,11 +47,17 @@ from google.colab import drive, runtime
 assert AUTHORIZED_TO_RUN, "Authorize only this bounded measurement first"
 assert math.isfinite(LIVE_BALANCE) and LIVE_BALANCE > 50
 assert math.isfinite(DISPLAYED_UNITS_PER_HOUR) and DISPLAYED_UNITS_PER_HOUR > 0
+assert math.isfinite(PRIOR_ALLOCATED_SECONDS) and PRIOR_ALLOCATED_SECONDS >= 0
+assert math.isfinite(PRIOR_COMPUTE_UNITS) and PRIOR_COMPUTE_UNITS >= 0
 allocation_time = datetime.fromisoformat(ALLOCATION_START_UTC)
 assert allocation_time.utcoffset() is not None, "Allocation timestamp needs a timezone"
 allocation_start = allocation_time.timestamp()
 assert allocation_start <= time.time(), "Allocation start cannot be in the future"
-deadline = allocation_start + min(3600, 2 / DISPLAYED_UNITS_PER_HOUR * 3600,
+# The immutable pilot accepts elapsed allocation time, so conservatively encode
+# both prior debits as time at today's rate. This cannot undercount either cap.
+accounting_offset = max(PRIOR_ALLOCATED_SECONDS, PRIOR_COMPUTE_UNITS / DISPLAYED_UNITS_PER_HOUR * 3600)
+accounting_start = allocation_start - accounting_offset
+deadline = accounting_start + min(3600, 2 / DISPLAYED_UNITS_PER_HOUR * 3600,
                                   (LIVE_BALANCE - 50) / DISPLAYED_UNITS_PER_HOUR * 3600)
 # Begin shutdown 30 seconds early to allow the unassign request to finish.
 stop_at = deadline - 30
@@ -63,6 +73,8 @@ threading.Thread(target=watchdog, daemon=True).start()
 result = None
 status = {'status': 'setup', 'purpose': 'GPU execution measurement only',
           'allocation_start_utc': ALLOCATION_START_UTC,
+          'prior_allocated_seconds': PRIOR_ALLOCATED_SECONDS, 'prior_compute_units': PRIOR_COMPUTE_UNITS,
+          'conservative_accounting_offset_seconds': accounting_offset,
           'live_balance': LIVE_BALANCE, 'displayed_units_per_hour': DISPLAYED_UNITS_PER_HOUR,
           'maximum_compute_units': 2, 'maximum_allocated_seconds': 3600,
           'quality_gates': 'unmeasured', 'training_stage_promotion': False}
@@ -95,7 +107,7 @@ try:
     with (result/'pilot.log').open('w', buffering=1) as log:
         subprocess.run([sys.executable, '-u', '-m', 'scripts.gpu_tokenizer_pilot', '--out', str(result/'measurement'),
                         '--rate', str(DISPLAYED_UNITS_PER_HOUR), '--balance', str(LIVE_BALANCE),
-                        '--allocation-start', str(allocation_start)], cwd=root, check=True,
+                        '--allocation-start', str(accounting_start)], cwd=root, check=True,
                        stdout=log, stderr=subprocess.STDOUT, timeout=max(1, stop_at-time.time()-120))
     report = json.loads((result/'measurement/pilot-report.json').read_text())
     status['status'] = report['status']
@@ -107,6 +119,8 @@ finally:
     try:
         status['allocated_seconds_before_unassign'] = time.time()-allocation_start
         status['estimated_units_before_unassign'] = status['allocated_seconds_before_unassign']*DISPLAYED_UNITS_PER_HOUR/3600
+        status['total_seconds_with_prior_debit'] = PRIOR_ALLOCATED_SECONDS + status['allocated_seconds_before_unassign']
+        status['total_units_with_prior_debit'] = PRIOR_COMPUTE_UNITS + status['estimated_units_before_unassign']
         if result is not None and result.exists():
             (result/'launch-status.json').write_text(json.dumps(status, indent=2) + '\\n')
     finally:
@@ -126,7 +140,7 @@ def build(output):
         if cell['cell_type'] == 'code':
             compile(''.join(cell['source']), f'cell-{index}', 'exec')
     output.mkdir(parents=True, exist_ok=False)
-    target = output/'first-gpu-trial-drive-v1.ipynb'
+    target = output/'first-gpu-trial-drive-v2.ipynb'
     target.write_text(json.dumps(document, indent=2) + '\n', encoding='utf-8')
     manifest = dict(notebook=target.name, notebook_sha256=hashlib.sha256(target.read_bytes()).hexdigest(),
                     archive='genie-baseline-v1-v9.zip', archive_sha256=ARCHIVE_SHA256,
@@ -137,5 +151,5 @@ def build(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--out', default='exports/baseline-v1-v9-drive-launch-v1')
+    parser.add_argument('--out', default='exports/baseline-v1-v9-drive-launch-v2')
     print(json.dumps(build(parser.parse_args().out), indent=2))
