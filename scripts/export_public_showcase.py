@@ -68,7 +68,7 @@ def run(root, destination):
         cohort_manifest_sha256=library.manifest_hash,selection_sha256=digest(root/'configs/public-showcase-v1.json'),
         sample_count=len(clips),sample_seconds=4*len(clips),media_bytes=media_bytes,
         sample_policy='Hand-selected train/validation examples; not a random or complete representation. No reserved-test footage. No rating or feedback collection.',clips=clips)
-    (out/'showcase.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    (out/'showcase.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     (out/'.nojekyll').write_text('',encoding='utf-8')
     print(json.dumps(dict(samples=len(clips),media_bytes=media_bytes,files=len(clips)*3,output=str(out))))
 
