@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-09",
+  "cohort": "data/curated-longform-v9",
+  "manifest_sha256": "cdc2107c523b51c92fe6dc4c70e23dfe31d5269b62d293d3849bacc949dfbe59",
+  "sequences_sha256": "b9c493052a3d0ec3466e2831d166ca350340bc8c948e847f107f1bd66fb4e7e2",
+  "scope": "All approximately four-second gaps between retained train/val sequences, rounded to nearest second. Original-screen reasons, not a census of final exclusion causes or confirmed recoveries.",
+  "gap_count": 989,
+  "reason_combinations": {
+    "no_center_body,nonstandard_or_obscured_background,blur_or_fade": 2,
+    "text": 509,
+    "no_center_body": 412,
+    "no_center_body,cut_or_flash,blur_or_fade": 3,
+    "no_center_body,cut_or_flash": 11,
+    "blur_or_fade": 20,
+    "no_center_body,blur_or_fade": 3,
+    "screen_passed": 17,
+    "freeze": 1,
+    "no_center_body,cut_or_flash,nonstandard_or_obscured_background": 2,
+    "no_center_body,cut_or_flash,nonstandard_or_obscured_background,blur_or_fade": 1,
+    "cut_or_flash": 7,
+    "cut_or_flash,nonstandard_or_obscured_background": 1
+  },
+  "gap_index": {
+    "path": "runs\\continuity-gap-audit-v1\\gaps.json",
+    "sha256": "64f54f264738ef0bde885978184b8b15f161a6575da1052eeab08dcd9172ee92"
+  },
+  "visual_sample": {
+    "selection": "Eight gaps with highest sum of left run, four-second gap, and right run; targeted, not random.",
+    "sample_index": "runs\\continuity-gap-audit-v1\\sample.json",
+    "sample_index_sha256": "1b0a9e4cc5198aa7fcfb543b8eda95675edd431ecd1ad47ecae75fd98a2dc683",
+    "inspected_crop_frames": 320,
+    "full_source_context_indices": [
+      3,
+      4,
+      7
+    ],
+    "text_detection_overlay": {
+      "path": "runs\\continuity-gap-audit-v1\\text-detections.jpg",
+      "sha256": "b9cc40950459a51fdd695ed1e14a36545182dd45771e84790d456855f25b9020"
+    },
+    "observations": [
+      {
+        "index": 0,
+        "source_id": "JSyZI-2KEMg",
+        "start": 598,
+        "missed_frames": [
+          12
+        ],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-00.jpg",
+        "sheet_sha256": "7af7623dc30f8ecdf410e5427c498a48c5976a90e6ff361479420bb281b13608",
+        "notes": "Player visible in missed frame; projectile/body geometry defeats color-component test."
+      },
+      {
+        "index": 1,
+        "source_id": "JSyZI-2KEMg",
+        "start": 878,
+        "missed_frames": [
+          37,
+          38
+        ],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-01.jpg",
+        "sheet_sha256": "8ad83dcb352bf06aa23a26a5e1698c544ec79663f013f9f836c91e6a3ba8ef30",
+        "notes": "Player visible during red damage flashes; two detector misses, not disappearance."
+      },
+      {
+        "index": 2,
+        "source_id": "n4Sb-H9pM-Q",
+        "start": 3054,
+        "missed_frames": [
+          10
+        ],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-02.jpg",
+        "sheet_sha256": "60e8bcdcff80dacbc503309db4d050bc3f2d0658a75036d6aa4c50d17ed03621",
+        "notes": "Player visible during red damage flash; one detector miss."
+      },
+      {
+        "index": 3,
+        "source_id": "3K9aU1BNwko",
+        "start": 634,
+        "missed_frames": [],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-03.jpg",
+        "sheet_sha256": "20e468c66f080d950692a71144bd35a7ee89f05d94fdad0b0bfc9e49d5a88420",
+        "notes": "Text flag is another player name at right crop edge (a lying cake); native game label, not added caption."
+      },
+      {
+        "index": 4,
+        "source_id": "e-8RxOtYZoU",
+        "start": 1780,
+        "missed_frames": [],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-04.jpg",
+        "sheet_sha256": "12ab9b171b3edc622df515b4533061f965f70f90dc1e5fec58248c26496fb087",
+        "notes": "OCR box for native bottom HUD name UQKgames grazes crop boundary; actual label is below crop in inspected exact frame. Requires exact crop/text rescreen, not automatic overlay rejection."
+      },
+      {
+        "index": 5,
+        "source_id": "JHC8BOtWrKA",
+        "start": 530,
+        "missed_frames": [
+          21
+        ],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-05.jpg",
+        "sheet_sha256": "d9c38a266cc6369a45631fd9e2ce04be465977f4b60c684c6e031a578085faf8",
+        "notes": "Player visible as white damage flash; one detector miss."
+      },
+      {
+        "index": 6,
+        "source_id": "QDhz5R9gxR8",
+        "start": 314,
+        "missed_frames": [
+          0
+        ],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-06.jpg",
+        "sheet_sha256": "7e3253d3aa1fce74a95ab791ead055f0bee87f9e42543e21583401ca92fe88cc",
+        "notes": "Player visible amid overlapping projectiles/food; one detector miss."
+      },
+      {
+        "index": 7,
+        "source_id": "fE8mBs7v-8k",
+        "start": 762,
+        "missed_frames": [],
+        "sheet": "runs\\continuity-gap-audit-v1\\gap-07.jpg",
+        "sheet_sha256": "aaf60162f864e0b558a30cd7c445df00cd560d403b35dfb84aa78e7f81439cb9",
+        "notes": "Flagged YT-Pookie19 label belongs to another player; earlier same-label detections were allowed, one later detection failed native-name heuristic."
+      }
+    ]
+  },
+  "screening_issue": "cheap_reasons requires player_present on every sampled frame; one miss excludes all four seconds and prevents joining retained neighbors. Damage flashes/projectile overlaps cause observed false missing-player flags.",
+  "policy": "Stationary play and brief natural damage flashes/occlusions should preserve chronological continuity. Detector misses request contextual review; genuine cuts, menus, invalid class intervals and disallowed overlays still require boundaries. Never drop individual frames and stitch over them.",
+  "limitations": [
+    "Only eight targeted gaps visually reviewed; no population false-positive rate established.",
+    "40 sampled frames per gap inspected, not all native-rate frames.",
+    "Player-only rejects skipped OCR; full OCR, native continuity/class, duplicate and boundary checks remain before recovery.",
+    "17 original-screen passes require downstream provenance review.",
+    "Frozen v9, training bundle and eligibility unchanged; no footage promoted; no GPU compute."
+  ]
+}
