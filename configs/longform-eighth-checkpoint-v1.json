@@ -1,0 +1,23 @@
+{
+  "cohort": "data/curated-longform-v8",
+  "parent_cohort": "data/curated-longform-v7",
+  "hashes": {
+    "summary.json": "71314a6d95d312928b7b5b74d1e9ce6c9a1f757e9e94804eff8581a039bb2e80",
+    "manifest.jsonl": "e835a0c3b98bf4b58132418114235d3b18e87fb5314a7a8fe5f7ce05d1a6c491",
+    "sequences.json": "657571e80fe5e989cd4ced38dab72b360c8e4a30e935865abf6400634c2d7dbd"
+  },
+  "accepted_blocks": 10414,
+  "accepted_hours": 11.571111111111112,
+  "source_count": 108,
+  "seconds_by_split": {
+    "train": 31512.0,
+    "test": 6376.0,
+    "val": 3768.0
+  },
+  "added_blocks": 28,
+  "added_seconds": 112.0,
+  "parent_rows_unchanged": true,
+  "reserved_test_unchanged": true,
+  "new_joins": 33,
+  "training_approved": false
+}

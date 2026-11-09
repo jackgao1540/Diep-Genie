@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "data_binding_only_not_executable_training_config",
+  "architecture_spec": "configs/baseline-v1.json",
+  "architecture_spec_sha256": "7969bbfd5c3cf7dd534bd15598a748abcd097f1533351ee0e1086fb5c857d395",
+  "cohort": "data/curated-longform-v8",
+  "hashes": {
+    "summary.json": "71314a6d95d312928b7b5b74d1e9ce6c9a1f757e9e94804eff8581a039bb2e80",
+    "manifest.jsonl": "e835a0c3b98bf4b58132418114235d3b18e87fb5314a7a8fe5f7ce05d1a6c491",
+    "sequences.json": "657571e80fe5e989cd4ced38dab72b360c8e4a30e935865abf6400634c2d7dbd"
+  },
+  "excluded_source_holds": [
+    "eGJEVXrV8rs"
+  ],
+  "coverage_evidence": "configs/longform-focused-review-v1.json",
+  "cohort_verification": "configs/longform-eighth-checkpoint-v1.json",
+  "note": "V8 preserves every v7 row and adds 28 reviewed stationary train blocks (112 seconds). Review the inherited 8f7hehx5w5g class interval around 3071.5 seconds before training; four new candidates remain withheld for unresolved reserved-test similarity. Training implementation/readiness gates remain pending.",
+  "training_approved": false,
+  "execution_ready": false,
+  "required_class_followup": {
+    "source_id": "8f7hehx5w5g",
+    "start": 3071.5,
+    "end": 3073.5,
+    "reason": "Duplicate comparison exposed the same uncertain player class in inherited footage. Recheck the surrounding parent class interval before training; v8 does not alter immutable parent rows."
+  }
+}

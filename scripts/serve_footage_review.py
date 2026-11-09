@@ -36,12 +36,13 @@ def clip_id(row):
 
 
 class Library:
-    def __init__(self, root, cohort='data/curated-longform-v7', feedback='runs/footage-review-v1/feedback.jsonl'):
+    def __init__(self, root, cohort='data/curated-longform-v8', feedback='runs/footage-review-v1/feedback.jsonl'):
         self.root = Path(root).resolve()
         self.cohort = self.root / cohort
         self.manifest_hash = file_hash(self.cohort/'manifest.jsonl')
         checkpoints={'data/curated-longform-v6':'configs/longform-sixth-checkpoint-v1.json',
-                     'data/curated-longform-v7':'configs/longform-seventh-checkpoint-v1.json'}
+                     'data/curated-longform-v7':'configs/longform-seventh-checkpoint-v1.json',
+                     'data/curated-longform-v8':'configs/longform-eighth-checkpoint-v1.json'}
         if cohort not in checkpoints:raise ValueError('Unsupported review cohort')
         checkpoint = read(self.root/checkpoints[cohort])
         if self.cohort != self.root/checkpoint['cohort']:
@@ -156,7 +157,7 @@ class Library:
                   'Entire source withheld from the current cohort after frozen gameplay at 70–74 seconds. No training use pending source audit.' if status == 'held' else
                   'Screen rejected this clip: '+', '.join(row['reasons'])+'. Retained for comparison; not reinstated.')
         if row.get('recovery_recipe'):
-            reason='Recovered into v7 after native-frame, class, text, duplicate and continuity review. Low motion is valid gameplay; original screening decision is preserved.'
+            reason='Retained after native-frame, class, text, duplicate and continuity review. Low motion is valid gameplay; original screening decision is preserved.'
         self.public[cid] = dict(id=cid, source_id=row['source_id'], block_id=row['block_id'], title=source['title'], channel=source['channel'],
             split=row['split'], start=row['start'], seconds=row['frames']/row['fps'], fps=row['fps'], frames=row['frames'],
             crop=row['crop'], has_proxy=proxy is not None, status=status, reason=reason, tags=[], evidence=[], reviewed=False,

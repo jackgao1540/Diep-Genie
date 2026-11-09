@@ -8,3 +8,7 @@ docs/assets/*.webp binary
 configs/longform-cohort-v7.json text eol=lf
 configs/longform-seventh-checkpoint-v1.json text eol=lf
 configs/baseline-data-v7.json text eol=lf
+configs/longform-cohort-v8.json text eol=lf
+configs/longform-eighth-checkpoint-v1.json text eol=lf
+configs/baseline-data-v8.json text eol=lf
+configs/remaining-low-motion-*.json text eol=lf

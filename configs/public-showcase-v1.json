@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "purpose": "User-authorized public GitHub Pages sample export, not full dataset publication.",
-  "cohort": "data/curated-longform-v7",
+  "cohort": "data/curated-longform-v8",
   "max_media_bytes": 15000000,
   "selection": [
     {

@@ -41,7 +41,7 @@ def validate():
     assert summary['curation_accepted_hours']==11.54 and not summary['training_approved']
     binding=read('configs/baseline-data-v7.json')
     assert binding['cohort']==checkpoint['cohort'] and binding['hashes']==checkpoint['hashes']
-    library=Library(Path.cwd())
+    library=Library(Path.cwd(),cohort=checkpoint['cohort'])
     assert Counter(r['status'] for r in library.public.values())=={'accepted':8792,'held':160,'rejected':1}
     assert all(r['split']!='test' for r in library.public.values())
     old=Library(Path.cwd(),cohort=parent['cohort'])

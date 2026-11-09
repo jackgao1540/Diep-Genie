@@ -62,7 +62,7 @@ def run(root, destination):
     media_bytes=sum(m['bytes'] for c in clips for m in c['media'].values())
     if media_bytes>recipe['max_media_bytes']:raise ValueError('Public sample size cap exceeded')
     # Deliberate field whitelist: no local paths, user feedback, credentials or test samples.
-    data=dict(schema_version=1,updated='2026-11-08',project='Diep-Genie',dataset_version='v7',
+    data=dict(schema_version=1,updated='2026-11-08',project='Diep-Genie',dataset_version='v8',
         retained_seconds=sum(library.summary['seconds_by_split'].values()),
         retained_hours=library.summary['curation_accepted_hours'],retained_sources=library.summary['source_count'],
         retained_blocks=library.summary['clips'],training_approved=False,model_status='Research prototype; no playable trained world model.',

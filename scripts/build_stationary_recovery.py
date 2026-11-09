@@ -4,6 +4,7 @@ from collections import Counter
 import json
 from pathlib import Path
 import shutil
+import copy
 import numpy as np
 from genie_diep.data import file_hash
 from scripts.report_sequence_lengths import sequence_runs
@@ -15,6 +16,37 @@ def read(path,sha=None):
 def rows(path):return [json.loads(s) for s in Path(path).read_text(encoding='utf-8').splitlines()]
 def key(row):return row['source_id'],row['block_id']
 def write(path,value):Path(path).write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8',newline='\n')
+
+
+def resolve_native_names(screen, decision):
+    result=copy.deepcopy(screen)
+    overrides=decision.get('native_name_overrides',[])
+    if not overrides:return result
+    unresolved={i for i,d in enumerate(screen['detections']) if not d.get('native_name_allowed')}
+    if {d['detection_index'] for d in overrides}!=unresolved or len(overrides)!=len(unresolved):
+        raise ValueError('Incomplete native-name review')
+    if set(screen['reasons'])!={'low_motion_review','text'}:raise ValueError('Unexpected screening override')
+    result['original_screening_reasons']=list(screen['reasons'])
+    result['native_name_overrides']=overrides
+    for d in overrides:
+        detection=result['detections'][d['detection_index']]
+        if d['text']!=detection['text'] or d['frame']!=detection['frame'] or not d['reason']:
+            raise ValueError('Native-name evidence mismatch')
+        detection['original_native_name_allowed']=False
+        detection['native_name_allowed']=True
+    result['reasons']=['low_motion_review']
+    return result
+
+
+def validate_boundary(boundary, endpoints):
+    lookup={key(r):r for r in endpoints}
+    before=lookup.get((boundary['source_id'],boundary['before']))
+    after=lookup.get((boundary['source_id'],boundary['after']))
+    if before is None or after is None:raise ValueError('Boundary endpoint missing')
+    if before['proxy_sha256']!=boundary['before_sha256'] or after['proxy_sha256']!=boundary['after_sha256']:raise ValueError('Boundary endpoint changed')
+    if any(before[k]!=after[k] for k in ['video_sha256','crop','split','fps','source_fps']):raise ValueError('Boundary source mismatch')
+    if before['start']>=after['start'] or abs(before['end']-after['start'])>=.6/before['source_fps']:raise ValueError('Boundary is not adjacent')
+    return boundary['source_id'],boundary['before'],boundary['after']
 
 
 def validate_additions(base,added,exclusions):
@@ -38,6 +70,7 @@ def validate_additions(base,added,exclusions):
 def run(recipe_path,destination):
     recipe=read(recipe_path);out=Path(destination)
     if out.exists():raise FileExistsError('Choose a new immutable cohort')
+    if recipe.get('review'):read(recipe['review'],recipe['review_sha256'])
     parent=Path(recipe['parent_cohort']);checkpoint=read(recipe['parent_checkpoint'])
     for name,sha in checkpoint['hashes'].items():
         if file_hash(parent/name)!=sha:raise ValueError('Parent cohort changed')
@@ -51,7 +84,9 @@ def run(recipe_path,destination):
     if any(d['decision']!='distinct_gameplay' for d in decisions):raise ValueError('Unresolved near duplicate')
     for artifact in recipe['duplicate_review_evidence']:
         if file_hash(artifact['path'])!=artifact['sha256']:raise ValueError('Duplicate visual evidence changed')
-    added=[];new_joins=[]
+    accepted_keys={(d['source_id'],d['block_id']) for d in recipe['accepted']}
+    endpoints=base+[e['row'] for e in index['rows'] if key(e['row']) in accepted_keys]
+    added=[];new_joins=set()
     for decision in recipe['accepted']:
         e=next(e for e in index['rows'] if key(e['row'])==(decision['source_id'],decision['block_id']))
         old=e['row'];screen_path=Path(old['recovery_screen']);screen=rows(screen_path)[0]
@@ -63,16 +98,13 @@ def run(recipe_path,destination):
             for artifact in ev['sheets']+[ev['context']]:
                 if file_hash(artifact['path'])!=artifact['sha256']:raise ValueError('Visual evidence changed')
         if file_hash(old['media_path'])!=old['video_sha256'] or file_hash(old['proxy_path'])!=old['proxy_sha256']:raise ValueError('Recovery pixels changed')
-        r=dict(screen,block_id=old['block_id'],start=old['start'],end=old['end'],proxy_path=old['proxy_path'])
+        r=dict(resolve_native_names(screen,decision),block_id=old['block_id'],start=old['start'],end=old['end'],proxy_path=old['proxy_path'])
         added.append(r)
         expected={(b['source_id'],b['before'],b['after']) for b in e['boundaries']}
         supplied={(b['source_id'],b['before'],b['after']) for b in decision['approved_boundaries']}
         if expected!=supplied:raise ValueError('Incomplete boundary review')
         for b in e['boundaries']:
-            for side in ['before','after']:
-                endpoint=next((x for x in base+[r] if key(x)==(b['source_id'],b[side])),None)
-                if endpoint is None or endpoint['proxy_sha256']!=b[side+'_sha256']:raise ValueError('Boundary endpoint changed')
-            new_joins.append((b['source_id'],b['before'],b['after']))
+            new_joins.add(validate_boundary(b,endpoints))
     if len(added)!=report['additions'] or len({key(r) for r in added})!=len(added):raise ValueError('Addition audit mismatch')
     exclusions=read('configs/longform-cohort-v6.json')['exclude_intervals']
     validate_additions(base,added,exclusions)
@@ -115,7 +147,7 @@ def run(recipe_path,destination):
                 accepted_blocks=len(all_rows),accepted_hours=summary['curation_accepted_hours'],source_count=summary['source_count'],
                 seconds_by_split=dict(seconds),added_blocks=len(added),added_seconds=sum(r['frames']/r['fps'] for r in added),parent_rows_unchanged=True,
                 reserved_test_unchanged=True,new_joins=len(new_joins),training_approved=False)
-    write('configs/longform-seventh-checkpoint-v1.json',result);print(json.dumps(result))
+    write(recipe.get('output_checkpoint','configs/longform-seventh-checkpoint-v1.json'),result);print(json.dumps(result))
 
 
 if __name__=='__main__':
