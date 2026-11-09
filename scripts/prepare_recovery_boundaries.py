@@ -3,13 +3,14 @@ import argparse
 from pathlib import Path
 from scripts.prepare_stationary_recovery import read, rows, write, native_sheet
 from scripts.build_stationary_recovery import key
+from genie_diep.data import file_hash
 
 
-def run(selection,out):
+def run(selection,out,parent='data/curated-longform-v7'):
     out=Path(out); out.mkdir(parents=True,exist_ok=True)
     selected=set(read(selection)); original=read('runs/remaining-low-motion-v1/candidates-native.json')
     evidence=[e for e in original['rows'] if e['queue_index'] in selected]
-    base=rows('data/curated-longform-v7/manifest.jsonl'); added=[e['row'] for e in evidence]
+    base=rows(Path(parent)/'manifest.jsonl'); added=[e['row'] for e in evidence]
     seen=set(); count=0
     for e in evidence:
         r=e['row']; e['boundaries']=[]
@@ -24,9 +25,9 @@ def run(selection,out):
             e['boundaries'].append(dict(source_id=r['source_id'],before=before['block_id'],after=after['block_id'],
                                       before_sha256=before['proxy_sha256'],after_sha256=after['proxy_sha256'],evidence=ev))
             count+=1
-    write(out/'native-index.json',dict(base_manifest_sha256=original['base_manifest_sha256'],rows=evidence))
+    write(out/'native-index.json',dict(base_manifest_sha256=file_hash(Path(parent)/'manifest.jsonl'),rows=evidence))
     print(dict(clips=len(evidence),joins=count))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('selection');p.add_argument('out');a=p.parse_args();run(a.selection,a.out)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('selection');p.add_argument('out');p.add_argument('--parent',default='data/curated-longform-v7');a=p.parse_args();run(a.selection,a.out,a.parent)

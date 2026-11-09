@@ -7,6 +7,7 @@
   <nav aria-label="Footage collections">
     <button class="nav-item active" data-view="featured"><span>◈ &nbsp; Reviewed examples</span><b id="count-featured">—</b></button>
     <button class="nav-item" data-view="accepted"><span>▦ &nbsp; Retained footage</span><b id="count-accepted">—</b></button>
+    <button class="nav-item" data-view="recovered"><span>↺ &nbsp; Recovered footage</span><b id="count-recovered">36</b></button>
     <button class="nav-item" data-view="held"><span>◷ &nbsp; Source hold</span><b id="count-held">—</b></button>
     <button class="nav-item" data-view="rejected"><span>⊘ &nbsp; Screening rejects</span><b id="count-rejected">—</b></button>
     <div class="nav-rule"></div>
@@ -18,6 +19,7 @@
 <main>
   <header><div><div class="eyebrow">GENIE / DATA QUALITY</div><h1>See what the model will see.</h1><p class="subtitle">Explore real gameplay. Catch the details. Shape a better dataset.</p></div><span class="pill neutral">Training not started</span></header>
   <section class="stats" aria-label="Dataset summary"><div><span class="stat-label">RETAINED CORPUS</span><strong id="hours">—</strong><small>Across all frozen splits</small></div><div><span class="stat-label">SOURCE VIDEOS</span><strong id="sources">—</strong><small>After source hold</small></div><div><span class="stat-label">REVIEWABLE CLIPS</span><strong id="visible">—</strong><small>Train + validation, 4 seconds each</small></div><div><span class="stat-label">YOUR PROGRESS</span><strong id="progress">0</strong><small id="progress-detail">Clips reviewed by you</small></div></section>
+  <section class="readiness-note" aria-label="Training preparation"><h2>Prepared for a bounded first trial</h2><p>Data and local execution checks are complete. The Sprayer class question is resolved. Next: measure GPU memory, speed and mixed precision before a longer tokenizer run. Model quality and controllability remain unmeasured.</p></section>
   <div class="section-head"><div><h2 id="collection-title">Reviewed examples</h2><p id="collection-description">Start with clips already examined for scene and behavior coverage.</p></div><button class="quiet" id="shuffle">↝ &nbsp; Pick another clip</button></div>
   <div class="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search video, creator or source ID…" aria-label="Search footage"></label><select id="split" aria-label="Dataset split"><option value="all">Train + validation</option><option value="train">Training only</option><option value="val">Validation only</option></select><select id="category" aria-label="Observed category"><option value="all">All observed categories</option></select><select id="source" aria-label="Source video"><option value="all">All source videos</option></select></div>
   <div id="notice" role="status" aria-live="polite">Loading your local footage library…</div>

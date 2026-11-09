@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "source_id": "8f7hehx5w5g",
+  "video_sha256": "77b4ded7a8a39d3dbe6a8d10b699ffb2fbab067d372a795ae1833d2703b68286",
+  "class_name": "Sprayer",
+  "ordinary_shooter": true,
+  "resolves": "configs/remaining-low-motion-review-v1.json",
+  "resolves_sha256": "e22b9a0ffff41ce36ca4be2850973866da8ba4bb2bbd8cf663b34b4217858bd9",
+  "correction": "The prior Trapper-like uncertainty was mistaken. Six enlarged original class bars read Sprayer; neighboring firing context shows the paired large/small round projectiles and front muzzle geometry. No change to inherited rows is required.",
+  "context_timestamps": [
+    2950,
+    3005,
+    3040,
+    3072,
+    3096,
+    3110,
+    3150,
+    3190,
+    3205,
+    3220,
+    3240,
+    3300
+  ],
+  "evidence": [
+    {
+      "path": "runs/training-readiness-v1/class-context-0.png",
+      "sha256": "6710a601b014c7b4acaef271d7fd618d32c00b833133f690299195de37ecea4c"
+    },
+    {
+      "path": "runs/training-readiness-v1/class-context-1.png",
+      "sha256": "f8e65906ccb11effb195795d724f918a66f34b38363abaad8d4740c4325da8f8"
+    },
+    {
+      "path": "runs/training-readiness-v1/class-labels.png",
+      "sha256": "1d04f09d8ebaa336f45c98015c840ccb06e73d2d331647cb20d69474c8acfb33"
+    }
+  ],
+  "accepted_queue_indices": [
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "native_frames_reviewed": 600,
+  "new_join_frames_reviewed": 60,
+  "duplicate_method": "All 324 same-source flags covered by seven merged interval context sheets, plus existing all-native candidate review. Sprayer differs from Machine Gun/Destroyer matches; same idle segment has evolving food and other-player positions. No exact pairs or cross-split matches.",
+  "duplicate_evidence": [
+    {
+      "start": 2139.0,
+      "end": 2141.0,
+      "path": "runs/training-readiness-v1/sprayer-match-0.png",
+      "sha256": "2a35860ac6b1d0c725fe94428aca1a0e6cd262c4b5b122e607332744ca923289"
+    },
+    {
+      "start": 3071.5,
+      "end": 3093.5,
+      "path": "runs/training-readiness-v1/sprayer-match-1.png",
+      "sha256": "68eb2338926238c26fa9dd77359a8c2e09b3df76748f6aaa9ebb187e7cd7caaf"
+    },
+    {
+      "start": 3230.0,
+      "end": 3231.5,
+      "path": "runs/training-readiness-v1/sprayer-match-2.png",
+      "sha256": "e21a61402976e46125dc50717571001cd7e48e72255daef63a225b6da63c548c"
+    },
+    {
+      "start": 3919.5,
+      "end": 3930.5,
+      "path": "runs/training-readiness-v1/sprayer-match-3.png",
+      "sha256": "2545753a850c5bb06ca5884107b65c4dd13e5a38ec5eda221a1de24888ba85ae"
+    },
+    {
+      "start": 3933.0,
+      "end": 3936.0,
+      "path": "runs/training-readiness-v1/sprayer-match-4.png",
+      "sha256": "19b1ad75f8dae322e01e6e2a76cb323678d35bd7582efbdc067b9d512d117ea8"
+    },
+    {
+      "start": 4075.0,
+      "end": 4077.5,
+      "path": "runs/training-readiness-v1/sprayer-match-5.png",
+      "sha256": "9a30c1f3a6f80080efd9e40835aa631b20389c4ce3feb8a5f0d57ae0832ca82b"
+    },
+    {
+      "start": 4082.0,
+      "end": 4097.5,
+      "path": "runs/training-readiness-v1/sprayer-match-6.png",
+      "sha256": "cf3eea96986aade9eceed70940dde550447b08299ee66c72c1e2a434540ce4aa"
+    }
+  ],
+  "training_approved": false
+}

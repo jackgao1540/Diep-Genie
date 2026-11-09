@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "ready_for_gpu_pilot": true,
+  "ready_for_unbounded_training": false,
+  "training_approved": false,
+  "first_stage": "Bounded tokenizer GPU measurement: maximum 2 compute units / 1 allocated hour; preserve 50-unit reserve",
+  "spec_sha256": "ca5280239d631b4714a448926b9b02e5ceb3d40599c3050545b871c849651d7d",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "implementation_sha256": "2d9ad5492f9a44505da75eb186088aef21a8213957076148c8b7cd97d4b7c7a8",
+  "execution_report": "runs/training-readiness-v1/execution/report.json",
+  "execution_report_sha256": "e16dbccb7a79193bc34ce1d9a80b24ad892ad4137e4846740505c22f63952c6c",
+  "fidelity_review": "configs/baseline-fidelity-review-v1.json",
+  "fidelity_review_sha256": "f93bd4dad98a0bef410811da95fdd7906b2554602332c5eaf6375582456187bc",
+  "retained_seconds": 41676.0,
+  "retained_blocks": 10419,
+  "reserved_test_unchanged": true,
+  "recovered_blocks_cumulative": 36,
+  "validation_windows": 64,
+  "validation_sources": 16,
+  "train_calibration_sources": 84,
+  "checks": {
+    "dataset_hashes": true,
+    "class_hold_resolved": true,
+    "checked_sequence_loading": true,
+    "split_isolation": true,
+    "real_cpu_finite_execution": true,
+    "exact_cpu_resume": true,
+    "frozen_stages": true,
+    "all_action_codebooks_exercised": true,
+    "source_fidelity": true
+  },
+  "next_gate": "Authorize allocation and enter live rate/balance, then measure GPU FP16/memory/throughput and resume. Stop on failure; no automatic longer training.",
+  "quality_gates": {
+    "G1": "unmeasured",
+    "G2": "unmeasured",
+    "G3": "unmeasured"
+  },
+  "later_stages": "Action/dynamics promotion still requires scored reconstruction, training-only semantic calibration and held-out interventions/rollouts."
+}

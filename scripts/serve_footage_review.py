@@ -36,13 +36,14 @@ def clip_id(row):
 
 
 class Library:
-    def __init__(self, root, cohort='data/curated-longform-v8', feedback='runs/footage-review-v1/feedback.jsonl'):
+    def __init__(self, root, cohort='data/curated-longform-v9', feedback='runs/footage-review-v1/feedback.jsonl'):
         self.root = Path(root).resolve()
         self.cohort = self.root / cohort
         self.manifest_hash = file_hash(self.cohort/'manifest.jsonl')
         checkpoints={'data/curated-longform-v6':'configs/longform-sixth-checkpoint-v1.json',
                      'data/curated-longform-v7':'configs/longform-seventh-checkpoint-v1.json',
-                     'data/curated-longform-v8':'configs/longform-eighth-checkpoint-v1.json'}
+                     'data/curated-longform-v8':'configs/longform-eighth-checkpoint-v1.json',
+                     'data/curated-longform-v9':'configs/longform-ninth-checkpoint-v1.json'}
         if cohort not in checkpoints:raise ValueError('Unsupported review cohort')
         checkpoint = read(self.root/checkpoints[cohort])
         if self.cohort != self.root/checkpoint['cohort']:
@@ -160,7 +161,9 @@ class Library:
             reason='Retained after native-frame, class, text, duplicate and continuity review. Low motion is valid gameplay; original screening decision is preserved.'
         self.public[cid] = dict(id=cid, source_id=row['source_id'], block_id=row['block_id'], title=source['title'], channel=source['channel'],
             split=row['split'], start=row['start'], seconds=row['frames']/row['fps'], fps=row['fps'], frames=row['frames'],
-            crop=row['crop'], has_proxy=proxy is not None, status=status, reason=reason, tags=[], evidence=[], reviewed=False,
+            crop=row['crop'], has_proxy=proxy is not None, status=status, reason=reason,
+            recovered=bool(row.get('recovery_recipe')),tags=['Reviewed low-motion'] if row.get('recovery_recipe') else [],
+            evidence=['All native crop frames and adjacent joins reviewed; original screening decisions preserved.'] if row.get('recovery_recipe') else [],reviewed=bool(row.get('recovery_recipe')),
             sequence_seconds=4, previous=None, next=None, palette=None)
 
     @staticmethod

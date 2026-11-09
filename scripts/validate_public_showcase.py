@@ -15,7 +15,7 @@ def validate(root):
     assert data['sample_seconds'] == 52
     assert {c['id'] for c in data['clips']} == {c['id'] for c in recipe['selection']}
     assert [sum(c['status'] == s for c in data['clips']) for s in ['accepted', 'held', 'rejected']] == [11, 1, 1]
-    assert data['dataset_version']=='v8' and data['retained_seconds']==41656
+    assert data['dataset_version']=='v9' and data['retained_seconds']==41676
     total = 0
     expected = {'index.html', 'style.css', 'app.js', 'showcase.json', '.nojekyll'}
     for clip in data['clips']:

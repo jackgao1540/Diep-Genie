@@ -4,8 +4,9 @@ const state = {clips:[],feedback:{},view:'featured',filtered:[],page:0,selected:
 const descriptions = {
   featured:['Reviewed examples','Start with clips examined for scene and behavior coverage. This is a targeted selection, not a random sample.'],
   accepted:['Retained footage','Browse the current retained training and validation footage. Quality remains sample-backed.'],
+  recovered:['Recovered stationary footage','36 clips recovered through native-frame, class, text, duplicate and continuity checks. Quiet gameplay is useful training data.'],
   held:['Source hold','160 clips from one source are withheld from the current dataset. Inspect them here without reinstating them.'],
-  rejected:['Screening rejects','The added-text example remains excluded. 31 preserved low-motion clips are now included in the retained v8 footage.'],
+  rejected:['Screening rejects','The added-text example remains excluded. 36 preserved low-motion clips are now included in the retained v9 footage.'],
   flagged:['Your flags','Clips you flagged for a closer look. Feedback does not change the frozen dataset.'],
   reviewed:['Your reviews','Your saved quality decisions and notes, stored on this computer.']
 };
@@ -26,6 +27,7 @@ function applyFilters(reset=true){
   state.filtered=state.clips.filter(c=>{
     const view=state.view;
     if(view==='featured'&&(!c.reviewed||c.status!=='accepted'))return false;
+    if(view==='recovered'&&!c.recovered)return false;
     if(['accepted','held','rejected'].includes(view)&&c.status!==view)return false;
     if(view==='flagged'&&decision(c.id)?.decision!=='flag')return false;
     if(view==='reviewed'&&!decision(c.id))return false;
@@ -119,6 +121,7 @@ async function boot(){
     const response=await fetch('/api/catalog');if(!response.ok)throw Error('The local library could not be loaded.');const data=await response.json();state.clips=data.clips;state.feedback=data.feedback;state.token=data.token;
     $('hours').textContent=data.meta.accepted_hours.toFixed(2)+' h';$('sources').textContent=data.meta.accepted_sources;$('visible').textContent=state.clips.filter(c=>c.status==='accepted').length.toLocaleString();$('version').textContent=`${data.meta.cohort} · 10 FPS · 128px`;
     for(const view of ['accepted','held','rejected'])$('count-'+view).textContent=state.clips.filter(c=>c.status===view).length.toLocaleString();$('count-featured').textContent=state.clips.filter(c=>c.status==='accepted'&&c.reviewed).length;
+    $('count-recovered').textContent=state.clips.filter(c=>c.recovered).length;
     [...new Set(state.clips.flatMap(c=>c.tags))].sort().forEach(tag=>$('category').add(new Option(tag,tag)));
     const sources=[...new Map(state.clips.map(c=>[c.source_id,c])).values()].sort((a,b)=>a.channel.localeCompare(b.channel)||a.source_id.localeCompare(b.source_id));sources.forEach(c=>$('source').add(new Option(`${c.channel} · ${c.source_id}`,c.source_id)));
     stats();applyFilters();const preferred=state.filtered.find(c=>c.tags.includes('Maze walls')&&c.tags.includes('Visible firing'))||state.filtered[0];if(preferred)await selectClip(preferred.id);notice();

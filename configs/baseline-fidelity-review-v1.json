@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "evaluation_selection": "configs/baseline-evaluation-v1.json",
+  "evaluation_sha256": "a7bf97bed304c7effc0095b5d81465b9c271129ba78317721d197a855ce1945d",
+  "index": "runs/training-readiness-v1/fidelity/index.json",
+  "index_sha256": "ebc9c4bad499110cb38ee7773d8a4f079ae19951a79e8046cb72c72511ea5a5f",
+  "all_eight_sheets_reviewed": true,
+  "frames": 64,
+  "sources": 16,
+  "source_resize_pixel_exact": true,
+  "conclusion": "128px retains visible tank/barrel, wall and >=3px object structure in these source-fidelity examples. Tiny projectiles and dense overlapping players are harder to separate; this supports a bounded diagnostic trial, not a reconstruction quality pass.",
+  "crowded_uncertain_player_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "supplemental_context_evidence": [
+    {
+      "path": "runs/training-readiness-v1/fidelity/context-22.png",
+      "sha256": "eb009165e942d9102b7f316feda5784089e40e939ba9dedd500bbfbfa2b3d63d"
+    },
+    {
+      "path": "runs/training-readiness-v1/fidelity/context-23.png",
+      "sha256": "0c904bf48f1c855d31917691705ca7f3dd876e86098db2825c7a940dc03e8565"
+    },
+    {
+      "path": "runs/training-readiness-v1/fidelity/context-36.png",
+      "sha256": "ff23c5dbb27057b4188565ad73256313271d7daf30add8fec8a702aa7558e799"
+    },
+    {
+      "path": "runs/training-readiness-v1/fidelity/context-41.png",
+      "sha256": "5aa9c40bdb34018795adfa71197260af497d2a5600acb80d3fc63c575da97ef0"
+    }
+  ],
+  "multi_barrel_resolution": "Full original contexts confirm fixed multi-barrel shooting shapes (Triple Twin/Octo Tank), not independent automatic turrets.",
+  "manual_anchors": [
+    {
+      "index": 0,
+      "selection": {
+        "source_id": "CjnGE_9RJbI",
+        "first_block": "000_000026",
+        "start_frame": 25,
+        "length": 16
+      },
+      "player_barrel_assessable": false,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 1,
+      "selection": {
+        "source_id": "CjnGE_9RJbI",
+        "first_block": "000_000065",
+        "start_frame": 40,
+        "length": 16
+      },
+      "player_barrel_assessable": false,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 2,
+      "selection": {
+        "source_id": "CjnGE_9RJbI",
+        "first_block": "000_000078",
+        "start_frame": 170,
+        "length": 16
+      },
+      "player_barrel_assessable": false,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 3,
+      "selection": {
+        "source_id": "CjnGE_9RJbI",
+        "first_block": "000_000115",
+        "start_frame": 15,
+        "length": 16
+      },
+      "player_barrel_assessable": false,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 4,
+      "selection": {
+        "source_id": "LgdTICpqGoY",
+        "first_block": "000_000015",
+        "start_frame": 15,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 5,
+      "selection": {
+        "source_id": "LgdTICpqGoY",
+        "first_block": "000_000018",
+        "start_frame": 21,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 6,
+      "selection": {
+        "source_id": "LgdTICpqGoY",
+        "first_block": "000_000026",
+        "start_frame": 3,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 7,
+      "selection": {
+        "source_id": "LgdTICpqGoY",
+        "first_block": "000_000029",
+        "start_frame": 9,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 8,
+      "selection": {
+        "source_id": "Zpy_9XXJtKw",
+        "first_block": "000_000001",
+        "start_frame": 22,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 9,
+      "selection": {
+        "source_id": "Zpy_9XXJtKw",
+        "first_block": "000_000008",
+        "start_frame": 2,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 10,
+      "selection": {
+        "source_id": "Zpy_9XXJtKw",
+        "first_block": "001_000004",
+        "start_frame": 22,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 11,
+      "selection": {
+        "source_id": "Zpy_9XXJtKw",
+        "first_block": "001_000008",
+        "start_frame": 2,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 12,
+      "selection": {
+        "source_id": "dN_UFytK7gw",
+        "first_block": "000_000016",
+        "start_frame": 13,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 13,
+      "selection": {
+        "source_id": "dN_UFytK7gw",
+        "first_block": "000_000023",
+        "start_frame": 26,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 14,
+      "selection": {
+        "source_id": "dN_UFytK7gw",
+        "first_block": "000_000023",
+        "start_frame": 103,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 15,
+      "selection": {
+        "source_id": "dN_UFytK7gw",
+        "first_block": "000_000033",
+        "start_frame": 11,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 16,
+      "selection": {
+        "source_id": "dgKCNs5Cn24",
+        "first_block": "000_000055",
+        "start_frame": 11,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 17,
+      "selection": {
+        "source_id": "dgKCNs5Cn24",
+        "first_block": "000_000094",
+        "start_frame": 23,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 18,
+      "selection": {
+        "source_id": "dgKCNs5Cn24",
+        "first_block": "000_000117",
+        "start_frame": 166,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 19,
+      "selection": {
+        "source_id": "dgKCNs5Cn24",
+        "first_block": "000_000143",
+        "start_frame": 33,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 20,
+      "selection": {
+        "source_id": "e6LxjKUgZtI",
+        "first_block": "000_000007",
+        "start_frame": 46,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 21,
+      "selection": {
+        "source_id": "e6LxjKUgZtI",
+        "first_block": "000_000034",
+        "start_frame": 15,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 22,
+      "selection": {
+        "source_id": "e6LxjKUgZtI",
+        "first_block": "000_000051",
+        "start_frame": 29,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 23,
+      "selection": {
+        "source_id": "e6LxjKUgZtI",
+        "first_block": "000_000064",
+        "start_frame": 83,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 24,
+      "selection": {
+        "source_id": "f6x0pEuhJ-Q",
+        "first_block": "000_000026",
+        "start_frame": 51,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 25,
+      "selection": {
+        "source_id": "f6x0pEuhJ-Q",
+        "first_block": "000_000026",
+        "start_frame": 205,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 26,
+      "selection": {
+        "source_id": "f6x0pEuhJ-Q",
+        "first_block": "000_000035",
+        "start_frame": 54,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 27,
+      "selection": {
+        "source_id": "f6x0pEuhJ-Q",
+        "first_block": "000_000050",
+        "start_frame": 53,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 28,
+      "selection": {
+        "source_id": "haMF0UV2bYs",
+        "first_block": "000_000023",
+        "start_frame": 90,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 29,
+      "selection": {
+        "source_id": "haMF0UV2bYs",
+        "first_block": "000_000072",
+        "start_frame": 15,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 30,
+      "selection": {
+        "source_id": "haMF0UV2bYs",
+        "first_block": "000_000092",
+        "start_frame": 135,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 31,
+      "selection": {
+        "source_id": "haMF0UV2bYs",
+        "first_block": "000_000126",
+        "start_frame": 70,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 32,
+      "selection": {
+        "source_id": "j22pphsxMpM",
+        "first_block": "000_000014",
+        "start_frame": 14,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 33,
+      "selection": {
+        "source_id": "j22pphsxMpM",
+        "first_block": "000_000014",
+        "start_frame": 93,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 34,
+      "selection": {
+        "source_id": "j22pphsxMpM",
+        "first_block": "000_000020",
+        "start_frame": 26,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 35,
+      "selection": {
+        "source_id": "j22pphsxMpM",
+        "first_block": "000_000020",
+        "start_frame": 105,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 36,
+      "selection": {
+        "source_id": "j5LISxLbKNk",
+        "first_block": "000_000035",
+        "start_frame": 85,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 37,
+      "selection": {
+        "source_id": "j5LISxLbKNk",
+        "first_block": "000_000139",
+        "start_frame": 1,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 38,
+      "selection": {
+        "source_id": "j5LISxLbKNk",
+        "first_block": "000_000227",
+        "start_frame": 8,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 39,
+      "selection": {
+        "source_id": "j5LISxLbKNk",
+        "first_block": "000_000348",
+        "start_frame": 4,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 40,
+      "selection": {
+        "source_id": "o1swktx96bU",
+        "first_block": "000_000042",
+        "start_frame": 21,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 41,
+      "selection": {
+        "source_id": "o1swktx96bU",
+        "first_block": "000_000070",
+        "start_frame": 25,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 42,
+      "selection": {
+        "source_id": "o1swktx96bU",
+        "first_block": "000_000095",
+        "start_frame": 39,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 43,
+      "selection": {
+        "source_id": "o1swktx96bU",
+        "first_block": "000_000114",
+        "start_frame": 78,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 44,
+      "selection": {
+        "source_id": "pst7M2Un5Aw",
+        "first_block": "000_000055",
+        "start_frame": 121,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 45,
+      "selection": {
+        "source_id": "pst7M2Un5Aw",
+        "first_block": "000_000094",
+        "start_frame": 163,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 46,
+      "selection": {
+        "source_id": "pst7M2Un5Aw",
+        "first_block": "000_000157",
+        "start_frame": 56,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 47,
+      "selection": {
+        "source_id": "pst7M2Un5Aw",
+        "first_block": "000_000171",
+        "start_frame": 1098,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 48,
+      "selection": {
+        "source_id": "qz3LCxUIe7c",
+        "first_block": "000_000028",
+        "start_frame": 163,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 49,
+      "selection": {
+        "source_id": "qz3LCxUIe7c",
+        "first_block": "000_000070",
+        "start_frame": 141,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 50,
+      "selection": {
+        "source_id": "qz3LCxUIe7c",
+        "first_block": "000_000107",
+        "start_frame": 223,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 51,
+      "selection": {
+        "source_id": "qz3LCxUIe7c",
+        "first_block": "000_000155",
+        "start_frame": 16,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 52,
+      "selection": {
+        "source_id": "tRySe3Tx-n0",
+        "first_block": "000_000006",
+        "start_frame": 393,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 53,
+      "selection": {
+        "source_id": "tRySe3Tx-n0",
+        "first_block": "001_000004",
+        "start_frame": 4,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 54,
+      "selection": {
+        "source_id": "tRySe3Tx-n0",
+        "first_block": "001_000057",
+        "start_frame": 70,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 55,
+      "selection": {
+        "source_id": "tRySe3Tx-n0",
+        "first_block": "001_000086",
+        "start_frame": 176,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 56,
+      "selection": {
+        "source_id": "y6-L9w3fKLs",
+        "first_block": "000_000028",
+        "start_frame": 41,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 57,
+      "selection": {
+        "source_id": "y6-L9w3fKLs",
+        "first_block": "000_000081",
+        "start_frame": 103,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 58,
+      "selection": {
+        "source_id": "y6-L9w3fKLs",
+        "first_block": "000_000116",
+        "start_frame": 106,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 59,
+      "selection": {
+        "source_id": "y6-L9w3fKLs",
+        "first_block": "000_000150",
+        "start_frame": 53,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 60,
+      "selection": {
+        "source_id": "ycjXOBkPaXw",
+        "first_block": "000_000007",
+        "start_frame": 129,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 61,
+      "selection": {
+        "source_id": "ycjXOBkPaXw",
+        "first_block": "000_000018",
+        "start_frame": 58,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": true,
+      "bullet_present_anchor": false,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 62,
+      "selection": {
+        "source_id": "ycjXOBkPaXw",
+        "first_block": "000_000038",
+        "start_frame": 96,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": false,
+      "food_present_anchor": true,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    },
+    {
+      "index": 63,
+      "selection": {
+        "source_id": "ycjXOBkPaXw",
+        "first_block": "000_000052",
+        "start_frame": 25,
+        "length": 16
+      },
+      "player_barrel_assessable": true,
+      "single_barrel_angle_anchor": true,
+      "food_present_anchor": false,
+      "bullet_present_anchor": true,
+      "note": "Positive anchor tags only; untagged means not selected, not proven absent. Quantitative reconstruction counts/angles are unmeasured until scoring a trained checkpoint."
+    }
+  ],
+  "G1_status": "unmeasured_no_trained_reconstruction",
+  "G2_status": "unmeasured_no_trained_action_mapping",
+  "G3_status": "unmeasured_no_trained_rollout"
+}

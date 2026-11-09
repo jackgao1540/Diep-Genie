@@ -1,0 +1,906 @@
+{
+  "schema_version": 1,
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "method": "Four valid windows per validation source at deterministic window-count quantiles; fixed before model comparison.",
+  "validation": [
+    {
+      "source_id": "CjnGE_9RJbI",
+      "first_block": "000_000026",
+      "start_frame": 25,
+      "length": 16
+    },
+    {
+      "source_id": "CjnGE_9RJbI",
+      "first_block": "000_000065",
+      "start_frame": 40,
+      "length": 16
+    },
+    {
+      "source_id": "CjnGE_9RJbI",
+      "first_block": "000_000078",
+      "start_frame": 170,
+      "length": 16
+    },
+    {
+      "source_id": "CjnGE_9RJbI",
+      "first_block": "000_000115",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "LgdTICpqGoY",
+      "first_block": "000_000015",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "LgdTICpqGoY",
+      "first_block": "000_000018",
+      "start_frame": 21,
+      "length": 16
+    },
+    {
+      "source_id": "LgdTICpqGoY",
+      "first_block": "000_000026",
+      "start_frame": 3,
+      "length": 16
+    },
+    {
+      "source_id": "LgdTICpqGoY",
+      "first_block": "000_000029",
+      "start_frame": 9,
+      "length": 16
+    },
+    {
+      "source_id": "Zpy_9XXJtKw",
+      "first_block": "000_000001",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "Zpy_9XXJtKw",
+      "first_block": "000_000008",
+      "start_frame": 2,
+      "length": 16
+    },
+    {
+      "source_id": "Zpy_9XXJtKw",
+      "first_block": "001_000004",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "Zpy_9XXJtKw",
+      "first_block": "001_000008",
+      "start_frame": 2,
+      "length": 16
+    },
+    {
+      "source_id": "dN_UFytK7gw",
+      "first_block": "000_000016",
+      "start_frame": 13,
+      "length": 16
+    },
+    {
+      "source_id": "dN_UFytK7gw",
+      "first_block": "000_000023",
+      "start_frame": 26,
+      "length": 16
+    },
+    {
+      "source_id": "dN_UFytK7gw",
+      "first_block": "000_000023",
+      "start_frame": 103,
+      "length": 16
+    },
+    {
+      "source_id": "dN_UFytK7gw",
+      "first_block": "000_000033",
+      "start_frame": 11,
+      "length": 16
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "first_block": "000_000055",
+      "start_frame": 11,
+      "length": 16
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "first_block": "000_000094",
+      "start_frame": 23,
+      "length": 16
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "first_block": "000_000117",
+      "start_frame": 166,
+      "length": 16
+    },
+    {
+      "source_id": "dgKCNs5Cn24",
+      "first_block": "000_000143",
+      "start_frame": 33,
+      "length": 16
+    },
+    {
+      "source_id": "e6LxjKUgZtI",
+      "first_block": "000_000007",
+      "start_frame": 46,
+      "length": 16
+    },
+    {
+      "source_id": "e6LxjKUgZtI",
+      "first_block": "000_000034",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "e6LxjKUgZtI",
+      "first_block": "000_000051",
+      "start_frame": 29,
+      "length": 16
+    },
+    {
+      "source_id": "e6LxjKUgZtI",
+      "first_block": "000_000064",
+      "start_frame": 83,
+      "length": 16
+    },
+    {
+      "source_id": "f6x0pEuhJ-Q",
+      "first_block": "000_000026",
+      "start_frame": 51,
+      "length": 16
+    },
+    {
+      "source_id": "f6x0pEuhJ-Q",
+      "first_block": "000_000026",
+      "start_frame": 205,
+      "length": 16
+    },
+    {
+      "source_id": "f6x0pEuhJ-Q",
+      "first_block": "000_000035",
+      "start_frame": 54,
+      "length": 16
+    },
+    {
+      "source_id": "f6x0pEuhJ-Q",
+      "first_block": "000_000050",
+      "start_frame": 53,
+      "length": 16
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "first_block": "000_000023",
+      "start_frame": 90,
+      "length": 16
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "first_block": "000_000072",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "first_block": "000_000092",
+      "start_frame": 135,
+      "length": 16
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "first_block": "000_000126",
+      "start_frame": 70,
+      "length": 16
+    },
+    {
+      "source_id": "j22pphsxMpM",
+      "first_block": "000_000014",
+      "start_frame": 14,
+      "length": 16
+    },
+    {
+      "source_id": "j22pphsxMpM",
+      "first_block": "000_000014",
+      "start_frame": 93,
+      "length": 16
+    },
+    {
+      "source_id": "j22pphsxMpM",
+      "first_block": "000_000020",
+      "start_frame": 26,
+      "length": 16
+    },
+    {
+      "source_id": "j22pphsxMpM",
+      "first_block": "000_000020",
+      "start_frame": 105,
+      "length": 16
+    },
+    {
+      "source_id": "j5LISxLbKNk",
+      "first_block": "000_000035",
+      "start_frame": 85,
+      "length": 16
+    },
+    {
+      "source_id": "j5LISxLbKNk",
+      "first_block": "000_000139",
+      "start_frame": 1,
+      "length": 16
+    },
+    {
+      "source_id": "j5LISxLbKNk",
+      "first_block": "000_000227",
+      "start_frame": 8,
+      "length": 16
+    },
+    {
+      "source_id": "j5LISxLbKNk",
+      "first_block": "000_000348",
+      "start_frame": 4,
+      "length": 16
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "first_block": "000_000042",
+      "start_frame": 21,
+      "length": 16
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "first_block": "000_000070",
+      "start_frame": 25,
+      "length": 16
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "first_block": "000_000095",
+      "start_frame": 39,
+      "length": 16
+    },
+    {
+      "source_id": "o1swktx96bU",
+      "first_block": "000_000114",
+      "start_frame": 78,
+      "length": 16
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "first_block": "000_000055",
+      "start_frame": 121,
+      "length": 16
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "first_block": "000_000094",
+      "start_frame": 163,
+      "length": 16
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "first_block": "000_000157",
+      "start_frame": 56,
+      "length": 16
+    },
+    {
+      "source_id": "pst7M2Un5Aw",
+      "first_block": "000_000171",
+      "start_frame": 1098,
+      "length": 16
+    },
+    {
+      "source_id": "qz3LCxUIe7c",
+      "first_block": "000_000028",
+      "start_frame": 163,
+      "length": 16
+    },
+    {
+      "source_id": "qz3LCxUIe7c",
+      "first_block": "000_000070",
+      "start_frame": 141,
+      "length": 16
+    },
+    {
+      "source_id": "qz3LCxUIe7c",
+      "first_block": "000_000107",
+      "start_frame": 223,
+      "length": 16
+    },
+    {
+      "source_id": "qz3LCxUIe7c",
+      "first_block": "000_000155",
+      "start_frame": 16,
+      "length": 16
+    },
+    {
+      "source_id": "tRySe3Tx-n0",
+      "first_block": "000_000006",
+      "start_frame": 393,
+      "length": 16
+    },
+    {
+      "source_id": "tRySe3Tx-n0",
+      "first_block": "001_000004",
+      "start_frame": 4,
+      "length": 16
+    },
+    {
+      "source_id": "tRySe3Tx-n0",
+      "first_block": "001_000057",
+      "start_frame": 70,
+      "length": 16
+    },
+    {
+      "source_id": "tRySe3Tx-n0",
+      "first_block": "001_000086",
+      "start_frame": 176,
+      "length": 16
+    },
+    {
+      "source_id": "y6-L9w3fKLs",
+      "first_block": "000_000028",
+      "start_frame": 41,
+      "length": 16
+    },
+    {
+      "source_id": "y6-L9w3fKLs",
+      "first_block": "000_000081",
+      "start_frame": 103,
+      "length": 16
+    },
+    {
+      "source_id": "y6-L9w3fKLs",
+      "first_block": "000_000116",
+      "start_frame": 106,
+      "length": 16
+    },
+    {
+      "source_id": "y6-L9w3fKLs",
+      "first_block": "000_000150",
+      "start_frame": 53,
+      "length": 16
+    },
+    {
+      "source_id": "ycjXOBkPaXw",
+      "first_block": "000_000007",
+      "start_frame": 129,
+      "length": 16
+    },
+    {
+      "source_id": "ycjXOBkPaXw",
+      "first_block": "000_000018",
+      "start_frame": 58,
+      "length": 16
+    },
+    {
+      "source_id": "ycjXOBkPaXw",
+      "first_block": "000_000038",
+      "start_frame": 96,
+      "length": 16
+    },
+    {
+      "source_id": "ycjXOBkPaXw",
+      "first_block": "000_000052",
+      "start_frame": 25,
+      "length": 16
+    }
+  ],
+  "training_calibration": [
+    {
+      "source_id": "-ATyu8dOUg0",
+      "first_block": "001_000008",
+      "start_frame": 87,
+      "length": 16
+    },
+    {
+      "source_id": "-U5UIZ8MBXo",
+      "first_block": "000_000067",
+      "start_frame": 95,
+      "length": 16
+    },
+    {
+      "source_id": "00vB_YL9k8o",
+      "first_block": "000_000056",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "0H52HQHM2dM",
+      "first_block": "001_000006",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "0tEeQGSiyH0",
+      "first_block": "000_000074",
+      "start_frame": 50,
+      "length": 16
+    },
+    {
+      "source_id": "1tkHsixTALw",
+      "first_block": "000_000057",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "1v_EioaHzuI",
+      "first_block": "000_000087",
+      "start_frame": 10,
+      "length": 16
+    },
+    {
+      "source_id": "2BhF41Xn42U",
+      "first_block": "000_000072",
+      "start_frame": 177,
+      "length": 16
+    },
+    {
+      "source_id": "2Ty7pbltJvM",
+      "first_block": "000_000059",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "2zc8I-mlZRM",
+      "first_block": "000_000068",
+      "start_frame": 62,
+      "length": 16
+    },
+    {
+      "source_id": "35gc8uMbkiQ",
+      "first_block": "000_000027",
+      "start_frame": 235,
+      "length": 16
+    },
+    {
+      "source_id": "36X_HOyNETg",
+      "first_block": "000_000044",
+      "start_frame": 105,
+      "length": 16
+    },
+    {
+      "source_id": "3K9aU1BNwko",
+      "first_block": "000_000121",
+      "start_frame": 1045,
+      "length": 16
+    },
+    {
+      "source_id": "59QN_OCbmJY",
+      "first_block": "000_000017",
+      "start_frame": 7,
+      "length": 16
+    },
+    {
+      "source_id": "6nLJUYmFS9M",
+      "first_block": "000_000032",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "740Dervtqh4",
+      "first_block": "001_000000",
+      "start_frame": 72,
+      "length": 16
+    },
+    {
+      "source_id": "7wHqNBSiKho",
+      "first_block": "000_000021",
+      "start_frame": 32,
+      "length": 16
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "first_block": "000_000450",
+      "start_frame": 77,
+      "length": 16
+    },
+    {
+      "source_id": "9OD4rSA1EHs",
+      "first_block": "000_000003",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "9rvvmxML1FY",
+      "first_block": "000_000084",
+      "start_frame": 117,
+      "length": 16
+    },
+    {
+      "source_id": "AnMhPHvSLUA",
+      "first_block": "000_000110",
+      "start_frame": 1120,
+      "length": 16
+    },
+    {
+      "source_id": "B7Mieh4P1rk",
+      "first_block": "000_000005",
+      "start_frame": 85,
+      "length": 16
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "first_block": "000_000395",
+      "start_frame": 137,
+      "length": 16
+    },
+    {
+      "source_id": "CLSiOG-g_t4",
+      "first_block": "000_000049",
+      "start_frame": 52,
+      "length": 16
+    },
+    {
+      "source_id": "D6XeiF_Kfh0",
+      "first_block": "000_000018",
+      "start_frame": 12,
+      "length": 16
+    },
+    {
+      "source_id": "E0b1NQHRcik",
+      "first_block": "000_000022",
+      "start_frame": 40,
+      "length": 16
+    },
+    {
+      "source_id": "FlzyVTjZRxc",
+      "first_block": "000_000113",
+      "start_frame": 210,
+      "length": 16
+    },
+    {
+      "source_id": "GOSmSMrDbk4",
+      "first_block": "000_000090",
+      "start_frame": 210,
+      "length": 16
+    },
+    {
+      "source_id": "H7fxbdTENaQ",
+      "first_block": "000_000048",
+      "start_frame": 60,
+      "length": 16
+    },
+    {
+      "source_id": "IDEuIUEZCoY",
+      "first_block": "000_000136",
+      "start_frame": 110,
+      "length": 16
+    },
+    {
+      "source_id": "Iw__m_tFTxE",
+      "first_block": "000_000274",
+      "start_frame": 25,
+      "length": 16
+    },
+    {
+      "source_id": "JHC8BOtWrKA",
+      "first_block": "000_000168",
+      "start_frame": 182,
+      "length": 16
+    },
+    {
+      "source_id": "JPee4p-t2EY",
+      "first_block": "000_000035",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "JSyZI-2KEMg",
+      "first_block": "000_000143",
+      "start_frame": 957,
+      "length": 16
+    },
+    {
+      "source_id": "JZ0R1JTdfMo",
+      "first_block": "000_000017",
+      "start_frame": 120,
+      "length": 16
+    },
+    {
+      "source_id": "MwOfFbwymWI",
+      "first_block": "000_000025",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "OJsD4P2kHZw",
+      "first_block": "000_000011",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "PSNubmrTEts",
+      "first_block": "000_000045",
+      "start_frame": 25,
+      "length": 16
+    },
+    {
+      "source_id": "Q4u0FpQfT0s",
+      "first_block": "002_000028",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "QDhz5R9gxR8",
+      "first_block": "000_000139",
+      "start_frame": 135,
+      "length": 16
+    },
+    {
+      "source_id": "QE5X7eqyA50",
+      "first_block": "000_000011",
+      "start_frame": 32,
+      "length": 16
+    },
+    {
+      "source_id": "RxUI8D6DzMw",
+      "first_block": "000_000097",
+      "start_frame": 7,
+      "length": 16
+    },
+    {
+      "source_id": "St5gqfAbHEo",
+      "first_block": "000_000041",
+      "start_frame": 537,
+      "length": 16
+    },
+    {
+      "source_id": "UWVsBKVm2To",
+      "first_block": "000_000108",
+      "start_frame": 20,
+      "length": 16
+    },
+    {
+      "source_id": "UjF_w3Jjq3E",
+      "first_block": "000_000015",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "VQ1keUxn1Bw",
+      "first_block": "000_000053",
+      "start_frame": 20,
+      "length": 16
+    },
+    {
+      "source_id": "VV-QcAfx9hI",
+      "first_block": "000_000081",
+      "start_frame": 42,
+      "length": 16
+    },
+    {
+      "source_id": "Xzj_eAzBuso",
+      "first_block": "000_000019",
+      "start_frame": 120,
+      "length": 16
+    },
+    {
+      "source_id": "YtomeIYBAhE",
+      "first_block": "001_000034",
+      "start_frame": 47,
+      "length": 16
+    },
+    {
+      "source_id": "Zl-_A3zUn6w",
+      "first_block": "000_000489",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "_8xrCu0mQh8",
+      "first_block": "000_000059",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "bU9qp8h2dNc",
+      "first_block": "000_000084",
+      "start_frame": 130,
+      "length": 16
+    },
+    {
+      "source_id": "bbyWrwSCq5I",
+      "first_block": "000_000032",
+      "start_frame": 615,
+      "length": 16
+    },
+    {
+      "source_id": "cNy25QYc8GY",
+      "first_block": "000_000220",
+      "start_frame": 10,
+      "length": 16
+    },
+    {
+      "source_id": "d5G0470YeuE",
+      "first_block": "000_000078",
+      "start_frame": 70,
+      "length": 16
+    },
+    {
+      "source_id": "e-8RxOtYZoU",
+      "first_block": "001_000000",
+      "start_frame": 482,
+      "length": 16
+    },
+    {
+      "source_id": "e4Mo0JLJmS4",
+      "first_block": "000_000018",
+      "start_frame": 92,
+      "length": 16
+    },
+    {
+      "source_id": "erfWgYS9WJ4",
+      "first_block": "000_000033",
+      "start_frame": 50,
+      "length": 16
+    },
+    {
+      "source_id": "es0u30-F0NA",
+      "first_block": "000_000026",
+      "start_frame": 20,
+      "length": 16
+    },
+    {
+      "source_id": "fE8mBs7v-8k",
+      "first_block": "000_000094",
+      "start_frame": 880,
+      "length": 16
+    },
+    {
+      "source_id": "fEHSCu-wTec",
+      "first_block": "000_000023",
+      "start_frame": 45,
+      "length": 16
+    },
+    {
+      "source_id": "fVKMTdpbbFw",
+      "first_block": "000_000115",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "fx46FnbYP9Y",
+      "first_block": "000_000082",
+      "start_frame": 2,
+      "length": 16
+    },
+    {
+      "source_id": "iD4cnIhY-To",
+      "first_block": "000_000077",
+      "start_frame": 5,
+      "length": 16
+    },
+    {
+      "source_id": "iS_jnBTqi0c",
+      "first_block": "000_000232",
+      "start_frame": 22,
+      "length": 16
+    },
+    {
+      "source_id": "iX4CtB3NXtQ",
+      "first_block": "000_000502",
+      "start_frame": 35,
+      "length": 16
+    },
+    {
+      "source_id": "ifbuKVQIDC8",
+      "first_block": "000_000059",
+      "start_frame": 130,
+      "length": 16
+    },
+    {
+      "source_id": "jrQ8N8LsysA",
+      "first_block": "000_000067",
+      "start_frame": 0,
+      "length": 16
+    },
+    {
+      "source_id": "jxk_SQf-aLI",
+      "first_block": "000_000086",
+      "start_frame": 137,
+      "length": 16
+    },
+    {
+      "source_id": "n4Sb-H9pM-Q",
+      "first_block": "000_000438",
+      "start_frame": 130,
+      "length": 16
+    },
+    {
+      "source_id": "nUm8hjfQ9pc",
+      "first_block": "000_000069",
+      "start_frame": 210,
+      "length": 16
+    },
+    {
+      "source_id": "nqBcHxUQrrg",
+      "first_block": "000_000079",
+      "start_frame": 1060,
+      "length": 16
+    },
+    {
+      "source_id": "pEJPDYfFQeM",
+      "first_block": "000_000054",
+      "start_frame": 15,
+      "length": 16
+    },
+    {
+      "source_id": "rhrJDjXpEVs",
+      "first_block": "001_000000",
+      "start_frame": 20,
+      "length": 16
+    },
+    {
+      "source_id": "s_NMXnRBq7w",
+      "first_block": "000_000025",
+      "start_frame": 7,
+      "length": 16
+    },
+    {
+      "source_id": "soatudugBjY",
+      "first_block": "000_000009",
+      "start_frame": 97,
+      "length": 16
+    },
+    {
+      "source_id": "tucxkLssgRw",
+      "first_block": "000_000005",
+      "start_frame": 90,
+      "length": 16
+    },
+    {
+      "source_id": "u_1_o_wnAT8",
+      "first_block": "000_000044",
+      "start_frame": 80,
+      "length": 16
+    },
+    {
+      "source_id": "uobBFtK1goY",
+      "first_block": "000_000042",
+      "start_frame": 417,
+      "length": 16
+    },
+    {
+      "source_id": "vSRAZ7Qpwjo",
+      "first_block": "000_000022",
+      "start_frame": 27,
+      "length": 16
+    },
+    {
+      "source_id": "vks-GsapOXM",
+      "first_block": "000_000045",
+      "start_frame": 20,
+      "length": 16
+    },
+    {
+      "source_id": "wp54XkQUhz0",
+      "first_block": "000_000091",
+      "start_frame": 432,
+      "length": 16
+    },
+    {
+      "source_id": "zA9B8C-l_HE",
+      "first_block": "000_000062",
+      "start_frame": 10,
+      "length": 16
+    },
+    {
+      "source_id": "zjzq4XfA8DU",
+      "first_block": "001_000040",
+      "start_frame": 367,
+      "length": 16
+    }
+  ],
+  "stress_review": "configs/longform-focused-review-v1.json",
+  "stress_policy": "Report targeted coverage cases separately from the fixed source-stratified evaluation.",
+  "manual_scoring": {
+    "player_barrel": "per-frame visible retention",
+    "food_bullets": "annotate >=3px instances and TP/FP/FN; minimum 30 per category from three sources",
+    "angles": "single-barrel only; minimum 30 from three sources; missing values do not pass",
+    "behavior": "train-only code calibration, held-out intervention scoring; unknown code meanings remain unmeasured"
+  },
+  "reserved_test_access": false
+}

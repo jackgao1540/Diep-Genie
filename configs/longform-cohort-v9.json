@@ -1,0 +1,1763 @@
+{
+  "schema_version": 1,
+  "parent_cohort": "data/curated-longform-v8",
+  "parent_checkpoint": "configs/longform-eighth-checkpoint-v1.json",
+  "output_checkpoint": "configs/longform-ninth-checkpoint-v1.json",
+  "native_index": "runs/training-readiness-v1/sprayer-boundaries/native-index.json",
+  "native_index_sha256": "a719515784644d917dae69b12fba598ab835180d9b60751666e96b7247fec5de",
+  "duplicate_report": "runs/training-readiness-v1/sprayer-duplicates/duplicates.json",
+  "duplicate_report_sha256": "23d1f1112bf5fb0aedbceb1faf92e94cdfae9cfcb3b76446b8ab3db87dabc94f",
+  "review": "configs/sprayer-class-resolution-v1.json",
+  "review_sha256": "4bff8eb92e77d34fef2b6217c81a75ad0839420e22abf4297b18af45cf935f4f",
+  "accepted": [
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000761",
+      "queue_index": 27,
+      "rescreen_sha256": "73af2d09673d9a58cf6b20fd04d9fe1c61bea38787b89f43b9a2c5f8383400d8",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "Sprayer class resolved from original HUD, muzzle and firing context; original all-native clean/live review remains content-bound.",
+      "approved_boundaries": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "before": "000_000760",
+          "after": "000_000761"
+        },
+        {
+          "source_id": "8f7hehx5w5g",
+          "before": "000_000761",
+          "after": "000_000762"
+        }
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000762",
+      "queue_index": 28,
+      "rescreen_sha256": "897e87fad0b24e0307db5bce19e2fd79e923dc67152afb550aedfbfe18d7d741",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "Sprayer class resolved from original HUD, muzzle and firing context; original all-native clean/live review remains content-bound.",
+      "approved_boundaries": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "before": "000_000762",
+          "after": "000_000763"
+        }
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000763",
+      "queue_index": 29,
+      "rescreen_sha256": "2101c64db862195da59429c8fb8bcb51753f99c376ab784ad4ea145c0d26995c",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "Sprayer class resolved from original HUD, muzzle and firing context; original all-native clean/live review remains content-bound.",
+      "approved_boundaries": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "before": "000_000763",
+          "after": "000_000764"
+        }
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000764",
+      "queue_index": 30,
+      "rescreen_sha256": "ca5203d85ffcf59ba6b9140a4b2a9f4052a652895a16f1cb788ef825e6895089",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "Sprayer class resolved from original HUD, muzzle and firing context; original all-native clean/live review remains content-bound.",
+      "approved_boundaries": [
+        {
+          "source_id": "8f7hehx5w5g",
+          "before": "000_000764",
+          "after": "000_000765"
+        }
+      ]
+    },
+    {
+      "source_id": "8f7hehx5w5g",
+      "block_id": "000_000765",
+      "queue_index": 31,
+      "rescreen_sha256": "2b5245660cf43b00426b4cb32780723648aa1c65bae2a449a7692818949e04dd",
+      "all_native_frames_reviewed": true,
+      "ordinary_shooter": true,
+      "clean_gameplay": true,
+      "notes": "Sprayer class resolved from original HUD, muzzle and firing context; original all-native clean/live review remains content-bound.",
+      "approved_boundaries": []
+    }
+  ],
+  "duplicate_decisions": [
+    {
+      "index": 0,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 1,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 2,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 3,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 4,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 5,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 6,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 7,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 8,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 9,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 10,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 11,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 12,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 13,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 14,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 15,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 16,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 17,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 18,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 19,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 20,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 21,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 22,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 23,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 24,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 25,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 26,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 27,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 28,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 29,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 30,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 31,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 32,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 33,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 34,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 35,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 36,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 37,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 38,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 39,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 40,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 41,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 42,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 43,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 44,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 45,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 46,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 47,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 48,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 49,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 50,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 51,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 52,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 53,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 54,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 55,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 56,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 57,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 58,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 59,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 60,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 61,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 62,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 63,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 64,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 65,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 66,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 67,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 68,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 69,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 70,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 71,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 72,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 73,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 74,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 75,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 76,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 77,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 78,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 79,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 80,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 81,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 82,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 83,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 84,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 85,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 86,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 87,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 88,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 89,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 90,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 91,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 92,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 93,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 94,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 95,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 96,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 97,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 98,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 99,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 100,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 101,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 102,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 103,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 104,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 105,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 106,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 107,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 108,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 109,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 110,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 111,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 112,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 113,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 114,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 115,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 116,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 117,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 118,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 119,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 120,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 121,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 122,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 123,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 124,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 125,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 126,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 127,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 128,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 129,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 130,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 131,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 132,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 133,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 134,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 135,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 136,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 137,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 138,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 139,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 140,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 141,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 142,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 143,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 144,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 145,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 146,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 147,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 148,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 149,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 150,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 151,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 152,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 153,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 154,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 155,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 156,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 157,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 158,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 159,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 160,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 161,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 162,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 163,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 164,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 165,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 166,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 167,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 168,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 169,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 170,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 171,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 172,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 173,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 174,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 175,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 176,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 177,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 178,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 179,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 180,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 181,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 182,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 183,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 184,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 185,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 186,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 187,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 188,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 189,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 190,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 191,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 192,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 193,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 194,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 195,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 196,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 197,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 198,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 199,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 200,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 201,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 202,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 203,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 204,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 205,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 206,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 207,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 208,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 209,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 210,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 211,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 212,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 213,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 214,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 215,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 216,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 217,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 218,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 219,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 220,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 221,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 222,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 223,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 224,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 225,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 226,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 227,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 228,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 229,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 230,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 231,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 232,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 233,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 234,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 235,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 236,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 237,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 238,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 239,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 240,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 241,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 242,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 243,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 244,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 245,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 246,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 247,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 248,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 249,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 250,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 251,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 252,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 253,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 254,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 255,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 256,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 257,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 258,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 259,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 260,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 261,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 262,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 263,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 264,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 265,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 266,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 267,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 268,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 269,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 270,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 271,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 272,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 273,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 274,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 275,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 276,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 277,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 278,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 279,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 280,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 281,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 282,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 283,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 284,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 285,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 286,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 287,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 288,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 289,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 290,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 291,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 292,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 293,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 294,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 295,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 296,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 297,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 298,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 299,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 300,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 301,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 302,
+      "decision": "distinct_gameplay",
+      "reason": "Different barrel/class, score/level and arena context: Machine Gun or Destroyer versus Sprayer."
+    },
+    {
+      "index": 303,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 304,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 305,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 306,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 307,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 308,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 309,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 310,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 311,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 312,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 313,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 314,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 315,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 316,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 317,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 318,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 319,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 320,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 321,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 322,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    },
+    {
+      "index": 323,
+      "decision": "distinct_gameplay",
+      "reason": "Same idle scene at different times: food and other players evolve, no replay."
+    }
+  ],
+  "duplicate_review_evidence": [
+    {
+      "path": "runs/training-readiness-v1/class-context-0.png",
+      "sha256": "6710a601b014c7b4acaef271d7fd618d32c00b833133f690299195de37ecea4c"
+    },
+    {
+      "path": "runs/training-readiness-v1/class-context-1.png",
+      "sha256": "f8e65906ccb11effb195795d724f918a66f34b38363abaad8d4740c4325da8f8"
+    },
+    {
+      "path": "runs/training-readiness-v1/class-labels.png",
+      "sha256": "1d04f09d8ebaa336f45c98015c840ccb06e73d2d331647cb20d69474c8acfb33"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-0.png",
+      "sha256": "2a35860ac6b1d0c725fe94428aca1a0e6cd262c4b5b122e607332744ca923289"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-1.png",
+      "sha256": "68eb2338926238c26fa9dd77359a8c2e09b3df76748f6aaa9ebb187e7cd7caaf"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-2.png",
+      "sha256": "e21a61402976e46125dc50717571001cd7e48e72255daef63a225b6da63c548c"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-3.png",
+      "sha256": "2545753a850c5bb06ca5884107b65c4dd13e5a38ec5eda221a1de24888ba85ae"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-4.png",
+      "sha256": "19b1ad75f8dae322e01e6e2a76cb323678d35bd7582efbdc067b9d512d117ea8"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-5.png",
+      "sha256": "9a30c1f3a6f80080efd9e40835aa631b20389c4ce3feb8a5f0d57ae0832ca82b"
+    },
+    {
+      "path": "runs/training-readiness-v1/sprayer-match-6.png",
+      "sha256": "cf3eea96986aade9eceed70940dde550447b08299ee66c72c1e2a434540ce4aa"
+    }
+  ],
+  "training_approved": false
+}

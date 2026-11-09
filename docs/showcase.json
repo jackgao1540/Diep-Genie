@@ -2,15 +2,15 @@
   "schema_version": 1,
   "updated": "2026-11-08",
   "project": "Diep-Genie",
-  "dataset_version": "v8",
-  "retained_seconds": 41656.0,
-  "retained_hours": 11.571111111111112,
+  "dataset_version": "v9",
+  "retained_seconds": 41676.0,
+  "retained_hours": 11.576666666666666,
   "retained_sources": 108,
-  "retained_blocks": 10414,
+  "retained_blocks": 10419,
   "training_approved": false,
   "model_status": "Research prototype; no playable trained world model.",
-  "cohort_manifest_sha256": "e835a0c3b98bf4b58132418114235d3b18e87fb5314a7a8fe5f7ce05d1a6c491",
-  "selection_sha256": "87b723f6ca970983539b3a00fbda223dfd0f06d5706e3095ec1490b601137e3f",
+  "cohort_manifest_sha256": "cdc2107c523b51c92fe6dc4c70e23dfe31d5269b62d293d3849bacc949dfbe59",
+  "selection_sha256": "3fff83d5ffc81bdafc708a1d8ddb1f4c60691854314c0c3f19f879ccbac586ab",
   "sample_count": 13,
   "sample_seconds": 52,
   "media_bytes": 3520218,
@@ -924,6 +924,7 @@
       "tags": [
         "Aim changes",
         "No emission seen",
+        "Reviewed low-motion",
         "Stable scenery"
       ],
       "media": {
@@ -1117,7 +1118,8 @@
       ],
       "processed_kind": "retained_proxy",
       "tags": [
-        "No emission seen"
+        "No emission seen",
+        "Reviewed low-motion"
       ],
       "media": {
         "original": {
@@ -1215,6 +1217,7 @@
       "tags": [
         "Aim changes",
         "No emission seen",
+        "Reviewed low-motion",
         "Stable scenery"
       ],
       "media": {

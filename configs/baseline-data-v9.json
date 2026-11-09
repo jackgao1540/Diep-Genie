@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "data_binding_only_not_executable_training_config",
+  "architecture_spec": "configs/baseline-v1.json",
+  "architecture_spec_sha256": "7969bbfd5c3cf7dd534bd15598a748abcd097f1533351ee0e1086fb5c857d395",
+  "cohort": "data/curated-longform-v9",
+  "hashes": {
+    "summary.json": "90c1278a2b80783e66f85b41b02930024d7a017a0679ad328ab25ac1be8b9345",
+    "manifest.jsonl": "cdc2107c523b51c92fe6dc4c70e23dfe31d5269b62d293d3849bacc949dfbe59",
+    "sequences.json": "b9c493052a3d0ec3466e2831d166ca350340bc8c948e847f107f1bd66fb4e7e2"
+  },
+  "excluded_source_holds": [
+    "eGJEVXrV8rs"
+  ],
+  "coverage_evidence": "configs/longform-focused-review-v1.json",
+  "cohort_verification": "configs/longform-ninth-checkpoint-v1.json",
+  "note": "V9 resolves the inherited Sprayer class question and adds five reviewed stationary blocks. Frozen cohort remains immutable; execution approval is stage-specific.",
+  "training_approved": false,
+  "execution_ready": false,
+  "class_resolution": "configs/sprayer-class-resolution-v1.json",
+  "class_resolution_sha256": "4bff8eb92e77d34fef2b6217c81a75ad0839420e22abf4297b18af45cf935f4f"
+}

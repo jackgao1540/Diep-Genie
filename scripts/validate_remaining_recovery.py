@@ -73,7 +73,7 @@ def validate():
     assert not summary['training_approved'] and not summary['corpus_complete']
     binding=read('configs/baseline-data-v8.json')
     assert binding['cohort']==checkpoint['cohort'] and binding['hashes']==checkpoint['hashes']
-    library=Library(Path.cwd());old=Library(Path.cwd(),cohort=parent['cohort'])
+    library=Library(Path.cwd(),cohort=checkpoint['cohort']);old=Library(Path.cwd(),cohort=parent['cohort'])
     assert Counter(r['status'] for r in library.public.values())=={'accepted':8820,'held':160,'rejected':1}
     assert all(r['split']!='test' for r in library.public.values())
     assert all(library.feedback.get(k)==v for k,v in old.feedback.items())
