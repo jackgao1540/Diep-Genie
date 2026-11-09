@@ -42,7 +42,7 @@ def acquire(url, out, node=None):
 
 
 def extract(video, out, source_id, start=0., seconds=120., fps=10., size=64, length=16, crop=None, require_tank=False):
-    """Sample by timestamp, reject cuts/freezes; emit provenance per nonoverlapping clip.
+    """Sample by timestamp; preserve flagged clips separately for manual review.
 
     Quality heuristics are triage only. Contact-sheet review remains required.
     crop is x,y,width,height in source pixels, applied before aspect-preserving resize.
@@ -86,11 +86,31 @@ def extract(video, out, source_id, start=0., seconds=120., fps=10., size=64, len
         if len(frames) == length:
             array = np.stack(frames)
             delta = np.abs(np.diff(array.astype(np.float32), axis=0)).mean((1,2,3))/255
-            reason = "cut" if delta.max() > .20 else "freeze" if delta.mean() < .0005 else None
+            reasons = []
+            if delta.max() > .20: reasons.append('cut')
+            if delta.mean() < .0005: reasons.append('low_motion_review')
             if require_tank and not all(center_tank_present(f) for f in array):
-                reason = "no_center_tank"
-            if reason:
+                reasons.append('no_center_tank')
+            if reasons:
                 rejected += 1
+                # A separate directory keeps flagged clips out of ClipDataset's
+                # top-level manifests. Content names preserve earlier variants.
+                folder = out / 'rejected'
+                folder.mkdir(exist_ok=True)
+                pixels = hashlib.sha256(array.tobytes()).hexdigest()
+                name = f'{source_id}_{timestamps[0]:010.3f}_{pixels[:16]}.npy'
+                path = folder / name
+                if path.exists():
+                    if not np.array_equal(np.load(path,allow_pickle=False),array):
+                        raise ValueError('Preserved rejected proxy changed')
+                else:
+                    np.save(path,array,allow_pickle=False)
+                record = dict(path=name,source_id=source_id,split=split,start=timestamps[0],end=timestamps[-1],
+                              fps=fps,shape=list(array.shape),video_sha256=checksum,proxy_sha256=file_hash(path),
+                              source_frame_indices=[round(t*source_fps) for t in timestamps],crop=crop,source_fps=source_fps,
+                              reasons=reasons,reviewed=False,preservation_required=True,training_approved=False)
+                with (folder/f'{source_id}.jsonl').open('a',encoding='utf-8') as handle:
+                    handle.write(json.dumps(record)+'\n')
             else:
                 name = f"{source_id}_{timestamps[0]:010.3f}.npy"
                 np.save(out / name, array, allow_pickle=False)

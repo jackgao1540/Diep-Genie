@@ -38,20 +38,26 @@ def player_present(bgr):
     return False
 
 
-def cheap_reasons(frames):
+def cheap_reasons(frames, motion_policy='review'):
+    if motion_policy not in ('review','legacy'):raise ValueError('Unknown motion policy')
     reasons=[]
     if not all(player_present(f) for f in frames):reasons.append('no_center_body')
     small=np.stack([cv2.resize(f,(64,64),interpolation=cv2.INTER_AREA) for f in frames])
     differences=np.abs(np.diff(small.astype(np.float32),axis=0)).mean((1,2,3))/255
     if differences.max()>.12:reasons.append('cut_or_flash')
-    if differences.mean()<.0004:reasons.append('freeze')
+    if differences.mean()<.0004:reasons.append('freeze' if motion_policy=='legacy' else 'low_motion_review')
+    repeated=np.all(np.diff(np.stack(frames).astype(np.int16),axis=0)==0,axis=(1,2,3))
+    streak=longest=0
+    for same in repeated:
+        streak=streak+1 if same else 0;longest=max(longest,streak)
     hsv=np.stack([cv2.cvtColor(f,cv2.COLOR_BGR2HSV) for f in small])
     neutral=((hsv[:,:,:,1]<45)&(hsv[:,:,:,2]>115)&(hsv[:,:,:,2]<250)).mean((1,2))
     if neutral.min()<.30:reasons.append('nonstandard_or_obscured_background')
     sharpness=[cv2.Laplacian(cv2.cvtColor(f,cv2.COLOR_BGR2GRAY),cv2.CV_64F).var() for f in frames]
     if min(sharpness)<8:reasons.append('blur_or_fade')
     return reasons,dict(mean_delta=float(differences.mean()),max_delta=float(differences.max()),
-                        min_neutral=float(neutral.min()),min_sharpness=float(min(sharpness)))
+                        min_neutral=float(neutral.min()),min_sharpness=float(min(sharpness)),
+                        exact_repeat_fraction=float(repeated.mean()),longest_exact_repeat_frames=longest+1)
 
 
 def crop_frame(frame,crop,padding):
@@ -62,10 +68,14 @@ def crop_frame(frame,crop,padding):
 
 
 def screen_source(source,args,engine,recipe_sha):
+    motion_policy=getattr(args,'motion_policy','review')
+    if motion_policy not in ('review','legacy'):raise ValueError('Unknown motion policy')
     caption_policy=getattr(args,'caption_policy','legacy')
     if caption_policy not in ('legacy','score-captions'):raise ValueError('Unknown caption policy')
     if caption_policy!='legacy' and getattr(args,'previous_screen',[]):
         raise ValueError('Stronger caption policy cannot reuse earlier negative screens')
+    if motion_policy=='review' and getattr(args,'previous_screen',[]):
+        raise ValueError('Low-motion review and rejected-proxy preservation require a fresh screen')
     candidate_fn=score_caption_candidate if caption_policy=='score-captions' else text_candidate
     out=Path(args.out)/source['id'];out.mkdir(parents=True,exist_ok=True)
     media=Path(source['media_path'])
@@ -77,6 +87,7 @@ def screen_source(source,args,engine,recipe_sha):
                        proxy_size=args.proxy_size,screen_version=1)
     if policy!='strict':configuration.update(screen_version=2,text_policy=policy)
     if caption_policy!='legacy':configuration.update(screen_version=3,caption_policy=caption_policy,text_policy=policy)
+    if motion_policy=='review':configuration.update(screen_version=4,motion_policy=motion_policy,preserve_rejected_proxies=True)
     config=out/'configuration.json'
     if config.exists() and json.loads(config.read_text())!=configuration:
         raise ValueError('Screen configuration changed: choose a new output directory')
@@ -85,7 +96,7 @@ def screen_source(source,args,engine,recipe_sha):
     if progress.exists():
         for line in progress.read_text(encoding='utf-8').splitlines():
             r=json.loads(line);done[r['block_id']]=r
-            if not r['reasons'] and (not (out/r['proxy']).exists() or file_hash(out/r['proxy'])!=r['proxy_sha256']):
+            if (not r['reasons'] or motion_policy=='review') and (not r.get('proxy') or not (out/r['proxy']).exists() or file_hash(out/r['proxy'])!=r['proxy_sha256']):
                 raise ValueError('Completed candidate proxy missing or changed')
     prior={}
     for previous_root in getattr(args,'previous_screen',[]):
@@ -141,8 +152,9 @@ def screen_source(source,args,engine,recipe_sha):
                 if not ok:raise RuntimeError(f'Decode failed: {source["id"]} {target}')
                 a,b,origin=crop_frame(frame,crop,args.padding)
                 frames.append(a.copy());padded.append(b.copy());full_frames.append(frame);timestamps.append(target/source_fps)
-            reasons,metrics=cheap_reasons(frames);detections=[];ocr_frames=0
-            if not reasons:
+            reasons,metrics=cheap_reasons(frames,motion_policy);detections=[];ocr_frames=0
+            low_motion_only=reasons==['low_motion_review']
+            if not reasons or low_motion_only:
                 for i,pad in enumerate(padded):
                     result=engine(pad);ocr_frames+=1
                     if result.boxes is None:continue
@@ -152,7 +164,8 @@ def screen_source(source,args,engine,recipe_sha):
                             allowed=policy=='native-names' and native_name(full_frames[i],box+np.array(crop[:2]))
                             detections.append(dict(frame=i,text=txt,score=float(score),box=box.tolist(),native_name_allowed=bool(allowed)))
                     if any(not d['native_name_allowed'] for d in detections):
-                        reasons.append('text');break
+                        if 'text' not in reasons:reasons.append('text')
+                        if not low_motion_only:break
             record=dict(block_id=block_id,source_id=source['id'],split=source['split'],
                         start=timestamps[0],end=block_start+args.block_seconds,
                         source_frame_indices=targets,source_fps=source_fps,fps=args.fps,
@@ -160,7 +173,10 @@ def screen_source(source,args,engine,recipe_sha):
                         reasons=reasons,detections=detections,ocr_frames=ocr_frames,
                         text_policy=policy,
                         training_approved=False,class_review_required=True)
-            if not reasons:
+            if motion_policy=='review':
+                record.update(disposition='manual_review' if reasons else 'screen_candidate',
+                              quality_approved=False,preservation_required=True,motion_policy=motion_policy)
+            if not reasons or motion_policy=='review':
                 proxy=np.stack([cv2.cvtColor(cv2.resize(f,(args.proxy_size,args.proxy_size),interpolation=cv2.INTER_AREA),cv2.COLOR_BGR2RGB) for f in frames])
                 path=out/f'{block_id}.npz';np.savez_compressed(path,frames=proxy)
                 record.update(proxy=path.name,proxy_sha256=file_hash(path))
@@ -198,4 +214,6 @@ if __name__=='__main__':
     p.add_argument('--text-policy',choices=['strict','native-names'],default='strict')
     p.add_argument('--caption-policy',choices=['legacy','score-captions'],default='legacy')
     p.add_argument('--previous-screen',nargs='*',default=[])
+    p.add_argument('--motion-policy',choices=['review','legacy'],default='review',
+                   help='Review preserves every proxy and treats low change as a review flag; legacy is only for historical reproduction.')
     run(p.parse_args())

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "preservation_bank": "data/preserved-candidates-v1",
+  "summary_sha256": "9e3de0bef9d76f9baef800bb3b605eac0d929a2ccd4a940372d99b7f4778c675",
+  "counts": {
+    "screen_directories": 216,
+    "screen_records": 36054,
+    "unique_content_blocks": 22070,
+    "historically_rejected_blocks": 11656,
+    "originals_verified": 118,
+    "existing_proxies_verified": 17639,
+    "low_motion_blocks": 87,
+    "low_motion_only_blocks": 62,
+    "low_motion_previews": 78,
+    "reserved_test_previews": 0
+  },
+  "rescreen_material": "runs/low-motion-rescreen-v1/review-material.json",
+  "rescreen_material_sha256": "e3d436d9ce4c63b2f05c5840bb292e58765977bf48411507e96344e91992e918",
+  "focused_index": "runs/longform-focused-coverage-v1/dense-targeted/index.json",
+  "priority_reviews": [
+    {
+      "source_id": "u_1_o_wnAT8",
+      "block_id": "000_000038",
+      "preservation_id": "25f4a9702ab6124d14a054c768a3895e70ad22f25d456cb50baf0214baec1ee0",
+      "recovery_status": "visual_candidate",
+      "class_observation": "ordinary single-barrel shooting tank",
+      "notes": "Single-barrel ordinary tank; opponent moves and player aim changes slightly. Native opponent name permitted; no added caption or edit seen in 40 retained frames.",
+      "review_scope": "All 40 retained crop frames and middle full original context; not all native-rate frames",
+      "cohort_action": "none",
+      "training_approved": false
+    },
+    {
+      "source_id": "haMF0UV2bYs",
+      "block_id": "000_000028",
+      "preservation_id": "0990b852631fbec5e5e75a55c51546545d98e2068f14875fe2a6dd39b070d874",
+      "recovery_status": "preserved_overlay",
+      "class_observation": "ordinary single-barrel shooting tank",
+      "notes": "Single-barrel ordinary tank, live opponent projectile, added Zzz overlay. Preserve original; no patch applied or recovery approval.",
+      "review_scope": "All 40 retained crop frames and middle full original context; not all native-rate frames",
+      "cohort_action": "none",
+      "training_approved": false
+    },
+    {
+      "source_id": "rhrJDjXpEVs",
+      "block_id": "001_000004",
+      "preservation_id": "7681606b3fa2d473e4d70823d89dc5a34b42f84e431569c88b1f2b15793802c5",
+      "recovery_status": "visual_candidate",
+      "class_observation": "ordinary single-barrel shooting tank",
+      "notes": "Single-barrel ordinary tank; maze walls drift continuously in 40 retained frames. No added caption or edit seen in crop; full-context HUD outside crop.",
+      "review_scope": "All 40 retained crop frames and middle full original context; not all native-rate frames",
+      "cohort_action": "none",
+      "training_approved": false
+    },
+    {
+      "source_id": "CJWlY5GDndo",
+      "block_id": "000_000867",
+      "preservation_id": "e4cbaa502a34ec372e05a5531fb5d32d0a3ad5f36468f2ba8323c38c20401186",
+      "recovery_status": "visual_candidate",
+      "class_observation": "ordinary single-barrel shooting tank",
+      "notes": "Single-barrel ordinary tank; aim rotates against fixed perpendicular team boundaries. Damage flashing is gameplay, no added caption or edit seen.",
+      "review_scope": "All 40 retained crop frames and middle full original context; not all native-rate frames",
+      "cohort_action": "none",
+      "training_approved": false
+    }
+  ],
+  "cohort": "data/curated-longform-v6",
+  "unchanged_cohort_hashes": {
+    "summary.json": "dbf7d8a4469ba77236368b4e372fca073ebdebf35e300873b007ae8177187859",
+    "manifest.jsonl": "b5f4e4bb530d1a2d4851c254305473c9535650e7401df1509dd529764f354a83",
+    "sequences.json": "a62b91f331ce8d962d68a3b1e7bdab731fa4c669e33383c2156071a13558ac9a"
+  },
+  "training_approved": false,
+  "class_evidence_index": "data/preserved-candidates-v1/class-evidence/index.json",
+  "class_evidence_sha256": "16028e55c836ccb2f24ce857e28978b9d431579904c7e9cee1f6004e5d002a4a"
+}

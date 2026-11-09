@@ -79,7 +79,7 @@ def test_every_frame_ocr_rejection_and_resume_integrity(tmp_path,monkeypatch):
     writer.release()
     source=dict(id='source',media_path=str(video),video_sha256=file_hash(video),
                 split='train',crop=[16,16,128,128],intervals=[[0,8]])
-    args=SimpleNamespace(out=str(tmp_path/'screen'),fps=10,block_seconds=4,padding=24,proxy_size=64)
+    args=SimpleNamespace(out=str(tmp_path/'screen'),fps=10,block_seconds=4,padding=24,proxy_size=64,motion_policy='legacy')
     class Engine:
         calls=0
         def __call__(self,frame):
