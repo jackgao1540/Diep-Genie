@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "purpose": "User-authorized public GitHub Pages sample export, not full dataset publication.",
+  "cohort": "data/curated-longform-v6",
+  "max_media_bytes": 15000000,
+  "selection": [
+    {
+      "id": "sample-01",
+      "batch": "initial",
+      "review_index": 0,
+      "title": "Navigating a maze",
+      "description": "Walls, scrolling scenery and intermittent firing in retained training footage."
+    },
+    {
+      "id": "sample-02",
+      "batch": "initial",
+      "review_index": 9,
+      "title": "Large pentagons under fire",
+      "description": "Ordinary and large pentagons appear together around a multi-barrel player."
+    },
+    {
+      "id": "sample-03",
+      "batch": "targeted",
+      "review_index": 1,
+      "title": "Aiming with stable scenery",
+      "description": "The barrel turns while the arena boundary and nearby scenery stay visually stable. Inputs are unknown."
+    },
+    {
+      "id": "sample-04",
+      "batch": "targeted",
+      "review_index": 4,
+      "title": "A quiet corner",
+      "description": "Stable arena boundaries and no new player emission observed across the retained frames."
+    },
+    {
+      "id": "sample-05",
+      "batch": "targeted",
+      "review_index": 7,
+      "title": "Through a narrow corridor",
+      "description": "A retained maze example with large projectiles, turns and tight geometry."
+    },
+    {
+      "id": "sample-06",
+      "batch": "targeted",
+      "review_index": 10,
+      "title": "A large-object validation example",
+      "description": "A red player, large pentagon and moving projectiles in held-out validation footage."
+    },
+    {
+      "id": "sample-07",
+      "batch": "targeted",
+      "review_index": 11,
+      "title": "Dense firing, small details",
+      "description": "A retained validation example testing the visibility of bullets and pentagon geometry."
+    },
+    {
+      "id": "sample-08",
+      "batch": "initial",
+      "review_index": 3,
+      "title": "Movement without visible firing",
+      "description": "A green player and translating food; nearby opponent bullets do not establish player firing."
+    },
+    {
+      "id": "sample-09",
+      "batch": "targeted",
+      "review_index": 5,
+      "title": "Why this source is on hold",
+      "description": "After initial motion, the player, another player and an in-flight projectile stall. The entire source is withheld."
+    },
+    {
+      "id": "sample-10",
+      "batch": "targeted",
+      "review_index": 14,
+      "title": "Low motion is not always a freeze",
+      "description": "An opponent moves and the barrel turns slightly. The freeze screen rejected it; it has not been reinstated."
+    },
+    {
+      "id": "sample-11",
+      "batch": "targeted",
+      "review_index": 15,
+      "title": "A rejected overlay",
+      "description": "Added “Zzz” text is visible despite a stationary player and occasional moving projectiles. This remains excluded."
+    },
+    {
+      "id": "sample-12",
+      "batch": "targeted",
+      "review_index": 16,
+      "title": "Slow movement missed by screening",
+      "description": "Maze walls drift gradually. A low mean-change threshold rejected the clip; recovery needs a full review."
+    },
+    {
+      "id": "sample-13",
+      "batch": "targeted",
+      "review_index": 17,
+      "title": "Aiming inside a rejected clip",
+      "description": "The player turns while the team-area boundaries remain stable. A screening rejection is not proof of a frozen image."
+    }
+  ]
+}

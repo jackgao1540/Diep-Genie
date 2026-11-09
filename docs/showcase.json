@@ -1,0 +1,1290 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-08",
+  "project": "Diep-Genie",
+  "dataset_version": "v6",
+  "retained_hours": 11.536666666666667,
+  "retained_sources": 108,
+  "retained_blocks": 10383,
+  "training_approved": false,
+  "model_status": "Research prototype; no playable trained world model.",
+  "cohort_manifest_sha256": "b5f4e4bb530d1a2d4851c254305473c9535650e7401df1509dd529764f354a83",
+  "selection_sha256": "416ae212ed35b23b5a5e85242f84a9b5649df919d2d6e16a7e4f89383d0e8ffa",
+  "sample_count": 13,
+  "sample_seconds": 52,
+  "media_bytes": 3520218,
+  "sample_policy": "Hand-selected train/validation examples; not a random or complete representation. No reserved-test footage. No rating or feedback collection.",
+  "clips": [
+    {
+      "id": "sample-01",
+      "title": "Navigating a maze",
+      "description": "Walls, scrolling scenery and intermittent firing in retained training footage.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "soatudugBjY",
+      "source_title": "If you kill you die - diep.io",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=soatudugBjY&t=140s",
+      "start": 140.00653333333332,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "Maze walls",
+        "Visible firing"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-01-original.webp",
+          "sha256": "5f93e5f4a1b630434d9513b7dbf68914f9b182b73c932de0ccdb563ce6d0c8c4",
+          "bytes": 101046
+        },
+        "processed": {
+          "path": "assets/sample-01-processed.webp",
+          "sha256": "c46075a17d604eb0206c4b1e61daa0c5d9e1cccb42aaedca0e10f23d4cdc5165",
+          "bytes": 76406
+        },
+        "thumbnail": {
+          "path": "assets/sample-01-thumbnail.webp",
+          "sha256": "4179690700cb93787101a143fcdf89a3a4bc1cce607a22f7c56e161ade017a59",
+          "bytes": 2678
+        }
+      },
+      "provenance": {
+        "video_sha256": "45f38494bb0a8fb05b758c67b3d13f485063c37dac8606965fea33a7e55f346b",
+        "proxy_sha256": "b2cd12055c0a7356664c3a4ab9beb9d5c8f1ab060b68e9332b7f2f7107d21bd0",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          4196,
+          4199,
+          4202,
+          4205,
+          4208,
+          4211,
+          4214,
+          4217,
+          4220,
+          4223,
+          4226,
+          4229,
+          4232,
+          4235,
+          4238,
+          4241,
+          4244,
+          4247,
+          4250,
+          4253,
+          4256,
+          4259,
+          4262,
+          4265,
+          4268,
+          4271,
+          4274,
+          4277,
+          4280,
+          4283,
+          4286,
+          4289,
+          4292,
+          4295,
+          4298,
+          4301,
+          4304,
+          4307,
+          4310,
+          4313
+        ]
+      }
+    },
+    {
+      "id": "sample-02",
+      "title": "Large pentagons under fire",
+      "description": "Ordinary and large pentagons appear together around a multi-barrel player.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "wp54XkQUhz0",
+      "source_title": "550,000 HIGH SCORE WORLD RECORD - DIEP.IO WORLD RECORD (YouTube DIEP.IO Highscore)",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=wp54XkQUhz0&t=498s",
+      "start": 498.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "Large pentagons",
+        "Pentagons",
+        "Visible firing"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-02-original.webp",
+          "sha256": "156021d095cfb1712df0fe7b133612def9bfbfab7a067a9c3cfcfe6bad310269",
+          "bytes": 354738
+        },
+        "processed": {
+          "path": "assets/sample-02-processed.webp",
+          "sha256": "307117bded4520d721e9fbd06725f8dbf01ad58c85ba2f44402481e735038f02",
+          "bytes": 251914
+        },
+        "thumbnail": {
+          "path": "assets/sample-02-thumbnail.webp",
+          "sha256": "d3ebe3beb3a4745337dadda579747100a9894473b7ccd54e3202355a07051daa",
+          "bytes": 6962
+        }
+      },
+      "provenance": {
+        "video_sha256": "2af47758c5d889f158165f426fcc10336d65885659cb6a94ddb62cca6dd348c3",
+        "proxy_sha256": "5d3fb681ba37697664fc5a1e32cde1fc437cfb9b106686faa359cb7b1c4c5b0f",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          14940,
+          14943,
+          14946,
+          14949,
+          14952,
+          14955,
+          14958,
+          14961,
+          14964,
+          14967,
+          14970,
+          14973,
+          14976,
+          14979,
+          14982,
+          14985,
+          14988,
+          14991,
+          14994,
+          14997,
+          15000,
+          15003,
+          15006,
+          15009,
+          15012,
+          15015,
+          15018,
+          15021,
+          15024,
+          15027,
+          15030,
+          15033,
+          15036,
+          15039,
+          15042,
+          15045,
+          15048,
+          15051,
+          15054,
+          15057
+        ]
+      }
+    },
+    {
+      "id": "sample-03",
+      "title": "Aiming with stable scenery",
+      "description": "The barrel turns while the arena boundary and nearby scenery stay visually stable. Inputs are unknown.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "CJWlY5GDndo",
+      "source_title": "WOLRDS STRONGEST TANK MAXED! DIEP.IO HUGE UPDATE! - New DIEP.IO TEAMS Gamemode & NEW TANK GAMEPLAY!",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=CJWlY5GDndo&t=1738s",
+      "start": 1738.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "No emission seen",
+        "Stable scenery"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-03-original.webp",
+          "sha256": "fd24e345fe60aadde573a89052e0db03c7bf5c89d1f1126f3f4332c2737c8a71",
+          "bytes": 112452
+        },
+        "processed": {
+          "path": "assets/sample-03-processed.webp",
+          "sha256": "b25c7f1f5a899fffee728f27f4a7ccf0f794e745896691947b142e29f2fe2dcf",
+          "bytes": 50260
+        },
+        "thumbnail": {
+          "path": "assets/sample-03-thumbnail.webp",
+          "sha256": "c6bd3295c48d9078f1f1da9b139dc9406ca23f50608f5b4a51970537321d9165",
+          "bytes": 6354
+        }
+      },
+      "provenance": {
+        "video_sha256": "94cd44d160589c22358e2bfde76535feb33ea267ef74bbbd790fd11fd32d088a",
+        "proxy_sha256": "c2eed60eade185883f6e944269246f1e83fe0391ded13f2f851e2c24100b2a1d",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          52140,
+          52143,
+          52146,
+          52149,
+          52152,
+          52155,
+          52158,
+          52161,
+          52164,
+          52167,
+          52170,
+          52173,
+          52176,
+          52179,
+          52182,
+          52185,
+          52188,
+          52191,
+          52194,
+          52197,
+          52200,
+          52203,
+          52206,
+          52209,
+          52212,
+          52215,
+          52218,
+          52221,
+          52224,
+          52227,
+          52230,
+          52233,
+          52236,
+          52239,
+          52242,
+          52245,
+          52248,
+          52251,
+          52254,
+          52257
+        ]
+      }
+    },
+    {
+      "id": "sample-04",
+      "title": "A quiet corner",
+      "description": "Stable arena boundaries and no new player emission observed across the retained frames.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "8f7hehx5w5g",
+      "source_title": "Diep.io - 4TDM - Musa - Consistent Scores",
+      "creator": "Matteo_XZ",
+      "source_url": "https://www.youtube.com/watch?v=8f7hehx5w5g&t=3934s",
+      "start": 3934.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "No emission seen",
+        "Stable scenery"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-04-original.webp",
+          "sha256": "c4a4235058ab04b9b1f38837815fe439ff8d91ce6b71c0aea19da02e697d8c3a",
+          "bytes": 84070
+        },
+        "processed": {
+          "path": "assets/sample-04-processed.webp",
+          "sha256": "3b187ba350b17e7dd2fb697bb2565617d005549cc7e810f734d34ca44c0b69ee",
+          "bytes": 51584
+        },
+        "thumbnail": {
+          "path": "assets/sample-04-thumbnail.webp",
+          "sha256": "4663903de930bf20347bc146f9df384c7c9be99bc7dd3e6f331644f716b79f62",
+          "bytes": 4634
+        }
+      },
+      "provenance": {
+        "video_sha256": "77b4ded7a8a39d3dbe6a8d10b699ffb2fbab067d372a795ae1833d2703b68286",
+        "proxy_sha256": "2eb3bb7435fd3c241409f292dadda666ab6e0d2c076879ad8970c70eb65de820",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          118020,
+          118023,
+          118026,
+          118029,
+          118032,
+          118035,
+          118038,
+          118041,
+          118044,
+          118047,
+          118050,
+          118053,
+          118056,
+          118059,
+          118062,
+          118065,
+          118068,
+          118071,
+          118074,
+          118077,
+          118080,
+          118083,
+          118086,
+          118089,
+          118092,
+          118095,
+          118098,
+          118101,
+          118104,
+          118107,
+          118110,
+          118113,
+          118116,
+          118119,
+          118122,
+          118125,
+          118128,
+          118131,
+          118134,
+          118137
+        ]
+      }
+    },
+    {
+      "id": "sample-05",
+      "title": "Through a narrow corridor",
+      "description": "A retained maze example with large projectiles, turns and tight geometry.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "2Ty7pbltJvM",
+      "source_title": "Diep.io THE MOST SATISFYING KILLS EVER!",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=2Ty7pbltJvM&t=404s",
+      "start": 404.0036,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "Maze walls",
+        "Visible firing"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-05-original.webp",
+          "sha256": "f300a9e1c263f9f86fe58f18b953d286f698e99a046a0158d027fcf1eeabe892",
+          "bytes": 121934
+        },
+        "processed": {
+          "path": "assets/sample-05-processed.webp",
+          "sha256": "fe173ed8aa24ec9f5261f7d67aaf890146a3bc00448c6e3a08eddda836a48af0",
+          "bytes": 86772
+        },
+        "thumbnail": {
+          "path": "assets/sample-05-thumbnail.webp",
+          "sha256": "4d3a77115006869fa61be98948250f088c496a9ce795140c5c381c0f3670304c",
+          "bytes": 2068
+        }
+      },
+      "provenance": {
+        "video_sha256": "f4eba2d056c14751740c2421820ceeb045680bbc995fb516d8d6774e086ef42d",
+        "proxy_sha256": "4c55f8f18d954b6b0c2886ae1ceebf29bfc5668dfcb4d799dd87e9fcd73509dd",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          12108,
+          12111,
+          12114,
+          12117,
+          12120,
+          12123,
+          12126,
+          12129,
+          12132,
+          12135,
+          12138,
+          12141,
+          12144,
+          12147,
+          12150,
+          12153,
+          12156,
+          12159,
+          12162,
+          12165,
+          12168,
+          12171,
+          12174,
+          12177,
+          12180,
+          12183,
+          12186,
+          12189,
+          12192,
+          12195,
+          12198,
+          12201,
+          12204,
+          12207,
+          12210,
+          12213,
+          12216,
+          12219,
+          12222,
+          12225
+        ]
+      }
+    },
+    {
+      "id": "sample-06",
+      "title": "A large-object validation example",
+      "description": "A red player, large pentagon and moving projectiles in held-out validation footage.",
+      "status": "accepted",
+      "split": "val",
+      "source_id": "y6-L9w3fKLs",
+      "source_title": "IMPOSSIBLE TANK CHALLENGE - Diep.io NO Upgrades MAX Level! - Diep.io Game Fun!",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=y6-L9w3fKLs&t=242s",
+      "start": 242.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "Large pentagons",
+        "Pentagons",
+        "Visible firing"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-06-original.webp",
+          "sha256": "431251720fc65e7dba664239b92cc519a79f674074482959132bcf8a4c5698fd",
+          "bytes": 407006
+        },
+        "processed": {
+          "path": "assets/sample-06-processed.webp",
+          "sha256": "77c1a39cb19e331f7d864140216c8d36f0f01dac4e69b525137cd7ebb7c32527",
+          "bytes": 253406
+        },
+        "thumbnail": {
+          "path": "assets/sample-06-thumbnail.webp",
+          "sha256": "eef559912a90fbe1f426288e19bae84bd9a07c24b798c2d5d55d2aedd96d8aaa",
+          "bytes": 6344
+        }
+      },
+      "provenance": {
+        "video_sha256": "a98125431ac2cbcbbf34e71c671cef428d3203c8485d60ada36c62d4dc68db2f",
+        "proxy_sha256": "4e75d546a248dfeafd711ce71e56506f3472999dc616eefdb9f8f80ac2906a6d",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          5808,
+          5810,
+          5813,
+          5815,
+          5818,
+          5820,
+          5822,
+          5825,
+          5827,
+          5830,
+          5832,
+          5834,
+          5837,
+          5839,
+          5842,
+          5844,
+          5846,
+          5849,
+          5851,
+          5854,
+          5856,
+          5858,
+          5861,
+          5863,
+          5866,
+          5868,
+          5870,
+          5873,
+          5875,
+          5878,
+          5880,
+          5882,
+          5885,
+          5887,
+          5890,
+          5892,
+          5894,
+          5897,
+          5899,
+          5902
+        ]
+      }
+    },
+    {
+      "id": "sample-07",
+      "title": "Dense firing, small details",
+      "description": "A retained validation example testing the visibility of bullets and pentagon geometry.",
+      "status": "accepted",
+      "split": "val",
+      "source_id": "ycjXOBkPaXw",
+      "source_title": "HOW TO  STACK BULLETS IN 2 SECONDS  - DIEP.IO",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=ycjXOBkPaXw&t=49s",
+      "start": 49.015633333333334,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "Large pentagons",
+        "Pentagons",
+        "Visible firing"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-07-original.webp",
+          "sha256": "7ef38cefbdeec5c1e910e8cbf51675cb8847cd69793d459414e584cbe66930be",
+          "bytes": 222826
+        },
+        "processed": {
+          "path": "assets/sample-07-processed.webp",
+          "sha256": "0c8637e842463e2e15a58844628a839fe91bd9558066fe2fafcb59edee75d642",
+          "bytes": 163188
+        },
+        "thumbnail": {
+          "path": "assets/sample-07-thumbnail.webp",
+          "sha256": "7c9a085fcb99edb8be532f3f3b94561bb2024fa1f6f5d1ff8d511acfc2e96855",
+          "bytes": 4268
+        }
+      },
+      "provenance": {
+        "video_sha256": "601e43c99f082327800257b6fd749e551856ae3f08c71029ac7ce9b4ca4ebb2b",
+        "proxy_sha256": "4b924382b43add3916fa71a1444f7fdd17956274632820978b5760c1fb2b28dc",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          1469,
+          1472,
+          1475,
+          1478,
+          1481,
+          1484,
+          1487,
+          1490,
+          1493,
+          1496,
+          1499,
+          1501,
+          1504,
+          1507,
+          1510,
+          1513,
+          1516,
+          1519,
+          1522,
+          1525,
+          1528,
+          1531,
+          1534,
+          1537,
+          1540,
+          1543,
+          1546,
+          1549,
+          1552,
+          1555,
+          1558,
+          1561,
+          1564,
+          1567,
+          1570,
+          1573,
+          1576,
+          1579,
+          1582,
+          1585
+        ]
+      }
+    },
+    {
+      "id": "sample-08",
+      "title": "Movement without visible firing",
+      "description": "A green player and translating food; nearby opponent bullets do not establish player firing.",
+      "status": "accepted",
+      "split": "train",
+      "source_id": "iD4cnIhY-To",
+      "source_title": "Diep.io STALKER HIGHLIGHTS PART 3",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=iD4cnIhY-To&t=232s",
+      "start": 232.99943333333334,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "retained_proxy",
+      "tags": [
+        "Aim changes",
+        "No emission seen"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-08-original.webp",
+          "sha256": "b9f9d4c915e87544180f8627db3f2e9c791a8c8d0b3ff87109f2b4ac0ad6a32e",
+          "bytes": 224814
+        },
+        "processed": {
+          "path": "assets/sample-08-processed.webp",
+          "sha256": "9edab7bc4425ebdfc3246cada3c6fff5103de04df99b6d97b20142fb0b16c536",
+          "bytes": 156896
+        },
+        "thumbnail": {
+          "path": "assets/sample-08-thumbnail.webp",
+          "sha256": "12dee95aa77135ddfe7e138dd111804336ff4a796c59f26929730cbc6d838039",
+          "bytes": 4696
+        }
+      },
+      "provenance": {
+        "video_sha256": "c41e36c4e975aa2801bdc8d3fecfae21b6fc2b0a1d5e85e794cfa61017915799",
+        "proxy_sha256": "20d4132a4c899455a1a9d77062b7183d7f8b05c63670996865e9e4b436d2f3f2",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          6983,
+          6986,
+          6989,
+          6992,
+          6995,
+          6998,
+          7001,
+          7004,
+          7007,
+          7010,
+          7013,
+          7016,
+          7019,
+          7022,
+          7025,
+          7028,
+          7031,
+          7034,
+          7037,
+          7040,
+          7043,
+          7046,
+          7049,
+          7052,
+          7055,
+          7058,
+          7061,
+          7064,
+          7067,
+          7070,
+          7073,
+          7076,
+          7079,
+          7082,
+          7085,
+          7088,
+          7091,
+          7094,
+          7097,
+          7100
+        ]
+      }
+    },
+    {
+      "id": "sample-09",
+      "title": "Why this source is on hold",
+      "description": "After initial motion, the player, another player and an in-flight projectile stall. The entire source is withheld.",
+      "status": "held",
+      "split": "train",
+      "source_id": "eGJEVXrV8rs",
+      "source_title": "[Pashalik] Live Diep.io Domination Triplet Carnage Uncut",
+      "creator": "Pashalik Games",
+      "source_url": "https://www.youtube.com/watch?v=eGJEVXrV8rs&t=70s",
+      "start": 70.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "withheld_proxy",
+      "tags": [
+        "Aim changes",
+        "Suspected freeze"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-09-original.webp",
+          "sha256": "bdac95a560bf513e4c7bf875ecff88df4b2982c29b10886480ded44637760b84",
+          "bytes": 310182
+        },
+        "processed": {
+          "path": "assets/sample-09-processed.webp",
+          "sha256": "bf9679f938a82f5037d60a2ead0d665f090dd280beda0484b6223a8c9c2289de",
+          "bytes": 143012
+        },
+        "thumbnail": {
+          "path": "assets/sample-09-thumbnail.webp",
+          "sha256": "24e8a40a2727b4e4342a5dc278cba4e91d8a8ba0cb8b184fff9f46fdf21d37c7",
+          "bytes": 7704
+        }
+      },
+      "provenance": {
+        "video_sha256": "2af74598bba52c883c8687238c47ac50e913d6c037cefab32b344d74461df385",
+        "proxy_sha256": "51ce6063de80a2dd9566db8ad3488164d766c9e084774df24872057a24c5e8d8",
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          2100,
+          2103,
+          2106,
+          2109,
+          2112,
+          2115,
+          2118,
+          2121,
+          2124,
+          2127,
+          2130,
+          2133,
+          2136,
+          2139,
+          2142,
+          2145,
+          2148,
+          2151,
+          2154,
+          2157,
+          2160,
+          2163,
+          2166,
+          2169,
+          2172,
+          2175,
+          2178,
+          2181,
+          2184,
+          2187,
+          2190,
+          2193,
+          2196,
+          2199,
+          2202,
+          2205,
+          2208,
+          2211,
+          2214,
+          2217
+        ]
+      }
+    },
+    {
+      "id": "sample-10",
+      "title": "Low motion is not always a freeze",
+      "description": "An opponent moves and the barrel turns slightly. The freeze screen rejected it; it has not been reinstated.",
+      "status": "rejected",
+      "split": "train",
+      "source_id": "u_1_o_wnAT8",
+      "source_title": "BYE DIEPIO",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=u_1_o_wnAT8&t=202s",
+      "start": 202.0018,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "illustrative_resize_not_training_data",
+      "tags": [
+        "Aim changes",
+        "No emission seen",
+        "Stable scenery"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-10-original.webp",
+          "sha256": "23eac65693be7dd08a0233abc843bbfdfabea55f070a6be4bebdaa781d3e52b4",
+          "bytes": 52220
+        },
+        "processed": {
+          "path": "assets/sample-10-processed.webp",
+          "sha256": "b43fd8ecc839450a43637fe548b3a36ead35cfb7a11dd6085d9543576715e34a",
+          "bytes": 33942
+        },
+        "thumbnail": {
+          "path": "assets/sample-10-thumbnail.webp",
+          "sha256": "37fb13a13324a51d542297d304f91b9cc8d513519abc6605ebd176bd046f34b4",
+          "bytes": 1904
+        }
+      },
+      "provenance": {
+        "video_sha256": "264514ab81d92b7ad07abe2c31c2cb925191e616359fb8c45bb1d6cf523262e6",
+        "proxy_sha256": null,
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          6054,
+          6057,
+          6060,
+          6063,
+          6066,
+          6069,
+          6072,
+          6075,
+          6078,
+          6081,
+          6084,
+          6087,
+          6090,
+          6093,
+          6096,
+          6099,
+          6102,
+          6105,
+          6108,
+          6111,
+          6114,
+          6117,
+          6120,
+          6123,
+          6126,
+          6129,
+          6132,
+          6135,
+          6138,
+          6141,
+          6144,
+          6147,
+          6150,
+          6153,
+          6156,
+          6159,
+          6162,
+          6165,
+          6168,
+          6171
+        ]
+      }
+    },
+    {
+      "id": "sample-11",
+      "title": "A rejected overlay",
+      "description": "Added “Zzz” text is visible despite a stationary player and occasional moving projectiles. This remains excluded.",
+      "status": "rejected",
+      "split": "val",
+      "source_id": "haMF0UV2bYs",
+      "source_title": "50/50 BUILD - Diep.io",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=haMF0UV2bYs&t=116s",
+      "start": 116.98353333333334,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "illustrative_resize_not_training_data",
+      "tags": [
+        "No emission seen",
+        "Stable scenery"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-11-original.webp",
+          "sha256": "0b0b0d40759920eebe882cb0097f08312300eb706d07c55ec202d91d84579463",
+          "bytes": 28624
+        },
+        "processed": {
+          "path": "assets/sample-11-processed.webp",
+          "sha256": "6db20796329aa7f67576b03232d8d0f85ac493a576332ec6eca35f2cba97b14b",
+          "bytes": 14842
+        },
+        "thumbnail": {
+          "path": "assets/sample-11-thumbnail.webp",
+          "sha256": "e4b69dd5063190a5ad2fc468c6cfef57bd9f54c6afe74fbfbb495ec9ea3ed428",
+          "bytes": 3786
+        }
+      },
+      "provenance": {
+        "video_sha256": "53b6894efef96c21eb6097af716b25b54f668422a357db0df28691519fd938d1",
+        "proxy_sha256": null,
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          3506,
+          3509,
+          3512,
+          3515,
+          3518,
+          3521,
+          3524,
+          3527,
+          3530,
+          3533,
+          3536,
+          3539,
+          3542,
+          3545,
+          3548,
+          3551,
+          3554,
+          3557,
+          3560,
+          3563,
+          3566,
+          3569,
+          3572,
+          3575,
+          3578,
+          3581,
+          3584,
+          3587,
+          3590,
+          3593,
+          3596,
+          3599,
+          3602,
+          3605,
+          3608,
+          3611,
+          3614,
+          3617,
+          3620,
+          3623
+        ]
+      }
+    },
+    {
+      "id": "sample-12",
+      "title": "Slow movement missed by screening",
+      "description": "Maze walls drift gradually. A low mean-change threshold rejected the clip; recovery needs a full review.",
+      "status": "rejected",
+      "split": "train",
+      "source_id": "rhrJDjXpEVs",
+      "source_title": "WE FINALLY KILLED THE BASE DRONES!  + Maze funny moments - Diep.io",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=rhrJDjXpEVs&t=506s",
+      "start": 506.0055,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "illustrative_resize_not_training_data",
+      "tags": [
+        "No emission seen"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-12-original.webp",
+          "sha256": "e7eade038756cba8de434b11d53484b35d4e4f2105083d4f9a70467760b635e0",
+          "bytes": 36782
+        },
+        "processed": {
+          "path": "assets/sample-12-processed.webp",
+          "sha256": "b3b7ec7f029624dd0da5591ca4ee4d58c25f62ed970223542ce657aeba115704",
+          "bytes": 24308
+        },
+        "thumbnail": {
+          "path": "assets/sample-12-thumbnail.webp",
+          "sha256": "6785df99244342a940ee3585d3671dc92cf01ff573b03fd4a973694ee46acfc5",
+          "bytes": 1330
+        }
+      },
+      "provenance": {
+        "video_sha256": "1a40038dfcad27082b1f1dfd8aadc4b72a23469428203a94296437bab7b9d7c5",
+        "proxy_sha256": null,
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          15165,
+          15168,
+          15171,
+          15174,
+          15177,
+          15180,
+          15183,
+          15186,
+          15189,
+          15192,
+          15195,
+          15198,
+          15201,
+          15204,
+          15207,
+          15210,
+          15213,
+          15216,
+          15219,
+          15222,
+          15225,
+          15228,
+          15231,
+          15234,
+          15237,
+          15240,
+          15243,
+          15246,
+          15249,
+          15252,
+          15255,
+          15258,
+          15261,
+          15264,
+          15267,
+          15270,
+          15273,
+          15276,
+          15279,
+          15282
+        ]
+      }
+    },
+    {
+      "id": "sample-13",
+      "title": "Aiming inside a rejected clip",
+      "description": "The player turns while the team-area boundaries remain stable. A screening rejection is not proof of a frozen image.",
+      "status": "rejected",
+      "split": "train",
+      "source_id": "CJWlY5GDndo",
+      "source_title": "WOLRDS STRONGEST TANK MAXED! DIEP.IO HUGE UPDATE! - New DIEP.IO TEAMS Gamemode & NEW TANK GAMEPLAY!",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=CJWlY5GDndo&t=3498s",
+      "start": 3498.0,
+      "duration": 4,
+      "fps": 10,
+      "frames": 40,
+      "source_crop_size": [
+        200,
+        200
+      ],
+      "processed_size": [
+        128,
+        128
+      ],
+      "processed_kind": "illustrative_resize_not_training_data",
+      "tags": [
+        "Aim changes",
+        "No emission seen",
+        "Stable scenery"
+      ],
+      "media": {
+        "original": {
+          "path": "assets/sample-13-original.webp",
+          "sha256": "790cae5a017f0cdc9cacb4bc7d2e5a22d9269c6ffbd41920a40225b604750d16",
+          "bytes": 65504
+        },
+        "processed": {
+          "path": "assets/sample-13-processed.webp",
+          "sha256": "9e74445bd3a8e7858d8ad71c96e59270b2bfbeb565085a07fb38639286a5f936",
+          "bytes": 34132
+        },
+        "thumbnail": {
+          "path": "assets/sample-13-thumbnail.webp",
+          "sha256": "8d2b4d3b98151590910d9bf1b8e0fdeddb36975aed74567521c60987b8a5313c",
+          "bytes": 4630
+        }
+      },
+      "provenance": {
+        "video_sha256": "94cd44d160589c22358e2bfde76535feb33ea267ef74bbbd790fd11fd32d088a",
+        "proxy_sha256": null,
+        "crop": [
+          220,
+          80,
+          200,
+          200
+        ],
+        "source_frame_indices": [
+          104940,
+          104943,
+          104946,
+          104949,
+          104952,
+          104955,
+          104958,
+          104961,
+          104964,
+          104967,
+          104970,
+          104973,
+          104976,
+          104979,
+          104982,
+          104985,
+          104988,
+          104991,
+          104994,
+          104997,
+          105000,
+          105003,
+          105006,
+          105009,
+          105012,
+          105015,
+          105018,
+          105021,
+          105024,
+          105027,
+          105030,
+          105033,
+          105036,
+          105039,
+          105042,
+          105045,
+          105048,
+          105051,
+          105054,
+          105057
+        ]
+      }
+    }
+  ]
+}
