@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect Diep-Genie reconstructions beside the observed frames, in synchronized playback or one frame at a time.">
+  <meta name="theme-color" content="#f5f4ed"><title>Diep-Genie · Reconstruction viewer</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="reconstruction-viewer.css">
+  <script src="reconstruction-viewer.js" defer></script>
+</head>
+<body class="reconstruction-page">
+<header class="topbar"><a class="brand" href="./" aria-label="Diep-Genie home"><span class="brand-icon" aria-hidden="true"></span> DIEP–GENIE</a><nav aria-label="Main navigation"><a href="./#showcase">Data showcase</a><a href="reconstructions.html" aria-current="page">Reconstructions</a><a href="https://github.com/jackgao1540/Diep-Genie">GitHub ↗</a></nav></header>
+<main>
+  <section class="reconstruction-intro">
+    <div><p class="eyebrow">THE MODEL / UNDER THE MICROSCOPE</p><h1>See what survives.<br><em>And what gets lost.</em></h1><p class="lede">Play the observed frames and their reconstructions together. Pause on a barrel, follow a projectile, or step through a change in direction.</p></div>
+    <aside class="evaluation-note"><span class="badge held">Still learning</span><p>The newer checkpoint recovers more color and shape, but still loses essential details. Neither checkpoint provides playable controls.</p><a href="https://github.com/jackgao1540/Diep-Genie/blob/main/MODEL_QUALITY.md">Read the quality assessment ↗</a></aside>
+  </section>
+  <section class="reconstruction-workspace" aria-label="Synchronized reconstruction comparison">
+    <div class="dataset-toolbar"><div><p id="dataset-kind" class="eyebrow">PUBLIC EXAMPLES</p><p id="dataset-title">Loading the comparison library…</p></div><div class="local-actions"><label class="file-button" for="local-file">Open local comparison file<input id="local-file" type="file" accept=".json,application/json"></label><button id="public-examples" class="quiet-button" hidden>Return to public examples</button></div></div>
+    <p class="local-explanation">Have the full evaluation file? Open it here to inspect all 64 validation windows. It stays in this browser; the file and its images are never uploaded.</p>
+    <div id="reconstruction-viewer" class="viewer" aria-busy="true" tabindex="0" aria-label="Reconstruction viewer. Arrow keys step frames; space plays or pauses.">
+      <div class="reconstruction-heading"><div><label for="clip-select" class="eyebrow">CHOOSE A CLIP</label><select id="clip-select" disabled><option>Loading…</option></select></div><div class="view-options"><span id="split-badge" class="badge">Loading</span><label for="crop">View <select id="crop"><option value="full">Full frame</option><option value="center">Center ×2</option></select></label></div></div>
+      <div class="reconstruction-comparison">
+        <figure><figcaption><span>OBSERVED INPUT</span><span>128 × 128</span></figcaption><canvas id="source-frame" width="128" height="128" aria-label="Observed input frame"></canvas><p>The actual frame seen by the model</p></figure>
+        <figure><figcaption><span id="before-label">STEP 219</span><span>Reconstruction</span></figcaption><canvas id="before-frame" width="128" height="128" aria-label="Earlier checkpoint reconstruction"></canvas><p id="before-description">Earlier tokenizer checkpoint</p></figure>
+        <figure><figcaption><span id="after-label">STEP 518</span><span>Reconstruction</span></figcaption><canvas id="after-frame" width="128" height="128" aria-label="Later checkpoint reconstruction"></canvas><p id="after-description">Diagnostic tokenizer checkpoint</p></figure>
+      </div>
+      <div class="transport reconstruction-transport"><button id="play" class="play" disabled aria-label="Play comparison">▶ Play</button><button id="back" class="step" disabled aria-label="Previous frame">‹</button><button id="next" class="step" disabled aria-label="Next frame">›</button><button id="anchor" class="quiet-button" hidden disabled>Scored frame</button><input id="scrub" type="range" min="0" max="39" value="0" aria-label="Comparison frame" disabled><output id="frame-count" class="mono">Frame —</output><label class="speed-label"><span class="sr-only">Playback speed</span><select id="speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+      <div class="reconstruction-details"><div><h2 id="clip-title">Preparing frames…</h2><p id="description"></p><p id="timing" class="processing-note"></p></div><div class="reconstruction-credit"><span class="eyebrow">SOURCE FOOTAGE</span><a id="source-link" target="_blank" rel="noopener noreferrer" hidden></a><p id="source-meta"></p></div></div>
+      <p id="load-status" class="load-status" role="status" aria-live="polite">Loading public examples…</p>
+    </div>
+    <div class="viewer-footnotes"><p><strong>One clock, three views.</strong> Playback loops at 10 sampled frames per second. Use ← / → to step and Space to play while the viewer is focused. Center ×2 changes the crop, not the model’s output.</p><p><strong>Reconstruction, not prediction.</strong> The tokenizer sees each displayed input frame and compresses/rebuilds it. This is not a generated future, a playable world, or a test of learned movement, aiming or firing.</p></div>
+  </section>
+  <section class="reconstruction-bottom"><div><p class="eyebrow">WHAT TO LOOK FOR</p><h2>Follow the small things.</h2><p>Compare the barrel outline and direction, the player’s color, projectile births and food shapes. Average image error can improve while these details disappear.</p></div><div><p class="eyebrow">HOW TO READ THE EXAMPLES</p><p>Public clips are a small, already-published selection with source credits. Training examples and held-out validation examples are labeled separately. The full fixed validation evaluation is available through a local comparison file, without publishing its footage.</p><a href="./#showcase">Explore the source footage ↗</a></div></section>
+</main>
+<footer><span class="brand">DIEP–GENIE <small>Independent research · November 2026</small></span><div><a href="reconstructions.json">Public comparison provenance ↗</a><a href="https://github.com/jackgao1540/Diep-Genie/blob/main/MODEL_QUALITY.md">Quality report ↗</a></div><p>Gameplay belongs to its respective creators and diep.io. This project is not affiliated with diep.io. No ratings or private files are collected.</p></footer>
+<noscript><p class="noscript">Enable JavaScript for synchronized playback and frame stepping. <a href="reconstructions.json">Public comparison metadata</a> remains available.</p></noscript>
+</body>
+</html>

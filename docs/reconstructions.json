@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "diep-genie-reconstructions",
+  "mode": "public",
+  "title": "Reconstruction comparison",
+  "description": "Same observed frames reconstructed by the tokenizer. These are not future predictions or playable controls.",
+  "checkpoints": {
+    "before": {
+      "step": 219,
+      "preflight": false,
+      "sha256": "4de110c80bcf085275c6d533c510d5b6cc3f1b4b00bf3faf2515d26a3b48e4c6"
+    },
+    "after": {
+      "step": 518,
+      "preflight": true,
+      "sha256": "5b6321ceb219b6d4b8a9f6ed5daa9b0afddaeb26f58f7e5a062eb1790d073d47"
+    }
+  },
+  "optimizer_updates": 0,
+  "clips": [
+    {
+      "id": "sample-01",
+      "title": "Navigating a maze",
+      "description": "Walls, scrolling scenery and intermittent firing in retained training footage.",
+      "split": "train",
+      "source_id": "soatudugBjY",
+      "source_title": "If you kill you die - diep.io",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=soatudugBjY&t=140s",
+      "fps": 10,
+      "frames": 40,
+      "width": 128,
+      "height": 128,
+      "columns": 8,
+      "media": {
+        "source": {
+          "path": "assets/sample-01-processed.webp",
+          "sha256": "c46075a17d604eb0206c4b1e61daa0c5d9e1cccb42aaedca0e10f23d4cdc5165",
+          "bytes": 76406
+        },
+        "before": {
+          "path": "assets/recon-sample-01-before.webp",
+          "bytes": 91822,
+          "sha256": "2d94afb865e2d25ee73d46394b44ad929d9325468d0d2bf6d7293dceb9177b27"
+        },
+        "after": {
+          "path": "assets/recon-sample-01-after.webp",
+          "bytes": 98554,
+          "sha256": "5f0f64734818d1fcda22bf0086d09e1d62a999fe7a3036f9c5d4635d552b02d0"
+        }
+      }
+    },
+    {
+      "id": "sample-02",
+      "title": "Large pentagons under fire",
+      "description": "Ordinary and large pentagons appear together around a multi-barrel player.",
+      "split": "train",
+      "source_id": "wp54XkQUhz0",
+      "source_title": "550,000 HIGH SCORE WORLD RECORD - DIEP.IO WORLD RECORD (YouTube DIEP.IO Highscore)",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=wp54XkQUhz0&t=498s",
+      "fps": 10,
+      "frames": 40,
+      "width": 128,
+      "height": 128,
+      "columns": 8,
+      "media": {
+        "source": {
+          "path": "assets/sample-02-processed.webp",
+          "sha256": "307117bded4520d721e9fbd06725f8dbf01ad58c85ba2f44402481e735038f02",
+          "bytes": 251914
+        },
+        "before": {
+          "path": "assets/recon-sample-02-before.webp",
+          "bytes": 208860,
+          "sha256": "645870b4af8527bb11cddd0db0830fd6dd5646e39c61f50ebfb42a3cf9f2c14f"
+        },
+        "after": {
+          "path": "assets/recon-sample-02-after.webp",
+          "bytes": 311000,
+          "sha256": "08bbd39c78bbf887767028d0c26ac998f056551e4815a67af5214250a13ff56c"
+        }
+      }
+    },
+    {
+      "id": "sample-06",
+      "title": "A large-object validation example",
+      "description": "A red player, large pentagon and moving projectiles in held-out validation footage.",
+      "split": "val",
+      "source_id": "y6-L9w3fKLs",
+      "source_title": "IMPOSSIBLE TANK CHALLENGE - Diep.io NO Upgrades MAX Level! - Diep.io Game Fun!",
+      "creator": "MasterOv",
+      "source_url": "https://www.youtube.com/watch?v=y6-L9w3fKLs&t=242s",
+      "fps": 10,
+      "frames": 40,
+      "width": 128,
+      "height": 128,
+      "columns": 8,
+      "media": {
+        "source": {
+          "path": "assets/sample-06-processed.webp",
+          "sha256": "77c1a39cb19e331f7d864140216c8d36f0f01dac4e69b525137cd7ebb7c32527",
+          "bytes": 253406
+        },
+        "before": {
+          "path": "assets/recon-sample-06-before.webp",
+          "bytes": 200810,
+          "sha256": "78017c971267efe267853b1fa797b330dcbb427a428db7ffca4e640cec71ffa5"
+        },
+        "after": {
+          "path": "assets/recon-sample-06-after.webp",
+          "bytes": 84562,
+          "sha256": "32663f5fe4f7fdf1cfcc3b62f5da9653ffa0053ea7f1c0be228cc0db1f5643c2"
+        }
+      }
+    },
+    {
+      "id": "sample-07",
+      "title": "Dense firing, small details",
+      "description": "A retained validation example testing the visibility of bullets and pentagon geometry.",
+      "split": "val",
+      "source_id": "ycjXOBkPaXw",
+      "source_title": "HOW TO  STACK BULLETS IN 2 SECONDS  - DIEP.IO",
+      "creator": "Sinbadx",
+      "source_url": "https://www.youtube.com/watch?v=ycjXOBkPaXw&t=49s",
+      "fps": 10,
+      "frames": 40,
+      "width": 128,
+      "height": 128,
+      "columns": 8,
+      "media": {
+        "source": {
+          "path": "assets/sample-07-processed.webp",
+          "sha256": "0c8637e842463e2e15a58844628a839fe91bd9558066fe2fafcb59edee75d642",
+          "bytes": 163188
+        },
+        "before": {
+          "path": "assets/recon-sample-07-before.webp",
+          "bytes": 135788,
+          "sha256": "70a8adc7ae3d4533b10078769749461ec096cc594b15bbad5f3ebc9973e65adb"
+        },
+        "after": {
+          "path": "assets/recon-sample-07-after.webp",
+          "bytes": 211364,
+          "sha256": "ebc47ea3c5a6cc37a5f7710322e29f49099f25f12213ca8f0d8a89ece75143b9"
+        }
+      }
+    }
+  ],
+  "recipe_sha256": "b21edf085b23feacad6deafbbc9ecc95af85357907f78d85cd1d13ad654e4c8e",
+  "showcase_sha256": "987ce4695af84177eae2ef6aec673b9c4b0cfe7079aa6ddbf0743af87e736142",
+  "policy": "Four already-public accepted samples only. Illustrative examples, not the fixed held-out quality score.",
+  "device": "cpu",
+  "precision": "fp32",
+  "torch_version": "2.15.0+cpu",
+  "exporter_sha256": "ccb59fa3d6ade32405762efa4b4c1977b94fff036e0d3fa1fada6f290d01b56b",
+  "model_implementation_sha256": "fabff6b90d6ef39e7a84697df848c060c357cf92dc8bcf5b80e78a628c71f5a5",
+  "reconstruction_media_bytes": 1342760
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "purpose": "User-requested reconstruction playback on the existing project site. Derivatives of four already-public accepted samples only; full held-out evaluation remains a local import.",
+  "sample_ids": ["sample-01", "sample-02", "sample-06", "sample-07"],
+  "max_reconstruction_media_bytes": 15000000,
+  "checkpoints": {
+    "before": {"step": 219, "preflight": false, "sha256": "4de110c80bcf085275c6d533c510d5b6cc3f1b4b00bf3faf2515d26a3b48e4c6"},
+    "after": {"step": 518, "preflight": true, "sha256": "5b6321ceb219b6d4b8a9f6ed5daa9b0afddaeb26f58f7e5a062eb1790d073d47"}
+  }
+}

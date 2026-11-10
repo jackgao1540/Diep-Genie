@@ -37,12 +37,17 @@ def validate(root):
             w, h = clip['source_crop_size'] if name == 'original' else [128, 128]
             with Image.open(path) as image:
                 assert image.size == ((128, 128) if name == 'thumbnail' else (w * 8, h * 5)), relative
+    reconstruction_bytes = 0
+    if (root / 'docs/reconstructions.json').exists():
+        from scripts.validate_reconstruction_viewer import validate as validate_reconstructions
+        additional, reconstruction_bytes = validate_reconstructions(root)
+        expected |= additional
     assert {p.relative_to(root / 'docs').as_posix() for p in (root / 'docs').rglob('*') if p.is_file()} == expected
     assert total == data['media_bytes'] <= recipe['max_media_bytes']
     public_text = '\n'.join((root / 'docs' / name).read_text(encoding='utf-8') for name in ['index.html', 'app.js', 'style.css', 'showcase.json'])
     for private in ['127.0.0.1', 'localhost', 'C:\\Users', 'feedback.jsonl', '/api/', 'feedback_token']:
         assert private not in public_text, private
-    print(json.dumps({'samples': len(data['clips']), 'media_bytes': total, 'public_files': len(expected), 'reserved_test_samples': 0, 'validation': 'passed'}))
+    print(json.dumps({'samples': len(data['clips']), 'media_bytes': total, 'reconstruction_media_bytes': reconstruction_bytes, 'public_files': len(expected), 'reserved_test_samples': 0, 'validation': 'passed'}))
 
 
 if __name__ == '__main__':
