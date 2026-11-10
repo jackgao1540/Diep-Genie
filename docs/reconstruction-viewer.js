@@ -49,7 +49,8 @@
     for (const key of ['before', 'after']) {
       const checkpoint = raw.checkpoints && raw.checkpoints[key];
       if (!checkpoint || typeof checkpoint.preflight !== 'boolean') throw new Error('Checkpoint information is incomplete.');
-      checkpoints[key] = {step: integer(checkpoint.step, 0, 100000000, 'checkpoint step'), preflight: checkpoint.preflight};
+      checkpoints[key] = {step: integer(checkpoint.step, 0, 100000000, 'checkpoint step'), preflight: checkpoint.preflight,
+        label: boundedText(checkpoint.label, '', 60)};
     }
     const seen = new Set(); let pixels = 0;
     const clips = raw.clips.map(clip => {
@@ -158,8 +159,9 @@
     text('dataset-title', `${dataset.title} · ${dataset.clips.length} clips${filename ? ` · ${filename}` : ''}`);
     $('public-examples').hidden = !dataset.local;
     for (const key of ['before', 'after']) {
-      const checkpoint = dataset.checkpoints[key]; text(`${key}-label`, `STEP ${checkpoint.step}`);
+      const checkpoint = dataset.checkpoints[key]; text(`${key}-label`, checkpoint.label || `STEP ${checkpoint.step}`);
       text(`${key}-description`, checkpoint.preflight ? 'Diagnostic tokenizer checkpoint' : 'Tokenizer checkpoint');
+      $(`${key}-frame`).setAttribute('aria-label', `${checkpoint.label || `Step ${checkpoint.step}`} reconstruction`);
     }
     choose(dataset.clips[0]);
   }

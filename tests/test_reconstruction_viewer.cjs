@@ -38,3 +38,18 @@ test('source credits accept only explicit YouTube watch links', () => {
   assert.equal(safeCredit('https://example.com/'),null);
   assert.equal(safeCredit('https://www.youtube.com/watch?v=abcdefghijk&t=12s'),'https://www.youtube.com/watch?v=abcdefghijk&t=12s');
 });
+test('optional checkpoint labels remain bounded text and old step-only manifests stay valid', () => {
+  const old=validateManifest(manifest());
+  assert.equal(old.checkpoints.before.step,219); assert.equal(old.checkpoints.after.step,518);
+  assert.equal(old.checkpoints.before.label,''); assert.equal(old.checkpoints.after.label,'');
+  const paired=manifest(); paired.checkpoints.before.label='Baseline'; paired.checkpoints.after.label='Detail loss';
+  const result=validateManifest(paired,true);
+  assert.equal(result.checkpoints.before.label,'Baseline'); assert.equal(result.checkpoints.after.label,'Detail loss');
+  paired.checkpoints.before.label='<img src=x onerror=alert(1)>';
+  assert.equal(validateManifest(paired,true).checkpoints.before.label,'<img src=x onerror=alert(1)>');
+  // Labels use the existing textContent renderer, so markup remains literal text.
+  for (const value of [123,{},'x'.repeat(61)]) {
+    const invalid=manifest(); invalid.checkpoints.before.label=value;
+    assert.throws(()=>validateManifest(invalid,true),/text is invalid or too long/);
+  }
+});

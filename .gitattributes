@@ -36,3 +36,5 @@ scripts/run_tokenizer_comparison.py text eol=lf
 scripts/probe_detail_loss.py text eol=lf
 scripts/build_tokenizer_comparison_notebook.py text eol=lf
 scripts/package_tokenizer_comparison.py text eol=lf
+scripts/export_tokenizer_comparison_viewer.py text eol=lf
+scripts/validate_tokenizer_comparison_artifacts.py text eol=lf

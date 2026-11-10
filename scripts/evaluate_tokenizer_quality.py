@@ -214,7 +214,8 @@ def run(args):
             cap.release()
     if [file_hash(path) for path in checkpoints] != checkpoint_hashes:
         raise ValueError('Checkpoint file changed during evaluation')
-    labels = [f"Step {state['step']} reconstruction" for state in states]
+    labels = [getattr(args, 'label_'+name, None) or f"Step {state['step']} reconstruction"
+              for name, state in zip(('before', 'after'), states)]
     sheets = write_sheets(out,visuals,labels)
     report = dict(schema_version=1, device='cpu', precision='fp32', updates=0,
         torch_version=str(torch.__version__),
@@ -231,7 +232,9 @@ def run(args):
             sheet_frame='Final frame at offset 15 matches frozen source-fidelity anchors; central crops are viewing aids'),
         metrics={label:aggregate(records,label) for label in ('before','after')},
         code_occupancy={label:dict(used=int((hist>0).sum()),capacity=len(hist),counts=hist.tolist()) for label,hist in zip(('before','after'),histograms)},
-        G1=dict(status='unmeasured',reason='No complete semantic object TP/FP/FN and angle scoring; diagnostic preflight weights cannot be promoted'),
+        comparison_labels=dict(zip(('before', 'after'), labels)),
+        G1=dict(status='unmeasured',reason='No complete semantic object TP/FP/FN and angle scoring' +
+                ('; diagnostic preflight weights cannot be promoted' if any(state['contract']['preflight'] for state in states) else '')),
         G2=dict(status='unmeasured',reason='Tokenizer reconstruction does not measure independent control'),
         G3=dict(status='unmeasured',reason='Tokenizer reconstruction does not measure future-free dynamics'),
         native_sources_verified=len(verified),sheets=sheets,records=records)
@@ -254,4 +257,6 @@ if __name__ == '__main__':
     parser.add_argument('--checkpoint-after', required=True)
     parser.add_argument('--out', required=True)
     parser.add_argument('--frame-batch', type=int, default=4)
+    parser.add_argument('--label-before')
+    parser.add_argument('--label-after')
     run(parser.parse_args())

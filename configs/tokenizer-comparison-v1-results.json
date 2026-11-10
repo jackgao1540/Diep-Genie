@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "purpose": "Completed matched fresh-initialization tokenizer loss screen with frozen held-out evaluation; not a playable model, convergence result, replication, or promotion.",
+  "status": "completed_research_screen",
+  "experiment": {
+    "path": "configs/tokenizer-comparison-v1.json",
+    "sha256": "36e58edd8025266b7272b58e42a6fe69a598174feeba8c60e62e6f5ce8ffe76c",
+    "reference_baseline": {
+      "path": "configs/training-baseline-v1.json",
+      "sha256": "0e59ef3b76ed1fb27d49a8667cb681c4c932e77354681eb2d3e62cbcbf5622d0"
+    },
+    "source_hashes": {
+      "implementation_sha256": "0c507dc9e949fc7821ed2eb026dba9e022af8f5d427d890741ff5631661c5ac6",
+      "model_sha256": "fabff6b90d6ef39e7a84697df848c060c357cf92dc8bcf5b80e78a628c71f5a5",
+      "detail_loss_sha256": "3d0e072e491d22ac966e2a311807237606d188d3a0576faf6eeeefe564fac3f9",
+      "runner_sha256": "168c890cdecfd36edb437ab12b22c515f04f5401311a09ec92a960ceb457b096"
+    },
+    "detail_objective": {
+      "name": "baseline_plus_detail",
+      "weight": 1.0,
+      "loss_spec": {
+        "patch_size": 8,
+        "gradient_threshold": 0.08,
+        "achromatic_chroma_max": 0.12,
+        "dilation_radius": 1,
+        "min_region_pixels": 2,
+        "small_region_max_fraction": 0.5,
+        "uniform_weight": 0.25,
+        "achromatic_weight": 0.5,
+        "small_weight": 0.25
+      }
+    },
+    "coefficient_changed_during_experiment": false,
+    "training_seed": 42,
+    "matched_experiment_runs": 1,
+    "independent_training_replications": 0,
+    "learning_rate_schedule_horizon": 20000,
+    "architectural_changes": false,
+    "action_or_dynamics_training": false
+  },
+  "authorized_caps": {
+    "optimizer_calls_per_arm": 1000,
+    "unique_updates_per_arm": 999,
+    "maximum_compute_units": 2,
+    "maximum_allocated_hours": 1,
+    "minimum_remaining_units": 50
+  },
+  "execution": {
+    "status": "completed",
+    "final_common_step": 999,
+    "optimizer_calls_per_arm": {
+      "baseline": 1000,
+      "detail": 1000
+    },
+    "unique_updates_per_arm": {
+      "baseline": 999,
+      "detail": 999
+    },
+    "replay_calls_per_arm": {
+      "baseline": 1,
+      "detail": 1
+    },
+    "saved_common_steps": [
+      250,
+      500,
+      750,
+      999
+    ],
+    "budget_scope": "One combined allocation shared by both arms; no actual account usage is published.",
+    "torch_version": "2.14.1+cu130",
+    "precision": "fp16",
+    "initial_and_maximum_loss_scale": 1024,
+    "fresh_initialization_exact": true,
+    "sampling_independently_replayed": true,
+    "exact_resume": {
+      "baseline": {
+        "status": "passed",
+        "resume_kind": "exact",
+        "maximum_state_difference": 0,
+        "step": 2
+      },
+      "detail": {
+        "status": "passed",
+        "resume_kind": "exact",
+        "maximum_state_difference": 0,
+        "step": 2
+      }
+    },
+    "frozen_modules": {
+      "baseline": {
+        "unchanged": true,
+        "tensors": 98,
+        "elements": 1879011
+      },
+      "detail": {
+        "unchanged": true,
+        "tensors": 98,
+        "elements": 1879011
+      }
+    },
+    "finite_model_optimizer_tensor_checks": 2622,
+    "preflight": false,
+    "promotion_approved": false
+  },
+  "saved_checkpoints": {
+    "baseline": [
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/step-000250.pt",
+        "sha256": "0ef659206a174ed0be52e6e8ac578f6cf92fa426488b933ecfa0f69b7e6c0650",
+        "private": true,
+        "step": 250,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/step-000500.pt",
+        "sha256": "90b10bb577fbd5c52914487f0487ad0a68086cf2b48b48094415d6118e34fa9f",
+        "private": true,
+        "step": 500,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/step-000750.pt",
+        "sha256": "2588f06bf767e59fc84cc6cf3bb94ed9e266f092567fd32f7faea633321d3eaa",
+        "private": true,
+        "step": 750,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/step-000999.pt",
+        "sha256": "508cbeaef6de0f8ed07210e97f7b9457acab73b82f3e85c5439d1f77b444f021",
+        "private": true,
+        "step": 999,
+        "preflight": false,
+        "promotion_approved": false
+      }
+    ],
+    "detail": [
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/step-000250.pt",
+        "sha256": "3de2768e4a8b776419fb86acebfe1ec7969a9b64f3fd5d68715d3a36eb914300",
+        "private": true,
+        "step": 250,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/step-000500.pt",
+        "sha256": "e2ea1aae68accf4a16cfe371a2d9480fc28b752f2511d2d7c3e5f62719344805",
+        "private": true,
+        "step": 500,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/step-000750.pt",
+        "sha256": "b405c6e747dd5216e7dd064003c32433ef5ccfc609fa387153d1ecb356f90968",
+        "private": true,
+        "step": 750,
+        "preflight": false,
+        "promotion_approved": false
+      },
+      {
+        "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/step-000999.pt",
+        "sha256": "2478ef9016c8ef074792c6f66b8a812b26b3edf441d3aa27044bd760c016a662",
+        "private": true,
+        "step": 999,
+        "preflight": false,
+        "promotion_approved": false
+      }
+    ]
+  },
+  "fixed_evaluation": {
+    "selection": {
+      "path": "configs/baseline-evaluation-v1.json",
+      "sha256": "a7bf97bed304c7effc0095b5d81465b9c271129ba78317721d197a855ce1945d"
+    },
+    "binding": {
+      "path": "configs/baseline-data-v9.json",
+      "sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d"
+    },
+    "anchors": {
+      "path": "configs/baseline-fidelity-review-v1.json",
+      "sha256": "f93bd4dad98a0bef410811da95fdd7906b2554602332c5eaf6375582456187bc"
+    },
+    "rubric": {
+      "path": "configs/tokenizer-quality-rubric-v1.json",
+      "sha256": "87555e82882236380dd7c65a1c855a71e98755c466b2c6f0f1a2ccb69c91c665"
+    },
+    "windows": 64,
+    "frames_per_arm_per_boundary": 1024,
+    "sources": 16,
+    "native_resize_pixel_exact_sources": 16,
+    "reserved_test_decoded": false,
+    "quality_evaluation_optimizer_updates": 0
+  },
+  "gpu_validation_curve": {
+    "device": "cuda",
+    "torch_version": "2.14.1+cu130",
+    "metric": "whole-frame reconstruction MSE",
+    "quality_gate": "unmeasured",
+    "boundaries": [
+      {
+        "step": 250,
+        "arms": {
+          "baseline": {
+            "pooled_mse": 0.010165954612602945,
+            "equal_source_mse": 0.010165954612602945,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          },
+          "detail": {
+            "pooled_mse": 0.012470143657992594,
+            "equal_source_mse": 0.012470143657992594,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          }
+        }
+      },
+      {
+        "step": 500,
+        "arms": {
+          "baseline": {
+            "pooled_mse": 0.006319134157820372,
+            "equal_source_mse": 0.006319134157820372,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          },
+          "detail": {
+            "pooled_mse": 0.008513626300555188,
+            "equal_source_mse": 0.008513626300555188,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          }
+        }
+      },
+      {
+        "step": 750,
+        "arms": {
+          "baseline": {
+            "pooled_mse": 0.006564790484844707,
+            "equal_source_mse": 0.006564790484844707,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          },
+          "detail": {
+            "pooled_mse": 0.010816978270668187,
+            "equal_source_mse": 0.010816978270668187,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          }
+        }
+      },
+      {
+        "step": 999,
+        "arms": {
+          "baseline": {
+            "pooled_mse": 0.005026712356993812,
+            "equal_source_mse": 0.005026712356993812,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          },
+          "detail": {
+            "pooled_mse": 0.004375170972707565,
+            "equal_source_mse": 0.004375170972707565,
+            "windows": 64,
+            "sources": 16,
+            "complete": true
+          }
+        }
+      }
+    ]
+  },
+  "cpu_quality": {
+    "500": {
+      "device": "cpu",
+      "precision": "fp32",
+      "torch_version": "2.15.0+cpu",
+      "optimizer_updates": 0,
+      "quality_report": {
+        "path": "runs/tokenizer-comparison-quality-step500-v1-2026-11-10/quality-report.json",
+        "sha256": "ab3c1d021cfb47661fbc415de4660a515607a19d6b7f97d17147608ef6f8f340",
+        "private": true
+      },
+      "evaluator": {
+        "path": "scripts/evaluate_tokenizer_quality.py",
+        "sha256": "5ff827f1e938b3a7071c37e75fa8eedd2bba8e4d4ea5ee0911306448720c4bae"
+      },
+      "metric_policy": {
+        "foreground": "Source-only HSV-style saturation>=65/255 and value>=65/255; colored pixels, not semantic objects",
+        "temporal": "MSE between successive-frame differences in reconstruction and source; reconstruction consistency, not predictive rollout",
+        "aggregation": "Pooled sums/counts and equal-weight source means; sources/windows are correlated",
+        "quantization": "Metrics use float predictions; saved visual arrays are rounded uint8",
+        "sheet_frame": "Final frame at offset 15 matches frozen source-fidelity anchors; central crops are viewing aids"
+      },
+      "arms": {
+        "baseline": {
+          "checkpoint": {
+            "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/step-000500.pt",
+            "sha256": "90b10bb577fbd5c52914487f0487ad0a68086cf2b48b48094415d6118e34fa9f",
+            "private": true,
+            "step": 500,
+            "preflight": false,
+            "promotion_approved": false
+          },
+          "metrics": {
+            "pooled": {
+              "mse": 0.006319140947460885,
+              "foreground_mse": 0.02091127773053991,
+              "temporal_difference_mse": 0.003988023030528066
+            },
+            "equal_source": {
+              "mse": 0.006319140947460884,
+              "foreground_mse": 0.02107447255284414,
+              "temporal_difference_mse": 0.003988023030528066
+            },
+            "per_source": {
+              "CjnGE_9RJbI": {
+                "mse": 0.016648362101345366,
+                "foreground_mse": 0.016160784808474094,
+                "temporal_difference_mse": 0.014089708973278764
+              },
+              "LgdTICpqGoY": {
+                "mse": 0.004034418797584041,
+                "foreground_mse": 0.009066675372738413,
+                "temporal_difference_mse": 0.0012487097440253528
+              },
+              "Zpy_9XXJtKw": {
+                "mse": 0.004310695494192888,
+                "foreground_mse": 0.0162585944038075,
+                "temporal_difference_mse": 0.002316227321486357
+              },
+              "dN_UFytK7gw": {
+                "mse": 0.003859473856394328,
+                "foreground_mse": 0.01416359823674261,
+                "temporal_difference_mse": 0.0015137118153561138
+              },
+              "dgKCNs5Cn24": {
+                "mse": 0.004572398707781692,
+                "foreground_mse": 0.016312011611058982,
+                "temporal_difference_mse": 0.0020681094832086335
+              },
+              "e6LxjKUgZtI": {
+                "mse": 0.002930458417772669,
+                "foreground_mse": 0.017749016222937588,
+                "temporal_difference_mse": 0.002070981903522574
+              },
+              "f6x0pEuhJ-Q": {
+                "mse": 0.004399642618716014,
+                "foreground_mse": 0.013855726369310114,
+                "temporal_difference_mse": 0.0022302584569602168
+              },
+              "haMF0UV2bYs": {
+                "mse": 0.003883704023784235,
+                "foreground_mse": 0.019174586049462275,
+                "temporal_difference_mse": 0.0021847258410798887
+              },
+              "j22pphsxMpM": {
+                "mse": 0.003954015437024988,
+                "foreground_mse": 0.030325546894866693,
+                "temporal_difference_mse": 0.0028679542285607834
+              },
+              "j5LISxLbKNk": {
+                "mse": 0.01373154458933007,
+                "foreground_mse": 0.054850799336860975,
+                "temporal_difference_mse": 0.009972919895977213
+              },
+              "o1swktx96bU": {
+                "mse": 0.004738010963020023,
+                "foreground_mse": 0.01377223195969707,
+                "temporal_difference_mse": 0.003142617794044158
+              },
+              "pst7M2Un5Aw": {
+                "mse": 0.006494699461271598,
+                "foreground_mse": 0.015555376150358681,
+                "temporal_difference_mse": 0.004745618207171295
+              },
+              "qz3LCxUIe7c": {
+                "mse": 0.011928442459870571,
+                "foreground_mse": 0.01913345881961334,
+                "temporal_difference_mse": 0.004352695742041747
+              },
+              "tRySe3Tx-n0": {
+                "mse": 0.003132863978661027,
+                "foreground_mse": 0.030295524805386588,
+                "temporal_difference_mse": 0.0018700859210089718
+              },
+              "y6-L9w3fKLs": {
+                "mse": 0.007864048679157713,
+                "foreground_mse": 0.02488520464746166,
+                "temporal_difference_mse": 0.005681145459507729
+              },
+              "ycjXOBkPaXw": {
+                "mse": 0.004623475573466931,
+                "foreground_mse": 0.0256324251567296,
+                "temporal_difference_mse": 0.003452897701219252
+              }
+            }
+          },
+          "code_occupancy": {
+            "used": 293,
+            "capacity": 512
+          }
+        },
+        "detail": {
+          "checkpoint": {
+            "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/step-000500.pt",
+            "sha256": "e2ea1aae68accf4a16cfe371a2d9480fc28b752f2511d2d7c3e5f62719344805",
+            "private": true,
+            "step": 500,
+            "preflight": false,
+            "promotion_approved": false
+          },
+          "metrics": {
+            "pooled": {
+              "mse": 0.008513626339981794,
+              "foreground_mse": 0.045284929181431684,
+              "temporal_difference_mse": 0.004054665039648914
+            },
+            "equal_source": {
+              "mse": 0.008513626339981794,
+              "foreground_mse": 0.03699912582125838,
+              "temporal_difference_mse": 0.004054665039648914
+            },
+            "per_source": {
+              "CjnGE_9RJbI": {
+                "mse": 0.022305682273253604,
+                "foreground_mse": 0.06099115525623139,
+                "temporal_difference_mse": 0.018882091721982616
+              },
+              "LgdTICpqGoY": {
+                "mse": 0.00472792817314803,
+                "foreground_mse": 0.01466479169181838,
+                "temporal_difference_mse": 0.0008979424295526712
+              },
+              "Zpy_9XXJtKw": {
+                "mse": 0.007097624790399365,
+                "foreground_mse": 0.039680379762792435,
+                "temporal_difference_mse": 0.0027823891544079887
+              },
+              "dN_UFytK7gw": {
+                "mse": 0.005441867812338048,
+                "foreground_mse": 0.027181661273741504,
+                "temporal_difference_mse": 0.0015690506585257858
+              },
+              "dgKCNs5Cn24": {
+                "mse": 0.006503032417625523,
+                "foreground_mse": 0.0407728490962621,
+                "temporal_difference_mse": 0.002858023110877293
+              },
+              "e6LxjKUgZtI": {
+                "mse": 0.009941641919165014,
+                "foreground_mse": 0.0437642941256045,
+                "temporal_difference_mse": 0.0034032068543674255
+              },
+              "f6x0pEuhJ-Q": {
+                "mse": 0.00512856276261446,
+                "foreground_mse": 0.021916325491432513,
+                "temporal_difference_mse": 0.0017760081241326412
+              },
+              "haMF0UV2bYs": {
+                "mse": 0.006612582255860814,
+                "foreground_mse": 0.024605671269312564,
+                "temporal_difference_mse": 0.0026653787600179756
+              },
+              "j22pphsxMpM": {
+                "mse": 0.00858182061687524,
+                "foreground_mse": 0.02989649033969299,
+                "temporal_difference_mse": 0.002361112125769555
+              },
+              "j5LISxLbKNk": {
+                "mse": 0.01349872908915263,
+                "foreground_mse": 0.05513521259425393,
+                "temporal_difference_mse": 0.00941165957153433
+              },
+              "o1swktx96bU": {
+                "mse": 0.0059514062694400955,
+                "foreground_mse": 0.021542720838343424,
+                "temporal_difference_mse": 0.0025258951519726105
+              },
+              "pst7M2Un5Aw": {
+                "mse": 0.006282772283349535,
+                "foreground_mse": 0.017134103623741015,
+                "temporal_difference_mse": 0.002566987834002764
+              },
+              "qz3LCxUIe7c": {
+                "mse": 0.010950719185863855,
+                "foreground_mse": 0.02065048209114572,
+                "temporal_difference_mse": 0.003774984704564048
+              },
+              "tRySe3Tx-n0": {
+                "mse": 0.009558156938844637,
+                "foreground_mse": 0.0899834255078151,
+                "temporal_difference_mse": 0.0029922692752675697
+              },
+              "y6-L9w3fKLs": {
+                "mse": 0.007329755282900321,
+                "foreground_mse": 0.057119976581832425,
+                "temporal_difference_mse": 0.003908934244630181
+              },
+              "ycjXOBkPaXw": {
+                "mse": 0.006305739368877533,
+                "foreground_mse": 0.026946473596114177,
+                "temporal_difference_mse": 0.00249870691277717
+              }
+            }
+          },
+          "code_occupancy": {
+            "used": 286,
+            "capacity": 512
+          }
+        }
+      },
+      "signed_relative_change_detail_vs_baseline": {
+        "pooled": {
+          "mse": 0.3472759051849734,
+          "foreground_mse": 1.1655744696697914,
+          "temporal_difference_mse": 0.01671053768012576
+        },
+        "equal_source": {
+          "mse": 0.34727590518497364,
+          "foreground_mse": 0.7556370973690207,
+          "temporal_difference_mse": 0.01671053768012576
+        }
+      },
+      "relative_change_interpretation": "Negative means lower error for the detail arm; positive means higher error.",
+      "per_source_direction_counts": {
+        "mse": {
+          "lower_error": 4,
+          "higher_error": 12,
+          "equal": 0
+        },
+        "foreground_mse": {
+          "lower_error": 1,
+          "higher_error": 15,
+          "equal": 0
+        },
+        "temporal_difference_mse": {
+          "lower_error": 9,
+          "higher_error": 7,
+          "equal": 0
+        }
+      },
+      "private_viewer_bundle": {
+        "path": "exports/tokenizer-comparison-v1/heldout-reconstructions-step500.json",
+        "sha256": "5a2105c6e773c23cf6e018b89261192c9167511fbf68d2df3fe303195483c6e9",
+        "private": true,
+        "bytes": 17246902,
+        "receipt": {
+          "path": "exports/tokenizer-comparison-v1/heldout-reconstructions-step500.receipt.json",
+          "sha256": "8aed55c2d5ed2467409a262147d78f3143cecda512f262a848e71ce09980e0ad",
+          "private": true
+        },
+        "exporter": {
+          "path": "scripts/export_tokenizer_comparison_viewer.py",
+          "sha256": "ef48908c6a50c58aa338f48717da95382c2847157a06285562401750e6d95e7f"
+        },
+        "parent_exporter": {
+          "path": "scripts/export_reconstruction_viewer.py",
+          "sha256": "59ec81dfd93e027a65d18ea9e8906d569c17e1d09f8154f554c655d1edb506a4"
+        },
+        "optimizer_updates": 0,
+        "inference_performed": false,
+        "public_media_written": false
+      }
+    },
+    "999": {
+      "device": "cpu",
+      "precision": "fp32",
+      "torch_version": "2.15.0+cpu",
+      "optimizer_updates": 0,
+      "quality_report": {
+        "path": "runs/tokenizer-comparison-quality-v1-2026-11-10/quality-report.json",
+        "sha256": "853bdba59d763b6e32b88eb32888c04a195cdd77414a7b594f8436fa07d7febb",
+        "private": true
+      },
+      "evaluator": {
+        "path": "scripts/evaluate_tokenizer_quality.py",
+        "sha256": "5ff827f1e938b3a7071c37e75fa8eedd2bba8e4d4ea5ee0911306448720c4bae"
+      },
+      "metric_policy": {
+        "foreground": "Source-only HSV-style saturation>=65/255 and value>=65/255; colored pixels, not semantic objects",
+        "temporal": "MSE between successive-frame differences in reconstruction and source; reconstruction consistency, not predictive rollout",
+        "aggregation": "Pooled sums/counts and equal-weight source means; sources/windows are correlated",
+        "quantization": "Metrics use float predictions; saved visual arrays are rounded uint8",
+        "sheet_frame": "Final frame at offset 15 matches frozen source-fidelity anchors; central crops are viewing aids"
+      },
+      "arms": {
+        "baseline": {
+          "checkpoint": {
+            "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/baseline/last-common.pt",
+            "sha256": "654bed1c667ed11455fd3e73fc3c51e962baab16b6fb373572d2518d6d2860e3",
+            "private": true,
+            "step": 999,
+            "preflight": false,
+            "promotion_approved": false
+          },
+          "metrics": {
+            "pooled": {
+              "mse": 0.005026712196183567,
+              "foreground_mse": 0.016387746598304557,
+              "temporal_difference_mse": 0.004255028040971557
+            },
+            "equal_source": {
+              "mse": 0.005026712196183567,
+              "foreground_mse": 0.01741169579017803,
+              "temporal_difference_mse": 0.004255028040971557
+            },
+            "per_source": {
+              "CjnGE_9RJbI": {
+                "mse": 0.010937037856670911,
+                "foreground_mse": 0.009878431954618287,
+                "temporal_difference_mse": 0.011355912372893478
+              },
+              "LgdTICpqGoY": {
+                "mse": 0.003029617775808487,
+                "foreground_mse": 0.007232437872778271,
+                "temporal_difference_mse": 0.002022876507239279
+              },
+              "Zpy_9XXJtKw": {
+                "mse": 0.002768555608302652,
+                "foreground_mse": 0.011710633193888284,
+                "temporal_difference_mse": 0.0024170332724079095
+              },
+              "dN_UFytK7gw": {
+                "mse": 0.002740243036915674,
+                "foreground_mse": 0.009818948028725146,
+                "temporal_difference_mse": 0.0019914808150241032
+              },
+              "dgKCNs5Cn24": {
+                "mse": 0.002765865843548874,
+                "foreground_mse": 0.010701607141263296,
+                "temporal_difference_mse": 0.0021417032487772566
+              },
+              "e6LxjKUgZtI": {
+                "mse": 0.0017437715353314984,
+                "foreground_mse": 0.012068390109186512,
+                "temporal_difference_mse": 0.001604671482439957
+              },
+              "f6x0pEuhJ-Q": {
+                "mse": 0.0035040203932767753,
+                "foreground_mse": 0.011360466041025988,
+                "temporal_difference_mse": 0.0033456184259842265
+              },
+              "haMF0UV2bYs": {
+                "mse": 0.002955583025172854,
+                "foreground_mse": 0.01430831064110696,
+                "temporal_difference_mse": 0.002692796399065928
+              },
+              "j22pphsxMpM": {
+                "mse": 0.0027643948331189275,
+                "foreground_mse": 0.03053654691370387,
+                "temporal_difference_mse": 0.002112561787778191
+              },
+              "j5LISxLbKNk": {
+                "mse": 0.009285818720172376,
+                "foreground_mse": 0.045449241974917724,
+                "temporal_difference_mse": 0.0071763081244767876
+              },
+              "o1swktx96bU": {
+                "mse": 0.002791146848634562,
+                "foreground_mse": 0.011435349993612483,
+                "temporal_difference_mse": 0.0024389796849566556
+              },
+              "pst7M2Un5Aw": {
+                "mse": 0.007710978305475198,
+                "foreground_mse": 0.016335961366687534,
+                "temporal_difference_mse": 0.00728301631845726
+              },
+              "qz3LCxUIe7c": {
+                "mse": 0.013484987231714048,
+                "foreground_mse": 0.021537955695603118,
+                "temporal_difference_mse": 0.008871639633933979
+              },
+              "tRySe3Tx-n0": {
+                "mse": 0.001750558505672558,
+                "foreground_mse": 0.016617884757368726,
+                "temporal_difference_mse": 0.0014782094532831962
+              },
+              "y6-L9w3fKLs": {
+                "mse": 0.008571408990172776,
+                "foreground_mse": 0.024040186684479596,
+                "temporal_difference_mse": 0.008326412694385605
+              },
+              "ycjXOBkPaXw": {
+                "mse": 0.003623406628948895,
+                "foreground_mse": 0.025554780273882676,
+                "temporal_difference_mse": 0.002821228434441091
+              }
+            }
+          },
+          "code_occupancy": {
+            "used": 181,
+            "capacity": 512
+          }
+        },
+        "detail": {
+          "checkpoint": {
+            "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/detail/last-common.pt",
+            "sha256": "146770170c4a1223801fcf44cafbbe170537778f8a775b5cf10a8eeb1a482e18",
+            "private": true,
+            "step": 999,
+            "preflight": false,
+            "promotion_approved": false
+          },
+          "metrics": {
+            "pooled": {
+              "mse": 0.004375167383592269,
+              "foreground_mse": 0.015572691209647457,
+              "temporal_difference_mse": 0.0035796924635870717
+            },
+            "equal_source": {
+              "mse": 0.004375167383592269,
+              "foreground_mse": 0.01656473178918383,
+              "temporal_difference_mse": 0.0035796924635870713
+            },
+            "per_source": {
+              "CjnGE_9RJbI": {
+                "mse": 0.01127148744706709,
+                "foreground_mse": 0.009540821234933194,
+                "temporal_difference_mse": 0.009902001427370802
+              },
+              "LgdTICpqGoY": {
+                "mse": 0.003034430053578162,
+                "foreground_mse": 0.008129355974108611,
+                "temporal_difference_mse": 0.002767611315898616
+              },
+              "Zpy_9XXJtKw": {
+                "mse": 0.002687469548594609,
+                "foreground_mse": 0.012705109502991576,
+                "temporal_difference_mse": 0.0026447408645176025
+              },
+              "dN_UFytK7gw": {
+                "mse": 0.002497988184685412,
+                "foreground_mse": 0.00997420568285337,
+                "temporal_difference_mse": 0.0019066341910600325
+              },
+              "dgKCNs5Cn24": {
+                "mse": 0.0027314985655335217,
+                "foreground_mse": 0.0106136262637088,
+                "temporal_difference_mse": 0.0021933639985114435
+              },
+              "e6LxjKUgZtI": {
+                "mse": 0.0019004990946967627,
+                "foreground_mse": 0.012220013196083906,
+                "temporal_difference_mse": 0.0014821230511949711
+              },
+              "f6x0pEuhJ-Q": {
+                "mse": 0.003452540079176492,
+                "foreground_mse": 0.011971368790485045,
+                "temporal_difference_mse": 0.004213164426118966
+              },
+              "haMF0UV2bYs": {
+                "mse": 0.002815762445577236,
+                "foreground_mse": 0.015931718308776245,
+                "temporal_difference_mse": 0.0027631428891206284
+              },
+              "j22pphsxMpM": {
+                "mse": 0.0027213127419604475,
+                "foreground_mse": 0.027775849714120806,
+                "temporal_difference_mse": 0.0020306579678894105
+              },
+              "j5LISxLbKNk": {
+                "mse": 0.0071920391411122815,
+                "foreground_mse": 0.0432186874219556,
+                "temporal_difference_mse": 0.006991537062726532
+              },
+              "o1swktx96bU": {
+                "mse": 0.002747911867252328,
+                "foreground_mse": 0.013078220862927993,
+                "temporal_difference_mse": 0.003167697856102851
+              },
+              "pst7M2Un5Aw": {
+                "mse": 0.004132994282825644,
+                "foreground_mse": 0.01456284930247223,
+                "temporal_difference_mse": 0.0031096638135966167
+              },
+              "qz3LCxUIe7c": {
+                "mse": 0.012554185040069771,
+                "foreground_mse": 0.019636116448902355,
+                "temporal_difference_mse": 0.004633928370265211
+              },
+              "tRySe3Tx-n0": {
+                "mse": 0.001704556128473363,
+                "foreground_mse": 0.012555664903485628,
+                "temporal_difference_mse": 0.0013841521831283654
+              },
+              "y6-L9w3fKLs": {
+                "mse": 0.005315516871584475,
+                "foreground_mse": 0.017913542829972262,
+                "temporal_difference_mse": 0.004508150565730629
+              },
+              "ycjXOBkPaXw": {
+                "mse": 0.003242486645288707,
+                "foreground_mse": 0.02520855818916367,
+                "temporal_difference_mse": 0.0035765094341604717
+              }
+            }
+          },
+          "code_occupancy": {
+            "used": 266,
+            "capacity": 512
+          }
+        }
+      },
+      "signed_relative_change_detail_vs_baseline": {
+        "pooled": {
+          "mse": -0.1296164942735274,
+          "foreground_mse": -0.04973565973624605,
+          "temporal_difference_mse": -0.15871471841823281
+        },
+        "equal_source": {
+          "mse": -0.1296164942735274,
+          "foreground_mse": -0.048643395290191904,
+          "temporal_difference_mse": -0.15871471841823293
+        }
+      },
+      "relative_change_interpretation": "Negative means lower error for the detail arm; positive means higher error.",
+      "per_source_direction_counts": {
+        "mse": {
+          "lower_error": 13,
+          "higher_error": 3,
+          "equal": 0
+        },
+        "foreground_mse": {
+          "lower_error": 9,
+          "higher_error": 7,
+          "equal": 0
+        },
+        "temporal_difference_mse": {
+          "lower_error": 9,
+          "higher_error": 7,
+          "equal": 0
+        }
+      },
+      "private_viewer_bundle": {
+        "path": "exports/tokenizer-comparison-v1/heldout-reconstructions.json",
+        "sha256": "bb495e337ec83a8bcd48fbecdb851b14e78364527f916debea3ffc27280fab3d",
+        "private": true,
+        "bytes": 18668905,
+        "receipt": {
+          "path": "exports/tokenizer-comparison-v1/heldout-reconstructions.receipt.json",
+          "sha256": "e28c5f472b8376160f081d7aee5209ff1937d59135f12f6817983b1bcdf7ad90",
+          "private": true
+        },
+        "exporter": {
+          "path": "scripts/export_tokenizer_comparison_viewer.py",
+          "sha256": "ef48908c6a50c58aa338f48717da95382c2847157a06285562401750e6d95e7f"
+        },
+        "parent_exporter": {
+          "path": "scripts/export_reconstruction_viewer.py",
+          "sha256": "59ec81dfd93e027a65d18ea9e8906d569c17e1d09f8154f554c655d1edb506a4"
+        },
+        "optimizer_updates": 0,
+        "inference_performed": false,
+        "public_media_written": false
+      }
+    }
+  },
+  "necessary_G1_retention": {
+    "status": "fail",
+    "applies_to": [
+      "baseline",
+      "detail"
+    ],
+    "common_step": 999,
+    "reviewed_windows_per_reviewer": 64,
+    "reviewers": 2,
+    "independent_review_before_root_ratings": true,
+    "frame_offset": 15,
+    "index_space": "zero-based frozen validation window index",
+    "assessable_anchors": 60,
+    "preexisting_excluded_anchor_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "corroborated_failure_indices_each_arm": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "failure_source_id": "j5LISxLbKNk",
+    "failure_reason": "The corresponding separable radial multi-barrel configuration is lost in both arms; this is not a color-only judgment.",
+    "maximum_possible_retained": 56,
+    "optimistic_retention_upper_bound": 0.9333333333333333,
+    "required_retention": 0.95,
+    "actual_retention_rate": "unmeasured",
+    "historical_failure_indices_now_uncertain": [
+      6,
+      7,
+      14,
+      16,
+      22,
+      23,
+      59
+    ],
+    "historical_failures_confirmed_recovered": false,
+    "bound_interpretation": "Even treating every other assessable anchor as passing gives 56/60, below 95%. Uncertain and unscored anchors are not asserted to pass.",
+    "correlation_limit": "All four confirmed configuration losses come from one source. This fixed engineering bound is not a population estimate.",
+    "review_proofs": {
+      "independent": {
+        "path": "runs/tokenizer-comparison-quality-v1-2026-11-10/visual-review-independent.json",
+        "sha256": "643351c4ee6ff2230d13e59ec6220d48637ccffd3d619de561517b622a24a477",
+        "private": true
+      },
+      "root": {
+        "path": "runs/tokenizer-comparison-quality-v1-2026-11-10/visual-review-root.json",
+        "sha256": "ee7c68019b39652e96cb2b55ca64d7e293ef81c24b6a530f4fff6186015531f6",
+        "private": true
+      }
+    }
+  },
+  "gates": {
+    "G1_full_semantic_object_and_angle_score": "unmeasured",
+    "G1_necessary_retention": "fail",
+    "G2": "untrained/unmeasured",
+    "G3": "untrained/unmeasured",
+    "promotion_approved": false,
+    "playable_control_established": false
+  },
+  "findings": {
+    "final_metrics": "The detail arm has lower pooled and equal-source MSE, colored-foreground error, and temporal-difference error at step 999.",
+    "earlier_boundary": "At step 500 the detail arm is worse on all three pooled metrics. The fixed coefficient was not retuned.",
+    "interpretation": "Promising final aggregate metrics from one short matched screen; no independent training replication or demonstrated convergence.",
+    "semantic_limit": "Colored-foreground error is not object precision/recall. Temporal-difference error is not a future-free rollout or control score.",
+    "code_occupancy_limit": "Used-code counts describe these held-out windows; they do not establish semantic diversity or prove/disprove collapse.",
+    "quality_winner_declared": false,
+    "replication_claimed": false,
+    "promotion_approved": false
+  },
+  "private_evidence": {
+    "run_report": {
+      "path": "runs/tokenizer-comparison-v1-2026-11-10/comparison/comparison-report.json",
+      "sha256": "420239004589043f148b0da6449c1cc87f9aaaddfd26d16a68d7fa9149c9ad57",
+      "private": true
+    },
+    "artifact_validation": {
+      "path": "runs/tokenizer-comparison-v1-2026-11-10/artifact-validation.json",
+      "sha256": "153653bc19ca5ceafc7d620f72a98d78c4b0720563c090c6c664e85fabecaca8",
+      "private": true
+    },
+    "artifact_validator": {
+      "path": "scripts/validate_tokenizer_comparison_artifacts.py",
+      "sha256": "a126f228a91f0b7bf6fdb53c284c833dba55e75484c98fdc546799cdec1580dd"
+    },
+    "private_media_or_weights_embedded_in_this_result": false
+  }
+}
