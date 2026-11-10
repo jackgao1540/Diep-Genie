@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "ready_for_gpu_pilot": true,
+  "ready_for_unbounded_training": false,
+  "arm": "detail",
+  "spec_sha256": "5be56fab1f1c873bd86e314612bd11b633801e625ad3c8b3429e03eba2a734ef",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "implementation_sha256": "0c507dc9e949fc7821ed2eb026dba9e022af8f5d427d890741ff5631661c5ac6",
+  "experiment_sha256": "36e58edd8025266b7272b58e42a6fe69a598174feeba8c60e62e6f5ce8ffe76c",
+  "comparison_source_hashes": {
+    "implementation_sha256": "0c507dc9e949fc7821ed2eb026dba9e022af8f5d427d890741ff5631661c5ac6",
+    "model_sha256": "fabff6b90d6ef39e7a84697df848c060c357cf92dc8bcf5b80e78a628c71f5a5",
+    "detail_loss_sha256": "3d0e072e491d22ac966e2a311807237606d188d3a0576faf6eeeefe564fac3f9",
+    "runner_sha256": "168c890cdecfd36edb437ab12b22c515f04f5401311a09ec92a960ceb457b096"
+  },
+  "execution_report": "runs/tokenizer-comparison-local-v1/execution/comparison-report.json",
+  "execution_report_sha256": "241beecb085dbcb802b6073b8be3dff57f6656509840c5032a0d209943040f74",
+  "parent_readiness": "configs/training-readiness-v1.json",
+  "parent_readiness_sha256": "b73e9712a75855ff50a6694f701aa544d26d581815790f088e8f09e8e283c59a",
+  "checks": {
+    "real_cpu_finite_execution": true,
+    "exact_cpu_resume": true,
+    "fresh_matched_initialization": true,
+    "frozen_modules": true,
+    "matched_sampling": true
+  },
+  "scope": "Only the explicitly authorized paired comparison under its shared limit; GPU FP16/resume checks still required before step three",
+  "limits": {
+    "optimizer_calls_per_arm": 1000,
+    "unique_updates_per_arm": 999,
+    "maximum_compute_units": 2,
+    "maximum_allocated_hours": 1,
+    "minimum_remaining_units": 50
+  },
+  "quality_gate": "unmeasured"
+}

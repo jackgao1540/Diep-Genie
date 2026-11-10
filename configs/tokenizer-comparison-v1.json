@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "purpose": "Authorized short matched tokenizer loss screen; no action/dynamics training or G1 promotion",
+  "reference_spec": "configs/training-baseline-v1.json",
+  "reference_spec_sha256": "0e59ef3b76ed1fb27d49a8667cb681c4c932e77354681eb2d3e62cbcbf5622d0",
+  "arms": {
+    "baseline": {
+      "spec": "configs/tokenizer-comparison-baseline-v1.json",
+      "spec_sha256": "d6f793a313c7fb2e1c1fdf695feff78421781f17014dcf06475a48dea7875c1f",
+      "objective": {
+        "name": "baseline"
+      }
+    },
+    "detail": {
+      "spec": "configs/tokenizer-comparison-detail-v1.json",
+      "spec_sha256": "5be56fab1f1c873bd86e314612bd11b633801e625ad3c8b3429e03eba2a734ef",
+      "objective": {
+        "name": "baseline_plus_detail",
+        "weight": 1.0,
+        "loss_spec": {
+          "patch_size": 8,
+          "gradient_threshold": 0.08,
+          "achromatic_chroma_max": 0.12,
+          "dilation_radius": 1,
+          "min_region_pixels": 2,
+          "small_region_max_fraction": 0.5,
+          "uniform_weight": 0.25,
+          "achromatic_weight": 0.5,
+          "small_weight": 0.25
+        }
+      }
+    }
+  },
+  "source_hashes": {
+    "implementation_sha256": "0c507dc9e949fc7821ed2eb026dba9e022af8f5d427d890741ff5631661c5ac6",
+    "model_sha256": "fabff6b90d6ef39e7a84697df848c060c357cf92dc8bcf5b80e78a628c71f5a5",
+    "detail_loss_sha256": "3d0e072e491d22ac966e2a311807237606d188d3a0576faf6eeeefe564fac3f9",
+    "runner_sha256": "168c890cdecfd36edb437ab12b22c515f04f5401311a09ec92a960ceb457b096"
+  },
+  "limits": {
+    "optimizer_calls_per_arm": 1000,
+    "unique_updates_per_arm": 999,
+    "maximum_compute_units": 2,
+    "maximum_allocated_hours": 1,
+    "minimum_remaining_units": 50
+  },
+  "save_steps": [
+    250,
+    500,
+    750,
+    999
+  ],
+  "schedule_max_updates": 20000,
+  "training_probe_sha256": "2799a2507e8e4580a7daff09356f9ccd3d330dd812232c19207f2c1c1ebf8523",
+  "experiment_notes": "TOKENIZER_COMPARISON.md",
+  "selection_policy": "Frozen train-only selectors and coefficient; original 64 held-out windows; reserved test untouched"
+}

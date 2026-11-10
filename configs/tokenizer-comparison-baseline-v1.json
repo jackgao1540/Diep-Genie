@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "status": "executable_stage_gated_baseline",
+  "training_approved": false,
+  "execution_ready": false,
+  "purpose": "A bounded diagnostic ordinary-shooter baseline; not a promised playable model or a Genie reproduction.",
+  "cohort": "data/curated-longform-v9",
+  "manifest_sha256": "cdc2107c523b51c92fe6dc4c70e23dfe31d5269b62d293d3849bacc949dfbe59",
+  "model": {
+    "size": 128,
+    "width": 128,
+    "token_dim": 64,
+    "vocab": 512,
+    "action_dim": 16,
+    "action_codes": [
+      9,
+      8,
+      2
+    ],
+    "layers": 4,
+    "heads": 4,
+    "context": 16,
+    "lam_variant": "pair",
+    "downsample": 4,
+    "lam_dilations": [
+      1,
+      3,
+      6
+    ],
+    "lam_motion_warp": false,
+    "lam_max_shift_fraction": 0.125
+  },
+  "parameter_counts": {
+    "tokenizer": 744643,
+    "lam": 549347,
+    "dynamics": 1329664,
+    "total": 2623654
+  },
+  "data": {
+    "fps": 10,
+    "window_frames": 16,
+    "window_span_seconds": 1.5,
+    "source_time_accounting_seconds_per_window": 1.6,
+    "spatial_tokens_per_frame": 1024,
+    "source_balanced_sampling_fraction": 0.5,
+    "duration_uniform_sampling_fraction": 0.5,
+    "augmentation": "none in the first baseline; preserve palette and geometry",
+    "validation": "fixed source-stratified blocks plus separately reported targeted coverage stress cases",
+    "reserved_test": "exclude from development sampling, tuning and pilot evaluation",
+    "joining": "only checked adjacent blocks within frozen sequences.json; never bridge a gap",
+    "training_inputs": "Verified 128px NPZ clips from the bound v9 cohort, using checked sequences only"
+  },
+  "stages": [
+    {
+      "name": "feasibility",
+      "max_compute_units": 2,
+      "max_allocated_hours": 1,
+      "promotion": "validated ingestion, resume, evaluation and measured GPU throughput/memory"
+    },
+    {
+      "name": "tokenizer",
+      "max_compute_units": 8,
+      "max_allocated_hours": 6,
+      "max_updates": 20000,
+      "learning_rate": 0.0003,
+      "microbatch_sequences": 4,
+      "gradient_accumulation": 4,
+      "color_balance": true,
+      "promotion": "G1 reconstruction and object-retention criteria"
+    },
+    {
+      "name": "actions",
+      "max_compute_units": 6,
+      "max_allocated_hours": 4,
+      "max_updates": 15000,
+      "learning_rate": 0.0001,
+      "microbatch_pairs": 8,
+      "gradient_accumulation": 8,
+      "freeze_tokenizer": true,
+      "promotion": "G2 predictive use plus semantic interventions; occupancy alone is insufficient"
+    },
+    {
+      "name": "dynamics",
+      "max_compute_units": 12,
+      "max_allocated_hours": 8,
+      "max_updates": 30000,
+      "learning_rate": 0.0001,
+      "microbatch_sequences": 1,
+      "gradient_accumulation": 16,
+      "freeze_tokenizer": true,
+      "freeze_actions": true,
+      "fully_mask_final_frame_fraction": 0.5,
+      "promotion": "G3 held-out prediction and closed-loop rollout criteria"
+    }
+  ],
+  "budget": {
+    "total_max_compute_units": 28,
+    "total_max_allocated_hours": 19,
+    "minimum_remaining_monthly_units": 50,
+    "stop_at_first_limit": true,
+    "include_setup_export_and_idle": true,
+    "purchases_allowed": false,
+    "historical_balance_is_not_live_authorization": true,
+    "unused_stage_budget_is_not_automatically_reallocated": true
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "mixed_precision": "FP16 with conservative initial scaling; requires a new GPU precision and resume measurement for changed code",
+    "fp16_initial_scale": 1024.0,
+    "fp16_max_scale": 1024.0,
+    "schedule": "500-update linear warmup then cosine decay to 10% of stage peak; persist schedule and scaler in checkpoints",
+    "seed": 42,
+    "checkpoint_interval_minutes": 5,
+    "evaluation_interval_updates": 500,
+    "evaluation_interval_minutes": 15,
+    "stop_nonfinite_immediately": true,
+    "fallback": "reduce microbatch and raise accumulation first; do not silently reduce resolution, change architecture or enlarge budget"
+  },
+  "action_interpretation": {
+    "groups_are_unlabeled": true,
+    "intended_capacity": "9 x 8 x 2 combinations; code counts express a hypothesis, not learned movement/aim/fire semantics",
+    "calibrate_mapping_on_training_only": true,
+    "validate_mapping_on_held_out_sources": true,
+    "do_not_use_future_frame_actions_for_playability_claims": true,
+    "no_verified_wasd_or_mouse_labels": true,
+    "motion_warp": "disabled because prior warp diagnostics produced similar smoothing shifts; correlation objectives deferred to a controlled later ablation"
+  },
+  "gates": {
+    "nature": "Provisional engineering acceptance targets to implement before training, not established scientific sufficiency thresholds.",
+    "G1": {
+      "player_and_barrel_retention_min_fraction": 0.95,
+      "food_and_bullet_precision_recall_min_each": 0.85,
+      "minimum_visible_object_diameter_pixels": 3,
+      "single_barrel_angle_error_max_degrees": 15,
+      "single_barrel_angle_pass_min_fraction": 0.9,
+      "minimum_instances_per_object_category": 30,
+      "minimum_sources_per_object_category": 3,
+      "insufficient_examples_result": "unmeasured, not pass; rare large pentagons reported separately"
+    },
+    "G2": {
+      "relative_motion_region_error_improvement_min": 0.1,
+      "comparisons": [
+        "copy-last-frame",
+        "past-only constant-velocity scene prediction",
+        "each alternative single-group code"
+      ],
+      "minimum_validation_sources": 8,
+      "minimum_intervention_prefixes": 32,
+      "minimum_prefixes_per_behavior": 8,
+      "minimum_sources_per_behavior": 3,
+      "semantic_directional_success_min_fraction": 0.8,
+      "semantics": "Train-calibrated movement sign, aim direction and emission toggle must transfer. Hold other codes fixed; report leakage into untargeted behaviors. Do not substitute future-inferred reconstruction for commanded control.",
+      "independence_tolerances": "Matched one-second rollouts: aim-only changes >=30 degrees while scene displacement differs by <=2px; fire-toggle changes >=2 attributable projectile births while aim differs <=15 degrees and scene displacement <=2px; movement changes scene displacement >=4px while aim differs <=15 degrees and firing mode is preserved. Report failures and ambiguous cases. These are interface effects, not recovered human inputs."
+    },
+    "G3": {
+      "rollout_horizons_seconds": [
+        1,
+        5,
+        10,
+        30
+      ],
+      "primary_horizon_seconds": 10,
+      "exploratory_horizon_seconds": 60,
+      "minimum_primary_success_fraction": 0.8,
+      "minimum_30_second_success_fraction": 0.6,
+      "success_definition": "Persistent visible player and barrel; coherent local scene rather than blanking/repetition; continuous trajectories and stable wall geometry; repeatable commanded effects. Zero unambiguous wall crossings on wall cases. Record a rubric per rollout before scoring.",
+      "report_both": [
+        "duration-weighted metrics",
+        "equal-source metrics",
+        "coverage-stratum results"
+      ],
+      "validation_eligible_runs_for_30s_plus_context": 21,
+      "validation_eligible_sources_for_30s_plus_context": 7,
+      "validation_eligible_runs_for_60s_plus_context": 6,
+      "validation_eligible_sources_for_60s_plus_context": 2,
+      "target_inferred_actions": "May be reported separately as an oracle diagnostic, never as playable control or the primary closed-loop score."
+    }
+  },
+  "required_before_execution": [
+    "Local real-data preflight must pass for this code/configuration.",
+    "Before GPU allocation: explicit authorization, live rate/balance and measured FP16/memory/throughput pilot.",
+    "Before later stages: scored G1/G2 promotion evidence bound to the exact prior checkpoint; missing measurements are not passes."
+  ],
+  "continuation": {
+    "same_architecture": "branch from best checkpoint; keep original checkpoint; train on curated old+new mixture; deduplicate new sources against every split",
+    "new_data_initial_mix": "retain 50% old-data sampling mass initially; cap new-data mass at 50%; revise from validation results and new-data size, not an automatic permanent rule",
+    "fixed_evaluation": "keep original validation and reserved test assignments; add new challenge sets separately",
+    "tokenizer_or_action_change": "version the representation; re-encode/relabel and adapt or retrain dependent dynamics; do not assume token/code IDs preserve meaning",
+    "collapsed_action_model": "do not automatically spend remaining budget resuming a collapsed checkpoint; compare a fresh action initialization and objective changes under a separate bounded plan"
+  },
+  "coverage_review": "configs/longform-focused-review-v1.json",
+  "training_hold_sources": [
+    "eGJEVXrV8rs"
+  ],
+  "local_execution_ready": true,
+  "data_binding": "configs/baseline-data-v9.json",
+  "evaluation_selection": "configs/baseline-evaluation-v1.json",
+  "readiness": "configs/tokenizer-comparison-baseline-readiness-v1.json",
+  "comparison_objective": {
+    "name": "baseline"
+  }
+}
