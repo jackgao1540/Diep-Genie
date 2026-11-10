@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "purpose": "Completed local diagnostic evaluation; no production promotion or GPU training authorization",
+  "artifacts_directory": "runs/tokenizer-quality-v1-2026-11-09",
+  "checkpoint_before": {
+    "sha256": "4de110c80bcf085275c6d533c510d5b6cc3f1b4b00bf3faf2515d26a3b48e4c6",
+    "step": 219,
+    "preflight": false
+  },
+  "checkpoint_after": {
+    "sha256": "5b6321ceb219b6d4b8a9f6ed5daa9b0afddaeb26f58f7e5a062eb1790d073d47",
+    "step": 518,
+    "preflight": true
+  },
+  "selection_sha256": "a7bf97bed304c7effc0095b5d81465b9c271129ba78317721d197a855ce1945d",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "windows": 64,
+  "frames": 1024,
+  "validation_sources": 16,
+  "native_resize_pixel_exact_sources": 16,
+  "metrics": {
+    "before": {
+      "pooled": {
+        "mse": 0.016252392459793794,
+        "foreground_mse": 0.06958337551717057,
+        "temporal_difference_mse": 0.004032415360056209
+      },
+      "equal_source": {
+        "mse": 0.01625239245979379,
+        "foreground_mse": 0.07326833391780516,
+        "temporal_difference_mse": 0.004032415360056209
+      },
+      "per_source": {
+        "CjnGE_9RJbI": {
+          "mse": 0.027446429179118038,
+          "foreground_mse": 0.06179145481500036,
+          "temporal_difference_mse": 0.01792060821713102
+        },
+        "LgdTICpqGoY": {
+          "mse": 0.014488226803336599,
+          "foreground_mse": 0.0771446451371279,
+          "temporal_difference_mse": 0.0005718805602318629
+        },
+        "Zpy_9XXJtKw": {
+          "mse": 0.016698132142895613,
+          "foreground_mse": 0.07228225859760586,
+          "temporal_difference_mse": 0.002611018166303906
+        },
+        "dN_UFytK7gw": {
+          "mse": 0.0157230169499458,
+          "foreground_mse": 0.0729475441833323,
+          "temporal_difference_mse": 0.0012706994639621763
+        },
+        "dgKCNs5Cn24": {
+          "mse": 0.016115674953538082,
+          "foreground_mse": 0.0838377638750452,
+          "temporal_difference_mse": 0.0024711629095828585
+        },
+        "e6LxjKUgZtI": {
+          "mse": 0.015348798827383646,
+          "foreground_mse": 0.07841860845741676,
+          "temporal_difference_mse": 0.0030781713500763357
+        },
+        "f6x0pEuhJ-Q": {
+          "mse": 0.014812119347956216,
+          "foreground_mse": 0.07914191996433917,
+          "temporal_difference_mse": 0.0014779227069107712
+        },
+        "haMF0UV2bYs": {
+          "mse": 0.016329400403120895,
+          "foreground_mse": 0.0706126558225423,
+          "temporal_difference_mse": 0.002845505812081954
+        },
+        "j22pphsxMpM": {
+          "mse": 0.014678905466776263,
+          "foreground_mse": 0.06511915910892453,
+          "temporal_difference_mse": 0.0023832474806757776
+        },
+        "j5LISxLbKNk": {
+          "mse": 0.026812401350575905,
+          "foreground_mse": 0.09161729255940396,
+          "temporal_difference_mse": 0.013665576272743849
+        },
+        "o1swktx96bU": {
+          "mse": 0.01631219021356046,
+          "foreground_mse": 0.08480025141851527,
+          "temporal_difference_mse": 0.00276611488596817
+        },
+        "pst7M2Un5Aw": {
+          "mse": 0.011942625707747853,
+          "foreground_mse": 0.05561027724292761,
+          "temporal_difference_mse": 0.0023925323352096853
+        },
+        "qz3LCxUIe7c": {
+          "mse": 0.010658176001933974,
+          "foreground_mse": 0.054398990693585676,
+          "temporal_difference_mse": 0.002163777142876726
+        },
+        "tRySe3Tx-n0": {
+          "mse": 0.015133085778416733,
+          "foreground_mse": 0.08814736768744945,
+          "temporal_difference_mse": 0.002534988605056134
+        },
+        "y6-L9w3fKLs": {
+          "mse": 0.012240843152892497,
+          "foreground_mse": 0.06004868198099035,
+          "temporal_difference_mse": 0.0034252336548402885
+        },
+        "ycjXOBkPaXw": {
+          "mse": 0.015298253077502105,
+          "foreground_mse": 0.07637447114067575,
+          "temporal_difference_mse": 0.002940206197247828
+        }
+      }
+    },
+    "after": {
+      "pooled": {
+        "mse": 0.011237074674474982,
+        "foreground_mse": 0.02852013092182359,
+        "temporal_difference_mse": 0.00417670893994525
+      },
+      "equal_source": {
+        "mse": 0.011237074674474982,
+        "foreground_mse": 0.025384526660174753,
+        "temporal_difference_mse": 0.00417670893994525
+      },
+      "per_source": {
+        "CjnGE_9RJbI": {
+          "mse": 0.0202622975046191,
+          "foreground_mse": 0.03223843983568685,
+          "temporal_difference_mse": 0.01722379724099621
+        },
+        "LgdTICpqGoY": {
+          "mse": 0.007253886066973703,
+          "foreground_mse": 0.010573137887738506,
+          "temporal_difference_mse": 0.0016166387204590148
+        },
+        "Zpy_9XXJtKw": {
+          "mse": 0.007786040553000911,
+          "foreground_mse": 0.02374948014795967,
+          "temporal_difference_mse": 0.0032203285205656025
+        },
+        "dN_UFytK7gw": {
+          "mse": 0.007177797464416981,
+          "foreground_mse": 0.017972716361572615,
+          "temporal_difference_mse": 0.002183519155709189
+        },
+        "dgKCNs5Cn24": {
+          "mse": 0.00833284890083508,
+          "foreground_mse": 0.025332460211358165,
+          "temporal_difference_mse": 0.0032447354869158175
+        },
+        "e6LxjKUgZtI": {
+          "mse": 0.00959575785085699,
+          "foreground_mse": 0.024530112225245797,
+          "temporal_difference_mse": 0.0031515515275943396
+        },
+        "f6x0pEuhJ-Q": {
+          "mse": 0.008471509200915677,
+          "foreground_mse": 0.015755997944924063,
+          "temporal_difference_mse": 0.002442937495474471
+        },
+        "haMF0UV2bYs": {
+          "mse": 0.008120172966112966,
+          "foreground_mse": 0.017591010954320755,
+          "temporal_difference_mse": 0.003237960457758435
+        },
+        "j22pphsxMpM": {
+          "mse": 0.009869417863016667,
+          "foreground_mse": 0.026207571030371402,
+          "temporal_difference_mse": 0.0023444332254633797
+        },
+        "j5LISxLbKNk": {
+          "mse": 0.013515876635006382,
+          "foreground_mse": 0.05157268828274809,
+          "temporal_difference_mse": 0.009608626343974339
+        },
+        "o1swktx96bU": {
+          "mse": 0.0071209025926736065,
+          "foreground_mse": 0.01635030200762293,
+          "temporal_difference_mse": 0.0033733070891301957
+        },
+        "pst7M2Un5Aw": {
+          "mse": 0.018665446503155065,
+          "foreground_mse": 0.0153247074135782,
+          "temporal_difference_mse": 0.0026857848556579495
+        },
+        "qz3LCxUIe7c": {
+          "mse": 0.01657654443748324,
+          "foreground_mse": 0.018208607714360076,
+          "temporal_difference_mse": 0.002557627398135631
+        },
+        "tRySe3Tx-n0": {
+          "mse": 0.010066287426601659,
+          "foreground_mse": 0.05207813185759564,
+          "temporal_difference_mse": 0.0027819532995002325
+        },
+        "y6-L9w3fKLs": {
+          "mse": 0.019228174771132867,
+          "foreground_mse": 0.03464467101725726,
+          "temporal_difference_mse": 0.003830547300046338
+        },
+        "ycjXOBkPaXw": {
+          "mse": 0.007750234054798835,
+          "foreground_mse": 0.02402239167045606,
+          "temporal_difference_mse": 0.0033235949217428487
+        }
+      }
+    }
+  },
+  "pooled_change_percent": {
+    "mse": -30.85895075279548,
+    "foreground_mse": -59.013010349309816,
+    "temporal_difference_mse": 3.5783411926848085
+  },
+  "whole_frame_mse_regressed_sources": [
+    "pst7M2Un5Aw",
+    "qz3LCxUIe7c",
+    "y6-L9w3fKLs"
+  ],
+  "code_occupancy": {
+    "before": {
+      "used": 382,
+      "capacity": 512
+    },
+    "after": {
+      "used": 379,
+      "capacity": 512
+    }
+  },
+  "visual_retention": {
+    "status": "fail",
+    "certain_losses": 7,
+    "assessable_anchors": 60,
+    "certain_loss_sources": 5,
+    "optimistic_retention_upper_bound": 0.8833333333333333,
+    "required_minimum": 0.95,
+    "failure_indices": [
+      6,
+      7,
+      14,
+      16,
+      22,
+      23,
+      59
+    ],
+    "reviewer": "Root assistant visual review independently corroborated by a second assistant; not user annotations"
+  },
+  "G1_full_score": "unmeasured; necessary retention criterion fails",
+  "G2": "ineligible and unmeasured: action model untrained",
+  "G3": "ineligible and unmeasured: dynamics untrained",
+  "frozen_modules": {
+    "tokenizer": {
+      "tensors": 13,
+      "elements": 744643,
+      "exactly_unchanged": false,
+      "maximum_absolute_difference": 0.08877490647137165
+    },
+    "lam": {
+      "tensors": 17,
+      "elements": 549347,
+      "exactly_unchanged": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "dynamics": {
+      "tensors": 81,
+      "elements": 1329664,
+      "exactly_unchanged": true,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "promotion_allowed": false,
+  "optimizer_updates": 0,
+  "gpu_allocations": 0,
+  "reserved_test_decoded": false,
+  "artifacts": {
+    "quality-report.json": "64d38e591045aa4bc402af489470881595ead81e6c3fe20d7ce0fbe654b273ce",
+    "control-readiness.json": "5165087acd41c70ffedb7cc3809489b3f9e85bc0067735e3ccbf0965f38f4268",
+    "visual-review.json": "ba0c0159c4dfb4f471f4273b7bb2c3c223bd563db0fd83c0627e92a229196fcd",
+    "evaluation-provenance.json": "ca6c37166d90f8537cd115eb807f471694d1dea263b6570193f296f86b3f499a"
+  },
+  "prior_step500_caveat": "Step500 GPU FP32 MSE was 0.0067811690; current step518 CPU FP32 MSE is higher. Checkpoint and runtime/backend differ; step500 weights were not preserved, so the cause is not isolated."
+}

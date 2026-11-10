@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "purpose": "Local diagnostic evaluation only; never a promotion authorization.",
+  "selection": "configs/baseline-evaluation-v1.json",
+  "selection_sha256": "a7bf97bed304c7effc0095b5d81465b9c271129ba78317721d197a855ce1945d",
+  "anchors": "configs/baseline-fidelity-review-v1.json",
+  "scored_frame_offset": 15,
+  "selection_policy": "Inspect all 64 fixed validation anchors. Player/barrel retention uses the 60 previously marked assessable anchors; the four previously crowded anchors remain excluded. Do not select examples based on model performance.",
+  "player_retained": "The source player has an identifiable corresponding tank body in the reconstruction. A similarly colored object elsewhere is not a match.",
+  "barrel_retained": "An identifiable protruding barrel or corresponding multi-barrel configuration remains attached to that player. A colored body/blob without separable barrel geometry is not sufficient. Exact angle is a separate metric.",
+  "scoring": "Record retained, lost, or uncertain for each component. Inspect nearest-neighbor enlarged source and reconstructed player crops alongside full context. Unreadable player names or health bars do not by themselves fail player/barrel retention.",
+  "retention_threshold": 0.95,
+  "partial_evidence_rule": "Report certain failures and optimistic retention bound (all uncertain and unscored assessable anchors count as passes). If that upper bound is below 0.95, the necessary retention criterion fails regardless of missing food/bullet/angle scores. Never invent missing scores or emit a promotion pass.",
+  "other_G1_metrics": "Food/bullet TP/FP/FN, category coverage and measured single-barrel angles require separate semantic annotations. Color-component heuristics and pixel error do not substitute for them.",
+  "control": "A tokenizer-only checkpoint cannot establish G2 or G3. Audit stage history and unchanged action/dynamics parameters; do not score untrained/random rollouts as playable control.",
+  "reviewer": "Assistant visual review, with independent assistant review of decisive failures; not user annotations."
+}

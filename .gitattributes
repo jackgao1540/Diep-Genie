@@ -20,3 +20,6 @@ configs/baseline-evaluation-v1.json text eol=lf
 configs/training-baseline-v1.json text eol=lf
 configs/training-readiness-v1.json text eol=lf
 configs/baseline-fidelity-review-v1.json text eol=lf
+configs/tokenizer-quality-*.json text eol=lf
+scripts/evaluate_tokenizer_quality.py text eol=lf
+scripts/audit_control_readiness.py text eol=lf
