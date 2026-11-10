@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 
@@ -9,7 +10,12 @@ ARCHIVE_SHA256 = '2ff978a9676e87f003929c5727158279113f7e4426febc3ea550950a01ac1c
 ARCHIVE_BYTES = 2915470473
 
 
-def notebook():
+def notebook(archive_name='genie-baseline-v1-v9.zip', archive_sha256=ARCHIVE_SHA256,
+             archive_bytes=ARCHIVE_BYTES):
+    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*\.zip', archive_name):
+        raise ValueError('Archive must be a simple ZIP filename')
+    if not re.fullmatch(r'[0-9a-f]{64}', archive_sha256) or type(archive_bytes) is not int or archive_bytes <= 0:
+        raise ValueError('Invalid archive hash or byte count')
     cells = []
 
     def cell(kind, source):
@@ -128,6 +134,12 @@ finally:
         runtime.unassign()
         finished.set()
 ''')
+    for item in cells:
+        source = ''.join(item['source'])
+        source = source.replace('genie-baseline-v1-v9', archive_name[:-4])
+        source = source.replace('baseline-v1-v9', archive_name[:-4].removeprefix('genie-'))
+        source = source.replace(ARCHIVE_SHA256, archive_sha256).replace(str(ARCHIVE_BYTES), str(archive_bytes))
+        item['source'] = source.splitlines(keepends=True)
     return dict(nbformat=4, nbformat_minor=5,
                 metadata=dict(kernelspec=dict(name='python3', display_name='Python 3')),
                 cells=cells)

@@ -1,4 +1,5 @@
 """Real-data CPU execution checks, never a performance or training-success claim."""
+import argparse
 import gc
 import time
 from pathlib import Path
@@ -9,8 +10,8 @@ from scripts.build_stationary_recovery import write
 from genie_diep.data import file_hash
 
 
-def run():
-    torch.set_num_threads(2);out=Path('runs/training-readiness-v1/execution');out.mkdir(exist_ok=True)
+def run(output='runs/training-readiness-v1/execution'):
+    torch.set_num_threads(2);out=Path(output);out.mkdir(parents=True,exist_ok=False)
     reports=[]
     for stage in ['tokenizer','actions','dynamics']:
         start=time.monotonic();trainer=Trainer('.','configs/training-baseline-v1.json',stage,preflight=True,microbatch=1,accumulation=2)
@@ -42,4 +43,7 @@ def run():
         stages=reports,gpu_fp16_memory_throughput='requires bounded GPU pilot',training_approved=False))
 
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--out',default='runs/training-readiness-v1/execution')
+    run(parser.parse_args().out)

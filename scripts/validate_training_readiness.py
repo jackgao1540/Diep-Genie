@@ -1,4 +1,5 @@
 """Release local readiness for the bounded GPU pilot, never model quality approval."""
+import argparse
 from collections import Counter
 from pathlib import Path
 from genie_diep.baseline import implementation_hash
@@ -7,7 +8,7 @@ from genie_diep.data import file_hash
 from scripts.build_stationary_recovery import read,rows,key,write,validate_boundary
 
 
-def run():
+def run(execution_report='runs/training-readiness-v1/execution/report.json'):
     c=read('configs/longform-ninth-checkpoint-v1.json');parent=read('configs/longform-eighth-checkpoint-v1.json')
     recipe=read('configs/longform-cohort-v9.json');review=read(recipe['review'],recipe['review_sha256'])
     native=read(recipe['native_index'],recipe['native_index_sha256']);duplicate=read(recipe['duplicate_report'],recipe['duplicate_report_sha256'])
@@ -35,7 +36,7 @@ def run():
     assert len(joins)==5
     def pairs(sequences):return {(s['source_id'],a,b) for s in sequences for a,b in zip(s['blocks'],s['blocks'][1:])}
     assert pairs(read(Path(c['cohort'])/'sequences.json'))==pairs(read(Path(parent['cohort'])/'sequences.json'))|joins
-    spec=read('configs/training-baseline-v1.json');execution=read('runs/training-readiness-v1/execution/report.json')
+    spec=read('configs/training-baseline-v1.json');execution=read(execution_report)
     assert execution['status']=='passed' and execution['implementation_sha256']==implementation_hash()
     assert execution['spec_sha256']==file_hash('configs/training-baseline-v1.json')
     assert execution['binding_sha256']==file_hash('configs/baseline-data-v9.json')
@@ -52,7 +53,7 @@ def run():
     result=dict(schema_version=1,ready_for_gpu_pilot=True,ready_for_unbounded_training=False,training_approved=False,
         first_stage='Bounded tokenizer GPU measurement: maximum 2 compute units / 1 allocated hour; preserve 50-unit reserve',
         spec_sha256=file_hash('configs/training-baseline-v1.json'),binding_sha256=file_hash('configs/baseline-data-v9.json'),
-        implementation_sha256=implementation_hash(),execution_report='runs/training-readiness-v1/execution/report.json',execution_report_sha256=file_hash('runs/training-readiness-v1/execution/report.json'),
+        implementation_sha256=implementation_hash(),execution_report=Path(execution_report).as_posix(),execution_report_sha256=file_hash(execution_report),
         fidelity_review='configs/baseline-fidelity-review-v1.json',fidelity_review_sha256=file_hash('configs/baseline-fidelity-review-v1.json'),
         retained_seconds=sum(seconds.values()),retained_blocks=len(current),reserved_test_unchanged=True,
         recovered_blocks_cumulative=36,validation_windows=64,validation_sources=16,train_calibration_sources=len(train.sources),
@@ -64,4 +65,7 @@ def run():
     write('configs/training-readiness-v1.json',result);print(result)
 
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--execution-report',default='runs/training-readiness-v1/execution/report.json')
+    run(parser.parse_args().execution_report)

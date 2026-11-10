@@ -12,6 +12,20 @@ import pytest
 from scripts.build_drive_trial_notebook import build, notebook
 
 
+def test_versioned_archive_is_bound_without_old_archive_references():
+    document=notebook('genie-baseline-v2-v9.zip','a'*64,12345)
+    source=''.join(document['cells'][2]['source'])
+    compile(source,'versioned-launcher','exec')
+    assert 'genie-baseline-v2-v9.zip' in source and "'a"+('a'*63)+"'" in source
+    assert '12345' in source and 'baseline-v1-v9' not in source
+    assert 'AUTHORIZED_TO_RUN = False' in ''.join(document['cells'][1]['source'])
+
+
+@pytest.mark.parametrize('name',['../bundle.zip',"bad\'name.zip",'bundle.zip/else','bundle.py'])
+def test_archive_name_cannot_escape_or_inject_code(name):
+    with pytest.raises(ValueError,match='filename'):notebook(name,'a'*64,100)
+
+
 def launcher_environment(monkeypatch, tmp_path):
     colab = ModuleType('google.colab')
     colab.drive = SimpleNamespace(mount=Mock())

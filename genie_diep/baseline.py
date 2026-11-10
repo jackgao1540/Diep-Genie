@@ -138,11 +138,63 @@ class Trainer:
             if step<warmup:return (step+1)/warmup
             progress=min(1,(step-warmup)/max(1,maximum-warmup));return .1+.9*(1+math.cos(math.pi*progress))/2
         self.scheduler=torch.optim.lr_scheduler.LambdaLR(self.optimizer,rate)
-        self.scaler=torch.amp.GradScaler('cuda',enabled=precision=='fp16')
+        self.scaler_initial_scale=float(self.spec['optimization'].get('fp16_initial_scale',1024))
+        if not math.isfinite(self.scaler_initial_scale) or self.scaler_initial_scale<=0:
+            raise ValueError('FP16 initial scale must be finite and positive')
+        self.scaler_max_scale=float(self.spec['optimization'].get('fp16_max_scale',1024))
+        if not math.isfinite(self.scaler_max_scale) or self.scaler_max_scale<self.scaler_initial_scale:
+            raise ValueError('FP16 maximum scale must be finite and at least the initial scale')
+        self.scaler=self._new_scaler()
+        self.last_failure=None;self._checkpoint_safe=True
         if state:
             self.optimizer.load_state_dict(state['optimizer']);self.scheduler.load_state_dict(state['scheduler'])
             self.scaler.load_state_dict(state['scaler']);self.sampler.load_state_dict(state['sampler']);self.step=state['step']
             self.best=state['best'];self.spent_seconds=state['spent_seconds'];self.spent_units=state['spent_units'];restore_rng(state['rng'])
+            self.last_failure=state.get('last_failure')
+
+    def _new_scaler(self):
+        return torch.amp.GradScaler('cuda',enabled=self.precision=='fp16',init_scale=self.scaler_initial_scale)
+
+    def _advance_scaler(self):
+        self.scaler.update()
+        # Strict failure handling deliberately does not skip or retry a batch.
+        # Bound automatic growth so a conservative start cannot quietly return
+        # to the original 65,536 scale over a long run.
+        if self.scaler.is_enabled() and self.scaler.get_scale()>self.scaler_max_scale:
+            self.scaler.update(new_scale=self.scaler_max_scale)
+
+    def _update_boundary(self):
+        # Copies stay on their original device. This costs model + Adam-state memory,
+        # but also makes exceptions during a partially completed optimizer step safe.
+        return dict(model=copy.deepcopy(self.model.state_dict()),optimizer=copy.deepcopy(self.optimizer.state_dict()),
+            scheduler=copy.deepcopy(self.scheduler.state_dict()),scaler=copy.deepcopy(self.scaler.state_dict()),
+            rng=rng_state(),sampler=self.sampler.state_dict(),step=self.step)
+
+    def _restore_update_boundary(self,boundary):
+        self.model.load_state_dict(boundary['model']);self.optimizer.load_state_dict(boundary['optimizer'])
+        self.scheduler.load_state_dict(boundary['scheduler'])
+        # load_state_dict alone does not reset GradScaler's private per-optimizer
+        # READY/UNSCALED state. A fresh scaler makes in-process recovery safe too.
+        self.scaler=self._new_scaler();self.scaler.load_state_dict(boundary['scaler'])
+        self.sampler.load_state_dict(boundary['sampler']);restore_rng(boundary['rng']);self.step=boundary['step']
+        self.optimizer.zero_grad(set_to_none=True);self._checkpoint_safe=True
+
+    def _failure_diagnostics(self,boundary,phase,microbatches,error):
+        affected=[]
+        for name,p in self.model.named_parameters():
+            if p.grad is None:continue
+            grad=p.grad.detach();finite=torch.isfinite(grad)
+            if bool(finite.all()):continue
+            values=grad[finite]
+            affected.append(dict(name=name,elements=grad.numel(),nonfinite=int((~finite).sum()),
+                nan=int(torch.isnan(grad).sum()),positive_inf=int(torch.isposinf(grad).sum()),
+                negative_inf=int(torch.isneginf(grad).sum()),max_finite_abs=float(values.abs().max()) if values.numel() else None))
+        replay=MixedSampler(self.data,source_fraction=self.sampler.fraction);replay.load_state_dict(boundary['sampler'])
+        windows=[self.data.descriptor(*replay.draw()) for _ in range(self.sampler.draws-boundary['sampler']['draws'])]
+        return dict(attempted_step=boundary['step']+1,phase=phase,completed_microbatches=microbatches,
+            exception=type(error).__name__,message=str(error),precision=self.precision,scale=self.scaler.get_scale(),
+            sampler_draws_before=boundary['sampler']['draws'],sampler_draws_at_failure=self.sampler.draws,
+            sampled_windows=windows,affected_gradients=affected,restored_pre_update_boundary=False)
 
     def loss(self,x):
         if self.stage=='tokenizer':
@@ -156,22 +208,37 @@ class Trainer:
         return F.cross_entropy(logits[mask],ids[mask])
 
     def update(self,budget=None):
+        self.last_failure=None
         if self.step>=self.stage_spec['max_updates']:raise ValueError('Update cap reached')
         self.optimizer.zero_grad(set_to_none=True);losses=[]
-        before_rng=rng_state();before_sampler=self.sampler.state_dict()
-        for _ in range(self.accumulation):
-            if budget is not None and not budget.permits():
-                self.optimizer.zero_grad(set_to_none=True);restore_rng(before_rng);self.sampler.load_state_dict(before_sampler);return None
-            x=self.sampler.batch(self.microbatch).to(self.device)
-            with torch.autocast(device_type=self.device.type,dtype=torch.float16,enabled=self.precision=='fp16'):
-                loss=self.loss(x)
-            if not torch.isfinite(loss):raise FloatingPointError('Nonfinite loss; no optimizer update')
-            self.scaler.scale(loss/self.accumulation).backward();losses.append(float(loss.detach()))
-        self.scaler.unscale_(self.optimizer)
-        if not all(p.grad is None or torch.isfinite(p.grad).all() for p in self.parameters):
-            self.optimizer.zero_grad(set_to_none=True);raise FloatingPointError('Nonfinite gradient; no optimizer update')
-        torch.nn.utils.clip_grad_norm_(self.parameters,self.spec['optimization']['gradient_clip_norm'],error_if_nonfinite=True)
-        self.scaler.step(self.optimizer);self.scaler.update();self.scheduler.step();self.step+=1
+        boundary=self._update_boundary();self._checkpoint_safe=False;phase='sampling'
+        try:
+            for _ in range(self.accumulation):
+                if budget is not None and not budget.permits():
+                    self._restore_update_boundary(boundary);return None
+                phase='sampling';x=self.sampler.batch(self.microbatch).to(self.device)
+                phase='forward'
+                with torch.autocast(device_type=self.device.type,dtype=torch.float16,enabled=self.precision=='fp16'):
+                    loss=self.loss(x)
+                if not torch.isfinite(loss):raise FloatingPointError('Nonfinite loss; no optimizer update')
+                phase='backward';self.scaler.scale(loss/self.accumulation).backward();losses.append(float(loss.detach()))
+            phase='unscale';self.scaler.unscale_(self.optimizer)
+            phase='gradient_check'
+            if not all(p.grad is None or torch.isfinite(p.grad).all() for p in self.parameters):
+                raise FloatingPointError('Nonfinite gradient; no optimizer update')
+            phase='gradient_clip'
+            torch.nn.utils.clip_grad_norm_(self.parameters,self.spec['optimization']['gradient_clip_norm'],error_if_nonfinite=True)
+            phase='optimizer_step';self.scaler.step(self.optimizer)
+            phase='scaler_update';self._advance_scaler()
+            phase='scheduler_step';self.scheduler.step();self.step+=1;self._checkpoint_safe=True
+        except BaseException as error:
+            try:self.last_failure=self._failure_diagnostics(boundary,phase,len(losses),error)
+            except Exception as diagnostic_error:
+                self.last_failure=dict(attempted_step=boundary['step']+1,phase=phase,exception=type(error).__name__,
+                    message=str(error),diagnostic_error=str(diagnostic_error),restored_pre_update_boundary=False)
+            self._restore_update_boundary(boundary)
+            self.last_failure['restored_pre_update_boundary']=True
+            raise
         return sum(losses)/len(losses)
 
     @torch.no_grad()
@@ -201,11 +268,12 @@ class Trainer:
             quality_gate='unmeasured',preflight=self.preflight,complete=len(records)==len(self.evaluation['validation'][:limit]))
 
     def save(self,path,budget=None):
+        if not self._checkpoint_safe:raise RuntimeError('Cannot save an incomplete update: rollback did not finish')
         if budget:self.spent_seconds,self.spent_units=budget.spent()
         state=dict(schema_version=1,config=self.model.config_dict(),contract=self.contract,model=self.model.state_dict(),
             optimizer=self.optimizer.state_dict(),scheduler=self.scheduler.state_dict(),scaler=self.scaler.state_dict(),
             sampler=self.sampler.state_dict(),rng=rng_state(),step=self.step,best=self.best,
-            spent_seconds=self.spent_seconds,spent_units=self.spent_units)
+            spent_seconds=self.spent_seconds,spent_units=self.spent_units,last_failure=self.last_failure)
         path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);temporary=path.with_suffix('.tmp')
         torch.save(state,temporary);temporary.replace(path)
 
@@ -245,6 +313,10 @@ def run(args):
                 with (out/'evaluation.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(report)+'\n')
                 if report['complete'] and report['equal_source']<trainer.best:trainer.best=report['equal_source'];trainer.save(out/'best.pt',budget)
             if now-last_save>=300:trainer.save(out/'last.pt',budget);last_save=time.monotonic()
+    except BaseException as error:
+        failure=trainer.last_failure or dict(exception=type(error).__name__,message=str(error),phase='outside_update')
+        (out/'failure.json').write_text(json.dumps(failure,indent=2)+'\n',encoding='utf-8')
+        raise
     finally:trainer.save(out/'last.pt',budget)
     print(json.dumps(dict(checkpoint=str(out/'last.pt'),step=trainer.step,preflight=args.preflight,promotion='not_approved')),flush=True)
 
