@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "experiment_sha256": "284be271a958d71c5d04877b557aea21aada7a6a40b740d42e22efeb39fa5d03",
+  "local_report_sha256": "ab9475ab9e6a5d9567ffd238c87c6dd502ef29685d5ae30bd0da423f8821590f",
+  "local_report": "runs/tokenizer-continuation-local-v1/continuation-report.json",
+  "parents_unchanged": true,
+  "full_suite_passed": true,
+  "python_tests_passed": 313,
+  "exact_resume_both_arms": true,
+  "maximum_state_difference": 0,
+  "local_parent_step": 999,
+  "local_final_step": 1001,
+  "local_optimizer_calls_per_arm": 3,
+  "frozen_action_dynamics_unchanged": true,
+  "full_train_coverage_plan_verified": true,
+  "coverage_training_frames": 315320,
+  "coverage_windows": 20331,
+  "diagnostic_preflight_weights_not_promotable": true,
+  "gpu_resume_verification_required_before_extended_training": true
+}

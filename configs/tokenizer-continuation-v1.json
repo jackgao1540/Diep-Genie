@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "Authorized paired step-999 continuation to 5000 with full prepared TRAIN-frame coverage; no action/dynamics training or model promotion",
+  "parent_experiment": {
+    "path": "configs/tokenizer-comparison-v1.json",
+    "sha256": "36e58edd8025266b7272b58e42a6fe69a598174feeba8c60e62e6f5ce8ffe76c"
+  },
+  "parent_step": 999,
+  "target_step": 5000,
+  "schedule_max_updates": 20000,
+  "coverage_seed": 20261110,
+  "sampling_policy": "full_train_frame_coverage_then_parent_mixed",
+  "parents": {
+    "baseline": {
+      "path": "continuation-inputs/baseline-step999.pt",
+      "sha256": "654bed1c667ed11455fd3e73fc3c51e962baab16b6fb373572d2518d6d2860e3"
+    },
+    "detail": {
+      "path": "continuation-inputs/detail-step999.pt",
+      "sha256": "146770170c4a1223801fcf44cafbbe170537778f8a775b5cf10a8eeb1a482e18"
+    }
+  },
+  "source_hashes": {
+    "runner_sha256": "6fa59d18ccb8948ccdb7bbfc050d974495fc03091ce21bc73f1f092305b011ad",
+    "coverage_sampler_sha256": "eee01ad1a6d8ba58b412c51340d9c3b2975e5aa5d483d6e980fc36f675017273"
+  },
+  "limits": {
+    "additional_optimizer_calls_per_arm": 4002,
+    "additional_unique_updates_per_arm": 4001,
+    "maximum_compute_units": 4,
+    "maximum_allocated_hours": 3,
+    "minimum_remaining_units": 50
+  },
+  "save_steps": [
+    1001,
+    1500,
+    2000,
+    2500,
+    3000,
+    3500,
+    4000,
+    4500,
+    5000
+  ],
+  "evaluate_steps": [
+    999,
+    2000,
+    3000,
+    4000,
+    5000
+  ],
+  "assessment": {
+    "training_windows": 84,
+    "validation_windows": 64,
+    "selection": "existing frozen baseline-evaluation-v1 descriptors",
+    "metrics": [
+      "whole-frame MSE",
+      "colored-foreground MSE",
+      "temporal-difference MSE"
+    ],
+    "semantic_and_control_gates": "unmeasured until separately scored"
+  },
+  "sampling_note": "Both arms use the same complete-coverage schedule. This is an explicit shared sampling change from the original experiment, not an unchanged random-sampler continuation. After coverage the inherited mixed sampler RNG resumes. No validation/test training."
+}
