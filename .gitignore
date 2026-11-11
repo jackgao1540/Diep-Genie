@@ -18,3 +18,13 @@ exports/
 *.key
 colab-checkpoint.jpg
 github-checkpoint.jpg
+
+# Private working documentation, regardless of extension case.
+*.[mM][dD]
+!/README.md
+private-archive/
+cleanup_local.py
+# Local screenshots and review feedback never belong in public backups.
+*screenshot*
+*checkpoint.jpg
+feedback.jsonl

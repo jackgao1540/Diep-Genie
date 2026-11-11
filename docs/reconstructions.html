@@ -8,15 +8,12 @@
   <script src="reconstruction-viewer.js" defer></script>
 </head>
 <body class="reconstruction-page">
-<header class="topbar"><a class="brand" href="./" aria-label="Diep-Genie home"><span class="brand-icon" aria-hidden="true"></span> DIEP–GENIE</a><nav aria-label="Main navigation"><a href="./#showcase">Data showcase</a><a href="reconstructions.html" aria-current="page">Reconstructions</a><a href="https://github.com/jackgao1540/Diep-Genie">GitHub ↗</a></nav></header>
+<header class="topbar"><a class="brand" href="./" aria-label="Diep-Genie home"><span class="brand-icon" aria-hidden="true"></span> DIEP–GENIE</a><nav aria-label="Main navigation"><a href="./#showcase">Data</a><a href="reconstructions.html" aria-current="page">Reconstructions</a><a href="https://github.com/jackgao1540/Diep-Genie">GitHub ↗</a></nav></header>
 <main>
-  <section class="reconstruction-intro">
-    <div><p class="eyebrow">THE MODEL / UNDER THE MICROSCOPE</p><h1>See what survives.<br><em>And what gets lost.</em></h1><p class="lede">Play the observed frames and their reconstructions together. Pause on a barrel, follow a projectile, or step through a change in direction.</p></div>
-    <aside class="evaluation-note"><span class="badge held">Still learning</span><p>These comparisons expose details the model preserves and loses. Neither checkpoint provides playable controls.</p><a href="https://github.com/jackgao1540/Diep-Genie/blob/main/MODEL_QUALITY.md">Read the quality assessment ↗</a></aside>
-  </section>
+  <section class="reconstruction-intro"><h1>Reconstructions</h1><p>Observed input and two earlier tokenizer checkpoints. Reconstruction rebuilds each input; it does not predict a future.</p><p>Current tokenizers still lose barrel geometry. No playable trained world model exists.</p></section>
   <section class="reconstruction-workspace" aria-label="Synchronized reconstruction comparison">
-    <div class="dataset-toolbar"><div><p id="dataset-kind" class="eyebrow">PUBLIC EXAMPLES</p><p id="dataset-title">Loading the comparison library…</p></div><div class="local-actions"><label class="file-button" for="local-file">Open local comparison file<input id="local-file" type="file" accept=".json,application/json"></label><button id="public-examples" class="quiet-button" hidden>Return to public examples</button></div></div>
-    <p class="local-explanation">Have the full evaluation file? Open it here to inspect all 64 validation windows. It stays in this browser; the file and its images are never uploaded.</p>
+    <div class="dataset-toolbar"><div><p id="dataset-kind" class="eyebrow">PUBLIC EXAMPLES</p><p id="dataset-title">Loading the comparison library…</p></div><div class="local-actions" hidden><input id="local-file" type="file" accept=".json,application/json"><button id="public-examples" hidden>Public examples</button></div></div>
+
     <div id="reconstruction-viewer" class="viewer" aria-busy="true" tabindex="0" aria-label="Reconstruction viewer. Arrow keys step frames; space plays or pauses.">
       <div class="reconstruction-heading"><div><label for="clip-select" class="eyebrow">CHOOSE A CLIP</label><select id="clip-select" disabled><option>Loading…</option></select></div><div class="view-options"><span id="split-badge" class="badge">Loading</span><label for="crop">View <select id="crop"><option value="full">Full frame</option><option value="center">Center ×2</option></select></label></div></div>
       <div class="reconstruction-comparison">
@@ -28,11 +25,11 @@
       <div class="reconstruction-details"><div><h2 id="clip-title">Preparing frames…</h2><p id="description"></p><p id="timing" class="processing-note"></p></div><div class="reconstruction-credit"><span class="eyebrow">SOURCE FOOTAGE</span><a id="source-link" target="_blank" rel="noopener noreferrer" hidden></a><p id="source-meta"></p></div></div>
       <p id="load-status" class="load-status" role="status" aria-live="polite">Loading public examples…</p>
     </div>
-    <div class="viewer-footnotes"><p><strong>One clock, three views.</strong> Playback loops at 10 sampled frames per second. Use ← / → to step and Space to play while the viewer is focused. Center ×2 changes the crop, not the model’s output.</p><p><strong>Reconstruction, not prediction.</strong> The tokenizer sees each displayed input frame and compresses/rebuilds it. This is not a generated future, a playable world, or a test of learned movement, aiming or firing.</p></div>
+    <p class="viewer-footnotes">Play together or step with ← / →. Space toggles playback while the viewer is focused.</p>
   </section>
-  <section class="reconstruction-bottom"><div><p class="eyebrow">WHAT TO LOOK FOR</p><h2>Follow the small things.</h2><p>Compare the barrel outline and direction, the player’s color, projectile births and food shapes. Average image error can improve while these details disappear.</p></div><div><p class="eyebrow">HOW TO READ THE EXAMPLES</p><p>Public clips are a small, already-published selection with source credits. Training examples and held-out validation examples are labeled separately. The full fixed validation evaluation is available through a local comparison file, without publishing its footage.</p><a href="./#showcase">Explore the source footage ↗</a></div></section>
+
 </main>
-<footer><span class="brand">DIEP–GENIE <small>Independent research · November 2026</small></span><div><a href="reconstructions.json">Public comparison provenance ↗</a><a href="https://github.com/jackgao1540/Diep-Genie/blob/main/MODEL_QUALITY.md">Quality report ↗</a></div><p>Gameplay belongs to its respective creators and diep.io. This project is not affiliated with diep.io. No ratings or private files are collected.</p></footer>
+<footer><a href="reconstructions.json">Comparison provenance</a><p>Source credits accompany each clip. Independent project; not affiliated with diep.io.</p></footer>
 <noscript><p class="noscript">Enable JavaScript for synchronized playback and frame stepping. <a href="reconstructions.json">Public comparison metadata</a> remains available.</p></noscript>
 </body>
 </html>
