@@ -63,6 +63,8 @@ def nearest_codes(values, book):
 class Inversion:
     @torch.no_grad()
     def __init__(self, model, clip, coordinates, project_nearest=False):
+        if getattr(model, 'temporal_decoder', False):
+            raise ValueError('Local convolution inversion requires the legacy CNN decoder')
         if any(parameter.requires_grad for parameter in model.parameters()):
             raise ValueError('Inversion requires a frozen model')
         self.decoder = model.decoder

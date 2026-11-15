@@ -15,6 +15,7 @@ from PIL import Image
 import torch
 
 from genie_diep.cohort import read
+from genie_diep.baseline import implementation_hash
 from genie_diep.data import file_hash
 from genie_diep.model import Config, WorldModel
 from scripts.evaluate_tokenizer_quality import reconstruct, uint8_frames, validate_state
@@ -180,6 +181,7 @@ def run(args):
     bundle = private_bundle(quality_dir, recipe['checkpoints'])
     public = manifest_base('public', 'Reconstruction comparison', recipe['checkpoints'])
     public.update(recipe_sha256=file_hash(recipe_path), showcase_sha256=file_hash(showcase_path),
+        implementation_sha256=implementation_hash(),
         policy='Four already-public accepted samples only. Illustrative examples, not the fixed held-out quality score.',
         device='cpu', precision='fp32', torch_version=str(torch.__version__),
         exporter_sha256=file_hash(__file__), model_implementation_sha256=hashlib.sha256((root/'genie_diep/model.py').read_bytes().replace(b'\r\n',b'\n')).hexdigest())

@@ -19,7 +19,7 @@ def sha(value):
 
 def implementation(payloads):
     digest = hashlib.sha256()
-    for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py']:
+    for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py', 'transformer_tokenizer.py']:
         digest.update(name.encode())
         digest.update(payloads['genie_diep/' + name].replace(b'\r\n', b'\n'))
     return digest.hexdigest()

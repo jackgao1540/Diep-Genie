@@ -43,7 +43,8 @@ def run(checkpoint,data,out,device="cpu"):
         history=ids[:,:1]; generated=[rec[:,:1]]
         for t in range(1,x.shape[1]):
             nxt=model.dynamics.next_tokens(history,actions[:,:t])
-            generated.append(model.tokenizer.decode_ids(nxt)); history=torch.cat([history,nxt],1)
+            history=torch.cat([history,nxt],1)
+            generated.append(model.tokenizer.decode_last_ids(history))
         frames.append(torch.cat(generated,1));labels.append('Rollout: inferred reference actions')
     elif state['stage']=='actions':
         frames.append(torch.cat([x[:,:1],model.lam.reconstruct(x[:,:-1],actions)],1))

@@ -198,7 +198,7 @@ def run(args):
                     post = tok.vq.lookup(ids)
                     row['representations'][arm+'_pre'] = z[0, -1].clone()
                     row['representations'][arm+'_post'] = post[0, -1].clone()
-                    row['native'][arm] = tok.decode(post[:, -1:])[0, 0]
+                    row['native'][arm] = tok.decode(post)[0, -1]
             raw = F.pixel_unshuffle(clip[-1: ], 4)[0]
             row['representations']['raw'] = F.pad(raw, (0, 0, 0, 0, 0, 16)).permute(1, 2, 0)
             cache.append(row)

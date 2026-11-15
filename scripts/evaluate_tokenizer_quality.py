@@ -1,7 +1,9 @@
 """Read-only CPU comparison on the frozen validation set; no promotion claims.
 
 Reconstruction metrics are diagnostics, not semantic food/bullet/angle labels.
-Temporal chunking retains the encoder's six-frame causal receptive history.
+CNN chunking retains six prior frames; ST tokenizers process the full bounded
+clip once, preserving both encoder and decoder history. frame_batch only bounds
+the legacy CNN decoder path.
 """
 import argparse
 from collections import defaultdict
@@ -15,6 +17,7 @@ from PIL import Image, ImageDraw
 import torch
 
 from genie_diep.cohort import Cohort, read
+from genie_diep.baseline import implementation_hash
 from genie_diep.data import file_hash
 from genie_diep.model import Config, WorldModel
 from genie_diep import model as model_module
@@ -45,6 +48,14 @@ def reconstruct(tokenizer, clip, frame_batch=4):
         raise ValueError('Invalid reconstruction batch')
     if tokenizer.training:
         raise ValueError('Inference requires eval mode')
+    if getattr(tokenizer, 'temporal_decoder', False):
+        # Both transformer sides need the full fixed prefix. A CNN's six-frame
+        # halo is insufficient, and slicing q before decode drops decoder past.
+        q, ids, _ = tokenizer.encode(clip[None])
+        prediction = tokenizer.decode(q)[0]
+        if not torch.isfinite(prediction).all():
+            raise ValueError('Nonfinite reconstruction')
+        return prediction, ids[0]
     # Three kernel-3 causal convolutions: six prior frames, irrespective of
     # spatial downsampling. Assert this architecture instead of silently
     # producing different predictions if the encoder changes in the future.
@@ -218,6 +229,7 @@ def run(args):
               for name, state in zip(('before', 'after'), states)]
     sheets = write_sheets(out,visuals,labels)
     report = dict(schema_version=1, device='cpu', precision='fp32', updates=0,
+        implementation_sha256=implementation_hash(),
         torch_version=str(torch.__version__),
         model_implementation_sha256=hashlib.sha256(Path(model_module.__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),
         binding_sha256=binding_hash, selection_sha256=selection_hash,

@@ -9,7 +9,7 @@ from scripts.build_drive_trial_notebook import ARCHIVE_BYTES, ARCHIVE_SHA256, no
 
 
 REQUIRED_MEMBERS = frozenset({
-    'genie_diep/baseline.py', 'genie_diep/cohort.py', 'genie_diep/model.py',
+    'genie_diep/baseline.py', 'genie_diep/cohort.py', 'genie_diep/model.py', 'genie_diep/transformer_tokenizer.py',
     'genie_diep/baseline_evaluation.py', 'genie_diep/gpu_precision.py', 'genie_diep/detail_loss.py',
     'scripts/run_tokenizer_comparison.py', 'scripts/diagnose_tokenizer_precision.py',
     'configs/training-baseline-v1.json', 'configs/training-readiness-v1.json',
@@ -78,7 +78,7 @@ def overlay_code(manifest):
         for field, name in bound_files.items():
             assert overlay_hashes[name] == overlay_contract[field], 'Input binding mismatch: ' + name
         implementation = hashlib.sha256()
-        for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py']:
+        for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py', 'transformer_tokenizer.py']:
             implementation.update(name.encode())
             implementation.update(payloads['genie_diep/' + name].replace(b'\\r\\n', b'\\n'))
         assert implementation.hexdigest() == overlay_contract['expected_implementation_sha256'], 'Implementation binding mismatch'

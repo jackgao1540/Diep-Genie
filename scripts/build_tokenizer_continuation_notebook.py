@@ -77,7 +77,7 @@ def overlay_code(manifest):
         for field, name in bound_files.items():
             assert overlay_hashes[name] == overlay_contract[field], 'Input binding mismatch: ' + name
         implementation = hashlib.sha256()
-        for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py']:
+        for name in ['baseline.py', 'cohort.py', 'model.py', 'baseline_evaluation.py', 'transformer_tokenizer.py']:
             implementation.update(name.encode())
             implementation.update(payloads['genie_diep/' + name].replace(b'\\r\\n', b'\\n'))
         assert implementation.hexdigest() == overlay_contract['expected_implementation_sha256'], 'Implementation binding mismatch'

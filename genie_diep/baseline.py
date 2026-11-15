@@ -23,7 +23,7 @@ def stage_config(spec, stage):return next(s for s in spec['stages'] if s['name']
 
 def implementation_hash():
     digest=hashlib.sha256()
-    for name in ['baseline.py','cohort.py','model.py','baseline_evaluation.py']:
+    for name in ['baseline.py','cohort.py','model.py','baseline_evaluation.py','transformer_tokenizer.py']:
         digest.update(name.encode());digest.update(Path(__file__).with_name(name).read_bytes().replace(b'\r\n',b'\n'))
     return digest.hexdigest()
 

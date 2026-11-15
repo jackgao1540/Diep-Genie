@@ -1,4 +1,4 @@
-"""Small, explicit deviations from Genie: conv tokenizer/LAM, ST masked dynamics.
+"""Small Genie-style prototype: optional ST/CNN tokenizer, conv LAM, ST dynamics.
 
 All time-dependent paths are causal. The LAM may see the target only while inferring
 a discrete training label. The dynamics receives its detached quantized code only.
@@ -26,6 +26,8 @@ class Config:
     lam_dilations: tuple = (1,1,1)
     lam_motion_warp: bool = False
     lam_max_shift_fraction: float = .125
+    tokenizer_arch: str = 'cnn'
+    tokenizer_transformer: dict | None = None
 
 
 class VQ(nn.Module):
@@ -94,6 +96,22 @@ class CausalConv(nn.Module):
 class VideoTokenizer(nn.Module):
     def __init__(self,c):
         super().__init__()
+        self.context = c.context
+        self.temporal_decoder = c.tokenizer_arch == 'st_transformer'
+        if self.temporal_decoder:
+            from .transformer_tokenizer import TransformerEncoder, TransformerDecoder
+            if c.downsample != 4 or c.size % 4:
+                raise ValueError('ST tokenizer requires patch/downsample 4 and size divisible by 4')
+            settings = c.tokenizer_transformer or {}
+            required = {'encoder_width', 'encoder_depth', 'encoder_heads', 'decoder_width', 'decoder_depth', 'decoder_heads'}
+            if set(settings) != required:
+                raise ValueError('Specify all encoder/decoder transformer widths, depths and heads')
+            self.encoder = TransformerEncoder(c, *[settings['encoder_'+k] for k in ('width', 'depth', 'heads')])
+            self.vq = VQ(c.vocab, c.token_dim)
+            self.decoder = TransformerDecoder(c, *[settings['decoder_'+k] for k in ('width', 'depth', 'heads')])
+            return
+        if c.tokenizer_arch != 'cnn' or c.tokenizer_transformer is not None:
+            raise ValueError('Unknown tokenizer architecture or transformer settings on CNN')
         if c.downsample not in (4,8): raise ValueError("Tokenizer downsample must be 4 or 8")
         self.encoder=nn.Sequential(CausalConv(3,c.width//2,2),nn.SiLU(),
                                    CausalConv(c.width//2,c.width,2),nn.SiLU(),
@@ -108,18 +126,32 @@ class VideoTokenizer(nn.Module):
                                       nn.Conv2d(c.width//2,3,3,1,1),nn.Sigmoid())
 
     def features(self,x):
+        if self.temporal_decoder:
+            return self.encoder(x)
         return self.encoder(x.transpose(1,2)).permute(0,2,3,4,1)
 
     def encode(self,x):
         return self.vq(self.features(x))
 
     def decode(self,q):
+        if self.temporal_decoder:
+            return self.decoder(q)
         b,t,h,w,d=q.shape
         result=self.decoder(q.reshape(b*t,h,w,d).permute(0,3,1,2))
         return result.reshape(b,t,3,result.shape[-2],result.shape[-1])
 
     def decode_ids(self,ids):
         return self.decode(self.vq.lookup(ids))
+
+    def decode_last_ids(self, history):
+        """Decode the new final frame using at most context past/current IDs.
+
+        A sliding window resets learned temporal positions to zero at its left
+        boundary. It does not retain memory beyond that explicit token window.
+        CNN decoding keeps its original single-frame numerics.
+        """
+        ids = history[:, -self.context:] if self.temporal_decoder else history[:, -1:]
+        return self.decode_ids(ids)[:, -1:]
 
     def forward(self,x):
         q,ids,loss=self.encode(x)
@@ -281,7 +313,10 @@ class WorldModel(nn.Module):
         self.dynamics=Dynamics(c)
 
     def config_dict(self):
-        return asdict(self.config)
+        result = asdict(self.config)
+        if self.config.tokenizer_arch == 'cnn' and self.config.tokenizer_transformer is None:
+            result.pop('tokenizer_arch'); result.pop('tokenizer_transformer')
+        return result
 
 
 def image_loss(pred,target,previous=None,color_balance=False):

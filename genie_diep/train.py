@@ -56,7 +56,8 @@ def evaluate(model,x):
     shuffled_logits=model.dynamics(corrupted,shuffled)[:,-1]
     target=ids[:,-1]
     ce=lambda y:torch.nn.functional.cross_entropy(y.reshape(-1,model.config.vocab),target.flatten()).item()
-    prediction=model.tokenizer.decode_ids(logits.argmax(-1)[:,None])[:,0]
+    predicted_ids=torch.cat([ids[:,:-1],logits.argmax(-1)[:,None]],1)
+    prediction=model.tokenizer.decode_last_ids(predicted_ids)[:,0]
     foreground=(x.max(2,keepdim=True).values-x.min(2,keepdim=True).values>.12).float()
     foreground_mse=((rec-x).square()*foreground).sum()/(foreground.sum()*3).clamp_min(1)
     side=x.shape[-1]; lo=side*3//8; hi=side*5//8

@@ -127,6 +127,8 @@ def verify_local(decoder, grid, codes, sites):
 
 class Search:
     def __init__(self, model, clip, coordinates, chunk, normalized=False):
+        if getattr(model, 'temporal_decoder', False):
+            raise ValueError('Local convolution search requires the legacy CNN decoder')
         self.decoder = model.decoder
         self.codes = F.normalize(model.vq.embedding.weight, dim=-1)
         self.target = clip[-1]

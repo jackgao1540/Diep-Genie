@@ -56,7 +56,7 @@ def main():
             actions=torch.cat(state_ui["actions"],1)
             nxt=model.dynamics.next_tokens(history,actions)
             state_ui["tokens"]=torch.cat([history,nxt],1)
-            state_ui["steps"]+=1; show(model.tokenizer.decode_ids(nxt))
+            state_ui["steps"]+=1; show(model.tokenizer.decode_last_ids(state_ui["tokens"]))
             status.set(f"Generated step {state_ui['steps']} using latent codes {values}")
         except Exception as error:status.set(str(error))
 

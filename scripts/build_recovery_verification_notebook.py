@@ -9,7 +9,7 @@ from scripts.build_drive_trial_notebook import ARCHIVE_BYTES, ARCHIVE_SHA256, no
 
 
 SOURCE_ALLOWLIST = frozenset({
-    'genie_diep/baseline.py', 'genie_diep/cohort.py', 'genie_diep/model.py',
+    'genie_diep/baseline.py', 'genie_diep/cohort.py', 'genie_diep/model.py', 'genie_diep/transformer_tokenizer.py',
     'genie_diep/baseline_evaluation.py', 'genie_diep/gpu_precision.py',
     'configs/training-baseline-v1.json', 'configs/training-readiness-v1.json',
     'scripts/gpu_recovery_verification.py', 'scripts/diagnose_tokenizer_precision.py',

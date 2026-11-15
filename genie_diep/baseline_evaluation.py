@@ -69,7 +69,8 @@ def commanded_rollout(model,prefix,codes,frames,stage='dynamics'):
         history=history[:,-(model.config.context-1):]
         prior=torch.cat([prior,action],1)[:,-history.shape[1]:]
         nxt=model.dynamics.next_tokens(history,prior)
-        output.append(model.tokenizer.decode_ids(nxt));history=torch.cat([history,nxt],1)
+        history=torch.cat([history,nxt],1)
+        output.append(model.tokenizer.decode_last_ids(history))
     return torch.cat(output,1)
 
 

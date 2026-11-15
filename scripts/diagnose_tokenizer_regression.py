@@ -304,6 +304,8 @@ def load_models(root, spec, binding_hash, selection_hash):
         if digest != checkpoints[f'{arm}/{path.name}']:
             raise ValueError(f'Checkpoint hash missing from audited results for {key}')
         model = WorldModel(Config(**state['config'])).eval().requires_grad_(False)
+        if model.tokenizer.temporal_decoder:
+            raise ValueError('Frozen CNN component diagnostics do not support transformer tokenizers')
         model.load_state_dict(state['model'])
         models[key] = model.tokenizer
         receipts[key] = dict(path=str(path.relative_to(root)), sha256=digest, step=step)
