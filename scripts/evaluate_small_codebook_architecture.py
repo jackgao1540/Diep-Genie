@@ -41,11 +41,13 @@ def private_output(root, value):
     return out
 
 
-def validate_endpoint(state, spec, binding_hash, selection_hash, spec_hash):
+def validate_endpoint(state, spec, binding_hash, selection_hash, spec_hash, expected_step=5000):
+    if expected_step not in (3000, 4000, 5000):
+        raise ValueError('Expected step must be explicitly 3000, 4000 or 5000')
     validate_state(state, spec, binding_hash, selection_hash)
     contract = state['contract']
-    if state['step'] != 5000 or contract.get('preflight') is not False:
-        raise ValueError('Expected a production update-5000 endpoint')
+    if state['step'] != expected_step or contract.get('preflight') is not False:
+        raise ValueError(f'Expected a production update-{expected_step} endpoint')
     if contract.get('spec_sha256') != spec_hash:
         raise ValueError('Checkpoint specification hash mismatch')
     if contract.get('precision') != 'fp16' or contract.get('device_type') != 'cuda':
