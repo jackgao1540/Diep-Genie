@@ -39,6 +39,8 @@ def validate_plan(root, plan_path):
     check(plan['implementation_sha256'] == implementation_hash(), 'Implementation changed')
     check(plan['runner_sha256'] == source_hash(__file__), 'Runner changed')
     check(plan.get('backend_policy') == BACKEND_POLICY, 'Backend reproducibility policy differs')
+    check(type(plan.get('timing_updates_per_arm', 0)) is int and
+          plan.get('timing_updates_per_arm', 0) in (0, 5), 'Unsupported steady timing budget')
     for arm in ARMS:
         entry = plan['arms'][arm]
         check(file_hash(root/entry['spec']) == entry['spec_sha256'], 'Arm spec changed')
@@ -185,6 +187,27 @@ def replay_check(trainer, out, budget):
                 unique_updates=1, extra_optimizer_calls=1)
 
 
+def measure_training_updates(trainer, budget, count):
+    """Time genuine counted updates after replay; retain their resulting state."""
+    first_step = trainer.step
+    seconds = []
+    for _ in range(count):
+        if not budget.permits((sum(seconds)/len(seconds))*1.3 if seconds else 0):
+            raise TimeoutError('Shared budget exhausted during steady timing')
+        if trainer.device.type == 'cuda': torch.cuda.synchronize()
+        start = time.monotonic()
+        value = trainer.update(budget)
+        if trainer.device.type == 'cuda': torch.cuda.synchronize()
+        if value is None: raise TimeoutError('Timing update rolled back at shared budget boundary')
+        seconds.append(time.monotonic()-start)
+    return dict(first_step=first_step+1, last_step=trainer.step, unique_updates=len(seconds),
+                seconds=seconds, mean_seconds=sum(seconds)/len(seconds))
+
+
+def update_seconds(entry):
+    return entry['timing']['mean_seconds'] if 'timing' in entry else entry['replay']['seconds']
+
+
 def run(args):
     configure_backend()
     root, out = Path(args.root).resolve(), Path(args.out).resolve()
@@ -251,11 +274,14 @@ def run(args):
                 arm_report['precision'] = precision_check(trainer, budget)
             arm_report['replay'] = replay_check(trainer, folder, budget)
             arm_report['extra_replay_calls'] = 1
+            timing_updates = min(plan.get('timing_updates_per_arm', 0), target-trainer.step)
+            if timing_updates:
+                arm_report['timing'] = measure_training_updates(trainer, budget, timing_updates)
             arm_report['pilot_passed'] = True
             checkpoint(trainer, folder, arm_report)
             del trainer
             if args.device == 'cuda': torch.cuda.empty_cache()
-        remaining = sum(max(0, target-r['latest_step'])*r['replay']['seconds']*1.3 for r in report['arms'].values())
+        remaining = sum(max(0, target-r['latest_step'])*update_seconds(r)*1.3 for r in report['arms'].values())
         if not args.preflight and not budget.permits(remaining+300):
             raise TimeoutError('Both measured arm timings cannot fit shared cap')
         report['measured_training_seconds_with_margin'] = remaining
@@ -268,7 +294,7 @@ def run(args):
                 resume=out/arm_report['checkpoint']['path'])
             last_save = time.monotonic()
             while trainer.step < target:
-                if not budget.permits(arm_report['replay']['seconds']*1.3): raise TimeoutError('Shared budget exhausted')
+                if not budget.permits(update_seconds(arm_report)*1.3): raise TimeoutError('Shared budget exhausted')
                 value = trainer.update(budget)
                 if value is None: raise TimeoutError('Shared budget ended mid-update; rollback applied')
                 arm_report['latest_step'] = trainer.step

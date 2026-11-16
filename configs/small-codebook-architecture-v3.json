@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "purpose": "Sequential fresh32-code CNN then near-size-matched32-code causal ST tokenizer; fixed exposure and shared allocation",
+  "unique_updates_per_arm": 5000,
+  "schedule_max_updates": 20000,
+  "coverage_after_update": 999,
+  "coverage_seed": 20261110,
+  "historical_parent_sampler_sha256": "a36123f0402dab4f3085368e87a654c78da12cb3320c566c9726472975089aeb",
+  "historical_coverage_plan_sha256": "2178c304f1c6bba9ea7c6c572747351795d85ec7171bed0da2d71af4ed8c612e",
+  "limits": {
+    "maximum_compute_units": 4,
+    "maximum_allocated_hours": 4,
+    "minimum_remaining_units": 50
+  },
+  "arms": {
+    "cnn": {
+      "spec": "configs/small-codebook-cnn-v3.json",
+      "spec_sha256": "659ae59c1786093bdcc9c1f8b2b11d2f7101fd249febbbddb946a54314fdfdd2"
+    },
+    "transformer": {
+      "spec": "configs/small-codebook-transformer-v3.json",
+      "spec_sha256": "2c434a3118526126f4cf3b55ca87724a29b0f1890f8e640e2142dd0fd91bc3a7"
+    }
+  },
+  "initial_checkpoint": {
+    "path": "runs/small-codebook-inputs-v1/cnn512-initial.pt",
+    "sha256": "d8c92ee61c299473ffd1d90998b5bc521d146ddaa1a3d0407d4073a5f362e496",
+    "step": 0
+  },
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "7758046eefa34cd4f719f8b32f19dc521e44cd6ad96aa59c8862576e5d5194fe",
+  "save_steps": [
+    1000,
+    2000,
+    3000,
+    4000,
+    5000
+  ],
+  "progress_validation_windows": 4,
+  "maximum_fp16_gradient_norm_relative_error": 0.1,
+  "initialization": "CNN: exact saved fresh512 encoder/decoder and first32 VQ rows; ST: fresh first32 features+jitter. No representative-pool change.",
+  "historical_comparison": "Same freshCNN tensors and first32 code rows, saved sampler/data schedule, loss and LR horizon; framework/precision/backend differences still recorded, no automatic causal or quality pass. Deterministic backend mode differs from the historical512run; this is recorded and no cross-backend numerical equivalence is claimed.",
+  "gpu_precision": "Both full4sequence x16frame microbatches, four accumulation steps; finiteFP32/FP16 gradient pilot and exact save-resume replay",
+  "stopping": "Stop and rollback on OOM/nonfinite, altered conditions, insufficient measured remaining budget or sharedcap/reserve; no silent microbatch changes",
+  "backend_policy": {
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "supersedes": "Version1 stopped at strict CUDA replay before full training; preserved failed snapshots. Version2 uses deterministic backend policy for both fresh arms.",
+  "timing_updates_per_arm": 5,
+  "timing_policy": "After exact step1 replay, time five counted real updates (steps2..6) with CUDA synchronization. Forecast remaining unique updates from their arithmetic mean times1.3; retain300s allowance and240s export reserve. No reset or extra exposure."
+}

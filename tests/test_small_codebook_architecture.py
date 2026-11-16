@@ -5,12 +5,12 @@ from types import SimpleNamespace
 import pytest
 import torch
 
-from genie_diep.baseline import implementation_hash, rng_state
+from genie_diep.baseline import Budget, implementation_hash, rng_state
 from genie_diep.cohort import Cohort, MixedSampler
 from genie_diep.coverage_sampler import CoverageSampler
 from genie_diep.data import file_hash
 from genie_diep.model import Config, WorldModel
-from scripts.run_small_codebook_architecture import ArchitectureTrainer, run, BACKEND_POLICY
+from scripts.run_small_codebook_architecture import ArchitectureTrainer, run, BACKEND_POLICY, measure_training_updates
 from scripts.run_tokenizer_comparison import source_hash, compare_exact
 from test_baseline_pipeline import project
 
@@ -136,3 +136,37 @@ def test_orchestrator_resumes_interrupted_second_arm_without_retraining_first(ex
     final = json.loads((root/'run/experiment-report.json').read_text())
     assert final['status']=='completed' and final['arms']['cnn']['checkpoint']['sha256']==first_sha
     assert final['arms']['transformer']['latest_step']==2 and final['arms']['transformer']['completed']
+
+
+@pytest.mark.parametrize('arm', ['cnn', 'transformer'])
+def test_steady_timing_counts_five_updates_and_continues_saved_state(experiment, arm):
+    root, _ = experiment
+    trainer = ArchitectureTrainer(root, 'plan.json', arm, preflight=True)
+    trainer.update()  # Exact-replay boundary; the measured updates are steps2..6.
+    budget = Budget(dict(max_allocated_hours=4, max_compute_units=4), reserve_seconds=0)
+    timing = measure_training_updates(trainer, budget, 5)
+    assert timing['first_step']==2 and timing['last_step']==6 and timing['unique_updates']==5
+    assert len(timing['seconds'])==5 and all(t>0 for t in timing['seconds'])
+    assert timing['mean_seconds']==sum(timing['seconds'])/5 and trainer.step==6
+    trainer.save(root/'timed.pt')
+    resumed = ArchitectureTrainer(root, 'plan.json', arm, preflight=True, resume=root/'timed.pt')
+    assert resumed.step==6 and resumed.update()==trainer.update()
+    assert resumed.step==trainer.step==7
+    compare_exact(resumed.model.state_dict(), trainer.model.state_dict())
+    compare_exact(resumed.sampler.state_dict(), trainer.sampler.state_dict())
+
+
+def test_steady_timing_budget_stop_preserves_completed_update_boundary(experiment):
+    root, _ = experiment
+    trainer = ArchitectureTrainer(root, 'plan.json', 'cnn', preflight=True)
+    trainer.update()
+    class StopAfterTwo:
+        def permits(self, seconds=0): return trainer.step<3
+    with pytest.raises(TimeoutError, match='steady timing'):
+        measure_training_updates(trainer, StopAfterTwo(), 5)
+    assert trainer.step==3
+    trainer.save(root/'timing-stopped.pt')
+    resumed=ArchitectureTrainer(root, 'plan.json', 'cnn', preflight=True, resume=root/'timing-stopped.pt')
+    assert resumed.step==3
+    compare_exact(resumed.model.state_dict(), trainer.model.state_dict())
+    compare_exact(resumed.sampler.state_dict(), trainer.sampler.state_dict())

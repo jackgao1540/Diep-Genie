@@ -1,0 +1,26 @@
+{
+  "ready_for_gpu_pilot": true,
+  "spec_sha256": "2c434a3118526126f4cf3b55ca87724a29b0f1890f8e640e2142dd0fd91bc3a7",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "7758046eefa34cd4f719f8b32f19dc521e44cd6ad96aa59c8862576e5d5194fe",
+  "plan_sha256": "539362592ad967d08d6d6ca709af783895cd9ee035017552921270f63a6ce53d",
+  "tested_plan_sha256": "ecb63f87786a66f6434270d9d56eccf982de7cab86a3b3fbfcfff0c27b853504",
+  "backend_policy": {
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "cpu_preflight": "runs/small-codebook-preflight-v2-2026-11-15/experiment-report.json",
+  "data_order_audit": "runs/small-codebook-preflight-v1-2026-11-15/data-order-audit.json",
+  "metadata_delta": "Model/data/loss/optimizer/backend unchanged from real-data v2 CPU and CUDA precision/exact-replay checks. v3 adds only five genuine counted timing updates per arm and mean-based forecast; focused timing/checkpoint/budget tests required.",
+  "microbatch": 4,
+  "accumulation": 4,
+  "focused_tests_passed": 16,
+  "cuda_precision_and_replay_still_required": true,
+  "promotion_approved": false,
+  "timing_updates_per_arm": 5,
+  "cuda_pilot_evidence": "runs/small-codebook-execution-v1-2026-11-15/v2-pilot-report.json"
+}
