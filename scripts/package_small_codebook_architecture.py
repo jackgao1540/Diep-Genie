@@ -12,6 +12,8 @@ from scripts.run_small_codebook_architecture import validate_plan
 
 
 def notebook(manifest):
+    plan_path = manifest.get('plan_path', 'configs/small-codebook-architecture-v1.json')
+    version = Path(plan_path).stem
     document = base_notebook()
     document['cells'][0]['source'] = [
         '# Two fresh 32-code tokenizer tests\n\n'
@@ -82,7 +84,9 @@ def notebook(manifest):
     status['status'] = report['status']
     print('Private experiment saved:', str(result), json.dumps(report, indent=2), flush=True)
 '''
+    command = command.replace('configs/small-codebook-architecture-v1.json', plan_path)
     source = source[:begin]+command+source[end:]
+    source = source.replace('small-codebook-architecture-v1', version)
     # Configuration validation also releases an already connected runtime.
     start = source.index('assert math.isfinite(LIVE_BALANCE)')
     finish = source.index('finished = threading.Event()', start)
@@ -94,23 +98,23 @@ def notebook(manifest):
     return document
 
 
-def package(root, output):
+def package(root, output, plan_path='configs/small-codebook-architecture-v1.json'):
     root, output = Path(root).resolve(), Path(output).resolve()
-    plan = validate_plan(root, 'configs/small-codebook-architecture-v1.json')
+    plan = validate_plan(root, plan_path)
     for entry in plan['arms'].values(): validate_readiness(root, entry['spec'])
     if output.exists(): raise FileExistsError('Choose a fresh immutable export')
     files = list((root/'genie_diep').glob('*.py'))
     files += [root/name for name in ['scripts/run_small_codebook_architecture.py', 'scripts/run_tokenizer_comparison.py',
-        'scripts/diagnose_tokenizer_precision.py', 'configs/small-codebook-architecture-v1.json', plan['initial_checkpoint']['path']]]
+        'scripts/diagnose_tokenizer_precision.py', plan_path, plan['initial_checkpoint']['path']]]
     for entry in plan['arms'].values():
         files.append(root/entry['spec']); files.append(root/read_spec(root/entry['spec'])['readiness'])
     hashes = {path.relative_to(root).as_posix(): file_hash(path) for path in sorted(set(files))}
-    output.mkdir(parents=True); overlay = output/'genie-small-codebook-architecture-v1.zip'
+    output.mkdir(parents=True); overlay = output/('genie-'+Path(plan_path).stem+'.zip')
     with zipfile.ZipFile(overlay, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=3) as archive:
         for name in hashes: archive.write(root/name, name)
         archive.writestr('overlay-sha256.json', json.dumps(hashes, indent=2)+'\n')
     manifest = dict(overlay_name=overlay.name, overlay_sha256=file_hash(overlay), overlay_bytes=overlay.stat().st_size,
-        files=hashes, plan_sha256=file_hash(root/'configs/small-codebook-architecture-v1.json'),
+        files=hashes, plan_path=plan_path, plan_sha256=file_hash(root/plan_path),
         contains_private_untrained_checkpoint=True, maximum_compute_units=4, maximum_allocated_seconds=14400,
         minimum_remaining_units=50, execution_authorized_in_file=False)
     with zipfile.ZipFile(overlay) as archive:
@@ -131,4 +135,5 @@ def read_spec(path):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', default='.'); p.add_argument('--out', required=True)
-    args = p.parse_args(); print(json.dumps(package(args.root, args.out), indent=2))
+    p.add_argument('--plan', default='configs/small-codebook-architecture-v1.json')
+    args = p.parse_args(); print(json.dumps(package(args.root, args.out, args.plan), indent=2))

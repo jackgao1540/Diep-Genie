@@ -1,0 +1,24 @@
+{
+  "ready_for_gpu_pilot": true,
+  "spec_sha256": "31ba7e7d9bffa82b12bde9c4636da00eeb19f30756f57d1c1ae69bc4a8aee344",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "a706adfa42a74143c15f2b6ae34ed67bd381f4957c081f29d0affe110da2f7e6",
+  "plan_sha256": "9909972713027994af78c3fc75f733ba7de26ae03fe857f6cad90f697df5a64e",
+  "tested_plan_sha256": "ecb63f87786a66f6434270d9d56eccf982de7cab86a3b3fbfcfff0c27b853504",
+  "backend_policy": {
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "cpu_preflight": "runs/small-codebook-preflight-v2-2026-11-15/experiment-report.json",
+  "data_order_audit": "runs/small-codebook-preflight-v1-2026-11-15/data-order-audit.json",
+  "metadata_delta": "Only local-ready/status flags changed after full real-data deterministic replay checks; model/data/loss/optimizer/backend unchanged",
+  "microbatch": 4,
+  "accumulation": 4,
+  "focused_tests_passed": 26,
+  "cuda_precision_and_replay_still_required": true,
+  "promotion_approved": false
+}

@@ -10,7 +10,7 @@ from genie_diep.cohort import Cohort, MixedSampler
 from genie_diep.coverage_sampler import CoverageSampler
 from genie_diep.data import file_hash
 from genie_diep.model import Config, WorldModel
-from scripts.run_small_codebook_architecture import ArchitectureTrainer, run
+from scripts.run_small_codebook_architecture import ArchitectureTrainer, run, BACKEND_POLICY
 from scripts.run_tokenizer_comparison import source_hash, compare_exact
 from test_baseline_pipeline import project
 
@@ -41,7 +41,7 @@ def experiment(project):
                 decoder_width=8, decoder_depth=1, decoder_heads=2))
         path = root/f'{arm}.json'; path.write_text(json.dumps(s))
         arms[arm] = dict(spec=path.name, spec_sha256=file_hash(path))
-    plan = dict(arms=arms, initial_checkpoint=dict(path='fresh.pt', sha256=file_hash(root/'fresh.pt')),
+    plan = dict(arms=arms, backend_policy=BACKEND_POLICY, initial_checkpoint=dict(path='fresh.pt', sha256=file_hash(root/'fresh.pt')),
         implementation_sha256=implementation_hash(), runner_sha256=source_hash('scripts/run_small_codebook_architecture.py'),
         coverage_after_update=1, coverage_seed=20261110)
     (root/'plan.json').write_text(json.dumps(plan))
@@ -57,6 +57,8 @@ def test_cnn_starts_from_exact_untrained_encoder_decoder_and_book_prefix(experim
     torch.testing.assert_close(trainer.model.tokenizer.vq.embedding.weight,
         original.tokenizer.vq.embedding.weight[:32], rtol=0, atol=0)
     assert trainer.step == 0 and not trainer.optimizer.state and trainer.sampler.draws == 1
+    assert trainer.contract['backend_policy']==BACKEND_POLICY
+    assert torch.are_deterministic_algorithms_enabled() and not torch.is_deterministic_algorithms_warn_only_enabled()
 
 
 def test_both_arms_have_identical_mixed_coverage_and_fallback_descriptors(experiment):

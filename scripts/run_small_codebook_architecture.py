@@ -3,9 +3,12 @@ import argparse
 import copy
 import json
 import math
+import os
 from pathlib import Path
 import time
 
+# Required before a CUDA process/context creates cuBLAS workspace state.
+os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 import torch
 
 from genie_diep.baseline import Trainer, Budget, implementation_hash, restore_rng, rng_state
@@ -16,6 +19,14 @@ from scripts.run_tokenizer_comparison import compare_exact, source_hash
 
 
 ARMS = ('cnn', 'transformer')
+BACKEND_POLICY = dict(deterministic_algorithms=True, warn_only=False,
+    cudnn_benchmark=False, cudnn_deterministic=True, cublas_workspace_config=':4096:8')
+
+
+def configure_backend():
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    torch.use_deterministic_algorithms(True, warn_only=False)
 
 
 def check(condition, message):
@@ -27,6 +38,7 @@ def validate_plan(root, plan_path):
     root = Path(root); plan = read(root/plan_path)
     check(plan['implementation_sha256'] == implementation_hash(), 'Implementation changed')
     check(plan['runner_sha256'] == source_hash(__file__), 'Runner changed')
+    check(plan.get('backend_policy') == BACKEND_POLICY, 'Backend reproducibility policy differs')
     for arm in ARMS:
         entry = plan['arms'][arm]
         check(file_hash(root/entry['spec']) == entry['spec_sha256'], 'Arm spec changed')
@@ -37,6 +49,7 @@ def validate_plan(root, plan_path):
 
 class ArchitectureTrainer(Trainer):
     def __init__(self, root, plan_path, arm, device='cpu', preflight=False, resume=None):
+        configure_backend()
         self.plan = validate_plan(root, plan_path)
         check(arm in ARMS, 'Unknown arm')
         self.arm = arm
@@ -71,6 +84,7 @@ class ArchitectureTrainer(Trainer):
                 codebook='Existing first flattened feature rows plus jitter, freshly initialized ST features')
         self.contract['small_codebook_architecture'] = dict(plan_sha256=file_hash(Path(root)/plan_path),
             arm=arm, reference_sha256=self.plan['initial_checkpoint']['sha256'], runner_sha256=source_hash(__file__))
+        self.contract['backend_policy'] = copy.deepcopy(BACKEND_POLICY)
         if resume:
             state = torch.load(resume, map_location='cpu', weights_only=True)
             check(state['contract'] == self.contract, 'Exact experiment resume contract changed')
@@ -172,6 +186,7 @@ def replay_check(trainer, out, budget):
 
 
 def run(args):
+    configure_backend()
     root, out = Path(args.root).resolve(), Path(args.out).resolve()
     plan = validate_plan(root, args.plan)
     check(args.resume or not out.exists(), 'Choose a fresh output directory')
@@ -209,6 +224,7 @@ def run(args):
             gpu=torch.cuda.get_device_name() if args.device == 'cuda' else None,
             limits=plan['limits'], arms={}, quality_gate='unmeasured', promotion_approved=False)
         report['displayed_units_per_hour'] = args.rate
+        report['backend_policy'] = copy.deepcopy(BACKEND_POLICY)
     def write_report():
         report['spent_seconds'], report['estimated_units'] = budget.spent()
         path = out/'experiment-report.json'; temporary = out/'experiment-report.tmp'
