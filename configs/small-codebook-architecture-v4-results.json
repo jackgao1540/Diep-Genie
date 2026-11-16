@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "status": "training_complete_and_stopped_at_user_request",
+  "purpose": "Fixed-exposure small-tokenizer screen; no playable or controllable world model claim",
+  "experiment": {
+    "plan": "configs/small-codebook-architecture-v4.json",
+    "plan_sha256": "b74770c7c54a62f8444ad52466b0ac33a6ea202441ac8da9623ae7990563a23c",
+    "frozen_training_source_commit": "c5e5ac1ba644b3b0a1538df21ab9456e4ca7f376",
+    "evaluation_source_commit": "8a70edcab8508e5aab50f657fcd64dbe2bd6fe5a",
+    "unique_updates_per_new_arm": 5000,
+    "frames_per_update": 256,
+    "frame_presentations_per_new_arm": 1280000,
+    "microbatch_sequences": 4,
+    "frames_per_sequence": 16,
+    "gradient_accumulation": 4,
+    "learning_rate_schedule_steps": 20000,
+    "independent_seed_replications": 0,
+    "seed": 42,
+    "fresh_training": true
+  },
+  "execution": {
+    "gpu": "Tesla T4",
+    "torch_version": "2.14.1+cu130",
+    "precision": "fp16",
+    "exact_replay_maximum_state_difference": 0,
+    "extra_replay_optimizer_calls_per_arm": 1,
+    "steady_timing_unique_updates_per_arm": 5,
+    "maximum_shared_compute_units": 4.5,
+    "maximum_shared_allocated_hours": 4,
+    "conservative_compute_units_upper_bound": 3.2253056527777773,
+    "conservative_allocated_seconds_upper_bound": 10096.609,
+    "accounting_includes_all_prior_setup": true,
+    "runtime_released": true,
+    "active_sessions_observed": 0,
+    "remote_launchers_disabled_exact_readbacks": 4
+  },
+  "verification": {
+    "downloaded_checkpoint_files": 42,
+    "finite_model_and_optimizer_tensor_checks": 15356,
+    "inactive_action_dynamics_tensors_per_arm": 98,
+    "inactive_exact_to_own_initial": true,
+    "reserved_test_frames_decoded": 0,
+    "full_training_frame_coverage_per_arm": 315320,
+    "training_sources": 84,
+    "final_sampler_draws_per_arm": 80001
+  },
+  "evaluation": {
+    "device": "cpu",
+    "precision": "fp32",
+    "torch_version": "2.15.0+cpu",
+    "windows": 64,
+    "sources": 16,
+    "frames_per_window": 16,
+    "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+    "selection_sha256": "a7bf97bed304c7effc0095b5d81465b9c271129ba78317721d197a855ce1945d",
+    "matched_final_step": 5000,
+    "report_sha256": "2b945684111f802e3e8c54ea9466f536a51a9e0a232ba9028e0438718ea8bcef",
+    "curve_report_sha256": "da843182bff203f9888a82050d609af8d8775a4ad2782958bcce37b64d575928",
+    "validation_used_for_training_gradients": false,
+    "best_saved_checkpoint_selection_uses_validation": true
+  },
+  "matched_5000": {
+    "cnn512": {
+      "encoder_parameters": 447808,
+      "decoder_parameters": 264067,
+      "codebook_entries": 512,
+      "code_dimension": 64,
+      "checkpoint_sha256": "4efc0e2009e6f3350567b8bd50ebb1b85a96b6ff590db5f6c417620397bc92dd",
+      "spec": "configs/tokenizer-comparison-baseline-v1.json",
+      "spec_sha256": "d6f793a313c7fb2e1c1fdf695feff78421781f17014dcf06475a48dea7875c1f",
+      "pooled": {
+        "mse": 0.004656342836519432,
+        "foreground_mse": 0.010541421919989552,
+        "temporal_difference_mse": 0.002871021864903016,
+        "neutral_flat_luminance_bias": -0.03153206251473447
+      },
+      "validation_code_usage": {
+        "used_codes": 172,
+        "vocabulary_size": 512,
+        "positions": 1048576,
+        "entropy_bits": 2.700739250994857,
+        "top_two_fraction": 0.6583786010742188
+      }
+    },
+    "cnn32": {
+      "encoder_parameters": 447808,
+      "decoder_parameters": 264067,
+      "codebook_entries": 32,
+      "code_dimension": 64,
+      "checkpoint_sha256": "76779a97334380a4b186f7d7e228b3e1e9071e00e59da83640630c7306907700",
+      "spec": "configs/small-codebook-cnn-v4.json",
+      "spec_sha256": "2581a61f76bbc6925f23cb271278016c7efa7b4eb642d0713c79140b58231d30",
+      "pooled": {
+        "mse": 0.0034296270604129916,
+        "foreground_mse": 0.01875977099394483,
+        "temporal_difference_mse": 0.0028844257668262465,
+        "neutral_flat_luminance_bias": 0.009874014855218511
+      },
+      "validation_code_usage": {
+        "used_codes": 31,
+        "vocabulary_size": 32,
+        "positions": 1048576,
+        "entropy_bits": 2.3985120231776706,
+        "top_two_fraction": 0.7354555130004883
+      }
+    },
+    "st32": {
+      "encoder_parameters": 409504,
+      "decoder_parameters": 274224,
+      "codebook_entries": 32,
+      "code_dimension": 64,
+      "checkpoint_sha256": "caf5363f914d40c1381588b9ca1b82a074108b0cfa856c5140e437144aa9670d",
+      "spec": "configs/small-codebook-transformer-v4.json",
+      "spec_sha256": "afef470337da61982d163dd19764d91467e0e70d920cfcf6de359c1939ed882d",
+      "pooled": {
+        "mse": 0.006014353829155768,
+        "foreground_mse": 0.038923470678576336,
+        "temporal_difference_mse": 0.0043711386745163535,
+        "neutral_flat_luminance_bias": 0.002755045719483181
+      },
+      "validation_code_usage": {
+        "used_codes": 7,
+        "vocabulary_size": 32,
+        "positions": 1048576,
+        "entropy_bits": 1.2685421254609917,
+        "top_two_fraction": 0.918757438659668
+      }
+    }
+  },
+  "late_curves": {
+    "cnn512": {
+      "3000": {
+        "mse": 0.0028635557210478072,
+        "foreground_mse": 0.011513538961543454,
+        "temporal_difference_mse": 0.0028595789082156244,
+        "neutral_flat_luminance_bias": -0.009758020364163894
+      },
+      "4000": {
+        "mse": 0.003142533085681678,
+        "foreground_mse": 0.011540719728546558,
+        "temporal_difference_mse": 0.002939117823069031,
+        "neutral_flat_luminance_bias": -0.010576574723484507
+      },
+      "5000": {
+        "mse": 0.004656342836519432,
+        "foreground_mse": 0.010541421919989552,
+        "temporal_difference_mse": 0.002871021864903016,
+        "neutral_flat_luminance_bias": -0.03153206251473447
+      }
+    },
+    "cnn32": {
+      "3000": {
+        "mse": 0.00370033957444596,
+        "foreground_mse": 0.01189057361215316,
+        "temporal_difference_mse": 0.003338032919769758,
+        "neutral_flat_luminance_bias": -0.0009245960605725918
+      },
+      "4000": {
+        "mse": 0.0027399059415060857,
+        "foreground_mse": 0.014660797436311834,
+        "temporal_difference_mse": 0.0024711416753580334,
+        "neutral_flat_luminance_bias": 0.004200197856808372
+      },
+      "5000": {
+        "mse": 0.0034296270604129916,
+        "foreground_mse": 0.01875977099394483,
+        "temporal_difference_mse": 0.0028844257668262465,
+        "neutral_flat_luminance_bias": 0.009874014855218511
+      }
+    },
+    "st32": {
+      "3000": {
+        "mse": 0.0052082994752272,
+        "foreground_mse": 0.0215055887522669,
+        "temporal_difference_mse": 0.004009636994621715,
+        "neutral_flat_luminance_bias": 0.0015016332945650202
+      },
+      "4000": {
+        "mse": 0.007183839227549488,
+        "foreground_mse": 0.020392671978989193,
+        "temporal_difference_mse": 0.004851701857903221,
+        "neutral_flat_luminance_bias": -0.008878479819758802
+      },
+      "5000": {
+        "mse": 0.006014353829155768,
+        "foreground_mse": 0.038923470678576336,
+        "temporal_difference_mse": 0.0043711386745163535,
+        "neutral_flat_luminance_bias": 0.002755045719483181
+      }
+    }
+  },
+  "best_saved_cnn32": {
+    "selection": "Validation-selected among all11saved training checkpoints; not every update, convergence or a test-set result",
+    "whole_image_and_temporal_step": 4000,
+    "whole_image_mse": 0.0027399059415060857,
+    "temporal_difference_mse": 0.0024711416753580334,
+    "colored_area_step": 3000,
+    "colored_area_mse": 0.01189057361215316
+  },
+  "geometry": {
+    "known_failure_anchors": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "independent_sources": 1,
+    "reviewers": 2,
+    "all_three_models_body_region_retained": true,
+    "all_three_models_five_separate_barrels_lost": true,
+    "complete_semantic_G1_score": "unmeasured"
+  },
+  "limitations": [
+    "One training seed; no independent replication.",
+    "The historical512-code run used an earlier CUDA backend policy; matching initial CNN tensors and data order does not guarantee numerical equivalence.",
+    "Similar encoder/decoder parameter counts do not imply identical compute or useful capacity.",
+    "The local custom loss and short run differ from the paper training recipe.",
+    "5000updates match historical exposure; they do not establish convergence or an optimal checkpoint.",
+    "Validation code use is descriptive and background-dominated; sparse use does not establish the cause of reconstruction failure.",
+    "Known geometry remains unresolved; no action/dynamics training or controllability evidence."
+  ],
+  "proposed_next_priority": "Focused local diagnosis of sparse code use and training stability before scaling; one controlled change only if later authorized. Larger transformers and frozen-encoder decoder stages remain untested.",
+  "unresolved_hypotheses": [
+    "Original narrow-prefix initialization",
+    "Custom reconstruction/diversity terms",
+    "Optimizer or schedule",
+    "Very small transformer architecture"
+  ],
+  "causal_status": "None of these mechanisms was isolated; sparse validation usage and late regression are observations, not proven causes."
+}
