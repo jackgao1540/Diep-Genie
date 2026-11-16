@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "local_architecture_preflight_only",
+  "purpose": "Local functional check for a small transformer with separately near-matched CNN encoder/decoder parameter counts; no training approval.",
+  "training_approved": false,
+  "execution_ready": false,
+  "local_execution_ready": false,
+  "gpu_authorized": false,
+  "model": {
+    "size": 128,
+    "width": 128,
+    "token_dim": 64,
+    "vocab": 512,
+    "action_dim": 16,
+    "action_codes": [
+      9,
+      8,
+      2
+    ],
+    "layers": 4,
+    "heads": 4,
+    "context": 16,
+    "lam_variant": "pair",
+    "downsample": 4,
+    "lam_dilations": [
+      1,
+      3,
+      6
+    ],
+    "lam_motion_warp": false,
+    "lam_max_shift_fraction": 0.125,
+    "tokenizer_arch": "st_transformer",
+    "tokenizer_transformer": {
+      "encoder_width": 96,
+      "encoder_depth": 2,
+      "encoder_heads": 3,
+      "decoder_width": 64,
+      "decoder_depth": 3,
+      "decoder_heads": 2
+    }
+  },
+  "parameter_counts": {
+    "encoder": 409504,
+    "decoder": 274224,
+    "vq": 32768
+  },
+  "data_binding": "configs/baseline-data-v9.json",
+  "evaluation_selection": "configs/baseline-evaluation-v1.json",
+  "data": {
+    "fps": 10,
+    "window_frames": 16,
+    "window_span_seconds": 1.5,
+    "source_time_accounting_seconds_per_window": 1.6,
+    "spatial_tokens_per_frame": 1024,
+    "source_balanced_sampling_fraction": 0.5,
+    "duration_uniform_sampling_fraction": 0.5,
+    "augmentation": "none in the first baseline; preserve palette and geometry",
+    "validation": "fixed source-stratified blocks plus separately reported targeted coverage stress cases",
+    "reserved_test": "exclude from development sampling, tuning and pilot evaluation",
+    "joining": "only checked adjacent blocks within frozen sequences.json; never bridge a gap",
+    "training_inputs": "Verified 128px NPZ clips from the bound v9 cohort, using checked sequences only"
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "mixed_precision": "FP16 with conservative initial scaling; requires a new GPU precision and resume measurement for changed code",
+    "fp16_initial_scale": 1024.0,
+    "fp16_max_scale": 1024.0,
+    "schedule": "500-update linear warmup then cosine decay to 10% of stage peak; persist schedule and scaler in checkpoints",
+    "seed": 42,
+    "checkpoint_interval_minutes": 5,
+    "evaluation_interval_updates": 500,
+    "evaluation_interval_minutes": 15,
+    "stop_nonfinite_immediately": true,
+    "fallback": "reduce microbatch and raise accumulation first; do not silently reduce resolution, change architecture or enlarge budget"
+  },
+  "objective": {
+    "name": "existing_baseline",
+    "formula": "10 * image_loss(color_balance=True) + VQ auxiliary; unchanged"
+  },
+  "stages": [
+    {
+      "name": "tokenizer",
+      "max_updates": 1,
+      "max_compute_units": 0,
+      "max_allocated_hours": 0,
+      "learning_rate": 0.0003,
+      "microbatch_sequences": 1,
+      "gradient_accumulation": 1,
+      "color_balance": true
+    }
+  ],
+  "paper": {
+    "source": "https://arxiv.org/html/2402.15391v1",
+    "sections": [
+      "2",
+      "2.1",
+      "C.2"
+    ],
+    "aligned": [
+      "spatial attention within each frame",
+      "same-site causal temporal attention",
+      "single feedforward after both attentions",
+      "ST encoder and decoder",
+      "4x4 patches"
+    ],
+    "departures": [
+      "Encoder2 blocks width96 heads3; decoder3 blocks width64 heads2; much smaller than original Table7",
+      "512 codes of dimension64; Table7 uses1024 codes dimension32",
+      "existing reconstruction objective, optimizer and limited-prefix VQ initialization retained",
+      "learned spatial/temporal positions and pre-LN are local choices; paper not specific",
+      "action/dynamics architectures unchanged and untrained"
+    ]
+  },
+  "constraints": [
+    "CPU local preflight only; no allocation or training authorization",
+    "16 observed frames at10FPS, finite window memory; cold starts supported",
+    "real held-out quality and geometry unmeasured",
+    "representative codebook initialization requires separate training design before any larger run"
+  ],
+  "comparison_design": {
+    "cnn_encoder_parameters": 447808,
+    "cnn_decoder_parameters": 264067,
+    "encoder_difference_percent": -8.553665856795767,
+    "decoder_difference_percent": 3.8463723221758173,
+    "encoder_position_parameters": 99840,
+    "decoder_position_parameters": 66560,
+    "codebook": "512 only preserves the current functional-check interface; actual step2 codebook choice remains dependent on step1 and is not selected here",
+    "capacity_limit": "Matching parameter totals does not match useful capacity: transformer counts include learned position tables and global spatial/past-frame attention",
+    "analytic_forward_work_ratio_vs_CNN": 1.141389323207505,
+    "work_limit": "Matrix/convolution arithmetic estimate only, not a measured GPU cost"
+  }
+}

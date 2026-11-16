@@ -41,7 +41,7 @@ def run(args):
     if not out.is_relative_to(root/'runs'):
         raise ValueError('Keep private preflight artifacts under project runs')
     out.mkdir(parents=True, exist_ok=False)
-    spec_path = root/'configs/tokenizer-transformer-v1.json'; spec = read(spec_path)
+    spec_path = root/args.spec; spec = read(spec_path)
     if any(spec[k] for k in ('training_approved', 'execution_ready', 'local_execution_ready', 'gpu_authorized')):
         raise ValueError('This check requires an unapproved local-only configuration')
     seed = spec['optimization']['seed']; random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
@@ -97,5 +97,6 @@ def run(args):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', required=True); p.add_argument('--out', required=True)
+    p.add_argument('--spec', default='configs/tokenizer-transformer-v1.json')
     p.add_argument('--threads', type=int, default=4)
     run(p.parse_args())
