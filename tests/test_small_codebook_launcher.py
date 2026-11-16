@@ -50,6 +50,19 @@ def test_disabled_configuration_and_shared_watchdog_precede_drive_access():
     assert "'maximum_compute_units': 4, 'maximum_allocated_seconds': 14400" in code
 
 
+def test_proposed_bound_limits_drive_watchdog_receipt_and_heading_without_authorization():
+    document=notebook(dict(overlay_name='private.zip',overlay_bytes=1,overlay_sha256='a'*64,
+        files={},plan_sha256='b'*64,maximum_compute_units=4.5,maximum_allocated_seconds=14400,
+        minimum_remaining_units=50))
+    scope={};exec(''.join(document['cells'][1]['source']),scope)
+    assert scope['AUTHORIZED_TO_RUN'] is False
+    code=''.join(document['cells'][2]['source'])
+    assert 'min(14400, 4.5 / DISPLAYED_UNITS_PER_HOUR' in code
+    assert "'maximum_compute_units': 4.5, 'maximum_allocated_seconds': 14400" in code
+    assert 'Shared hard limits: 4.5 compute units / 4 allocated hours' in ''.join(document['cells'][0]['source'])
+    assert 'min(14400, 4 / DISPLAYED_UNITS_PER_HOUR' not in code
+
+
 def test_verified_overlay_executes_sequential_runner_and_always_releases(monkeypatch, tmp_path):
     colab, run, scope, code = environment(monkeypatch, tmp_path)
     def execute(command, **kwargs):

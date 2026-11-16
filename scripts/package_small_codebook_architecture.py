@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import zipfile
 
@@ -14,14 +15,19 @@ from scripts.run_small_codebook_architecture import validate_plan
 def notebook(manifest):
     plan_path = manifest.get('plan_path', 'configs/small-codebook-architecture-v1.json')
     version = Path(plan_path).stem
+    units = manifest.get('maximum_compute_units', 4)
+    seconds = manifest.get('maximum_allocated_seconds', 14400)
+    reserve = manifest.get('minimum_remaining_units', 50)
+    if not all(isinstance(x, (int, float)) and math.isfinite(x) and x > 0 for x in (units, seconds, reserve)):
+        raise ValueError('Invalid bound allocation limits')
     document = base_notebook()
     document['cells'][0]['source'] = [
         '# Two fresh 32-code tokenizer tests\n\n'
         'CNN32 first, then near-size-matched causal transformer32. Both receive '
         '5,000 unique updates, identical frozen data order, 4-sequence microbatches '
         'and four accumulation steps. Both CUDA pilots run before either full run. '
-        'Shared hard limits: 4 compute units / four allocated hours, preserving '
-        '50 units. Setup, idle, precision/replay checks, validation and exports '
+        f'Shared hard limits: {units:g} compute units / {seconds/3600:g} allocated hours, preserving '
+        f'{reserve:g} units. Setup, idle, precision/replay checks, validation and exports '
         'all count. No action/dynamics training or quality promotion.\n\n'
         'The overlay contains a verified untrained starting checkpoint and must '
         'remain private. This exported launcher is disabled.\n']
@@ -29,8 +35,10 @@ def notebook(manifest):
     config += '\nRESUME_RUN_DIRECTORY = ""  # Existing absolute result directory on mounted Drive, only for reviewed recovery\n'
     document['cells'][1]['source'] = config.splitlines(keepends=True)
     source = ''.join(document['cells'][2]['source'])
-    source = source.replace('min(3600, 2 / DISPLAYED_UNITS_PER_HOUR * 3600,', 'min(14400, 4 / DISPLAYED_UNITS_PER_HOUR * 3600,')
-    source = source.replace("'maximum_compute_units': 2, 'maximum_allocated_seconds': 3600,", "'maximum_compute_units': 4, 'maximum_allocated_seconds': 14400,")
+    source = source.replace('min(3600, 2 / DISPLAYED_UNITS_PER_HOUR * 3600,', f'min({seconds:g}, {units:g} / DISPLAYED_UNITS_PER_HOUR * 3600,')
+    source = source.replace("'maximum_compute_units': 2, 'maximum_allocated_seconds': 3600,", f"'maximum_compute_units': {units:g}, 'maximum_allocated_seconds': {seconds:g},")
+    source = source.replace('LIVE_BALANCE > 50', f'LIVE_BALANCE > {reserve:g}')
+    source = source.replace('(LIVE_BALANCE - 50)', f'(LIVE_BALANCE - {reserve:g})')
     source = source.replace("'purpose': 'GPU execution measurement only'", "'purpose': 'Sequential fresh CNN32 and ST32; shared allocation'")
     source = source.replace("result = pathlib.Path('/content/drive/MyDrive/Diep-Genie/baseline-v1-v9') / time.strftime('pilot-%Y%m%d-%H%M%S', time.gmtime())\n    result.mkdir(parents=True, exist_ok=False)",
         "result = pathlib.Path(RESUME_RUN_DIRECTORY) if RESUME_RUN_DIRECTORY else pathlib.Path('/content/drive/MyDrive/Diep-Genie/small-codebook-architecture-v1') / time.strftime('run-%Y%m%d-%H%M%S', time.gmtime())\n    assert result.resolve().is_relative_to(pathlib.Path('/content/drive/MyDrive/Diep-Genie').resolve()), 'Unsafe recovery result path'\n    result.mkdir(parents=True, exist_ok=bool(RESUME_RUN_DIRECTORY))")
@@ -115,8 +123,9 @@ def package(root, output, plan_path='configs/small-codebook-architecture-v1.json
         archive.writestr('overlay-sha256.json', json.dumps(hashes, indent=2)+'\n')
     manifest = dict(overlay_name=overlay.name, overlay_sha256=file_hash(overlay), overlay_bytes=overlay.stat().st_size,
         files=hashes, plan_path=plan_path, plan_sha256=file_hash(root/plan_path),
-        contains_private_untrained_checkpoint=True, maximum_compute_units=4, maximum_allocated_seconds=14400,
-        minimum_remaining_units=50, execution_authorized_in_file=False)
+        contains_private_untrained_checkpoint=True, maximum_compute_units=plan['limits']['maximum_compute_units'],
+        maximum_allocated_seconds=plan['limits']['maximum_allocated_hours']*3600,
+        minimum_remaining_units=plan['limits']['minimum_remaining_units'], execution_authorized_in_file=False)
     with zipfile.ZipFile(overlay) as archive:
         for name, digest in hashes.items():
             if hashlib.sha256(archive.read(name)).hexdigest() != digest: raise ValueError('Overlay readback mismatch')
