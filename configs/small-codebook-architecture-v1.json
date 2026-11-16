@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "purpose": "Sequential fresh32-code CNN then near-size-matched32-code causal ST tokenizer; fixed exposure and shared allocation",
+  "unique_updates_per_arm": 5000,
+  "schedule_max_updates": 20000,
+  "coverage_after_update": 999,
+  "coverage_seed": 20261110,
+  "historical_parent_sampler_sha256": "a36123f0402dab4f3085368e87a654c78da12cb3320c566c9726472975089aeb",
+  "historical_coverage_plan_sha256": "2178c304f1c6bba9ea7c6c572747351795d85ec7171bed0da2d71af4ed8c612e",
+  "limits": {
+    "maximum_compute_units": 4,
+    "maximum_allocated_hours": 4,
+    "minimum_remaining_units": 50
+  },
+  "arms": {
+    "cnn": {
+      "spec": "configs/small-codebook-cnn-v1.json",
+      "spec_sha256": "821a1d26de752a7dca45667e20ea234cc0331798f11933dcf6b2e9c98f35cae3"
+    },
+    "transformer": {
+      "spec": "configs/small-codebook-transformer-v1.json",
+      "spec_sha256": "b90d8203ffad366fc4cfdf9c04df09bbc08da2d99bad075431242f4b61e6f3a8"
+    }
+  },
+  "initial_checkpoint": {
+    "path": "runs/small-codebook-inputs-v1/cnn512-initial.pt",
+    "sha256": "d8c92ee61c299473ffd1d90998b5bc521d146ddaa1a3d0407d4073a5f362e496",
+    "step": 0
+  },
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "ac3a9f8d61b1283b984bd41f4fa130760acb768daf428bb114f8eb2b9ff63b6e",
+  "save_steps": [
+    1000,
+    2000,
+    3000,
+    4000,
+    5000
+  ],
+  "progress_validation_windows": 4,
+  "maximum_fp16_gradient_norm_relative_error": 0.1,
+  "initialization": "CNN: exact saved fresh512 encoder/decoder and first32 VQ rows; ST: fresh first32 features+jitter. No representative-pool change.",
+  "historical_comparison": "Same freshCNN tensors and first32 code rows, saved sampler/data schedule, loss and LR horizon; framework/precision/backend differences still recorded, no automatic causal or quality pass.",
+  "gpu_precision": "Both full4sequence x16frame microbatches, four accumulation steps; finiteFP32/FP16 gradient pilot and exact save-resume replay",
+  "stopping": "Stop and rollback on OOM/nonfinite, altered conditions, insufficient measured remaining budget or sharedcap/reserve; no silent microbatch changes"
+}

@@ -1,0 +1,19 @@
+{
+  "ready_for_gpu_pilot": true,
+  "spec_sha256": "821a1d26de752a7dca45667e20ea234cc0331798f11933dcf6b2e9c98f35cae3",
+  "binding_sha256": "4dfb25186cda9d7300dd16d9d306193f74a17356b9d41caa40469a308abf725d",
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "ac3a9f8d61b1283b984bd41f4fa130760acb768daf428bb114f8eb2b9ff63b6e",
+  "plan_sha256": "702555d7ddc5c14a76ef5044c9049528d16307e8426ac1602a8bc5c9e357cf61",
+  "cpu_preflight": "runs/small-codebook-preflight-v1-2026-11-15/experiment-report.json",
+  "tested_plan_sha256": "285d3d1c9622bc75aedc492594da40e188e52f93feb600dcffbe91597dfa203e",
+  "metadata_delta": "Only local_execution_ready and status changed after successful CPU preflight; model/data/objective/optimization unchanged",
+  "real_data": true,
+  "microbatch": 4,
+  "accumulation": 4,
+  "exact_resume": true,
+  "coverage_transition_rollback_tests": true,
+  "historical_data_order_verified": true,
+  "cuda_precision_and_replay_still_required": true,
+  "promotion_approved": false
+}
