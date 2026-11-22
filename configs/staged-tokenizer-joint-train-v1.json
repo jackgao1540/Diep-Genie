@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "staged_plan_gated",
+  "purpose": "Staged16 budgeted probe; local/GPU checks are execution evidence only",
+  "training_approved": false,
+  "execution_ready": false,
+  "local_execution_ready": false,
+  "gpu_authorized": false,
+  "preflight_phase": "joint",
+  "model": {
+    "size": 128,
+    "width": 128,
+    "token_dim": 64,
+    "vocab": 16,
+    "action_dim": 16,
+    "action_codes": [
+      9,
+      8,
+      2
+    ],
+    "layers": 4,
+    "heads": 4,
+    "context": 16,
+    "lam_variant": "pair",
+    "downsample": 4,
+    "lam_dilations": [
+      1,
+      3,
+      6
+    ],
+    "lam_motion_warp": false,
+    "lam_max_shift_fraction": 0.125,
+    "tokenizer_arch": "st_transformer",
+    "tokenizer_transformer": {
+      "encoder_width": 256,
+      "encoder_depth": 4,
+      "encoder_heads": 8,
+      "decoder_width": 128,
+      "decoder_depth": 3,
+      "decoder_heads": 4
+    }
+  },
+  "parameter_counts": {
+    "encoder": 4509504,
+    "decoder": 941616,
+    "vq": 1024
+  },
+  "data_binding": "configs/baseline-data-v9.json",
+  "evaluation_selection": "configs/baseline-evaluation-v1.json",
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "fp16_initial_scale": 1024.0,
+    "fp16_max_scale": 1024.0
+  },
+  "constraints": [
+    "CPU local-only functionality check; no remote compute",
+    "128px inputs, 32x32 grid, 16 observed frames at 10FPS",
+    "No held-out quality or geometry evaluation",
+    "Stage two freezes both encoder and codebook from stage-one handoff",
+    "Existing prefix initialization retained; representative initialization remains a separate design decision"
+  ],
+  "data": {
+    "fps": 10,
+    "window_frames": 16,
+    "window_span_seconds": 1.5,
+    "source_time_accounting_seconds_per_window": 1.6,
+    "spatial_tokens_per_frame": 1024,
+    "source_balanced_sampling_fraction": 0.5,
+    "duration_uniform_sampling_fraction": 0.5,
+    "augmentation": "none in the first baseline; preserve palette and geometry",
+    "validation": "fixed source-stratified blocks plus separately reported targeted coverage stress cases",
+    "reserved_test": "exclude from development sampling, tuning and pilot evaluation",
+    "joining": "only checked adjacent blocks within frozen sequences.json; never bridge a gap",
+    "training_inputs": "Verified 128px NPZ clips from the bound v9 cohort, using checked sequences only"
+  },
+  "stages": [
+    {
+      "name": "tokenizer",
+      "max_updates": 20000,
+      "learning_rate": 0.0003,
+      "microbatch_sequences": 4,
+      "gradient_accumulation": 4,
+      "color_balance": true
+    }
+  ]
+}

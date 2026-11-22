@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "phases": [
+    "joint",
+    "decoder_only"
+  ],
+  "pilot_limits": {
+    "max_compute_units": 1.0,
+    "max_allocated_hours": 0.75,
+    "minimum_remaining_units": 50
+  },
+  "full_updates_per_phase": 5000,
+  "timing_updates": 5,
+  "coverage_after_update": 999,
+  "coverage_seed": 20261110,
+  "microbatch_candidates": [
+    4,
+    2,
+    1
+  ],
+  "sequences_per_update": 16,
+  "maximum_fp16_gradient_norm_relative_error": 0.05,
+  "stages": {
+    "joint": {
+      "spec": "configs/staged-tokenizer-joint-train-v1.json",
+      "spec_sha256": "1253e13bfb834b47160293a5cf5fd3120f8ec4e3372baaf3b10d9182e5e4e4ac"
+    },
+    "decoder_only": {
+      "spec": "configs/staged-tokenizer-decoder-train-v1.json",
+      "spec_sha256": "7d463c409f6fbf0700c5e0afec4fa001f0a743416b32078483bdfd0ab48149e9"
+    }
+  },
+  "backend_policy": {
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "implementation_sha256": "b2e9fbc9acb59073b29a6e60716237a6f98dee5e5c264a1f17b91c404ae27f80",
+  "runner_sha256": "f580eb9a2ffc02bba057d8e4b24fc41ab4311076f53c607d6d564ad3d0d24e69",
+  "source_sha256": {
+    "genie_diep/baseline.py": "51949f2e67829a73cf122bcfdc9cfe2ec490ffb551886780f105c88099edcc06",
+    "genie_diep/cohort.py": "27cf4c62df6eb69a02b8334c32797f692d057cbe1e487745534558440e73452e",
+    "genie_diep/coverage_sampler.py": "eee01ad1a6d8ba58b412c51340d9c3b2975e5aa5d483d6e980fc36f675017273",
+    "genie_diep/data.py": "a5565aed2f76831e401a2512c4e54c1cbcabbae6c65ac3e32730adcc9985242a",
+    "genie_diep/model.py": "3c90fcc0dcbe34a581b7131c9e779f743fc00b1f44088f34b7170db0ebfcf4da",
+    "genie_diep/transformer_tokenizer.py": "3461b90fcedef41a56a95463e3dc55adbb431b9cdd7613dd521c5f7c699b28ca",
+    "genie_diep/gpu_precision.py": "f0ef40e1caeead24476889f9b2adbc61ade3e2b351db4df3b5fd394a30e0afee",
+    "scripts/diagnose_tokenizer_precision.py": "c8d9183bf85ed75fb36d1a6913c81571ad934a8bd67e2a10fe54261dcd1a2179",
+    "scripts/run_small_codebook_architecture.py": "7758046eefa34cd4f719f8b32f19dc521e44cd6ad96aa59c8862576e5d5194fe",
+    "scripts/run_tokenizer_comparison.py": "168c890cdecfd36edb437ab12b22c515f04f5401311a09ec92a960ceb457b096"
+  },
+  "full_authorized": false,
+  "scheduler_horizon_updates": 20000,
+  "warmup_updates": 500
+}
