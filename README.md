@@ -6,6 +6,8 @@ Can a small model learn a controllable diep.io world from gameplay video alone? 
 
 No playable world model exists. The latest 16-code staged probe completed 5,000 joint updates, then 5,000 larger-decoder updates with the encoder and codebook frozen. Across the same 64 validation clips, the larger decoder's RGB MSE was 3.58% lower (0.00753977 to 0.00727003), but both models failed barrel retention (0/60 in blinded assistant review). The historical CNN32 had lower RGB MSE on these clips (0.00342963); vocabulary, architecture and optimization history differ, so this is not a size-only comparison. Only 4/16 codes were observed, with one taking 97.65% of sites; background dominates, and this does not identify the cause.
 
+A local bottleneck audit found that all 16 codes won assignments initially, but a single code won on fixed training and validation probes by update 91. The soft balancing term remained nearly uniform despite concentrated hard assignments. Color and geometry probes found information before quantization that the selected IDs did not preserve. Alternative initialization improved code separation but did not establish a fix; the next proposed comparison targets hard code use and foreground coverage.
+
 Currently implemented features include local video curation, a causal VQ tokenizer, latent-action and token-dynamics modules, and reconstruction diagnostics.
 
 ## Earlier 32-code tokenizer checkpoint
