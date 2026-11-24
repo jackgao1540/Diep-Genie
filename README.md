@@ -2,13 +2,13 @@
 
 Can a small model learn a controllable diep.io world from gameplay video alone? A compact Genie-style prototype explores that question.
 
-![Actual diep.io beside a tokenizer reconstruction](assets/comparison.png)
+![Historical diep.io input beside a tokenizer reconstruction](assets/comparison.png)
 
-No playable world model exists. Both new tokenizer tests completed 5,000 updates, and all training is stopped. Known barrel detail remains unresolved.
+No playable world model exists. The latest 16-code staged probe completed 5,000 joint updates, then 5,000 larger-decoder updates with the encoder and codebook frozen. Across the same 64 validation clips, the larger decoder's RGB MSE was 3.58% lower (0.00753977 to 0.00727003), but both models failed barrel retention (0/60 in blinded assistant review). The historical CNN32 had lower RGB MSE on these clips (0.00342963); vocabulary, architecture and optimization history differ, so this is not a size-only comparison. Only 4/16 codes were observed, with one taking 97.65% of sites; background dominates, and this does not identify the cause.
 
 Currently implemented features include local video curation, a causal VQ tokenizer, latent-action and token-dynamics modules, and reconstruction diagnostics.
 
-## Completed tokenizer checkpoint
+## Earlier 32-code tokenizer checkpoint
 
 A fresh CNN with 32 codebook entries and a similarly sized causal transformer with 32 entries were compared with the historical 512-entry CNN. Each new run received 5,000 updates with matched training exposure. Lower error is better; these averages do not count retained objects or barrels.
 
